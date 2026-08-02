@@ -1,0 +1,181 @@
+# BODACC-api
+
+🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+
+**法国官方公告（BODACC）的现代 API。实时搜索、探索和跟踪官方公报的公告：设立、变更、注销、集体程序、账目存放……支持 20 种语言，包含企业、高管和公共合同的关系图谱。**
+
+> 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
+
+---
+
+## ✨ Highlights
+
+| | |
+|---|---|
+| 🗂 **超过 600 万条公告** | BODACC 历史记录（2004 → 至今，回填进行中） |
+| 🕸 **三角图谱** | 每条公告都关联到其企业（SIREN）和人员（高管、清算人、审计师……） |
+| 📦 **公共合同（BOAMP）** | 170 万份合同按名称关联到企业（2015 → 2026） |
+| ✨ **丰富数据** | 结构化丰富（regex + LLM）：从法律文本中提取的 SIREN、NAF、地址、高管 |
+| 🌍 **20 种语言** | 界面和内容均已翻译 |
+| 🤖 **Agent-ready** | isitagentready 上 100/100（DNSSEC、DNS-AID、auth.md、WebMCP、llms.txt） |
+
+---
+
+## 🚀 快速开始
+
+所有路由均可无需密钥进行公开读取：
+
+
+```bash
+# Search a company by name
+curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
+
+# Notice detail (with company + people relations)
+curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
+
+# Company profile (recent notices + directors + BOAMP contracts)
+curl "https://bodacc.io/api/bodacc/entreprises/912969573"
+
+# Global statistics
+curl "https://bodacc.io/api/bodacc/stats"
+
+# Daily volume (last 30 days)
+curl "https://bodacc.io/api/bodacc/stats/daily30"
+```
+
+
+---
+
+## 📡 端点
+
+
+### Annonces
+
+| Méthode | Route | Description |
+|---|---|---|
+| `GET` | `/bodacc/annonces` | Search: `q` (name/SIREN), `famille`, `departement`, dates, pagination `limit`/`offset` |
+| `GET` | `/bodacc/annonces/{id}` | Full detail with `raw_data` + enrichment + `relations` (linked companies and people) |
+| `GET` | `/bodacc/enrichi/{id}` | Structured enriched version (siren, denomination, NAF, directors...) |
+| `POST` | `/bodacc/enrichi/batch` | Batch enrichment |
+
+### Companies & people
+
+| Méthode | Route | Description |
+|---|---|---|
+| `GET` | `/bodacc/entreprises` | Company search (name, city, NAF, postal code) |
+| `GET` | `/bodacc/entreprises/{siren}` | INSEE profile + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
+| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profile by SEO slug |
+| `GET` | `/bodacc/personnes/{id}` | Person profile: mandates (roles) + linked companies |
+
+### Statistics
+
+| Méthode | Route | Description |
+|---|---|---|
+| `GET` | `/bodacc/stats` | Totals, by family, by date |
+| `GET` | `/bodacc/stats/daily` | Today's volume (by publication, department, family) |
+| `GET` | `/bodacc/stats/daily30` | Last 30 days series |
+| `GET` | `/bodacc/stats/counts` | Counters: notices, companies, people |
+| `GET` | `/bodacc/graph/categories` | Distribution by category |
+
+### Alerts & ingestion
+
+| Méthode | Route | Description |
+|---|---|---|
+| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN alerts (company tracking) |
+| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Trigger ingestion for a date |
+| `POST` | `/bodacc/import` | Batch import (for backfill) |
+
+
+---
+
+## 📅 如何每天获取 BODACC 数据？
+
+数据由 DILA 在 Opendatasoft 平台上发布：
+
+
+The data is published by the **DILA** on the **Opendatasoft** platform:
+
+```
+Source : https://bodacc-datadila.opendatasoft.com/api/explore/v2.1
+Dataset : annonces-commerciales (publications A/B/C)
+```
+
+**Publication rhythm** (observed on real data):
+- 05:30 UTC : publications A/B (~25% of volume)
+- 08:00-09:00 UTC : publication C (annual accounts) → full daily volume
+- Notices carry publication date **D** but are published at **D+1** early morning
+
+**The BODACC.io ingestion pipeline:**
+1. `POST /bodacc/ingest?target_date=YYYY-MM-DD` → fetch via 210 sub-queries (3 publications × 8 departments × 10 families), each under 10,000 records
+2. **Upsert by `id`** → idempotent (re-running creates no duplicates)
+3. Daily cron at 05:30 UTC + monitoring every 15 min from 06:00 to 10:30 UTC (catches publication C)
+4. Cross-check DB ↔ Opendatasoft (`total_count`)
+
+
+---
+
+## 🧠 图谱：企业 ↔ 人员 ↔ 公告
+
+这是 BODACC-api 的附加值。每条公告都包含原始文本（登记册、人员、程序）。丰富处理将这些文本结构化：
+
+```
+Annonce (creation, insolvency proceedings, annual accounts...)
+ ├── Company(ies) : SIREN, name, address, NAF, status
+ └── Person(s) : name, first name, role (director, president, liquidator, auditor...)
+      └── Mandates : all notices where the person appears
+```
+
+```
+Company (SIREN)
+ ├── Legal notices (full history)
+ ├── Directors (individuals and companies)
+ └── Public contracts won (buyer, subject, amount, date)
+```
+
+---
+
+## 🛠 技术
+
+
+| Couche | Technologie |
+|---|---|
+| **API** | Python 3.12 · FastAPI · uvicorn · asyncpg |
+| **Base de données** | PostgreSQL 16 (trigram, GiST KNN, JSONB indexes) |
+| **Ingestion** | Asynchronous pipeline (httpx) + systemd cron |
+| **Enrichissement** | Regex (Layer 2) + LLM fallback (DeepSeek) — ~96% structured without LLM |
+| **Frontend** | Next.js 14 (App Router) · i18n 20 languages · Tailwind |
+| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
+| **AI agents** | MCP server · DNS-AID · auth.md · llms.txt · selective robots.txt |
+
+
+---
+
+## 🔓 开放数据
+
+源数据是公开且免费的：
+
+
+- **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
+- **SIRENE** : [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
+- **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
+
+
+BODACC-api 在这些原始数据之上添加结构和图谱：法律文本解析、身份解析（人员）、企业↔公告↔合同交叉链接。
+
+---
+
+## 🌐 探索实时网站：
+
+[首页](https://bodacc.io/zh) · [公告](https://bodacc.io/zh/gonggao) · [企业](https://bodacc.io/zh/gongsi) · [人员](https://bodacc.io/zh/renyuan) · [价格](https://bodacc.io/zh/jiagebiao) · [技术](https://bodacc.io/zh/jishu)
+
+---
+
+## 📄 许可与联系
+
+- Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
+- Site : [bodacc.io](https://bodacc.io)
+- Issues & PR : welcome on this repository
+
+---
+
+*BODACC（Bulletin Officiel des Annonces Civiles et Commerciales）是法国企业法定公告的官方出版物。本项目与 DILA 无关。*
