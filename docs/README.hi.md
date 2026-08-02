@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**L'API moderne des annonces légales françaises (BODACC). Recherchez, explorez et suivez les annonces du Bulletin Officiel : créations, modifications, radiations, procédures collectives, dépôts de comptes... en temps réel, dans 20 langues, avec un graphe d'entreprises, de dirigeants et de marchés publics.**
+**फ्रांसीसी कानूनी सूचनाओं (BODACC) के लिए आधुनिक API। आधिकारिक बुलेटिन की सूचनाएं खोजें, अन्वेषण करें और ट्रैक करें: निर्माण, संशोधन, अपंजीकरण, सामूहिक कार्यवाही, खाता जमा... वास्तविक समय में, 20 भाषाओं में, कंपनियों, निदेशकों और सार्वजनिक अनुबंधों के ग्राफ के साथ।**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **6+ millions d'annonces** | Historique BODACC (2004 → aujourd'hui, rattrapage en cours) |
-| 🕸 **Graphe triangulaire** | Chaque annonce est liée à ses entreprises (SIREN) et ses personnes (dirigeants, liquidateurs, commissaires...) |
-| 📦 **Marchés publics (BOAMP)** | 1,7M marchés liés aux entreprises par nom (2015 → 2026) |
-| ✨ **Données enrichies** | Enrichissement structuré (regex + LLM) : SIREN, NAF, adresse, dirigeants extraits du texte légal |
-| 🌍 **20 langues** | L'interface et les contenus sont traduits |
-| 🤖 **Agent-ready** | 100/100 sur isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **6 मिलियन+ सूचनाएं** | BODACC इतिहास (2004 → आज, बैकफिल जारी) |
+| 🕸 **त्रिकोणीय ग्राफ** | हर सूचना अपनी कंपनियों (SIREN) और लोगों (निदेशक, परिसमापक, लेखा परीक्षक...) से जुड़ी है |
+| 📦 **सार्वजनिक अनुबंध (BOAMP)** | 1.7 मिलियन अनुबंध नाम से कंपनियों से जुड़े (2015 → 2026) |
+| ✨ **समृद्ध डेटा** | संरचित संवर्धन (regex + LLM): कानूनी पाठ से निकाले गए SIREN, NAF, पता, निदेशक |
+| 🌍 **20 भाषाएं** | इंटरफ़ेस और सामग्री का अनुवाद किया गया है |
+| 🤖 **Agent-ready** | isitagentready पर 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 Démarrage rapide
+## 🚀 त्वरित आरंभ
 
-Toutes les routes sont accessibles sans clé pour la lecture publique :
+सभी रूट सार्वजनिक पढ़ने के लिए बिना कुंजी के सुलभ हैं:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 Les endpoints
+## 📡 एंडपॉइंट
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 Comment obtenir les données BODACC chaque jour ?
+## 📅 हर दिन BODACC डेटा कैसे प्राप्त करें?
 
-Les données sont publiées par la DILA sur la plateforme Opendatasoft :
+डेटा DILA द्वारा Opendatasoft प्लेटफॉर्म पर प्रकाशित किया जाता है:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 Le graphe : entreprises ↔ personnes ↔ annonces
+## 🧠 ग्राफ: कंपनियां ↔ लोग ↔ सूचनाएं
 
-C'est la valeur ajoutée de BODACC-api. Chaque annonce contient du texte brut (registre, personnes, procédures). L'enrichissement structure ce texte :
+यह BODACC-api का मूल्य है। हर सूचना में कच्चा पाठ होता है (रजिस्टर, लोग, प्रक्रियाएं)। संवर्धन इस पाठ को संरचित करता है:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 Technologies
+## 🛠 प्रौद्योगिकियां
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 Données open data
+## 🔓 खुला डेटा
 
-Les données sources sont publiques et gratuites :
+स्रोत डेटा सार्वजनिक और मुफ्त है:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Les données sources sont publiques et gratuites :
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api ajoute la structure et le graphe par-dessus ces données brutes : parsing des textes légaux, résolution d'identité (personnes), liens croisés entreprise ↔ annonce ↔ marché.
+BODACC-api इन कच्चे डेटा के ऊपर संरचना और ग्राफ जोड़ता है: कानूनी पाठों का पार्सिंग, पहचान समाधान (लोग), कंपनी ↔ सूचना ↔ अनुबंध क्रॉस-लिंक।
 
 ---
 
-## 🌐 Explorez le site en direct :
+## 🌐 लाइव साइट देखें:
 
-[Accueil](https://bodacc.io/fr) · [Annonces](https://bodacc.io/fr/annonces) · [Entreprises](https://bodacc.io/fr/entreprises) · [Personnes](https://bodacc.io/fr/personnes) · [Tarifs](https://bodacc.io/fr/tarifs) · [Technologie](https://bodacc.io/fr/technologie-api-mcp-server)
+[होम](https://bodacc.io/hi) · [सूचनाएं](https://bodacc.io/hi/soochanaen) · [कंपनियां](https://bodacc.io/hi/kampaniyan) · [लोग](https://bodacc.io/hi/log) · [मूल्य](https://bodacc.io/hi/keematen) · [प्रौद्योगिकी](https://bodacc.io/hi/pradyogiki)
 
 ---
 
-## 📄 Licence & contact
+## 📄 लाइसेंस और संपर्क
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api ajoute la structure et le graphe par-dessus ces données brutes : par
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) est la publication officielle des annonces légales des sociétés françaises. Ce projet n'est pas affilié à la DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) फ्रांसीसी कंपनियों की कानूनी सूचनाओं का आधिकारिक प्रकाशन है। यह परियोजना DILA से संबद्ध नहीं है।*

@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**프랑스 공식 공고(BODACC)의 현대적인 API. 공식 관보의 공고(설립, 변경, 말소, 집단 절차, 재무제표 제출)를 실시간으로 검색, 탐색, 추적하세요. 20개 언어, 기업·임원·공공 계약 그래프 포함.**
+**De moderne API voor Franse wettelijke bekendmakingen (BODACC). Zoek, verken en volg de aankondigingen van het Officiële Bulletin: oprichtingen, wijzigingen, doorhalingen, collectieve procedures, depots van jaarrekeningen... in realtime, in 20 talen, met een graaf van bedrijven, bestuurders en overheidsopdrachten.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **600만 개 이상의 공고** | BODACC 기록 (2004년→현재, 백필 진행 중) |
-| 🕸 **삼각 그래프** | 각 공고는 기업(SIREN)과 사람(임원, 청산인, 감사인...)에 연결됩니다 |
-| 📦 **공공 계약 (BOAMP)** | 170만 건의 계약을 기업 이름으로 연결 (2015→2026) |
-| ✨ **강화된 데이터** | 구조화된 강화 (regex + LLM): 법적 텍스트에서 추출한 SIREN, NAF, 주소, 임원 |
-| 🌍 **20개 언어** | 인터페이스와 콘텐츠가 번역되었습니다 |
-| 🤖 **Agent-ready** | isitagentready에서 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **Meer dan 6 miljoen aankondigingen** | BODACC-geschiedenis (2004 → vandaag, backfill loopt) |
+| 🕸 **Driehoeksgraaf** | Elke aankondiging is gekoppeld aan haar bedrijven (SIREN) en personen (bestuurders, vereffenaars, commissarissen...) |
+| 📦 **Overheidsopdrachten (BOAMP)** | 1,7M opdrachten gekoppeld aan bedrijven op naam (2015 → 2026) |
+| ✨ **Verrijkte data** | Gestructureerde verrijking (regex + LLM): SIREN, NAF, adres, bestuurders geëxtraheerd uit de juridische tekst |
+| 🌍 **20 talen** | De interface en inhoud zijn vertaald |
+| 🤖 **Agent-ready** | 100/100 op isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 빠른 시작
+## 🚀 Snelstart
 
-모든 경로는 공개 읽기를 위해 키 없이 액세스할 수 있습니다:
+Alle routes zijn toegankelijk zonder sleutel voor openbare leestoegang:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 엔드포인트
+## 📡 De endpoints
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 매일 BODACC 데이터를 얻는 방법은?
+## 📅 Hoe krijgt u elke dag BODACC-gegevens?
 
-데이터는 DILA가 Opendatasoft 플랫폼에 게시합니다:
+De gegevens worden gepubliceerd door de DILA op het Opendatasoft-platform:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 그래프: 기업 ↔ 사람 ↔ 공고
+## 🧠 De graaf: bedrijven ↔ personen ↔ aankondigingen
 
-이것이 BODACC-api의 가치입니다. 각 공고에는 원시 텍스트(등록부, 사람, 절차)가 포함됩니다. 강화 처리가 이 텍스트를 구조화합니다:
+Dit is de toegevoegde waarde van BODACC-api. Elke aankondiging bevat ruwe tekst (register, personen, procedures). De verrijking structureert deze tekst:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 기술
+## 🛠 Technologieën
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 오픈 데이터
+## 🔓 Open data
 
-소스 데이터는 공개적이고 무료입니다:
+De brongegevens zijn openbaar en gratis:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Company (SIREN)
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api는 이러한 원시 데이터 위에 구조와 그래프를 추가합니다: 법적 텍스트 파싱, 신원 확인(사람), 기업↔공고↔계약 교차 연결.
+BODACC-api voegt de structuur en de graaf toe bovenop deze ruwe gegevens: parsing van juridische teksten, identiteitsresolutie (personen), kruisverbanden bedrijf ↔ aankondiging ↔ opdracht.
 
 ---
 
-## 🌐 라이브 사이트 보기:
+## 🌐 Verken de live website:
 
-[홈](https://bodacc.io/ko) · [공고](https://bodacc.io/ko/gong-go) · [기업](https://bodacc.io/ko/hoesa) · [사람](https://bodacc.io/ko/saram) · [가격](https://bodacc.io/ko/gagyeokpyo) · [기술](https://bodacc.io/ko/gisul)
+[Home](https://bodacc.io/nl) · [Aankondigingen](https://bodacc.io/nl/aankondigingen) · [Bedrijven](https://bodacc.io/nl/bedrijven) · [Personen](https://bodacc.io/nl/personen) · [Prijzen](https://bodacc.io/nl/prijzen) · [Technologie](https://bodacc.io/nl/technologie)
 
 ---
 
-## 📄 라이선스 및 연락처
+## 📄 Licentie en contact
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api는 이러한 원시 데이터 위에 구조와 그래프를 추가합
 
 ---
 
-*BODACC(Bulletin Officiel des Annonces Civiles et Commerciales)는 프랑스 기업의 법정 공고 공식 간행물입니다. 이 프로젝트는 DILA와 제휴하지 않습니다.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de officiële publicatie van wettelijke bekendmakingen van Franse bedrijven. Dit project is niet verbonden aan de DILA.*

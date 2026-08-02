@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**फ्रांसीसी कानूनी सूचनाओं (BODACC) के लिए आधुनिक API। आधिकारिक बुलेटिन की सूचनाएं खोजें, अन्वेषण करें और ट्रैक करें: निर्माण, संशोधन, अपंजीकरण, सामूहिक कार्यवाही, खाता जमा... वास्तविक समय में, 20 भाषाओं में, कंपनियों, निदेशकों और सार्वजनिक अनुबंधों के ग्राफ के साथ।**
+**フランスの公式公告（BODACC）のモダンなAPI。公式官報の公告（設立、変更、抹消、集団手続、決算報告の預託など）をリアルタイムで検索・探索・追跡できます。20言語対応、企業・役員・公共調達のグラフ付き。**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **6 मिलियन+ सूचनाएं** | BODACC इतिहास (2004 → आज, बैकफिल जारी) |
-| 🕸 **त्रिकोणीय ग्राफ** | हर सूचना अपनी कंपनियों (SIREN) और लोगों (निदेशक, परिसमापक, लेखा परीक्षक...) से जुड़ी है |
-| 📦 **सार्वजनिक अनुबंध (BOAMP)** | 1.7 मिलियन अनुबंध नाम से कंपनियों से जुड़े (2015 → 2026) |
-| ✨ **समृद्ध डेटा** | संरचित संवर्धन (regex + LLM): कानूनी पाठ से निकाले गए SIREN, NAF, पता, निदेशक |
-| 🌍 **20 भाषाएं** | इंटरफ़ेस और सामग्री का अनुवाद किया गया है |
-| 🤖 **Agent-ready** | isitagentready पर 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **600万件以上の公告** | BODACCの履歴（2004年→現在、バックフィル進行中） |
+| 🕸 **三角グラフ** | 各公告は企業（SIREN）と人物（役員、清算人、監査役など）にリンク |
+| 📦 **公共調達（BOAMP）** | 170万件の契約を企業名でリンク（2015年→2026年） |
+| ✨ **拡充データ** | 構造化された拡充（regex + LLM）：法的テキストから抽出したSIREN、NAF、住所、役員 |
+| 🌍 **20言語** | インターフェースとコンテンツは翻訳済み |
+| 🤖 **Agent-ready** | isitagentreadyで100/100（DNSSEC、DNS-AID、auth.md、WebMCP、llms.txt） |
 
 ---
 
-## 🚀 त्वरित आरंभ
+## 🚀 クイックスタート
 
-सभी रूट सार्वजनिक पढ़ने के लिए बिना कुंजी के सुलभ हैं:
+すべてのルートは公開読み取り用にキーなしでアクセスできます：
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 एंडपॉइंट
+## 📡 エンドポイント
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 हर दिन BODACC डेटा कैसे प्राप्त करें?
+## 📅 毎日BODACCデータを取得するには？
 
-डेटा DILA द्वारा Opendatasoft प्लेटफॉर्म पर प्रकाशित किया जाता है:
+データはDILAがOpendatasoftプラットフォームで公開しています：
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 ग्राफ: कंपनियां ↔ लोग ↔ सूचनाएं
+## 🧠 グラフ：企業 ↔ 人物 ↔ 公告
 
-यह BODACC-api का मूल्य है। हर सूचना में कच्चा पाठ होता है (रजिस्टर, लोग, प्रक्रियाएं)। संवर्धन इस पाठ को संरचित करता है:
+これがBODACC-apiの付加価値です。各公告には生テキスト（登記、人物、手続）が含まれます。拡充処理がこのテキストを構造化します：
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 प्रौद्योगिकियां
+## 🛠 技術
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 खुला डेटा
+## 🔓 オープンデータ
 
-स्रोत डेटा सार्वजनिक और मुफ्त है:
+ソースデータは公開されており無料です：
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Company (SIREN)
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api इन कच्चे डेटा के ऊपर संरचना और ग्राफ जोड़ता है: कानूनी पाठों का पार्सिंग, पहचान समाधान (लोग), कंपनी ↔ सूचना ↔ अनुबंध क्रॉस-लिंक।
+BODACC-apiはこれらの生データの上に構造とグラフを追加します：法的テキストの解析、本人確認（人物）、企業↔公告↔契約の相互リンク。
 
 ---
 
-## 🌐 लाइव साइट देखें:
+## 🌐 ライブサイトを見る：
 
-[होम](https://bodacc.io/hi) · [सूचनाएं](https://bodacc.io/hi/soochanaen) · [कंपनियां](https://bodacc.io/hi/kampaniyan) · [लोग](https://bodacc.io/hi/log) · [मूल्य](https://bodacc.io/hi/keematen) · [प्रौद्योगिकी](https://bodacc.io/hi/pradyogiki)
+[ホーム](https://bodacc.io/ja) · [公告](https://bodacc.io/ja/kokuji) · [企業](https://bodacc.io/ja/kaisha) · [人物](https://bodacc.io/ja/jinbutsu) · [料金](https://bodacc.io/ja/ryoukin) · [技術](https://bodacc.io/ja/gijutsu)
 
 ---
 
-## 📄 लाइसेंस और संपर्क
+## 📄 ライセンスと連絡先
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api इन कच्चे डेटा के ऊपर संरचन�
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) फ्रांसीसी कंपनियों की कानूनी सूचनाओं का आधिकारिक प्रकाशन है। यह परियोजना DILA से संबद्ध नहीं है।*
+*BODACC（Bulletin Officiel des Annonces Civiles et Commerciales）はフランス企業の法定公告の公式刊行物です。このプロジェクトはDILAとは提携していません。*

@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**Die moderne API für französische Rechtsbekanntmachungen (BODACC). Suchen, erkunden und verfolgen Sie amtliche Bekanntmachungen: Gründungen, Änderungen, Löschungen, Insolvenzverfahren, Jahresabschlüsse... in Echtzeit, in 20 Sprachen, mit einem Graphen von Unternehmen, Geschäftsführern und öffentlichen Aufträgen.**
+**La API moderna degli annunci legali francesi (BODACC). Cerca, esplora e segui gli annunci del Bollettino Ufficiale: creazioni, modifiche, cancellazioni, procedure concorsuali, depositi di bilanci... in tempo reale, in 20 lingue, con un grafo di imprese, dirigenti e contratti pubblici.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **Über 6 Millionen Bekanntmachungen** | BODACC-Verlauf (2004 → heute, Backfill läuft) |
-| 🕸 **Dreiecksgraph** | Jede Bekanntmachung ist mit ihren Unternehmen (SIREN) und Personen (Geschäftsführer, Liquidatoren, Prüfer...) verknüpft |
-| 📦 **Öffentliche Aufträge (BOAMP)** | 1,7 Mio. Aufträge, namentlich mit Unternehmen verknüpft (2015 → 2026) |
-| ✨ **Angereicherte Daten** | Strukturierte Anreicherung (Regex + LLM): SIREN, NAF, Adresse, Geschäftsführer aus dem Rechtstext extrahiert |
-| 🌍 **20 Sprachen** | Oberfläche und Inhalte sind übersetzt |
-| 🤖 **Agent-ready** | 100/100 bei isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **Oltre 6 milioni di annunci** | Storico BODACC (2004 → oggi, backfill in corso) |
+| 🕸 **Grafo triangolare** | Ogni annuncio è collegato alle sue imprese (SIREN) e persone (dirigenti, liquidatori, revisori...) |
+| 📦 **Contratti pubblici (BOAMP)** | 1,7M contratti collegati alle imprese per nome (2015 → 2026) |
+| ✨ **Dati arricchiti** | Arricchimento strutturato (regex + LLM): SIREN, NAF, indirizzo, dirigenti estratti dal testo legale |
+| 🌍 **20 lingue** | L'interfaccia e i contenuti sono tradotti |
+| 🤖 **Agent-ready** | 100/100 su isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 Schnellstart
+## 🚀 Avvio rapido
 
-Alle Routen sind ohne Schlüssel für den öffentlichen Lesezugriff erreichbar:
+Tutte le route sono accessibili senza chiave per la lettura pubblica:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 Die Endpunkte
+## 📡 Gli endpoint
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 Wie erhalte ich BODACC-Daten täglich?
+## 📅 Come ottenere i dati BODACC ogni giorno?
 
-Die Daten werden von der DILA auf der Plattform Opendatasoft veröffentlicht:
+I dati sono pubblicati dalla DILA sulla piattaforma Opendatasoft:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 Der Graph: Unternehmen ↔ Personen ↔ Bekanntmachungen
+## 🧠 Il grafo: imprese ↔ persone ↔ annunci
 
-Das ist der Mehrwert von BODACC-api. Jede Bekanntmachung enthält Rohtext (Register, Personen, Verfahren). Die Anreicherung strukturiert diesen Text:
+Questo è il valore aggiunto di BODACC-api. Ogni annuncio contiene testo grezzo (registro, persone, procedure). L'arricchimento struttura questo testo:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 Technologien
+## 🛠 Tecnologie
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 Offene Daten
+## 🔓 Dati aperti
 
-Die Quelldaten sind öffentlich und kostenlos:
+I dati di origine sono pubblici e gratuiti:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Die Quelldaten sind öffentlich und kostenlos:
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api fügt die Struktur und den Graphen über diesen Rohdaten hinzu: Parsing von Rechtstexten, Identitätsauflösung (Personen), Querverbindungen Unternehmen ↔ Bekanntmachung ↔ Auftrag.
+BODACC-api aggiunge la struttura e il grafo su questi dati grezzi: parsing dei testi legali, risoluzione dell'identità (persone), collegamenti incrociati impresa ↔ annuncio ↔ contratto.
 
 ---
 
-## 🌐 Entdecken Sie die Live-Website:
+## 🌐 Esplora il sito dal vivo:
 
-[Startseite](https://bodacc.io/de) · [Bekanntmachungen](https://bodacc.io/de/bekanntmachungen) · [Unternehmen](https://bodacc.io/de/unternehmen) · [Personen](https://bodacc.io/de/personen) · [Preise](https://bodacc.io/de/preise) · [Technologie](https://bodacc.io/de/technologie)
+[Home](https://bodacc.io/it) · [Annunci](https://bodacc.io/it/annunci) · [Imprese](https://bodacc.io/it/imprese) · [Persone](https://bodacc.io/it/persone) · [Prezzi](https://bodacc.io/it/prezzi) · [Tecnologia](https://bodacc.io/it/tecnologia)
 
 ---
 
-## 📄 Lizenz & Kontakt
+## 📄 Licenza e contatti
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api fügt die Struktur und den Graphen über diesen Rohdaten hinzu: Parsi
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist die offizielle Veröffentlichung der Rechtsbekanntmachungen französischer Unternehmen. Dieses Projekt ist nicht mit der DILA verbunden.*
+*BODACC (Bollettino Ufficiale degli Annunci Civili e Commerciali) è la pubblicazione ufficiale degli annunci legali delle imprese francesi. Questo progetto non è affiliato alla DILA.*

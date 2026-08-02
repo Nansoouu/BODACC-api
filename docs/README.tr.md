@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**API modern pengumuman hukum Prancis (BODACC). Cari, jelajahi, dan lacak pengumuman Buletin Resmi: pendirian, perubahan, penghapusan, prosedur kolektif, penyimpanan laporan keuangan... secara real-time, dalam 20 bahasa, dengan grafik perusahaan, direktur, dan kontrak publik.**
+**Fransız resmi ilanlarının (BODACC) modern API'si. Resmi Bülten ilanlarını arayın, keşfedin ve takip edin: kuruluşlar, değişiklikler, silinmeler, toplu işlemler, hesap depoları... gerçek zamanlı, 20 dilde, şirketler, yöneticiler ve kamu sözleşmeleri grafiğiyle.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **Lebih dari 6 juta pengumuman** | Sejarah BODACC (2004 → hari ini, backfill berlangsung) |
-| 🕸 **Grafik segitiga** | Setiap pengumuman terhubung ke perusahaan (SIREN) dan orang-orangnya (direktur, likuidator, auditor...) |
-| 📦 **Kontrak publik (BOAMP)** | 1,7 juta kontrak terhubung ke perusahaan berdasarkan nama (2015 → 2026) |
-| ✨ **Data yang diperkaya** | Pengayaan terstruktur (regex + LLM): SIREN, NAF, alamat, direktur yang diekstrak dari teks hukum |
-| 🌍 **20 bahasa** | Antarmuka dan konten telah diterjemahkan |
-| 🤖 **Agent-ready** | 100/100 di isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **6 milyondan fazla ilan** | BODACC geçmişi (2004 → bugün, backfill devam ediyor) |
+| 🕸 **Üçgen grafik** | Her ilan şirketleriyle (SIREN) ve kişilerle (yöneticiler, tasfiye memurları, denetçiler...) bağlantılıdır |
+| 📦 **Kamu sözleşmeleri (BOAMP)** | 1,7M sözleşme adlarıyla şirketlere bağlı (2015 → 2026) |
+| ✨ **Zenginleştirilmiş veriler** | Yapılandırılmış zenginleştirme (regex + LLM): SIREN, NAF, adres, yasal metinden çıkarılan yöneticiler |
+| 🌍 **20 dil** | Arayüz ve içerikler çevrilmiştir |
+| 🤖 **Agent-ready** | isitagentready'de 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 Mulai cepat
+## 🚀 Hızlı başlangıç
 
-Semua rute dapat diakses tanpa kunci untuk pembacaan publik:
+Tüm rotalar herkese açık okuma için anahtarsız erişilebilir:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 Endpoint
+## 📡 Uç noktalar
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 Bagaimana cara mendapatkan data BODACC setiap hari?
+## 📅 BODACC verileri her gün nasıl alınır?
 
-Data diterbitkan oleh DILA di platform Opendatasoft:
+Veriler DILA tarafından Opendatasoft platformunda yayınlanır:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 Grafik: perusahaan ↔ orang ↔ pengumuman
+## 🧠 Grafik: şirketler ↔ kişiler ↔ ilanlar
 
-Ini adalah nilai tambah BODACC-api. Setiap pengumuman berisi teks mentah (register, orang, prosedur). Pengayaan menyusun teks ini:
+Bu BODACC-api'nin katma değeridir. Her ilan ham metin içerir (sicil, kişiler, prosedürler). Zenginleştirme bu metni yapılandırır:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 Teknologi
+## 🛠 Teknolojiler
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 Data terbuka
+## 🔓 Açık veri
 
-Data sumber bersifat publik dan gratis:
+Kaynak veriler herkese açık ve ücretsizdir:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Data sumber bersifat publik dan gratis:
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api menambahkan struktur dan grafik di atas data mentah ini: penguraian teks hukum, resolusi identitas (orang), tautan silang perusahaan ↔ pengumuman ↔ kontrak.
+BODACC-api bu ham verilerin üzerine yapıyı ve grafiği ekler: yasal metinlerin ayrıştırılması, kimlik çözümü (kişiler), şirket ↔ ilan ↔ sözleşme çapraz bağlantıları.
 
 ---
 
-## 🌐 Jelajahi situs langsung:
+## 🌐 Canlı siteyi keşfedin:
 
-[Beranda](https://bodacc.io/id) · [Pengumuman](https://bodacc.io/id/pengumuman) · [Perusahaan](https://bodacc.io/id/perusahaan) · [Orang](https://bodacc.io/id/orang) · [Harga](https://bodacc.io/id/harga) · [Teknologi](https://bodacc.io/id/teknologi)
+[Ana sayfa](https://bodacc.io/tr) · [İlanlar](https://bodacc.io/tr/ilanlar) · [Şirketler](https://bodacc.io/tr/sirketler) · [Kişiler](https://bodacc.io/tr/kisiler) · [Fiyatlar](https://bodacc.io/tr/fiyatlar) · [Teknoloji](https://bodacc.io/tr/teknoloji)
 
 ---
 
-## 📄 Lisensi dan kontak
+## 📄 Lisans ve iletişim
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api menambahkan struktur dan grafik di atas data mentah ini: penguraian t
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) adalah publikasi resmi pengumuman hukum perusahaan Prancis. Proyek ini tidak berafiliasi dengan DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales), Fransız şirketlerinin resmi ilanlarının yayın organıdır. Bu proje DILA ile bağlantılı değildir.*

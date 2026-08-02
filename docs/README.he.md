@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**La API moderna de los anuncios legales franceses (BODACC). Busque, explore y siga los anuncios del Boletín Oficial: creaciones, modificaciones, cancelaciones, procedimientos concursales, depósitos de cuentas... en tiempo real, en 20 idiomas, con un grafo de empresas, directivos y contratos públicos.**
+**ה-API המודרני להודעות משפטיות צרפתיות (BODACC). חפשו, חקרו ועקבו אחר ההודעות של העלון הרשמי: הקמות, שינויים, מחיקות, הליכים קיבוציים, הפקדות דוחות... בזמן אמת, ב-20 שפות, עם גרף של חברות, מנהלים וחוזים ציבוריים.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **Más de 6 millones de anuncios** | Histórico BODACC (2004 → hoy, recuperación en curso) |
-| 🕸 **Grafo triangular** | Cada anuncio se vincula a sus empresas (SIREN) y personas (directivos, liquidadores, auditores...) |
-| 📦 **Contratos públicos (BOAMP)** | 1,7M contratos vinculados a empresas por nombre (2015 → 2026) |
-| ✨ **Datos enriquecidos** | Enriquecimiento estructurado (regex + LLM): SIREN, NAF, dirección, directivos extraídos del texto legal |
-| 🌍 **20 idiomas** | La interfaz y los contenidos están traducidos |
-| 🤖 **Agent-ready** | 100/100 en isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **יותר מ-6 מיליון הודעות** | היסטוריית BODACC (2004 ← היום, מילוי רקע מתבצע) |
+| 🕸 **גרף משולש** | כל הודעה מקושרת לחברות שלה (SIREN) ולאנשים (מנהלים, מפרקים, רואי חשבון...) |
+| 📦 **חוזים ציבוריים (BOAMP)** | 1.7 מיליון חוזים מקושרים לחברות בשם (2015 ← 2026) |
+| ✨ **נתונים מועשרים** | העשרה מובנית (regex + LLM): SIREN, NAF, כתובת, מנהלים שחולצו מהטקסט המשפטי |
+| 🌍 **20 שפות** | הממשק והתוכן מתורגמים |
+| 🤖 **Agent-ready** | 100/100 ב-isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 Inicio rápido
+## 🚀 התחלה מהירה
 
-Todas las rutas son accesibles sin clave para lectura pública:
+כל המסלולים נגישים ללא מפתח לקריאה ציבורית:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 Los endpoints
+## 📡 נקודות הקצה
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 ¿Cómo obtener los datos BODACC cada día?
+## 📅 איך מקבלים נתוני BODACC כל יום?
 
-Los datos son publicados por la DILA en la plataforma Opendatasoft:
+הנתונים מתפרסמים על ידי DILA בפלטפורמת Opendatasoft:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 El grafo: empresas ↔ personas ↔ anuncios
+## 🧠 הגרף: חברות ↔ אנשים ↔ הודעות
 
-Este es el valor añadido de BODACC-api. Cada anuncio contiene texto bruto (registro, personas, procedimientos). El enriquecimiento estructura este texto:
+זו התוספת של BODACC-api. כל הודעה מכילה טקסט גולמי (מרשם, אנשים, הליכים). ההעשרה מבנה את הטקסט הזה:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 Tecnologías
+## 🛠 טכנולוגיות
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 Datos abiertos
+## 🔓 נתונים פתוחים
 
-Los datos de origen son públicos y gratuitos:
+נתוני המקור הם ציבוריים וחינמיים:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Los datos de origen son públicos y gratuitos:
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api añade la estructura y el grafo sobre estos datos brutos: análisis de textos legales, resolución de identidad (personas), vínculos cruzados empresa ↔ anuncio ↔ contrato.
+BODACC-api מוסיף את המבנה והגרף מעל הנתונים הגולמיים: ניתוח טקסטים משפטיים, פתרון זהות (אנשים), קישורים צולבים חברה ↔ הודעה ↔ חוזה.
 
 ---
 
-## 🌐 Explore el sitio en vivo:
+## 🌐 חקרו את האתר החי:
 
-[Inicio](https://bodacc.io/es) · [Anuncios](https://bodacc.io/es/anuncios) · [Empresas](https://bodacc.io/es/empresas) · [Personas](https://bodacc.io/es/personas) · [Precios](https://bodacc.io/es/precios) · [Tecnología](https://bodacc.io/es/tecnologia)
+[בית](https://bodacc.io/he) · [הודעות](https://bodacc.io/he/odaot) · [חברות](https://bodacc.io/he/khavarot) · [אנשים](https://bodacc.io/he/anashim) · [מחירים](https://bodacc.io/he/mehirim) · [טכנולוגיה](https://bodacc.io/he/tehnologia)
 
 ---
 
-## 📄 Licencia y contacto
+## 📄 רישיון ויצירת קשר
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api añade la estructura y el grafo sobre estos datos brutos: análisis d
 
 ---
 
-*BODACC (Boletín Oficial de Anuncios Civiles y Comerciales) es la publicación oficial de los anuncios legales de las empresas francesas. Este proyecto no está afiliado a la DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) הוא הפרסום הרשמי של ההודעות המשפטיות של חברות צרפתיות. פרויקט זה אינו מזוהה עם DILA.*

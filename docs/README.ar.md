@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**API مدرن اطلاعیه‌های حقوقی فرانسه (BODACC). اطلاعیه‌های بولتن رسمی را جستجو، کاوش و پیگیری کنید: تأسیس، تغییرات، ابطال، رویه‌های جمعی، سپرده‌گذاری حساب‌ها... در زمان واقعی، به ۲۰ زبان، با گراف شرکت‌ها، مدیران و قراردادهای عمومی.**
+**واجهة برمجة التطبيقات الحديثة للإعلانات القانونية الفرنسية (BODACC). ابحث واستكشف وتتبع إعلانات النشرة الرسمية: التأسيس والتعديل والشطب والإجراءات الجماعية وإيداع الحسابات... في الوقت الفعلي، بـ 20 لغة، مع رسم بياني للشركات والمديرين والعقود العامة.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **بیش از ۶ میلیون اطلاعیه** | تاریخچه BODACC (۲۰۰۴ ← امروز، بازپردازی در حال انجام) |
-| 🕸 **گراف مثلثی** | هر اطلاعیه به شرکت‌های خود (SIREN) و افراد (مدیران، تصفیه‌کنندگان، حسابرسان...) مرتبط است |
-| 📦 **قراردادهای عمومی (BOAMP)** | ۱.۷ میلیون قرارداد مرتبط با شرکت‌ها به نام (۲۰۱۵ ← ۲۰۲۶) |
-| ✨ **داده‌های غنی‌شده** | غنی‌سازی ساختاریافته (regex + LLM): SIREN، NAF، آدرس، مدیران استخراج‌شده از متن قانونی |
-| 🌍 **۲۰ زبان** | رابط و محتوا ترجمه شده‌اند |
-| 🤖 **Agent-ready** | ۱۰۰/۱۰۰ در isitagentready (DNSSEC، DNS-AID، auth.md، WebMCP، llms.txt) |
+| 🗂 **أكثر من 6 ملايين إعلان** | سجل BODACC (2004 ← اليوم، الردم جارٍ) |
+| 🕸 **رسم بياني ثلاثي** | كل إعلان مرتبط بشركاته (SIREN) وأشخاصه (المديرون والمصفون والمراجعون...) |
+| 📦 **العقود العامة (BOAMP)** | 1.7 مليون عقد مرتبط بالشركات بالاسم (2015 ← 2026) |
+| ✨ **بيانات مُثراة** | إثراء منظم (regex + LLM): SIREN وNAF والعنوان والمديرون مستخرجون من النص القانوني |
+| 🌍 **20 لغة** | الواجهة والمحتوى مترجمان |
+| 🤖 **Agent-ready** | 100/100 على isitagentready (DNSSEC وDNS-AID وauth.md وWebMCP وllms.txt) |
 
 ---
 
-## 🚀 شروع سریع
+## 🚀 بدء سريع
 
-همه مسیرها بدون کلید برای خواندن عمومی قابل دسترسی هستند:
+جميع المسارات متاحة بدون مفتاح للقراءة العامة:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 نقاط پایانی
+## 📡 نقاط النهاية
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 چگونه هر روز داده‌های BODACC را دریافت کنیم؟
+## 📅 كيفية الحصول على بيانات BODACC يوميًا؟
 
-داده‌ها توسط DILA در پلتفرم Opendatasoft منتشر می‌شوند:
+تنشر DILA البيانات على منصة Opendatasoft:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 گراف: شرکت‌ها ↔ افراد ↔ اطلاعیه‌ها
+## 🧠 الرسم البياني: الشركات ↔ الأشخاص ↔ الإعلانات
 
-این ارزش افزوده BODACC-api است. هر اطلاعیه شامل متن خام است (ثبت، افراد، رویه‌ها). غنی‌سازی این متن را ساختارمند می‌کند:
+هذه هي القيمة المضافة لـ BODACC-api. كل إعلان يحتوي على نص خام (سجل وأشخاص وإجراءات). يعمل الإثراء على هيكلة هذا النص:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 فناوری‌ها
+## 🛠 التقنيات
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 داده‌های باز
+## 🔓 بيانات مفتوحة
 
-داده‌های منبع عمومی و رایگان هستند:
+البيانات المصدرية عامة ومجانية:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Company (SIREN)
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api ساختار و گراف را روی این داده‌های خام اضافه می‌کند: تجزیه متون حقوقی، حل هویت (افراد)، پیوندهای متقابل شرکت ↔ اطلاعیه ↔ قرارداد.
+يضيف BODACC-api البنية والرسم البياني فوق هذه البيانات الخام: تحليل النصوص القانونية وحل الهوية (الأشخاص) والروابط المتقاطعة شركة ↔ إعلان ↔ عقد.
 
 ---
 
-## 🌐 وب‌سایت زنده را کاوش کنید:
+## 🌐 استكشف الموقع المباشر:
 
-[خانه](https://bodacc.io/fa) · [اطلاعیه‌ها](https://bodacc.io/fa/etelaeyeh) · [شرکت‌ها](https://bodacc.io/fa/sherkatha) · [افراد](https://bodacc.io/fa/afrad) · [قیمت‌ها](https://bodacc.io/fa/gheimatha) · [فناوری](https://bodacc.io/fa/teknoloji)
+[الرئيسية](https://bodacc.io/ar) · [الإعلانات](https://bodacc.io/ar/aelanawat) · [الشركات](https://bodacc.io/ar/sharikat) · [الأشخاص](https://bodacc.io/ar/ashkhas) · [الأسعار](https://bodacc.io/ar/alasear) · [التقنية](https://bodacc.io/ar/tiknulujia)
 
 ---
 
-## 📄 مجوز و تماس
+## 📄 الترخيص والتواصل
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api ساختار و گراف را روی این داده‌های خام 
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) نشریه رسمی اطلاعیه‌های حقوقی شرکت‌های فرانسوی است. این پروژه وابسته به DILA نیست.*
+*BODACC (النشرة الرسمية للإعلانات المدنية والتجارية) هو النشر الرسمي للإعلانات القانونية للشركات الفرنسية. هذا المشروع غير تابع لـ DILA.*

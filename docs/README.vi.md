@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**De moderne API voor Franse wettelijke bekendmakingen (BODACC). Zoek, verken en volg de aankondigingen van het Officiële Bulletin: oprichtingen, wijzigingen, doorhalingen, collectieve procedures, depots van jaarrekeningen... in realtime, in 20 talen, met een graaf van bedrijven, bestuurders en overheidsopdrachten.**
+**API hiện đại cho thông báo pháp lý của Pháp (BODACC). Tìm kiếm, khám phá và theo dõi các thông báo của Công báo chính thức: thành lập, sửa đổi, xóa đăng ký, thủ tục tập thể, nộp báo cáo tài chính... theo thời gian thực, bằng 20 ngôn ngữ, với biểu đồ doanh nghiệp, giám đốc và hợp đồng công.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **Meer dan 6 miljoen aankondigingen** | BODACC-geschiedenis (2004 → vandaag, backfill loopt) |
-| 🕸 **Driehoeksgraaf** | Elke aankondiging is gekoppeld aan haar bedrijven (SIREN) en personen (bestuurders, vereffenaars, commissarissen...) |
-| 📦 **Overheidsopdrachten (BOAMP)** | 1,7M opdrachten gekoppeld aan bedrijven op naam (2015 → 2026) |
-| ✨ **Verrijkte data** | Gestructureerde verrijking (regex + LLM): SIREN, NAF, adres, bestuurders geëxtraheerd uit de juridische tekst |
-| 🌍 **20 talen** | De interface en inhoud zijn vertaald |
-| 🤖 **Agent-ready** | 100/100 op isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **Hơn 6 triệu thông báo** | Lịch sử BODACC (2004 → nay, backfill đang tiến hành) |
+| 🕸 **Biểu đồ tam giác** | Mỗi thông báo liên kết đến doanh nghiệp (SIREN) và người (giám đốc, thanh lý viên, kiểm toán...) |
+| 📦 **Hợp đồng công (BOAMP)** | 1,7 triệu hợp đồng liên kết với doanh nghiệp theo tên (2015 → 2026) |
+| ✨ **Dữ liệu được làm giàu** | Làm giàu có cấu trúc (regex + LLM): SIREN, NAF, địa chỉ, giám đốc trích xuất từ văn bản pháp lý |
+| 🌍 **20 ngôn ngữ** | Giao diện và nội dung đã được dịch |
+| 🤖 **Agent-ready** | 100/100 trên isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 Snelstart
+## 🚀 Bắt đầu nhanh
 
-Alle routes zijn toegankelijk zonder sleutel voor openbare leestoegang:
+Tất cả các tuyến đều có thể truy cập không cần khóa để đọc công khai:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 De endpoints
+## 📡 Các endpoint
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 Hoe krijgt u elke dag BODACC-gegevens?
+## 📅 Làm thế nào để có dữ liệu BODACC mỗi ngày?
 
-De gegevens worden gepubliceerd door de DILA op het Opendatasoft-platform:
+Dữ liệu được DILA công bố trên nền tảng Opendatasoft:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 De graaf: bedrijven ↔ personen ↔ aankondigingen
+## 🧠 Biểu đồ: doanh nghiệp ↔ người ↔ thông báo
 
-Dit is de toegevoegde waarde van BODACC-api. Elke aankondiging bevat ruwe tekst (register, personen, procedures). De verrijking structureert deze tekst:
+Đây là giá trị gia tăng của BODACC-api. Mỗi thông báo chứa văn bản thô (sổ đăng ký, người, thủ tục). Việc làm giàu cấu trúc văn bản này:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 Technologieën
+## 🛠 Công nghệ
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 Open data
+## 🔓 Dữ liệu mở
 
-De brongegevens zijn openbaar en gratis:
+Dữ liệu nguồn là công khai và miễn phí:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ De brongegevens zijn openbaar en gratis:
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api voegt de structuur en de graaf toe bovenop deze ruwe gegevens: parsing van juridische teksten, identiteitsresolutie (personen), kruisverbanden bedrijf ↔ aankondiging ↔ opdracht.
+BODACC-api thêm cấu trúc và biểu đồ trên dữ liệu thô này: phân tích văn bản pháp lý, giải quyết danh tính (người), liên kết chéo doanh nghiệp ↔ thông báo ↔ hợp đồng.
 
 ---
 
-## 🌐 Verken de live website:
+## 🌐 Khám phá trang web trực tiếp:
 
-[Home](https://bodacc.io/nl) · [Aankondigingen](https://bodacc.io/nl/aankondigingen) · [Bedrijven](https://bodacc.io/nl/bedrijven) · [Personen](https://bodacc.io/nl/personen) · [Prijzen](https://bodacc.io/nl/prijzen) · [Technologie](https://bodacc.io/nl/technologie)
+[Trang chủ](https://bodacc.io/vi) · [Thông báo](https://bodacc.io/vi/thong-bao) · [Doanh nghiệp](https://bodacc.io/vi/cong-ty) · [Người](https://bodacc.io/vi/ca-nhan) · [Bảng giá](https://bodacc.io/vi/bang-gia) · [Công nghệ](https://bodacc.io/vi/cong-nghe)
 
 ---
 
-## 📄 Licentie en contact
+## 📄 Giấy phép và liên hệ
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api voegt de structuur en de graaf toe bovenop deze ruwe gegevens: parsin
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de officiële publicatie van wettelijke bekendmakingen van Franse bedrijven. Dit project is niet verbonden aan de DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) là ấn phẩm chính thức về thông báo pháp lý của các công ty Pháp. Dự án này không trực thuộc DILA.*

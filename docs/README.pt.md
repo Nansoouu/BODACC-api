@@ -1,8 +1,8 @@
 # BODACC-api
 
-🌍 [Français](README.fr.md) · [English](README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
+🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
-**Современный API французских официальных объявлений (BODACC). Ищите, исследуйте и отслеживайте объявления Официального бюллетеня: создания, изменения, аннулирования, процедуры коллективных взысканий, депозиты счетов... в реальном времени, на 20 языках, с графом компаний, руководителей и государственных контрактов.**
+**A API moderna dos anúncios legais franceses (BODACC). Pesquise, explore e acompanhe os anúncios do Boletim Oficial: criações, alterações, cancelamentos, processos coletivos, depósitos de contas... em tempo real, em 20 idiomas, com um grafo de empresas, diretores e contratos públicos.**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
 
@@ -12,18 +12,18 @@
 
 | | |
 |---|---|
-| 🗂 **Более 6 миллионов объявлений** | История BODACC (2004 → сегодня, бэкфилл в процессе) |
-| 🕸 **Треугольный граф** | Каждое объявление связано со своими компаниями (SIREN) и людьми (руководители, ликвидаторы, аудиторы...) |
-| 📦 **Государственные контракты (BOAMP)** | 1,7 млн контрактов, связанных с компаниями по названию (2015 → 2026) |
-| ✨ **Обогащенные данные** | Структурированное обогащение (regex + LLM): SIREN, NAF, адрес, руководители, извлеченные из юридического текста |
-| 🌍 **20 языков** | Интерфейс и содержимое переведены |
-| 🤖 **Agent-ready** | 100/100 на isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **Mais de 6 milhões de anúncios** | Histórico BODACC (2004 → hoje, backfill em andamento) |
+| 🕸 **Grafo triangular** | Cada anúncio está ligado às suas empresas (SIREN) e pessoas (diretores, liquidatários, auditores...) |
+| 📦 **Contratos públicos (BOAMP)** | 1,7M contratos ligados a empresas por nome (2015 → 2026) |
+| ✨ **Dados enriquecidos** | Enriquecimento estruturado (regex + LLM): SIREN, NAF, endereço, diretores extraídos do texto legal |
+| 🌍 **20 idiomas** | A interface e os conteúdos estão traduzidos |
+| 🤖 **Agent-ready** | 100/100 no isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
 
 ---
 
-## 🚀 Быстрый старт
+## 🚀 Início rápido
 
-Все маршруты доступны без ключа для публичного чтения:
+Todas as rotas são acessíveis sem chave para leitura pública:
 
 
 ```bash
@@ -46,7 +46,7 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📡 Эндпоинты
+## 📡 Os endpoints
 
 
 ### Annonces
@@ -88,9 +88,9 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 
 ---
 
-## 📅 Как получать данные BODACC каждый день?
+## 📅 Como obter os dados BODACC todos os dias?
 
-Данные публикуются DILA на платформе Opendatasoft:
+Os dados são publicados pela DILA na plataforma Opendatasoft:
 
 
 The data is published by the **DILA** on the **Opendatasoft** platform:
@@ -114,9 +114,9 @@ Dataset : annonces-commerciales (publications A/B/C)
 
 ---
 
-## 🧠 Граф: компании ↔ люди ↔ объявления
+## 🧠 O grafo: empresas ↔ pessoas ↔ anúncios
 
-Это добавленная стоимость BODACC-api. Каждое объявление содержит необработанный текст (реестр, люди, процедуры). Обогащение структурирует этот текст:
+Este é o valor acrescentado do BODACC-api. Cada anúncio contém texto bruto (registo, pessoas, processos). O enriquecimento estrutura este texto:
 
 ```
 Annonce (creation, insolvency proceedings, annual accounts...)
@@ -134,7 +134,7 @@ Company (SIREN)
 
 ---
 
-## 🛠 Технологии
+## 🛠 Tecnologias
 
 
 | Couche | Technologie |
@@ -150,9 +150,9 @@ Company (SIREN)
 
 ---
 
-## 🔓 Открытые данные
+## 🔓 Dados abertos
 
-Исходные данные являются общедоступными и бесплатными:
+Os dados de origem são públicos e gratuitos:
 
 
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
@@ -160,17 +160,17 @@ Company (SIREN)
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
 
 
-BODACC-api добавляет структуру и граф поверх этих необработанных данных: разбор юридических текстов, разрешение личности (люди), перекрестные связи компания ↔ объявление ↔ контракт.
+O BODACC-api acrescenta a estrutura e o grafo sobre estes dados brutos: análise de textos legais, resolução de identidade (pessoas), ligações cruzadas empresa ↔ anúncio ↔ contrato.
 
 ---
 
-## 🌐 Исследуйте живой сайт:
+## 🌐 Explore o site ao vivo:
 
-[Главная](https://bodacc.io/ru) · [Объявления](https://bodacc.io/ru/obyavleniya) · [Компании](https://bodacc.io/ru/kompanii) · [Люди](https://bodacc.io/ru/lyudi) · [Цены](https://bodacc.io/ru/ceny) · [Технологии](https://bodacc.io/ru/tehnologiya)
+[Início](https://bodacc.io/pt) · [Anúncios](https://bodacc.io/pt/anuncios) · [Empresas](https://bodacc.io/pt/empresas) · [Pessoas](https://bodacc.io/pt/pessoas) · [Preços](https://bodacc.io/pt/precos) · [Tecnologia](https://bodacc.io/pt/tecnologia)
 
 ---
 
-## 📄 Лицензия и контакты
+## 📄 Licença e contacto
 
 - Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
 - Site : [bodacc.io](https://bodacc.io)
@@ -178,4 +178,4 @@ BODACC-api добавляет структуру и граф поверх эти
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) — официальная публикация юридических объявлений французских компаний. Этот проект не связан с DILA.*
+*BODACC (Boletim Oficial dos Anúncios Civis e Comerciais) é a publicação oficial dos anúncios legais das empresas francesas. Este projeto não é afiliado à DILA.*
