@@ -2,6 +2,20 @@
 
 🌍 [Français](README.fr.md) · [English](../README.md) · [Español](README.es.md) · [Deutsch](README.de.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Nederlands](README.nl.md) · [Polski](README.pl.md) · [Русский](README.ru.md) · [Türkçe](README.tr.md) · [Українська](README.uk.md) · [Bahasa Indonesia](README.id.md) · [Tiếng Việt](README.vi.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [中文](README.zh.md) · [العربية](README.ar.md) · [עברית](README.he.md) · [हिन्दी](README.hi.md) · [فارسی](README.fa.md)
 
+<div align="center">
+
+**Python 3.12** ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+**FastAPI** ![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
+**PostgreSQL 16** ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
+**Next.js 14** ![Next.js](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
+**Docker** ![Docker](https://img.shields.io/badge/Docker-deploy-2496ED?logo=docker&logoColor=white)
+
+![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts&query=annonces&label=Annonces&color=blue)
+![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts&query=entreprises&label=Entreprises&color=green)
+![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts&query=personnes&label=Personnes&color=orange)
+
+</div>
+
 **フランスの公式公告（BODACC）のモダンなAPI。公式官報の公告（設立、変更、抹消、集団手続、決算報告の預託など）をリアルタイムで検索・探索・追跡できます。20言語対応、企業・役員・公共調達のグラフ付き。**
 
 > 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
@@ -133,6 +147,22 @@ Company (SIREN)
 ```
 
 ---
+
+
+---
+
+## 📊 Data state — live volumes (updated 2026-08-02)
+
+| Dataset | Volume | Detail |
+|---|---|---|
+| 📰 Annonces BODACC | **6 159 881** | History 2004 → today (backfill in progress: 2023 + early 2024) |
+| 🏢 Entreprises (SIRENE) | **29 805 853** | French legal units (INSEE) |
+| 👤 Personnes extraites | **1 354+** | Directors, liquidators, auditors... (growing with enrichment) |
+| 📦 Marchés publics (BOAMP) | **1 694 145** | Public contracts 2015 → 2026 |
+| 🔗 Liens annonce → entreprise | **352 515+** | SIREN resolution from legal text |
+| ✨ Annonces enrichies | **435 000+** | Structured extraction (regex, no LLM) — ~96% of all notices |
+
+The badges above read the live counters from the API (`/bodacc/stats/counts`).
 
 ## 🛠 技術
 
