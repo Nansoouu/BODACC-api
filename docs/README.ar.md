@@ -115,6 +115,16 @@ curl "https://bodacc.io/api/bodacc/stats/daily30"
 | `POST` | `/bodacc/import` | Batch import (for backfill) |
 
 
+### NAF reference (INSEE)
+
+| Méthode | Route | Description |
+|---|---|---|
+| `GET` | `/bodacc/naf` | Full NAF rev. 2 reference (732 sub-classes, 615 classes) — official INSEE labels |
+| `GET` | `/bodacc/naf?q=commerce` | Search NAF by label (ILIKE) |
+| `GET` | `/bodacc/naf?code=46.72Z` | One NAF code entry |
+
+> 📄 Source: INSEE NAF rév. 2 file `int_courts_naf_rev_2.xls` (file dated 2008-07-01, still the current official reference — NAF rev. 2 nomenclature, 732 sub-classes). The same labels are joined into every company profile (`naf_libelle`).
+
 ---
 
 ## 📅 كيفية الحصول على بيانات BODACC يوميًا؟
