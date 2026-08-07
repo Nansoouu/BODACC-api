@@ -21,8 +21,6 @@
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
 ![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-![Next.js 14](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Deploy-2496ED?logo=docker&logoColor=white)
 
 ![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Annonces&color=blue)
 ![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Entreprises&color=green)
@@ -31,206 +29,187 @@
 
 </div>
 
-**फ्रांसीसी कानूनी सूचनाओं (BODACC) के लिए आधुनिक API। आधिकारिक बुलेटिन की सूचनाएं खोजें, अन्वेषण करें और ट्रैक करें: निर्माण, संशोधन, अपंजीकरण, सामूहिक कार्यवाही, खाता जमा... वास्तविक समय में, 20 भाषाओं में, कंपनियों, निदेशकों और सार्वजनिक अनुबंधों के ग्राफ के साथ।**
+**वह API जो फ्रांसीसी कानूनी विज्ञापनों को संरचित, संबद्ध और उपयोग योग्य डेटा में बदलती है — वास्तविक समय में।**
 
-> 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
+BODACC (बुलेटिन ऑफिसियल डेस अंनोन्स सिविल्स एट कमर्शियल्स) आधिकारिक प्रकाशन है जो फ्रांसीसी उद्यमों के कानूनी जीवन का पता लगाता है: निर्माण, संशोधन, रद्दीकरण, सामूहिक प्रक्रियाएं, बिक्री, खाता जमा। ये पाठ सार्वजनिक हैं, लेकिन कच्चे दस्तावेज़ों की स्थिति में रहते हैं: वे न तो संरचित हैं, न ही आपस में जुड़े हुए हैं, और न ही आसानी से खोजे जा सकते हैं।
+
+**BODACC-api उन्हें उपयोग योग्य बनात��� है।** प्रत्येक विज्ञापन का स्वचालित रूप से विश्लेषण किया जाता है और उसे संरचित डेटा (SIREN, कानूनी नाम, पता, NAF, निदेशक, राशियाँ...) में बदल दिया जाता है, फिर उसके उद्यम और उसमें दिखाई देने वाले व्यक्तियों से जोड़ा जाता है। परिणाम: फ्रांसीसी आर्थिक जीवन का एक संपूर्ण ग्राफ, जिसे एक ही HTTP अनुरोध में खोजा जा सकता है।
+
+> 🌐 साइट: [bodacc.io](https://bodacc.io) · 📖 स्वैगर: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [मूल्य सूची](https://bodacc.io/fr/tarifs)
 
 ---
 
-## ✨ Highlights
+## ✨ BODACC-api क्यों?
 
 | | |
 |---|---|
-| 🗂 **6 मिलियन+ सूचनाएं** | BODACC इतिहास (2004 → आज, बैकफिल जारी) |
-| 🕸 **त्रिकोणीय ग्राफ** | हर सूचना अपनी कंपनियों (SIREN) और लोगों (निदेशक, परिसमापक, लेखा परीक्षक...) से जुड़ी है |
-| 📦 **सार्वजनिक अनुबंध (BOAMP)** | 1.7 मिलियन अनुबंध नाम से कंपनियों से जुड़े (2015 → 2026) |
-| ✨ **समृद्ध डेटा** | संरचित संवर्धन (regex + LLM): कानूनी पाठ से निकाले गए SIREN, NAF, पता, निदेशक |
-| 🌍 **20 भाषाएं** | इंटरफ़ेस और सामग्री का अनुवाद किया गया है |
-| 🤖 **Agent-ready** | isitagentready पर 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **2004 से संपूर्ण इतिहास** | डेटाबेस में लाखों विज्ञापन, पूर्ण कवरेज — कोई स्लाइडिंग विंडो नहीं |
+| ⚡ **वास्तविक समय** | आज के विज्ञापन हर सुबह, कार्यालय खुलने से पहले उपलब्ध होते हैं |
+| 🕸 **एक ग्राफ, फ़ाइलें नहीं** | विज्ञापन → उद्यम (SIREN) → निदेशक → कार्यकाल → सार्वजनिक बाज़ार: सब कुछ जुड़ा हुआ है और एक अनुरोध में खोजा जा सकता है |
+| ✨ **कच्चे पाठ से संरचित डेटा तक** | SIREN, NAF, पता, निदेशक, प्रक्रियाएं... प्रत्येक कानूनी पाठ से स्वचालित रूप से निकाले गए |
+| 🌍 **20 भाषाएँ** | इंटरफ़ेस और सामग्री का अनुवाद किया गया है — आपकी टीमें और आपके ग्राहक अपनी भाषा बोलते हैं |
+| 🤖 **एजेंट-तैयार** | isitagentready ऑडिट में 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🚪 **परीक्षण के लिए शून्य बाधा** | सभी रीड एंडपॉइंट बिना कुंजी के सुलभ हैं — आप भुगतान करने से पहले मूल्यांकन करते हैं |
 
 ---
 
-## 🚀 त्वरित आरंभ
+## 🏭 हमारा मूल्य वर्धन: पाइपलाइन
 
-सभी रूट सार्वजनिक पढ़ने के लिए बिना कुंजी के सुलभ हैं:
+अंतर कच्चे डेटा (जो सार्वजनिक है) में नहीं है, बल्कि इसमें है कि हम उसके साथ क्या करते हैं — हर दिन, स्वचालित रूप से:
 
+**1. विश्वसनीय और पूर्ण अंतर्ग्रहण।** हर सुबह 09:00 बजे से पहले, DILA द्वारा प्रकाशित नए विज्ञापन हमारे डेटाबेस में एकीकृत हो जाते हैं। पूरा इतिहास 2004 तक जाता है, जो सार्वजनिक परामर्श से कहीं आगे है। अंतर्ग्रहण को फिर से चलाने से कोई डुप्लिकेट नहीं बनता: हमारा डेटा लगातार सत्यापित और सुसंगत रहता है।
+
+**2. बुद्धिमान संवर्धन।** प्रत्येक विज्ञापन एक कानूनी पाठ है — हमारा हाइब्रिड निष्कर्षण इंजन (व्यावसायिक नियम + AI) इसे संरचित डेटा में बदल देता है: SIREN नंबर, कानूनी नाम, पता, NAF कोड, निदेशक, कार्यकाल, राशियाँ, प्रक्रियाएं। जिसमें मानव पठन के घंटे लगते हैं वह JSON फ़ील्ड बन जाता है जिन्हें खोजा जा सकता है।
+
+**3. संबंधपरक ग्राफ।** एक सामूहिक प्रक्रिया विज्ञापन तभी मूल्यवान है जब आप जानते हैं कि यह किस उद्यम से जुड़ा है और इसका निदेशक कौन है। हमारा रिज़ॉल्यूशन इंजन प्रत्येक विज्ञापन को उसके उद्यम (SIREN) से, प्रत्येक व्यक्ति को उसके कार्यकाल से, प्रत्येक सार्वजनिक बाज़ार को उसके अनुबंध धारक से जोड़ता है। आप फ्रांसीसी आर्थिक जीवन को एक डेटाबेस की तरह खोजते हैं — PDF के ढेर की तरह नहीं।
+
+**4. वास्तविक समय प्रसारण।** जैसे ही कोई विज्ञापन प्रकाशित होता है, वह अपने संबंधों और संवर्धन के साथ API के माध्यम से उपलब्ध हो जाता है। डाउनलोड करने के लिए कोई फ़ाइलें नहीं, बनाए रखने के लिए कोई ETL नहीं: एक HTTP अनुरोध पर्याप्त है।
+
+---
+
+## ⚖️ तुलना: हम कहाँ स्थित हैं
+
+| | **आधिकारिक साइट (bodacc.fr)** | **Pappers** | **BODACC.io** |
+|---|---|---|---|
+| **इतिहास** | केवल 2008 से | सदस्यता के अनुसार व्यावसायिक इतिहास | **2004 से संपूर्ण** |
+| **API** | ❌ कोई नहीं | API केवल उच्च योजनाओं के लिए | ✅ **प्रलेखित REST API, पढ़ने के लिए बिना कुंजी** |
+| **संरचित डेटा** | ❌ PDF परामर्श | ✅ समृद्ध प्रोफ़ाइल | ✅ **विज्ञापन + उद्यम/व्यक्ति/बाज़ार ग्राफ** |
+| **वास्तविक समय** | ऑनलाइन देखने योग्य कागजी प्रकाशन | दैनिक अद्यतन | ✅ **हर सुबह 09:00 बजे से पहले** |
+| **मूल्य** | निःशुल्क, लेकिन सीमित | बुनियादी पहुंच के लिए **29,90 €/माह** से | **सुलभ योजनाएं, खोज के लिए निःशुल्क से शुरू** |
+| **लक्षित दर्शक** | आम जनता | पेशेवर (अनुपालन, निगरानी) | **डेवलपर्स, फिनटेक, लीगलटेक, डेटा टीमें** |
+
+**आधिकारिक साइट की खूबियाँ**: निःशुल्क, विश्वसनीय, आधिकारिक। **कमज़ोरियाँ**: कोई API नहीं, इतिहास 2008 तक सीमित, कोई संरचित डेटा नहीं — आप PDF में ही रहते हैं।
+
+**Pappers की खूबियाँ**: बहुत साफ़ इंटरफ़ेस, INSEE + INPI + BODACC एकत्रीकरण, एकीकृत निगरानी। **कमज़ोरियाँ**: मूल्य (बुनियादी पहुंच के लिए 29,90 €/माह, API और पूरा इतिहास अधिक महंगा है), परामर्श-उन्मुख समाधान, उपयोग योग्य डेटा के बजाय।
+
+**हमारी स्थिति**: **2004 से संपूर्ण इतिहास, आधिकारिक साइट से तेज़ — और Pappers से कम कीमत पर।** उन लोगों के लिए डिज़ाइन किया गया है जो डेटा को अपने स्वयं के टूल में जोड़ना चाहते हैं, न कि उन लोगों के लिए जो एक और स्क्रीन चाहते हैं।
+
+> 💶 योजनाएं देखें: [bodacc.io/fr/tarifs](https://bodacc.io/fr/tarifs) — निःशुल्क · Pro · Enterprise · LIFE
+
+---
+
+## 🚀 30 सेकंड में आज़माएं
+
+सभी रीड एंडपॉइंट **बिना कुंजी** के सुलभ हैं:
 
 ```bash
-# Search a company by name
+# नाम से उद्यम खोजें
 curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
 
-# Notice detail (with company + people relations)
+# एक विज्ञापन का विवरण (उसके संबंधों के साथ: उद्यम + व्यक्ति)
 curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
 
-# Company profile (recent notices + directors + BOAMP contracts)
+# उद्यम प्रोफ़ाइल (हाल के विज्ञापन + निदेशक + सार्वजनिक बाज़ार)
 curl "https://bodacc.io/api/bodacc/entreprises/912969573"
 
-# Global statistics
+# वैश्विक आँकड़े
 curl "https://bodacc.io/api/bodacc/stats"
 
-# Daily volume (last 30 days)
+# दैनिक मात्रा (पिछले 30 दिन)
 curl "https://bodacc.io/api/bodacc/stats/daily30"
 ```
-
 
 ---
 
 ## 📡 एंडपॉइंट
 
+### विज्ञापन
 
-### Annonces
-
-| Méthode | Route | Description |
+| विधि | रूट | विवरण |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Search: `q` (name/SIREN), `famille`, `departement`, dates, pagination `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Full detail with `raw_data` + enrichment + `relations` (linked companies and people) |
-| `GET` | `/bodacc/enrichi/{id}` | Structured enriched version (siren, denomination, NAF, directors...) |
-| `POST` | `/bodacc/enrichi/batch` | Batch enrichment |
+| `GET` | `/bodacc/annonces` | खोज: `q` (नाम/SIREN), `famille`, `departement`, तिथियाँ, पेजिनेशन `limit`/`offset` |
+| `GET` | `/bodacc/annonces/{id}` | पूर्ण विवरण: `raw_data` + संवर्धन + `relations` (संबंधित उद्यम और व्यक्ति) |
+| `GET` | `/bodacc/enrichi/{id}` | संरचित संस्करण (siren, dénomination, NAF, dirigeants...) |
+| `POST` | `/bodacc/enrichi/batch` | बैच संवर्धन |
 
-### Companies & people
+### उद्यम और व्यक्ति
 
-| Méthode | Route | Description |
+| विधि | रूट | विवरण |
 |---|---|---|
-| `GET` | `/bodacc/entreprises` | Company search (name, city, NAF, postal code) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE profile + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profile by SEO slug |
-| `GET` | `/bodacc/personnes/{id}` | Person profile: mandates (roles) + linked companies |
+| `GET` | `/bodacc/entreprises` | उद्यम खोज (नाम, शहर, NAF, पिन कोड) |
+| `GET` | `/bodacc/entreprises/{siren}` | INSEE प्रोफ़ाइल + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
+| `GET` | `/bodacc/entreprises/by-slug/{slug}` | SEO स्लग द्वारा प्रोफ़ाइल |
+| `GET` | `/bodacc/personnes/{id}` | व्यक्ति प्रोफ़ाइल: कार्यकाल (भूमिकाएं) + संबंधित उद्यम |
 
-### Statistics
+### आँकड़े
 
-| Méthode | Route | Description |
+| विधि | रूट | विवरण |
 |---|---|---|
-| `GET` | `/bodacc/stats` | Totals, by family, by date |
-| `GET` | `/bodacc/stats/daily` | Today's volume (by publication, department, family) |
-| `GET` | `/bodacc/stats/daily30` | Last 30 days series |
-| `GET` | `/bodacc/stats/counts` | Counters: notices, companies, people |
-| `GET` | `/bodacc/graph/categories` | Distribution by category |
+| `GET` | `/bodacc/stats` | कुल, परिवार द्वारा, तिथि द्वारा |
+| `GET` | `/bodacc/stats/daily` | दिन की मात्रा (प्रकाशन, विभाग, परिवार द्वारा) |
+| `GET` | `/bodacc/stats/daily30` | पिछले 30 दिनों की श्रृंखला |
+| `GET` | `/bodacc/stats/counts` | काउंटर: विज्ञापन, उद्���म, व्यक्ति |
+| `GET` | `/bodacc/graph/categories` | श्रेणी द्वारा वितरण |
 
-### Alerts & ingestion
+### अलर्ट और एकीकरण
 
-| Méthode | Route | Description |
+| विधि | रूट | विवरण |
 |---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN alerts (company tracking) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Trigger ingestion for a date |
-| `POST` | `/bodacc/import` | Batch import (for backfill) |
+| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN द्वारा अलर्ट (उद्यम ट्रैकिंग) |
+| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | किसी तिथि के लिए अंतर्ग्रहण ट्रिगर करें |
+| `POST` | `/bodacc/import` | बैच आयात (बैकफिल) |
 
+### NAF संदर्भ (INSEE)
 
-### NAF reference (INSEE)
-
-| Méthode | Route | Description |
+| विधि | रूट | विवरण |
 |---|---|---|
-| `GET` | `/bodacc/naf` | Full NAF rev. 2 reference (732 sub-classes, 615 classes) — official INSEE labels |
-| `GET` | `/bodacc/naf?q=commerce` | Search NAF by label (ILIKE) |
-| `GET` | `/bodacc/naf?code=46.72Z` | One NAF code entry |
-
-> 📄 Source: INSEE NAF rév. 2 file `int_courts_naf_rev_2.xls` (file dated 2008-07-01, still the current official reference — NAF rev. 2 nomenclature, 732 sub-classes). The same labels are joined into every company profile (`naf_libelle`).
+| `GET` | `/bodacc/naf` | पूर्ण NAF रेव. 2 संदर्भ (732 उप-श्रेणियां, 615 श्रेणियां) — आधिकारिक INSEE लेबल |
+| `GET` | `/bodacc/naf?q=commerce` | लेबल द्वारा NAF खोज |
+| `GET` | `/bodacc/naf?code=46.72Z` | एक NAF कोड की फ़ाइल |
 
 ---
 
-## 📅 हर दिन BODACC डेटा कैसे प्राप्त करें?
+## 📊 डेटा
 
-डेटा DILA द्वारा Opendatasoft प्लेटफॉर्म पर प्रकाशित किया जाता है:
+पृष्ठ के शीर्ष पर बैज **वास्तविक समय काउंटर** हैं: BODACC विज्ञापन, SIRENE उद्यम और निकाले गए व्यक्ति — वे इतिहास के समेकन और संवर्धन के साथ बदलते रहते हैं।
 
+स्थिर संदर्भ बिंदु:
 
-The data is published by the **DILA** on the **Opendatasoft** platform:
-
-```
-Source : https://bodacc-datadila.opendatasoft.com/api/explore/v2.1
-Dataset : annonces-commerciales (publications A/B/C)
-```
-
-**Publication rhythm** (observed on real data):
-- 05:30 UTC : publications A/B (~25% of volume)
-- 08:00-09:00 UTC : publication C (annual accounts) → full daily volume
-- Notices carry publication date **D** but are published at **D+1** early morning
-
-**The BODACC.io ingestion pipeline:**
-1. `POST /bodacc/ingest?target_date=YYYY-MM-DD` → fetch via 210 sub-queries (3 publications × 8 departments × 10 families), each under 10,000 records
-2. **Upsert by `id`** → idempotent (re-running creates no duplicates)
-3. Daily cron at 05:30 UTC + monitoring every 15 min from 06:00 to 10:30 UTC (catches publication C)
-4. Cross-check DB ↔ Opendatasoft (`total_count`)
-
+- 📰 **BODACC विज्ञापन**: 2004 से संपूर्ण इतिहास, हर सुबह 09:00 बजे से पहले अद्यतन
+- 🏢 **उद्यम (SIRENE)**: 29.8 मिलियन फ्रांसीसी कानूनी इकाइयाँ (INSEE रजिस्टर)
+- 👤 **निकाले गए व्यक्ति**: निदेशक, परिसमापक, लेखा परीक्षक... निरंतर समेकन में
+- 📦 **सार्वजनिक बाज़ार (BOAMP)**: 2015 → 2026 तक 1.69 मिलियन सार्वजनिक अनुबंध
 
 ---
 
-## 🧠 ग्राफ: कंपनियां ↔ लोग ↔ सूचनाएं
+## 🛠 प्रौद्योगिकी
 
-यह BODACC-api का मूल्य है। हर सूचना में कच्चा पाठ होता है (रजिस्टर, लोग, प्रक्रियाएं)। संवर्धन इस पाठ को संरचित करता है:
-
-```
-Annonce (creation, insolvency proceedings, annual accounts...)
- ├── Company(ies) : SIREN, name, address, NAF, status
- └── Person(s) : name, first name, role (director, president, liquidator, auditor...)
-      └── Mandates : all notices where the person appears
-```
-
-```
-Company (SIREN)
- ├── Legal notices (full history)
- ├── Directors (individuals and companies)
- └── Public contracts won (buyer, subject, amount, date)
-```
-
----
-
-
----
-
-## 📊 Data state — live volumes (updated 2026-08-02)
-
-| Dataset | Volume | Detail |
-|---|---|---|
-| 📰 Annonces BODACC | **6 159 881** | History 2004 → today (backfill in progress: 2023 + early 2024) |
-| 🏢 Entreprises (SIRENE) | **29 805 853** | French legal units (INSEE) |
-| 👤 Personnes extraites | **1 354+** | Directors, liquidators, auditors... (growing with enrichment) |
-| 📦 Marchés publics (BOAMP) | **1 694 145** | Public contracts 2015 → 2026 |
-| 🔗 Liens annonce → entreprise | **352 515+** | SIREN resolution from legal text |
-| ✨ Annonces enrichies | **435 000+** | Structured extraction (regex, no LLM) — ~96% of all notices |
-
-The badges above read the live counters from the API (`/bodacc/stats/counts`).
-
-## 🛠 प्रौद्योगिकियां
-
-
-| Couche | Technologie |
+| परत | प्रौद्योगिकी |
 |---|---|
-| **API** | Python 3.12 · FastAPI · uvicorn · asyncpg |
-| **Base de données** | PostgreSQL 16 (trigram, GiST KNN, JSONB indexes) |
-| **Ingestion** | Asynchronous pipeline (httpx) + systemd cron |
-| **Enrichissement** | Regex (Layer 2) + LLM fallback (DeepSeek) — ~96% structured without LLM |
-| **Frontend** | Next.js 14 (App Router) · i18n 20 languages · Tailwind |
-| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI agents** | MCP server · DNS-AID · auth.md · llms.txt · selective robots.txt |
-
-
----
-
-## 🔓 खुला डेटा
-
-स्रोत डेटा सार्वजनिक और मुफ्त है:
-
-
-- **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
-- **SIRENE** : [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
-- **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
-
-
-BODACC-api इन कच्चे डेटा के ऊपर संरचना और ग्राफ जोड़ता है: कानूनी पाठों का पार्सिंग, पहचान समाधान (लोग), कंपनी ↔ सूचना ↔ अनुबंध क्रॉस-लिंक।
+| **API** | Python · FastAPI · PostgreSQL 16 |
+| **डेटा** | ट्राइग्राम इंडेक्सिंग, फुल-टेक्स्ट खोज, JSONB |
+| **अंतर्ग्रहण** | स्वचालित पाइपलाइन, दैनिक एकीकरण, इडेम्पोटेंट |
+| **संवर्धन** | हाइब्रिड निष्कर्षण (व्यावसायिक नियम + AI) |
+| **फ्रंटएंड** | Next.js · i18n 20 भाषाएँ |
+| **इंफ्रा** | Docker · Cloudflare (CDN, कैश, DNSSEC) |
+| **AI एजेंट** | MCP सर्वर · DNS-AID · auth.md · llms.txt |
 
 ---
 
-## 🌐 लाइव साइट देखें:
+## 🔓 ओपन डेटा
 
-[होम](https://bodacc.io/hi) · [सूचनाएं](https://bodacc.io/hi/soochanaen) · [कंपनियां](https://bodacc.io/hi/kampaniyan) · [लोग](https://bodacc.io/hi/log) · [मूल्य](https://bodacc.io/hi/keematen) · [प्रौद्योगिकी](https://bodacc.io/hi/pradyogiki)
+स्रोत डेटा सार्वजनिक और निःशुल्क है:
+
+- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (कानूनी विज्ञापन)
+- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8 मिलियन कानूनी इकाइयाँ)
+- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (सार्वजनिक बाज़ार)
+
+**BODACC-api इस कच्चे डेटा पर संरचना और ग्राफ जोड़ता है**: कानूनी पाठों का विश्लेषण, पहचान समाधान (व्यक्ति), उद्यम ↔ विज्ञापन ↔ अनुबंध लिंक।
+
+---
+
+## 🌐 साइट एक्सप्लोर करें
+
+[होम](https://bodacc.io/fr) · [विज्ञापन](https://bodacc.io/fr/annonces) · [उद्यम](https://bodacc.io/fr/entreprises) · [व्यक्ति](https://bodacc.io/fr/personnes) · [मूल्य सूची](https://bodacc.io/fr/tarifs) · [प्रौद्योगिकी](https://bodacc.io/fr/technologie)
 
 ---
 
 ## 📄 लाइसेंस और संपर्क
 
-- Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
-- Site : [bodacc.io](https://bodacc.io)
-- Issues & PR : welcome on this repository
+- लाइसेंस: MIT (कोड) — डेटा अपने उत्पादकों (DILA, INSEE) के लाइसेंस के अधीन रहता है
+- साइट: [bodacc.io](https://bodacc.io)
+- मुद्दे और PR: इस रिपॉजिटरी में आपका स्वागत है
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) फ्रांसीसी कंपनियों की कानूनी सूचनाओं का आधिकारिक प्रकाशन है। यह परियोजना DILA से संबद्ध नहीं है।*
+*BODACC (बुलेटिन ऑफिसियल डेस अंनोन्स सिविल्स एट कमर्शियल्स) फ्रांसीसी उद्यमों के कानूनी विज्ञापनों का आधिकारिक प्रकाशन है। यह परियोजना DILA से संबद्ध नहीं है।*

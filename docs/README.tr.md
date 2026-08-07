@@ -21,8 +21,6 @@
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
 ![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-![Next.js 14](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Deploy-2496ED?logo=docker&logoColor=white)
 
 ![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Annonces&color=blue)
 ![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Entreprises&color=green)
@@ -31,206 +29,187 @@
 
 </div>
 
-**Fransız resmi ilanlarının (BODACC) modern API'si. Resmi Bülten ilanlarını arayın, keşfedin ve takip edin: kuruluşlar, değişiklikler, silinmeler, toplu işlemler, hesap depoları... gerçek zamanlı, 20 dilde, şirketler, yöneticiler ve kamu sözleşmeleri grafiğiyle.**
+**Fransız yasal ilanlarını yapılandırılmış, ilişkilendirilmiş ve kullanılabilir verilere dönüştüren API — gerçek zamanlı.**
 
-> 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
+BODACC (Bulletin Officiel des Annonces Civiles et Commerciales), Fransız şirketlerinin hukuki yaşamını izleyen resmi yayındır: kuruluşlar, değişiklikler, fesihler, toplu işlemler, satışlar, hesap depozitoları. Bu metinler kamuya açıktır, ancak ham belge olarak kalır: ne yapılandırılmıştır, ne birbirleriyle ilişkilidir, ne de kolayca sorgulanabilir.
+
+**BODACC-api onları kullanılabilir kılar.** Her ilan otomatik olarak analiz edilir ve yapılandırılmış verilere (SIREN, ticari unvan, adres, NAF, yöneticiler, tutarlar...) dönüştürülür, ardından şirketi ve içinde görünen kişilerle ilişkilendirilir. Sonuç: tek bir HTTP isteğiyle sorgulanabilen, Fransız ekonomik yaşamının eksiksiz bir grafiği.
+
+> 🌐 Site: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Fiyatlar](https://bodacc.io/fr/tarifs)
 
 ---
 
-## ✨ Highlights
+## ✨ Neden BODACC-api?
 
 | | |
 |---|---|
-| 🗂 **6 milyondan fazla ilan** | BODACC geçmişi (2004 → bugün, backfill devam ediyor) |
-| 🕸 **Üçgen grafik** | Her ilan şirketleriyle (SIREN) ve kişilerle (yöneticiler, tasfiye memurları, denetçiler...) bağlantılıdır |
-| 📦 **Kamu sözleşmeleri (BOAMP)** | 1,7M sözleşme adlarıyla şirketlere bağlı (2015 → 2026) |
-| ✨ **Zenginleştirilmiş veriler** | Yapılandırılmış zenginleştirme (regex + LLM): SIREN, NAF, adres, yasal metinden çıkarılan yöneticiler |
-| 🌍 **20 dil** | Arayüz ve içerikler çevrilmiştir |
-| 🤖 **Agent-ready** | isitagentready'de 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **2004'ten beri tüm geçmiş** | Veritabanında milyonlarca ilan, tam kapsam — kayan pencere değil |
+| ⚡ **Gerçek zamanlı** | Günün ilanları her sabah ofisler açılmadan önce kullanılabilir |
+| 🕸 **Dosyalar değil, bir grafik** | İlan → şirket (SIREN) → yöneticiler → görevler → kamu ihaleleri: her şey ilişkili ve tek bir istekle sorgulanabilir |
+| ✨ **Ham metinden yapılandırılmış verilere** | SIREN, NAF, adres, yöneticiler, prosedürler... her hukuki metinden otomatik olarak çıkarılır |
+| 🌍 **20 dil** | Arayüz ve içerikler çevrilmiştir — ekipleriniz ve müşterileriniz kendi dilini konuşur |
+| 🤖 **Ajan uyumlu** | isitagentready denetiminde 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🚪 **Test için sıfır sürtünme** | Tüm okuma uç noktaları anahtar olmadan erişilebilir — ödemeden önce değerlendirirsiniz |
 
 ---
 
-## 🚀 Hızlı başlangıç
+## 🏭 Katma değerimiz: boru hattı
 
-Tüm rotalar herkese açık okuma için anahtarsız erişilebilir:
+Fark yaratan şey ham veri değil (kamuya açıktır), onunla yaptıklarımızdır — her gün, otomatik olarak:
 
+**1. Güvenilir ve eksiksiz bir alım.** Her sabah 09:00'dan önce, DILA tarafından yayınlanan yeni ilanlar veritabanımıza entegre edilir. Tam geçmiş 2004'e kadar uzanır, kamuya açık danışmanın sunduğunun çok ötesinde. Bir alımı yeniden çalıştırmak hiçbir kopya oluşturmaz: verilerimiz sürekli olarak doğrulanır ve tutarlıdır.
+
+**2. Akıllı zenginleştirme.** Her ilan hukuki bir metindir — hibrit çıkarma motorumuz (iş kuralları + yapay zeka) onu yapılandırılmış verilere dönüştürür: SIREN numarası, ticari unvan, adres, NAF kodu, yöneticiler, görevler, tutarlar, prosedürler. Saatlerce insan okuması gerektiren şey, sorgulanabilir JSON alanlarına dönüşür.
+
+**3. İlişkisel bir grafik.** Bir toplu işlem ilanı, yalnızca hangi şirkete bağlı olduğunu ve yöneticisinin kim olduğunu biliyorsanız değerlidir. Çözümleme motorumuz her ilanı şirketine (SIREN), her kişiyi görevlerine, her kamu ihalesini alıcısına bağlar. Fransız ekonomik yaşamını bir PDF yığını gibi değil, bir veritabanı gibi sorgularsınız.
+
+**4. Gerçek zamanlı yayın.** Bir ilan yayınlandığı anda, ilişkileri ve zenginleştirmesiyle birlikte API üzerinden kullanılabilir. İndirilecek dosya yok, bakımı yapılacak ETL yok: tek bir HTTP isteği yeterlidir.
+
+---
+
+## ⚖️ Karşılaştırma: nerede konumlanıyoruz
+
+| | **Resmi site (bodacc.fr)** | **Pappers** | **BODACC.io** |
+|---|---|---|---|
+| **Geçmiş** | Yalnızca 2008'den beri | Aboneliğe göre ticari geçmiş | **2004'ten beri eksiksiz** |
+| **API** | ❌ Yok | API yalnızca üst düzey paketlerde | ✅ **Belgelenmiş REST API, okumada anahtarsız** |
+| **Yapılandırılmış veriler** | ❌ PDF danışma | ✅ Zenginleştirilmiş profiller | ✅ **İlanlar + şirket/kişi/ihale grafiği** |
+| **Gerçek zamanlı** | Çevrimiçi görüntülenebilir kağıt yayın | Günlük güncelleme | ✅ **Her sabah 09:00'dan önce** |
+| **Fiyat** | Ücretsiz, ancak sınırlı | Temel erişim için **aylık 29,90 €'dan başlayan** | **Erişilebilir paketler, keşfetmek için ücretsizden başlayan** |
+| **Hedef kitle** | Genel kamu | Profesyoneller (uyum, izleme) | **Geliştiriciler, fintech, legaltech, veri ekipleri** |
+
+**Resmi sitenin güçlü yönleri**: ücretsiz, güvenilir, resmi. **Zayıf yönleri**: API yok, geçmiş 2008 ile sınırlı, yapılandırılmış veri yok — PDF'lerde kalırsınız.
+
+**Pappers'ın güçlü yönleri**: çok özenli arayüz, INSEE + INPI + BODACC toplama, entegre izleme. **Zayıf yönleri**: fiyat (temel erişim için aylık 29,90 €, API ve tam geçmiş daha pahalıdır), danışma odaklı bir çözüm, kullanılabilir verilerden ziyade.
+
+**Bizim konumumuz**: **2004'ten beri tüm geçmiş, resmi siteden daha hızlı — ve Pappers'ın fiyatından daha düşük bir fiyata.** Veriyi kendi araçlarına bağlamak isteyenler için tasarlandı, fazladan bir ekran isteyenler için değil.
+
+> 💶 Paketleri görün: [bodacc.io/fr/tarifs](https://bodacc.io/fr/tarifs) — Ücretsiz · Pro · Enterprise · LIFE
+
+---
+
+## 🚀 30 saniyede deneyin
+
+Tüm okuma uç noktaları **anahtar olmadan** erişilebilir:
 
 ```bash
-# Search a company by name
+# Bir şirketi adına göre arayın
 curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
 
-# Notice detail (with company + people relations)
+# Bir ilanın detayı (ilişkileriyle: şirketler + kişiler)
 curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
 
-# Company profile (recent notices + directors + BOAMP contracts)
+# Şirket profili (son ilanlar + yöneticiler + kamu ihaleleri)
 curl "https://bodacc.io/api/bodacc/entreprises/912969573"
 
-# Global statistics
+# Genel istatistikler
 curl "https://bodacc.io/api/bodacc/stats"
 
-# Daily volume (last 30 days)
+# Günlük hacim (son 30 gün)
 curl "https://bodacc.io/api/bodacc/stats/daily30"
 ```
-
 
 ---
 
 ## 📡 Uç noktalar
 
+### İlanlar
 
-### Annonces
-
-| Méthode | Route | Description |
+| Yöntem | Rota | Açıklama |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Search: `q` (name/SIREN), `famille`, `departement`, dates, pagination `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Full detail with `raw_data` + enrichment + `relations` (linked companies and people) |
-| `GET` | `/bodacc/enrichi/{id}` | Structured enriched version (siren, denomination, NAF, directors...) |
-| `POST` | `/bodacc/enrichi/batch` | Batch enrichment |
+| `GET` | `/bodacc/annonces` | Arama: `q` (isim/SIREN), `famille`, `departement`, tarihler, `limit`/`offset` sayfalama |
+| `GET` | `/bodacc/annonces/{id}` | Tam detay: `raw_data` + zenginleştirme + `relations` (bağlantılı şirketler ve kişiler) |
+| `GET` | `/bodacc/enrichi/{id}` | Yapılandırılmış sürüm (siren, dénomination, NAF, dirigeants...) |
+| `POST` | `/bodacc/enrichi/batch` | Toplu zenginleştirme |
 
-### Companies & people
+### Şirketler ve kişiler
 
-| Méthode | Route | Description |
+| Yöntem | Rota | Açıklama |
 |---|---|---|
-| `GET` | `/bodacc/entreprises` | Company search (name, city, NAF, postal code) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE profile + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profile by SEO slug |
-| `GET` | `/bodacc/personnes/{id}` | Person profile: mandates (roles) + linked companies |
+| `GET` | `/bodacc/entreprises` | Şirket arama (isim, şehir, NAF, posta kodu) |
+| `GET` | `/bodacc/entreprises/{siren}` | INSEE profili + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
+| `GET` | `/bodacc/entreprises/by-slug/{slug}` | SEO slug ile profil |
+| `GET` | `/bodacc/personnes/{id}` | Kişi profili: görevler (roller) + bağlantılı şirketler |
 
-### Statistics
+### İstatistikler
 
-| Méthode | Route | Description |
+| Yöntem | Rota | Açıklama |
 |---|---|---|
-| `GET` | `/bodacc/stats` | Totals, by family, by date |
-| `GET` | `/bodacc/stats/daily` | Today's volume (by publication, department, family) |
-| `GET` | `/bodacc/stats/daily30` | Last 30 days series |
-| `GET` | `/bodacc/stats/counts` | Counters: notices, companies, people |
-| `GET` | `/bodacc/graph/categories` | Distribution by category |
+| `GET` | `/bodacc/stats` | Toplamlar, aileye göre, tarihe göre |
+| `GET` | `/bodacc/stats/daily` | Günün hacmi (yayına, departmana, aileye göre) |
+| `GET` | `/bodacc/stats/daily30` | Son 30 günün serisi |
+| `GET` | `/bodacc/stats/counts` | Sayaçlar: ilanlar, şirketler, kişiler |
+| `GET` | `/bodacc/graph/categories` | Kategoriye göre dağılım |
 
-### Alerts & ingestion
+### Uyarılar ve entegrasyonlar
 
-| Méthode | Route | Description |
+| Yöntem | Rota | Açıklama |
 |---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN alerts (company tracking) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Trigger ingestion for a date |
-| `POST` | `/bodacc/import` | Batch import (for backfill) |
+| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN'e göre uyarılar (şirket takibi) |
+| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Bir tarih için alım tetikleme |
+| `POST` | `/bodacc/import` | Toplu içe aktarma (backfill) |
 
+### NAF referansı (INSEE)
 
-### NAF reference (INSEE)
-
-| Méthode | Route | Description |
+| Yöntem | Rota | Açıklama |
 |---|---|---|
-| `GET` | `/bodacc/naf` | Full NAF rev. 2 reference (732 sub-classes, 615 classes) — official INSEE labels |
-| `GET` | `/bodacc/naf?q=commerce` | Search NAF by label (ILIKE) |
-| `GET` | `/bodacc/naf?code=46.72Z` | One NAF code entry |
-
-> 📄 Source: INSEE NAF rév. 2 file `int_courts_naf_rev_2.xls` (file dated 2008-07-01, still the current official reference — NAF rev. 2 nomenclature, 732 sub-classes). The same labels are joined into every company profile (`naf_libelle`).
+| `GET` | `/bodacc/naf` | Tam NAF rev. 2 referansı (732 alt sınıf, 615 sınıf) — resmi INSEE etiketleri |
+| `GET` | `/bodacc/naf?q=commerce` | Etikete göre NAF arama |
+| `GET` | `/bodacc/naf?code=46.72Z` | Bir NAF kodunun fişi |
 
 ---
 
-## 📅 BODACC verileri her gün nasıl alınır?
+## 📊 Veriler
 
-Veriler DILA tarafından Opendatasoft platformunda yayınlanır:
+Sayfanın üst kısmındaki rozetler **gerçek zamanlı sayaçlardır**: BODACC ilanları, SIRENE şirketleri ve çıkarılan kişiler — geçmişin konsolidasyonu ve zenginleştirme ilerledikçe değişirler.
 
+Sabit referans noktaları:
 
-The data is published by the **DILA** on the **Opendatasoft** platform:
-
-```
-Source : https://bodacc-datadila.opendatasoft.com/api/explore/v2.1
-Dataset : annonces-commerciales (publications A/B/C)
-```
-
-**Publication rhythm** (observed on real data):
-- 05:30 UTC : publications A/B (~25% of volume)
-- 08:00-09:00 UTC : publication C (annual accounts) → full daily volume
-- Notices carry publication date **D** but are published at **D+1** early morning
-
-**The BODACC.io ingestion pipeline:**
-1. `POST /bodacc/ingest?target_date=YYYY-MM-DD` → fetch via 210 sub-queries (3 publications × 8 departments × 10 families), each under 10,000 records
-2. **Upsert by `id`** → idempotent (re-running creates no duplicates)
-3. Daily cron at 05:30 UTC + monitoring every 15 min from 06:00 to 10:30 UTC (catches publication C)
-4. Cross-check DB ↔ Opendatasoft (`total_count`)
-
+- 📰 **BODACC İlanları**: 2004'ten beri tam geçmiş, her sabah 09:00'dan önce güncellenir
+- 🏢 **Şirketler (SIRENE)**: 29,8 M Fransız tüzel kişiliği (INSEE kaydı)
+- 👤 **Çıkarılan kişiler**: yöneticiler, tasfiye memurları, bağımsız denetçiler... sürekli konsolidasyonda
+- 📦 **Kamu ihaleleri (BOAMP)**: 2015 → 2026 arası 1,69 M kamu sözleşmesi
 
 ---
 
-## 🧠 Grafik: şirketler ↔ kişiler ↔ ilanlar
+## 🛠 Teknoloji
 
-Bu BODACC-api'nin katma değeridir. Her ilan ham metin içerir (sicil, kişiler, prosedürler). Zenginleştirme bu metni yapılandırır:
-
-```
-Annonce (creation, insolvency proceedings, annual accounts...)
- ├── Company(ies) : SIREN, name, address, NAF, status
- └── Person(s) : name, first name, role (director, president, liquidator, auditor...)
-      └── Mandates : all notices where the person appears
-```
-
-```
-Company (SIREN)
- ├── Legal notices (full history)
- ├── Directors (individuals and companies)
- └── Public contracts won (buyer, subject, amount, date)
-```
-
----
-
-
----
-
-## 📊 Data state — live volumes (updated 2026-08-02)
-
-| Dataset | Volume | Detail |
-|---|---|---|
-| 📰 Annonces BODACC | **6 159 881** | History 2004 → today (backfill in progress: 2023 + early 2024) |
-| 🏢 Entreprises (SIRENE) | **29 805 853** | French legal units (INSEE) |
-| 👤 Personnes extraites | **1 354+** | Directors, liquidators, auditors... (growing with enrichment) |
-| 📦 Marchés publics (BOAMP) | **1 694 145** | Public contracts 2015 → 2026 |
-| 🔗 Liens annonce → entreprise | **352 515+** | SIREN resolution from legal text |
-| ✨ Annonces enrichies | **435 000+** | Structured extraction (regex, no LLM) — ~96% of all notices |
-
-The badges above read the live counters from the API (`/bodacc/stats/counts`).
-
-## 🛠 Teknolojiler
-
-
-| Couche | Technologie |
+| Katman | Teknoloji |
 |---|---|
-| **API** | Python 3.12 · FastAPI · uvicorn · asyncpg |
-| **Base de données** | PostgreSQL 16 (trigram, GiST KNN, JSONB indexes) |
-| **Ingestion** | Asynchronous pipeline (httpx) + systemd cron |
-| **Enrichissement** | Regex (Layer 2) + LLM fallback (DeepSeek) — ~96% structured without LLM |
-| **Frontend** | Next.js 14 (App Router) · i18n 20 languages · Tailwind |
-| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI agents** | MCP server · DNS-AID · auth.md · llms.txt · selective robots.txt |
-
+| **API** | Python · FastAPI · PostgreSQL 16 |
+| **Veri** | Trigram indeksleme, tam metin arama, JSONB |
+| **Alım** | Otomatik boru hattı, günlük entegrasyon, idempotent |
+| **Zenginleştirme** | Hibrit çıkarma (iş kuralları + yapay zeka) |
+| **Ön yüz** | Next.js · i18n 20 dil |
+| **Altyapı** | Docker · Cloudflare (CDN, önbellek, DNSSEC) |
+| **Yapay zeka ajanları** | MCP sunucusu · DNS-AID · auth.md · llms.txt |
 
 ---
 
 ## 🔓 Açık veri
 
-Kaynak veriler herkese açık ve ücretsizdir:
+Kaynak veriler kamuya açık ve ücretsizdir:
 
+- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (yasal ilanlar)
+- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 M tüzel kişilik)
+- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (kamu ihaleleri)
 
-- **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
-- **SIRENE** : [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
-- **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
-
-
-BODACC-api bu ham verilerin üzerine yapıyı ve grafiği ekler: yasal metinlerin ayrıştırılması, kimlik çözümü (kişiler), şirket ↔ ilan ↔ sözleşme çapraz bağlantıları.
+**BODACC-api bu ham veriye yapıyı ve grafiği ekler**: hukuki metinlerin analizi, kimlik çözümleme (kişiler), şirket ↔ ilan ↔ sözleşme bağlantıları.
 
 ---
 
-## 🌐 Canlı siteyi keşfedin:
+## 🌐 Siteyi keşfedin
 
-[Ana sayfa](https://bodacc.io/tr) · [İlanlar](https://bodacc.io/tr/ilanlar) · [Şirketler](https://bodacc.io/tr/sirketler) · [Kişiler](https://bodacc.io/tr/kisiler) · [Fiyatlar](https://bodacc.io/tr/fiyatlar) · [Teknoloji](https://bodacc.io/tr/teknoloji)
+[Ana Sayfa](https://bodacc.io/fr) · [İlanlar](https://bodacc.io/fr/annonces) · [Şirketler](https://bodacc.io/fr/entreprises) · [Kişiler](https://bodacc.io/fr/personnes) · [Fiyatlar](https://bodacc.io/fr/tarifs) · [Teknoloji](https://bodacc.io/fr/technologie)
 
 ---
 
 ## 📄 Lisans ve iletişim
 
-- Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
-- Site : [bodacc.io](https://bodacc.io)
-- Issues & PR : welcome on this repository
+- Lisans: MIT (kod) — veriler, üreticilerinin (DILA, INSEE) lisanslarına tabi olmaya devam eder
+- Site: [bodacc.io](https://bodacc.io)
+- Sorunlar ve PR'lar: bu depoda memnuniyetle karşılanır
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales), Fransız şirketlerinin resmi ilanlarının yayın organıdır. Bu proje DILA ile bağlantılı değildir.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales), Fransız şirketlerinin yasal ilanlarının resmi yayınıdır. Bu proje DILA ile bağlantılı değildir.*

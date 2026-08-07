@@ -21,8 +21,6 @@
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
 ![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-![Next.js 14](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Deploy-2496ED?logo=docker&logoColor=white)
 
 ![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Annonces&color=blue)
 ![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Entreprises&color=green)
@@ -31,206 +29,187 @@
 
 </div>
 
-**フランスの公式公告（BODACC）のモダンなAPI。公式官報の公告（設立、変更、抹消、集団手続、決算報告の預託など）をリアルタイムで検索・探索・追跡できます。20言語対応、企業・役員・公共調達のグラフ付き。**
+**フランスの法定公告を、構造化・関連付け・活用可能なデータへリアルタイムに変換するAPI。**
 
-> 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
+BODACC（Bulletin Officiel des Annonces Civiles et Commerciales／商業・民事公告の官報）は、フランス企業の法的な動向（設立、変更、抹消、集団手続、売却、決算公告）を記録する公式刊行物です。これらの文書は公開されていますが、生の文書のままであり、構造化されておらず、相互に関連付けられておらず、簡単に検索することもできません。
+
+**BODACC-apiはそれらを活用可能にします。** 各公告は自動的に分析され、構造化データ（SIREN、商号、住所、NAF、役員、金額など）に変換され、その後、その企業およびそこに登場する人物に関連付けられます。その結果、フランスの経済活動の完全なグラフが構築され、単一のHTTPリクエストで検索できるようになります。
+
+> 🌐 サイト：[bodacc.io](https://bodacc.io) · 📖 Swagger：[https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [料金](https://bodacc.io/fr/tarifs)
 
 ---
 
-## ✨ Highlights
+## ✨ BODACC-apiが選ばれる理由
 
 | | |
 |---|---|
-| 🗂 **600万件以上の公告** | BODACCの履歴（2004年→現在、バックフィル進行中） |
-| 🕸 **三角グラフ** | 各公告は企業（SIREN）と人物（役員、清算人、監査役など）にリンク |
-| 📦 **公共調達（BOAMP）** | 170万件の契約を企業名でリンク（2015年→2026年） |
-| ✨ **拡充データ** | 構造化された拡充（regex + LLM）：法的テキストから抽出したSIREN、NAF、住所、役員 |
-| 🌍 **20言語** | インターフェースとコンテンツは翻訳済み |
-| 🤖 **Agent-ready** | isitagentreadyで100/100（DNSSEC、DNS-AID、auth.md、WebMCP、llms.txt） |
+| 🗂 **2004年以降の全履歴** | 数百万件の公告をデータベースに収録、完全なカバレッジ — 期間限定の窓ではありません |
+| ⚡ **リアルタイム** | 当日分の公告は、毎朝、営業開始前に利用可能です |
+| 🕸 **ファイルではなく、グラフ** | 公告 → 企業（SIREN） → 役員 → 役職 → 公共調達：すべてが関連付けられ、1回のリクエストで検索可能です |
+| ✨ **生のテキストから構造化データへ** | SIREN、NAF、住所、役員、手続などを、各法的テキストから自動抽出します |
+| 🌍 **20言語** | インターフェースとコンテンツは翻訳されています — あなたのチームと顧客は自分たちの言語で利用できます |
+| 🤖 **エージェント対応** | isitagentready監査で100/100を獲得（DNSSEC、DNS-AID、auth.md、WebMCP、llms.txt） |
+| 🚪 **テストの摩擦ゼロ** | すべての読み取り専用エンドポイントはキーなしでアクセス可能 — 支払い前に評価いただけます |
 
 ---
 
-## 🚀 クイックスタート
+## 🏭 私たちの付加価値：パイプライン
 
-すべてのルートは公開読み取り用にキーなしでアクセスできます：
+違いを生むのは、生データ（公開されています）ではなく、私たちがそれをどう処理するかです — 毎日、自動的に：
 
+**1. 信頼性が高く完全な取り込み。** 毎朝09:00までに、DILAが公開した新しい公告が当社のデータベースに統合されます。完全な履歴は2004年まで遡り、公的閲覧で提供される範囲をはるかに超えています。取り込みを再実行しても重複は発生しません。当社のデータは常に検証され、整合性が保たれています。
+
+**2. インテリジェントなエンリッチメント。** 各公告は法的テキストです — 当社のハイブリッド抽出エンジン（ビジネスルール＋AI）が、それを構造化データ（SIREN番号、商号、住所、NAFコード、役員、役職、金額、手続）に変換します。人間が何時間もかけて読む作業が、検索可能なJSONフィールドになります。
+
+**3. リレーショナルグラフ。** 集団手続の公告は、それがどの企業に関連し、誰がその役員であるかを知って初めて価値を持ちます。当社の解決エンジンは、各公告をその企業（SIREN）に、各人物をその役職に、各公共調達をその受注者に関連付けます。あなたは、フランスの経済活動を、PDFの山ではなく、データベースとして検索できます。
+
+**4. リアルタイム配信。** 公告が公開されるとすぐに、その関連情報とエンリッチメントとともにAPIで利用可能になります。ダウンロードするファイルも、維持管理するETLもありません。HTTPリクエスト1つで十分です。
+
+---
+
+## ⚖️ 比較：当社の位置づけ
+
+| | **公式サイト (bodacc.fr)** | **Pappers** | **BODACC.io** |
+|---|---|---|---|
+| **履歴** | 2008年以降のみ | サブスクリプションによる商用履歴 | **2004年以降の完全な履歴** |
+| **API** | ❌ なし | APIは上位プランのみ | ✅ **文書化されたREST API、読み取りはキー不要** |
+| **構造化データ** | ❌ PDF閲覧のみ | ✅ エンリッチされたプロフィール | ✅ **公告＋企業/人物/市場のグラフ** |
+| **リアルタイム性** | 紙の刊行物をオンラインで閲覧 | 毎日更新 | ✅ **毎朝09:00までに** |
+| **価格** | 無料だが制限あり | 基本アクセスは **月額29.90ユーロ** から | **手頃なプラン、探索用の無料プランあり** |
+| **対象** | 一般向け | 専門家向け（コンプライアンス、ウォッチ） | **開発者、フィンテック、リーガルテック、データチーム** |
+
+**公式サイトの強み**：無料、信頼性が高い、公式。**弱み**：APIなし、履歴が2008年まで、構造化データなし — PDFのままです。
+
+**Pappersの強み**：非常に洗練されたインターフェース、INSEE＋INPI＋BODACCの統合、組み込みのウォッチ機能。**弱み**：価格（基本アクセスで月額29.90ユーロ、APIと完全な履歴はさらに高額）、閲覧重視でデータ活用向きではないソリューション。
+
+**当社の立場**：**2004年以降の全履歴を、公式サイトよりも速く、そしてPappersよりも低価格で提供。** これは、追加の画面ではなく、自社のツールにデータを組み込みたい人のために設計されています。
+
+> 💶 プランを見る：[bodacc.io/fr/tarifs](https://bodacc.io/fr/tarifs) — 無料・Pro・Enterprise・LIFE
+
+---
+
+## 🚀 30秒で試す
+
+すべての読み取り専用エンドポイントは**キーなしで**アクセスできます：
 
 ```bash
-# Search a company by name
+# 企業名で検索
 curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
 
-# Notice detail (with company + people relations)
+# 公告の詳細（関連情報：企業＋人物を含む）
 curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
 
-# Company profile (recent notices + directors + BOAMP contracts)
+# 企業プロフィール（最近の公告＋役員＋公共調達）
 curl "https://bodacc.io/api/bodacc/entreprises/912969573"
 
-# Global statistics
+# 全体統計
 curl "https://bodacc.io/api/bodacc/stats"
 
-# Daily volume (last 30 days)
+# 日次ボリューム（過去30日間）
 curl "https://bodacc.io/api/bodacc/stats/daily30"
 ```
-
 
 ---
 
 ## 📡 エンドポイント
 
+### 公告
 
-### Annonces
-
-| Méthode | Route | Description |
+| メソッド | ルート | 説明 |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Search: `q` (name/SIREN), `famille`, `departement`, dates, pagination `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Full detail with `raw_data` + enrichment + `relations` (linked companies and people) |
-| `GET` | `/bodacc/enrichi/{id}` | Structured enriched version (siren, denomination, NAF, directors...) |
-| `POST` | `/bodacc/enrichi/batch` | Batch enrichment |
+| `GET` | `/bodacc/annonces` | 検索：`q`（名称/SIREN）、`famille`、`departement`、日付、ページネーション `limit`/`offset` |
+| `GET` | `/bodacc/annonces/{id}` | 完全な詳細：`raw_data`＋エンリッチメント＋`relations`（関連する企業と人物） |
+| `GET` | `/bodacc/enrichi/{id}` | 構造化バージョン（siren、dénomination、NAF、dirigeants...） |
+| `POST` | `/bodacc/enrichi/batch` | バッチでのエンリッチメント |
 
-### Companies & people
+### 企業・人物
 
-| Méthode | Route | Description |
+| メソッド | ルート | 説明 |
 |---|---|---|
-| `GET` | `/bodacc/entreprises` | Company search (name, city, NAF, postal code) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE profile + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profile by SEO slug |
-| `GET` | `/bodacc/personnes/{id}` | Person profile: mandates (roles) + linked companies |
+| `GET` | `/bodacc/entreprises` | 企業検索（名称、市区町村、NAF、郵便番号） |
+| `GET` | `/bodacc/entreprises/{siren}` | INSEEプロフィール＋`annonces_recentes`、`dirigeants`、`marches_publics`、`stats` |
+| `GET` | `/bodacc/entreprises/by-slug/{slug}` | SEOスラッグによるプロフィール |
+| `GET` | `/bodacc/personnes/{id}` | 人物プロフィール：役職（ロール）＋関連企業 |
 
-### Statistics
+### 統計
 
-| Méthode | Route | Description |
+| メソッド | ルート | 説明 |
 |---|---|---|
-| `GET` | `/bodacc/stats` | Totals, by family, by date |
-| `GET` | `/bodacc/stats/daily` | Today's volume (by publication, department, family) |
-| `GET` | `/bodacc/stats/daily30` | Last 30 days series |
-| `GET` | `/bodacc/stats/counts` | Counters: notices, companies, people |
-| `GET` | `/bodacc/graph/categories` | Distribution by category |
+| `GET` | `/bodacc/stats` | 合計、カテ��リ別、日付別 |
+| `GET` | `/bodacc/stats/daily` | 当日のボリューム（発行、県、カテゴリ別） |
+| `GET` | `/bodacc/stats/daily30` | 過去30日間の時系列 |
+| `GET` | `/bodacc/stats/counts` | カウンター：公告、企業、人物 |
+| `GET` | `/bodacc/graph/categories` | カテゴリ別の分布 |
 
-### Alerts & ingestion
+### アラート・統合
 
-| Méthode | Route | Description |
+| メソッド | ルート | 説明 |
 |---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN alerts (company tracking) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Trigger ingestion for a date |
-| `POST` | `/bodacc/import` | Batch import (for backfill) |
+| `GET/POST/DELETE` | `/bodacc/alertes` | SIRENによるアラート（企業の追跡） |
+| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | 特定日付の取り込みをトリガー |
+| `POST` | `/bodacc/import` | バッチインポート（バックフィル） |
 
+### NAFレファレンシャル（INSEE）
 
-### NAF reference (INSEE)
-
-| Méthode | Route | Description |
+| メソッド | ルート | 説明 |
 |---|---|---|
-| `GET` | `/bodacc/naf` | Full NAF rev. 2 reference (732 sub-classes, 615 classes) — official INSEE labels |
-| `GET` | `/bodacc/naf?q=commerce` | Search NAF by label (ILIKE) |
-| `GET` | `/bodacc/naf?code=46.72Z` | One NAF code entry |
-
-> 📄 Source: INSEE NAF rév. 2 file `int_courts_naf_rev_2.xls` (file dated 2008-07-01, still the current official reference — NAF rev. 2 nomenclature, 732 sub-classes). The same labels are joined into every company profile (`naf_libelle`).
+| `GET` | `/bodacc/naf` | 完全なNAF改訂2レファレンシャル（732小分類、615分類）— INSEE公式ラベル |
+| `GET` | `/bodacc/naf?q=commerce` | ラベルによるNAF検索 |
+| `GET` | `/bodacc/naf?code=46.72Z` | 特定のNAFコードの詳細 |
 
 ---
 
-## 📅 毎日BODACCデータを取得するには？
+## 📊 データ
 
-データはDILAがOpendatasoftプラットフォームで公開しています：
+ページ上部のバッジは**リアルタイムカウンター**です：BODACC公告、SIRENE企業、抽出された人物 — 履歴の統合とエンリッチメントの進行に伴って変動します。
 
+安定した基準値：
 
-The data is published by the **DILA** on the **Opendatasoft** platform:
-
-```
-Source : https://bodacc-datadila.opendatasoft.com/api/explore/v2.1
-Dataset : annonces-commerciales (publications A/B/C)
-```
-
-**Publication rhythm** (observed on real data):
-- 05:30 UTC : publications A/B (~25% of volume)
-- 08:00-09:00 UTC : publication C (annual accounts) → full daily volume
-- Notices carry publication date **D** but are published at **D+1** early morning
-
-**The BODACC.io ingestion pipeline:**
-1. `POST /bodacc/ingest?target_date=YYYY-MM-DD` → fetch via 210 sub-queries (3 publications × 8 departments × 10 families), each under 10,000 records
-2. **Upsert by `id`** → idempotent (re-running creates no duplicates)
-3. Daily cron at 05:30 UTC + monitoring every 15 min from 06:00 to 10:30 UTC (catches publication C)
-4. Cross-check DB ↔ Opendatasoft (`total_count`)
-
+- 📰 **BODACC公告**：2004年以降の完全な履歴、毎朝09:00までに更新
+- 🏢 **���業（SIRENE）**：フランスの法人2980万件（INSEE登録）
+- 👤 **抽出された人物**：役員、清算人、会計監査人など — 継続的に統合中
+- 📦 **公共調達（BOAMP）**：2015年から2026年までの公共契約169万件
 
 ---
 
-## 🧠 グラフ：企業 ↔ 人物 ↔ 公告
+## 🛠 テクノロジー
 
-これがBODACC-apiの付加価値です。各公告には生テキスト（登記、人物、手続）が含まれます。拡充処理がこのテキストを構造化します：
-
-```
-Annonce (creation, insolvency proceedings, annual accounts...)
- ├── Company(ies) : SIREN, name, address, NAF, status
- └── Person(s) : name, first name, role (director, president, liquidator, auditor...)
-      └── Mandates : all notices where the person appears
-```
-
-```
-Company (SIREN)
- ├── Legal notices (full history)
- ├── Directors (individuals and companies)
- └── Public contracts won (buyer, subject, amount, date)
-```
-
----
-
-
----
-
-## 📊 Data state — live volumes (updated 2026-08-02)
-
-| Dataset | Volume | Detail |
-|---|---|---|
-| 📰 Annonces BODACC | **6 159 881** | History 2004 → today (backfill in progress: 2023 + early 2024) |
-| 🏢 Entreprises (SIRENE) | **29 805 853** | French legal units (INSEE) |
-| 👤 Personnes extraites | **1 354+** | Directors, liquidators, auditors... (growing with enrichment) |
-| 📦 Marchés publics (BOAMP) | **1 694 145** | Public contracts 2015 → 2026 |
-| 🔗 Liens annonce → entreprise | **352 515+** | SIREN resolution from legal text |
-| ✨ Annonces enrichies | **435 000+** | Structured extraction (regex, no LLM) — ~96% of all notices |
-
-The badges above read the live counters from the API (`/bodacc/stats/counts`).
-
-## 🛠 技術
-
-
-| Couche | Technologie |
+| レイヤー | テクノロジー |
 |---|---|
-| **API** | Python 3.12 · FastAPI · uvicorn · asyncpg |
-| **Base de données** | PostgreSQL 16 (trigram, GiST KNN, JSONB indexes) |
-| **Ingestion** | Asynchronous pipeline (httpx) + systemd cron |
-| **Enrichissement** | Regex (Layer 2) + LLM fallback (DeepSeek) — ~96% structured without LLM |
-| **Frontend** | Next.js 14 (App Router) · i18n 20 languages · Tailwind |
-| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI agents** | MCP server · DNS-AID · auth.md · llms.txt · selective robots.txt |
-
+| **API** | Python · FastAPI · PostgreSQL 16 |
+| **データ** | Trigramインデックス、全文検索、JSONB |
+| **取り込み** | 自動化パイプライン、毎日統合、冪等 |
+| **エンリッチメント** | ハイブリッド抽出（ビジネスルール＋AI） |
+| **フロントエンド** | Next.js · i18n 20言語 |
+| **インフラ** | Docker · Cloudflare（CDN、キャッシュ、DNSSEC） |
+| **AIエージェント** | MCPサーバー · DNS-AID · auth.md · llms.txt |
 
 ---
 
 ## 🔓 オープンデータ
 
-ソースデータは公開されており無料です：
+ソースデータは公開されており、無料です：
 
+- **BODACC**：[data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/)（法定公告）
+- **SIRENE**：[INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/)（法人2980万件）
+- **BOAMP**：[Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com)（公共調達）
 
-- **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
-- **SIRENE** : [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
-- **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
-
-
-BODACC-apiはこれらの生データの上に構造とグラフを追加します：法的テキストの解析、本人確認（人物）、企業↔公告↔契約の相互リンク。
+**BODACC-apiは、この生データに構造とグラフを追加します**：法的テキストの分析、人物の同一性解決、企業 ↔ 公告 ↔ 契約のリンク。
 
 ---
 
-## 🌐 ライブサイトを見る：
+## 🌐 サイトを探索
 
-[ホーム](https://bodacc.io/ja) · [公告](https://bodacc.io/ja/kokuji) · [企業](https://bodacc.io/ja/kaisha) · [人物](https://bodacc.io/ja/jinbutsu) · [料金](https://bodacc.io/ja/ryoukin) · [技術](https://bodacc.io/ja/gijutsu)
-
----
-
-## 📄 ライセンスと連絡先
-
-- Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
-- Site : [bodacc.io](https://bodacc.io)
-- Issues & PR : welcome on this repository
+[ホーム](https://bodacc.io/fr) · [公告](https://bodacc.io/fr/annonces) · [企業](https://bodacc.io/fr/entreprises) · [人物](https://bodacc.io/fr/personnes) · [料金](https://bodacc.io/fr/tarifs) · [テクノロジー](https://bodacc.io/fr/technologie)
 
 ---
 
-*BODACC（Bulletin Officiel des Annonces Civiles et Commerciales）はフランス企業の法定公告の公式刊行物です。このプロジェクトはDILAとは提携していません。*
+## 📄 ライセンス・連絡先
+
+- ライセンス：MIT（コード）— データは各提供元（DILA、INSEE）のライセンスに従います
+- サイト：[bodacc.io](https://bodacc.io)
+- このリポジトリへのIssue・PRは歓迎します
+
+---
+
+*BODACC（Bulletin Officiel des Annonces Civiles et Commerciales／商業・民事公告の官報）は、フランス企業の法定公告の公式刊行物です。このプロジェクトはDILAとは提携していません。*

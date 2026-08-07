@@ -21,8 +21,6 @@
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
 ![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-![Next.js 14](https://img.shields.io/badge/Next.js-14-000000?logo=nextdotjs&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-Deploy-2496ED?logo=docker&logoColor=white)
 
 ![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Annonces&color=blue)
 ![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Entreprises&color=green)
@@ -31,177 +29,160 @@
 
 </div>
 
-**API modern pengumuman hukum Prancis (BODACC). Cari, jelajahi, dan lacak pengumuman Buletin Resmi: pendirian, perubahan, penghapusan, prosedur kolektif, penyimpanan laporan keuangan... secara real-time, dalam 20 bahasa, dengan grafik perusahaan, direktur, dan kontrak publik.**
+**API yang mengubah pengumuman legal Prancis menjadi data terstruktur, saling terhubung, dan dapat dimanfaatkan — secara real-time.**
 
-> 🌐 Live site : [bodacc.io](https://bodacc.io) · 📖 Swagger : [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs)
+BODACC (Buletin Resmi Pengumuman Sipil dan Komersial) adalah publikasi resmi yang mencatat kehidupan hukum perusahaan Prancis: pendirian, perubahan, penghapusan, prosedur kolektif, penjualan, penyetoran laporan keuangan. Teks-teks ini bersifat publik, tetapi tetap berupa dokumen mentah: tidak terstruktur, tidak saling terhubung, dan tidak mudah untuk ditelusuri.
+
+**BODACC-api menjadikannya dapat dimanfaatkan.** Setiap pengumuman dianalisis secara otomatis dan diubah menjadi data terstruktur (SIREN, nama badan usaha, alamat, NAF, direksi, jumlah...), kemudian dihubungkan ke perusahaannya dan orang-orang yang muncul di dalamnya. Hasilnya: grafik lengkap kehidupan ekonomi Prancis, yang dapat ditelusuri hanya dengan satu permintaan HTTP.
+
+> 🌐 Situs: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Harga](https://bodacc.io/fr/tarifs)
 
 ---
 
-## ✨ Highlights
+## ✨ Mengapa BODACC-api?
 
 | | |
 |---|---|
-| 🗂 **Lebih dari 6 juta pengumuman** | Sejarah BODACC (2004 → hari ini, backfill berlangsung) |
-| 🕸 **Grafik segitiga** | Setiap pengumuman terhubung ke perusahaan (SIREN) dan orang-orangnya (direktur, likuidator, auditor...) |
-| 📦 **Kontrak publik (BOAMP)** | 1,7 juta kontrak terhubung ke perusahaan berdasarkan nama (2015 → 2026) |
-| ✨ **Data yang diperkaya** | Pengayaan terstruktur (regex + LLM): SIREN, NAF, alamat, direktur yang diekstrak dari teks hukum |
-| 🌍 **20 bahasa** | Antarmuka dan konten telah diterjemahkan |
-| 🤖 **Agent-ready** | 100/100 di isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🗂 **Seluruh riwayat, sejak 2004** | Jutaan pengumuman dalam basis data, cakupan lengkap — bukan jendela bergulir |
+| ⚡ **Real-time** | Pengumuman hari ini tersedia setiap pagi, sebelum jam kantor dimulai |
+| 🕸 **Grafik, bukan berkas** | Pengumuman → perusahaan (SIREN) → direksi → mandat → pasar publik: semuanya terhubung dan dapat ditelusuri dalam satu permintaan |
+| ✨ **Dari teks mentah ke data terstruktur** | SIREN, NAF, alamat, direksi, prosedur... diekstraksi secara otomatis dari setiap teks hukum |
+| 🌍 **20 bahasa** | Antarmuka dan konten diterjemahkan — tim dan klien Anda berbicara dalam bahasa mereka |
+| 🤖 **Siap-agen** | 100/100 pada audit isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
+| 🚪 **Tanpa hambatan untuk mencoba** | Semua endpoint baca dapat diakses tanpa kunci — Anda mengevaluasi sebelum membayar |
 
 ---
 
-## 🚀 Mulai cepat
+## 🏭 Nilai tambah kami: jalur pemrosesan
 
-Semua rute dapat diakses tanpa kunci untuk pembacaan publik:
+Yang membuat perbedaan bukanlah data mentah (data tersebut publik), melainkan apa yang kami lakukan dengannya — setiap hari, secara otomatis:
 
+**1. Ingestion yang andal dan lengkap.** Setiap pagi sebelum pukul 09:00, pengumuman baru yang diterbitkan oleh DILA diintegrasikan ke dalam basis data kami. Riwayat lengkapnya dimulai dari tahun 2004, jauh melampaui apa yang ditawarkan konsultasi publik. Menjalankan ulang ingestion tidak membuat duplikat: data kami selalu terverifikasi dan konsisten.
+
+**2. Pengayaan cerdas.** Setiap pengumuman adalah teks hukum — mesin ekstraksi hibrida kami (aturan bisnis + AI) mengubahnya menjadi data terstruktur: nomor SIREN, nama badan usaha, alamat, kode NAF, direksi, mandat, jumlah, prosedur. Apa yang membutuhkan waktu berjam-jam untuk dibaca manusia menjadi kolom JSON yang dapat ditelusuri.
+
+**3. Grafik relasional.** Pengumuman prosedur kolektif hanya berguna jika kita tahu perusahaan mana yang terkait, dan siapa direksinya. Mesin resolusi kami menghubungkan setiap pengumuman ke perusahaannya (SIREN), setiap orang ke mandatnya, setiap pasar publik ke pemenangnya. Anda menelusuri kehidupan ekonomi Prancis seperti basis data — bukan seperti tumpukan PDF.
+
+**4. Distribusi real-time.** Segera setelah pengumuman diterbitkan, pengumuman tersebut tersedia melalui API, beserta relasi dan pengayaannya. Tidak ada berkas untuk diunduh, tidak ada ETL untuk dipelihara: satu permintaan HTTP sudah cukup.
+
+---
+
+## ⚖️ Perbandingan: posisi kami
+
+| | **Situs resmi (bodacc.fr)** | **Pappers** | **BODACC.io** |
+|---|---|---|---|
+| **Riwayat** | Hanya sejak 2008 | Riwayat komersial sesuai langganan | **Lengkap sejak 2004** |
+| **API** | ❌ Tidak ada | API khusus penawaran tingkat atas | ✅ **API REST terdokumentasi, tanpa kunci untuk baca** |
+| **Data terstruktur** | ❌ Konsultasi PDF | ✅ Profil yang diperkaya | ✅ **Pengumuman + grafik perusahaan/orang/pasar** |
+| **Real-time** | Publikasi kertas dapat dilihat daring | Pembaruan harian | ✅ **Setiap pagi sebelum pukul 09:00** |
+| **Harga** | Gratis, tetapi terbatas | Mulai **29,90 €/bln** untuk akses dasar | **Paket terjangkau, mulai gratis untuk eksplorasi** |
+| **Publik** | Masyarakat umum | Profesional (kepatuhan, pemantauan) | **Pengembang, fintech, legaltech, tim data** |
+
+**Kelebihan situs resmi**: gratis, andal, resmi. **Kekurangan**: tidak ada API, riwayat terbatas hingga 2008, tidak ada data terstruktur — Anda tetap berada di PDF.
+
+**Kelebihan Pappers**: antarmuka yang sangat rapi, agregasi INSEE + INPI + BODACC, pemantauan terintegrasi. **Kekurangan**: harga (29,90 €/bln untuk akses dasar, API dan riwayat lengkap lebih mahal), solusi yang berorientasi pada konsultasi daripada data yang dapat dimanfaatkan.
+
+**Posisi kami**: **seluruh riwayat sejak 2004, lebih cepat daripada situs resmi — dan dengan tarif lebih rendah daripada Pappers.** Dirancang untuk mereka yang ingin menghubungkan data ke alat mereka sendiri, bukan untuk mereka yang menginginkan layar tambahan.
+
+> 💶 Lihat paket: [bodacc.io/fr/tarifs](https://bodacc.io/fr/tarifs) — Gratis · Pro · Enterprise · LIFE
+
+---
+
+## 🚀 Coba dalam 30 detik
+
+Semua endpoint baca dapat diakses **tanpa kunci**:
 
 ```bash
-# Search a company by name
+# Cari perusahaan berdasarkan nama
 curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
 
-# Notice detail (with company + people relations)
+# Detail pengumuman (dengan relasinya: perusahaan + orang)
 curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
 
-# Company profile (recent notices + directors + BOAMP contracts)
+# Profil perusahaan (pengumuman terbaru + direksi + pasar publik)
 curl "https://bodacc.io/api/bodacc/entreprises/912969573"
 
-# Global statistics
+# Statistik global
 curl "https://bodacc.io/api/bodacc/stats"
 
-# Daily volume (last 30 days)
+# Volume harian (30 hari terakhir)
 curl "https://bodacc.io/api/bodacc/stats/daily30"
 ```
-
 
 ---
 
 ## 📡 Endpoint
 
+### Pengumuman
 
-### Annonces
-
-| Méthode | Route | Description |
+| Metode | Rute | Deskripsi |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Search: `q` (name/SIREN), `famille`, `departement`, dates, pagination `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Full detail with `raw_data` + enrichment + `relations` (linked companies and people) |
-| `GET` | `/bodacc/enrichi/{id}` | Structured enriched version (siren, denomination, NAF, directors...) |
-| `POST` | `/bodacc/enrichi/batch` | Batch enrichment |
+| `GET` | `/bodacc/annonces` | Pencarian: `q` (nama/SIREN), `famille`, `departement`, tanggal, paginasi `limit`/`offset` |
+| `GET` | `/bodacc/annonces/{id}` | Detail lengkap: `raw_data` + pengayaan + `relations` (perusahaan dan orang terkait) |
+| `GET` | `/bodacc/enrichi/{id}` | Versi terstruktur (siren, dénomination, NAF, direksi...) |
+| `POST` | `/bodacc/enrichi/batch` | Pengayaan massal |
 
-### Companies & people
+### Perusahaan & orang
 
-| Méthode | Route | Description |
+| Metode | Rute | Deskripsi |
 |---|---|---|
-| `GET` | `/bodacc/entreprises` | Company search (name, city, NAF, postal code) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE profile + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profile by SEO slug |
-| `GET` | `/bodacc/personnes/{id}` | Person profile: mandates (roles) + linked companies |
+| `GET` | `/bodacc/entreprises` | Pencarian perusahaan (nama, kota, NAF, kode pos) |
+| `GET` | `/bodacc/entreprises/{siren}` | Profil INSEE + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
+| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profil berdasarkan slug SEO |
+| `GET` | `/bodacc/personnes/{id}` | Profil orang: mandat (peran) + perusahaan terkait |
 
-### Statistics
+### Statistik
 
-| Méthode | Route | Description |
+| Metode | Rute | Deskripsi |
 |---|---|---|
-| `GET` | `/bodacc/stats` | Totals, by family, by date |
-| `GET` | `/bodacc/stats/daily` | Today's volume (by publication, department, family) |
-| `GET` | `/bodacc/stats/daily30` | Last 30 days series |
-| `GET` | `/bodacc/stats/counts` | Counters: notices, companies, people |
-| `GET` | `/bodacc/graph/categories` | Distribution by category |
+| `GET` | `/bodacc/stats` | Total, per keluarga, per tanggal |
+| `GET` | `/bodacc/stats/daily` | Volume hari ini (per terbitan, departemen, keluarga) |
+| `GET` | `/bodacc/stats/daily30` | Seri 30 hari terakhir |
+| `GET` | `/bodacc/stats/counts` | Penghitung: pengumuman, perusahaan, orang |
+| `GET` | `/bodacc/graph/categories` | Distribusi per kategori |
 
-### Alerts & ingestion
+### Alert & integrasi
 
-| Méthode | Route | Description |
+| Metode | Rute | Deskripsi |
 |---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN alerts (company tracking) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Trigger ingestion for a date |
-| `POST` | `/bodacc/import` | Batch import (for backfill) |
+| `GET/POST/DELETE` | `/bodacc/alertes` | Alert berdasarkan SIREN (pemantauan perusahaan) |
+| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Memicu ingestion untuk tanggal tertentu |
+| `POST` | `/bodacc/import` | Impor massal (backfill) |
 
+### Referensi NAF (INSEE)
 
-### NAF reference (INSEE)
-
-| Méthode | Route | Description |
+| Metode | Rute | Deskripsi |
 |---|---|---|
-| `GET` | `/bodacc/naf` | Full NAF rev. 2 reference (732 sub-classes, 615 classes) — official INSEE labels |
-| `GET` | `/bodacc/naf?q=commerce` | Search NAF by label (ILIKE) |
-| `GET` | `/bodacc/naf?code=46.72Z` | One NAF code entry |
-
-> 📄 Source: INSEE NAF rév. 2 file `int_courts_naf_rev_2.xls` (file dated 2008-07-01, still the current official reference — NAF rev. 2 nomenclature, 732 sub-classes). The same labels are joined into every company profile (`naf_libelle`).
+| `GET` | `/bodacc/naf` | Referensi NAF rev. 2 lengkap (732 subkelas, 615 kelas) — label resmi INSEE |
+| `GET` | `/bodacc/naf?q=commerce` | Pencarian NAF berdasarkan label |
+| `GET` | `/bodacc/naf?code=46.72Z` | Detail kode NAF |
 
 ---
 
-## 📅 Bagaimana cara mendapatkan data BODACC setiap hari?
+## 📊 Data
 
-Data diterbitkan oleh DILA di platform Opendatasoft:
+Lencana di bagian atas halaman adalah **penghitung real-time**: pengumuman BODACC, perusahaan SIRENE, dan orang yang diekstraksi — semuanya berubah seiring dengan konsolidasi riwayat dan pengayaan.
 
+Titik referensi yang stabil:
 
-The data is published by the **DILA** on the **Opendatasoft** platform:
-
-```
-Source : https://bodacc-datadila.opendatasoft.com/api/explore/v2.1
-Dataset : annonces-commerciales (publications A/B/C)
-```
-
-**Publication rhythm** (observed on real data):
-- 05:30 UTC : publications A/B (~25% of volume)
-- 08:00-09:00 UTC : publication C (annual accounts) → full daily volume
-- Notices carry publication date **D** but are published at **D+1** early morning
-
-**The BODACC.io ingestion pipeline:**
-1. `POST /bodacc/ingest?target_date=YYYY-MM-DD` → fetch via 210 sub-queries (3 publications × 8 departments × 10 families), each under 10,000 records
-2. **Upsert by `id`** → idempotent (re-running creates no duplicates)
-3. Daily cron at 05:30 UTC + monitoring every 15 min from 06:00 to 10:30 UTC (catches publication C)
-4. Cross-check DB ↔ Opendatasoft (`total_count`)
-
+- 📰 **Pengumuman BODACC**: riwayat lengkap sejak 2004, diperbarui setiap pagi sebelum pukul 09:00
+- 🏢 **Perusahaan (SIRENE)**: 29,8 J unit legal Prancis (registri INSEE)
+- 👤 **Orang yang diekstraksi**: direksi, likuidator, auditor... dalam konsolidasi berkelanjutan
+- 📦 **Pasar publik (BOAMP)**: 1,69 J kontrak publik 2015 → 2026
 
 ---
-
-## 🧠 Grafik: perusahaan ↔ orang ↔ pengumuman
-
-Ini adalah nilai tambah BODACC-api. Setiap pengumuman berisi teks mentah (register, orang, prosedur). Pengayaan menyusun teks ini:
-
-```
-Annonce (creation, insolvency proceedings, annual accounts...)
- ├── Company(ies) : SIREN, name, address, NAF, status
- └── Person(s) : name, first name, role (director, president, liquidator, auditor...)
-      └── Mandates : all notices where the person appears
-```
-
-```
-Company (SIREN)
- ├── Legal notices (full history)
- ├── Directors (individuals and companies)
- └── Public contracts won (buyer, subject, amount, date)
-```
-
----
-
-
----
-
-## 📊 Data state — live volumes (updated 2026-08-02)
-
-| Dataset | Volume | Detail |
-|---|---|---|
-| 📰 Annonces BODACC | **6 159 881** | History 2004 → today (backfill in progress: 2023 + early 2024) |
-| 🏢 Entreprises (SIRENE) | **29 805 853** | French legal units (INSEE) |
-| 👤 Personnes extraites | **1 354+** | Directors, liquidators, auditors... (growing with enrichment) |
-| 📦 Marchés publics (BOAMP) | **1 694 145** | Public contracts 2015 → 2026 |
-| 🔗 Liens annonce → entreprise | **352 515+** | SIREN resolution from legal text |
-| ✨ Annonces enrichies | **435 000+** | Structured extraction (regex, no LLM) — ~96% of all notices |
-
-The badges above read the live counters from the API (`/bodacc/stats/counts`).
 
 ## 🛠 Teknologi
 
-
-| Couche | Technologie |
+| Lapisan | Teknologi |
 |---|---|
-| **API** | Python 3.12 · FastAPI · uvicorn · asyncpg |
-| **Base de données** | PostgreSQL 16 (trigram, GiST KNN, JSONB indexes) |
-| **Ingestion** | Asynchronous pipeline (httpx) + systemd cron |
-| **Enrichissement** | Regex (Layer 2) + LLM fallback (DeepSeek) — ~96% structured without LLM |
-| **Frontend** | Next.js 14 (App Router) · i18n 20 languages · Tailwind |
+| **API** | Python · FastAPI · PostgreSQL 16 |
+| **Data** | Indeksasi trigram, pencarian teks lengkap, JSONB |
+| **Ingestion** | Pipeline otomatis, integrasi harian, idempoten |
+| **Pengayaan** | Ekstraksi hibrida (aturan bisnis + AI) |
+| **Frontend** | Next.js · i18n 20 bahasa |
 | **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI agents** | MCP server · DNS-AID · auth.md · llms.txt · selective robots.txt |
-
+| **Agen AI** | Server MCP · DNS-AID · auth.md · llms.txt |
 
 ---
 
@@ -209,28 +190,26 @@ The badges above read the live counters from the API (`/bodacc/stats/counts`).
 
 Data sumber bersifat publik dan gratis:
 
+- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (pengumuman legal)
+- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 J unit legal)
+- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (pasar publik)
 
-- **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
-- **SIRENE** : [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
-- **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
-
-
-BODACC-api menambahkan struktur dan grafik di atas data mentah ini: penguraian teks hukum, resolusi identitas (orang), tautan silang perusahaan ↔ pengumuman ↔ kontrak.
+**BODACC-api menambahkan struktur dan grafik pada data mentah ini**: analisis teks hukum, resolusi identitas (orang), tautan perusahaan ↔ pengumuman ↔ kontrak.
 
 ---
 
-## 🌐 Jelajahi situs langsung:
+## 🌐 Jelajahi situs
 
-[Beranda](https://bodacc.io/id) · [Pengumuman](https://bodacc.io/id/pengumuman) · [Perusahaan](https://bodacc.io/id/perusahaan) · [Orang](https://bodacc.io/id/orang) · [Harga](https://bodacc.io/id/harga) · [Teknologi](https://bodacc.io/id/teknologi)
-
----
-
-## 📄 Lisensi dan kontak
-
-- Licence : MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
-- Site : [bodacc.io](https://bodacc.io)
-- Issues & PR : welcome on this repository
+[Beranda](https://bodacc.io/fr) · [Pengumuman](https://bodacc.io/fr/annonces) · [Perusahaan](https://bodacc.io/fr/entreprises) · [Orang](https://bodacc.io/fr/personnes) · [Harga](https://bodacc.io/fr/tarifs) · [Teknologi](https://bodacc.io/fr/technologie)
 
 ---
 
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) adalah publikasi resmi pengumuman hukum perusahaan Prancis. Proyek ini tidak berafiliasi dengan DILA.*
+## 📄 Lisensi & kontak
+
+- Lisensi: MIT (kode) — data tetap tunduk pada lisensi produsennya (DILA, INSEE)
+- Situs: [bodacc.io](https://bodacc.io)
+- Isu & PR: dipersilakan di repositori ini
+
+---
+
+*BODACC (Buletin Resmi Pengumuman Sipil dan Komersial) adalah publikasi resmi pengumuman legal perusahaan Prancis. Proyek ini tidak berafiliasi dengan DILA.*
