@@ -193,7 +193,7 @@ Les données sources sont publiques et gratuites :
 - **BODACC** : [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (annonces légales)
 - **SIRENE** : [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 M unités légales)
 - **BOAMP** : [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (marchés publics)
-- **JAL (Journaux d'Annonces Légales)** : [annoncelegale.com](https://www.annoncelegale.com/) — 598 journaux habilités (annuaire dans `pipeline_site/sources/annuaire_jal.json`)
+- **JAL (Journaux d'Annonces Légales)** : [annoncelegale.com](https://www.annoncelegale.com/) — 598 journaux habilités
 
 **BODACC-api ajoute la structure et le graphe sur cette donnée brute** : analyse des textes juridiques, résolution d'identité (personnes), liens entreprise ↔ annonce ↔ contrat.
 

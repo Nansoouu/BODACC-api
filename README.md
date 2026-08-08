@@ -193,7 +193,7 @@ The source data is public and free:
 - **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
 - **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
 - **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
-- **JAL (Journaux d'Annonces Légales)**: [annoncelegale.com](https://www.annoncelegale.com/) — 598 authorized legal-notice newspapers (directory in `pipeline_site/sources/annuaire_jal.json`)
+- **JAL (Journaux d'Annonces Légales)**: [annoncelegale.com](https://www.annoncelegale.com/) — 598 authorized legal-notice newspapers
 
 **BODACC-api adds structure and the graph on top of this raw data**: legal text analysis, identity resolution (people), company ↔ notice ↔ contract links.
 
