@@ -203,6 +203,14 @@ The source data is public and free:
 
 [Home](https://bodacc.io/en) · [Notices](https://bodacc.io/en/notices) · [Companies](https://bodacc.io/en/companies) · [People](https://bodacc.io/en/people) · [Pricing](https://bodacc.io/en/pricing) · [Technology](https://bodacc.io/en/technology)
 
+## 📡 Discovery feeds (RSS)
+
+![RSS](https://img.shields.io/badge/RSS-Feed-orange?logo=rss&logoColor=white)
+
+- **RSS public** : [`https://bodacc.io/rss.xml`](https://bodacc.io/rss.xml) — daily recaps + latest notices (updated every 5 min, pinged on Feedly/Pingomatic)
+- **Sitemap index** : [`https://bodacc.io/sitemap.xml`](https://bodacc.io/sitemap.xml)
+- **URLLIST (all key URLs)** : see [`URLLIST.md`](URLLIST.md) — machine-readable list of site entry points
+
 ---
 
 ## 📄 License & contact
