@@ -16,6 +16,10 @@ de la veille : créations d'entreprises, changements de dirigeants, liquidations
 dépôts de comptes... Il les ramène toutes, sans en perdre une seule, et les
 range dans notre grande bibliothèque.
 
+> 👤 **Incarné par Thom** — agent ingestion : il récupère chaque jour les
+> annonces officielles et les structure pour la base de données. C'est lui qui
+> fait tourner la machine.
+
 → [Découvrir le travail du facteur](docs/coulisses/le-facteur/README.md)
 
 ## 📖 Ensuite : le traducteur
@@ -33,6 +37,11 @@ Une fois la fiche prête, notre **enquêteur** la complète avec les information
 **publiques** de l'entreprise : son site web, son téléphone, ses réseaux
 sociaux. Rien de privé, rien de secret — uniquement ce que l'entreprise
 montre elle-même.
+
+> 👤 **Incarné par Elysa** — agent enrichissement : elle complète les fiches
+> entreprises (site web, téléphone, réseaux sociaux des dirigeants). Elle ne
+> récupère que les données publiques exposées : rien n'est recherché dans des
+> endroits interdits.
 
 → [Découvrir le travail de l'enquêteur](docs/coulisses/lenqueteur/README.md)
 
@@ -59,6 +68,18 @@ archivés dans notre **bibliothèque** : plus d'un million de contrats, consulta
 librement.
 
 → [Découvrir la bibliothèque des contrats](docs/coulisses/la-bibliotheque/README.md)
+
+---
+
+## 👥 L'équipe qui fait tourner les coulisses
+
+| Personne | Rôle | Domaine |
+|---|---|---|
+| **Nansou** | Chef de projet | Vision, stratégie, contenu — il orchestre tout |
+| **Thom** | Agent ingestion | Le facteur : récupérer les annonces chaque jour |
+| **Elysa** | Agent enrichissement | L'enquêteur : compléter les fiches publiques |
+| **Karan** | Agent international et SEO | Traductions, visibilité à l'international |
+| **Ruby** | Agent supervision | Vérifier que tout fonctionne, en permanence |
 
 ---
 
