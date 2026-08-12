@@ -2,4 +2,4 @@
 
 | Date | Nouvelles personnes | Nouveaux liens | Petites améliorations |
 |---|---|---|---|
-| 12/08/2026 | : | : | Journée de référence |
+| 12/08/2026 | 355 831 | : | Journée de référence |
