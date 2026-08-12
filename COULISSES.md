@@ -1,118 +1,114 @@
-# 🏠 Dans les coulisses de BODACC.io
+# 🏠 Behind the scenes at BODACC.io
 
-BODACC.io rend les annonces officielles des entreprises françaises **faciles à
-consulter**. Mais d'où viennent ces données ? Comment arrivent-elles jusqu'à
-votre écran ?
+BODACC.io makes the official announcements of French companies **easy to
+consult**. But where does the data come from? How does it reach your screen?
 
-C'est une petite équipe de travailleurs automatiques qui s'active chaque jour
-dans les coulisses. Voici leur histoire.
+It's a small team of automatic workers working behind the scenes every day.
+Here is their story.
 
----
-
-## 🌅 Le matin : le facteur
-
-Chaque matin, très tôt, notre **facteur** part chercher les annonces officielles
-de la veille : créations d'entreprises, changements de dirigeants, liquidations,
-dépôts de comptes... Il les ramène toutes, sans en perdre une seule, et les
-range dans notre grande bibliothèque.
-
-> 👤 **Incarné par Thom** — agent ingestion : il récupère chaque jour les
-> annonces officielles et les structure pour la base de données. C'est lui qui
-> fait tourner la machine.
-
-→ [Découvrir le travail du facteur](docs/coulisses/le-facteur/README.md)
-
-## 📖 Ensuite : le traducteur
-
-Les annonces officielles sont des textes écrits en langage administratif, pas
-toujours faciles à lire. Notre **traducteur** les lit toutes et les transforme
-en fiches claires : le nom de l'entreprise, son adresse, son activité, ses
-dirigeants, les montants...
-
-→ [Découvrir le travail du traducteur](docs/coulisses/le-traducteur/README.md)
-
-## 🔍 Puis : l'enquêteur
-
-Une fois la fiche prête, notre **enquêteur** la complète avec les informations
-**publiques** de l'entreprise : son site web, son téléphone, ses réseaux
-sociaux. Rien de privé, rien de secret — uniquement ce que l'entreprise
-montre elle-même.
-
-> 👤 **Incarné par Elysa** — agent enrichissement : elle complète les fiches
-> entreprises (site web, téléphone, réseaux sociaux des dirigeants). Elle ne
-> récupère que les données publiques exposées : rien n'est recherché dans des
-> endroits interdits.
-
-→ [Découvrir le travail de l'enquêteur](docs/coulisses/lenqueteur/README.md)
-
-## 🧩 En même temps : le puzzle des personnes
-
-Chaque annonce parle de personnes : des dirigeants, des liquidateurs, des
-commissaires aux comptes. Notre **puzzle** relie chaque personne à ses
-entreprises, pour qu'on puisse retrouver facilement « qui fait quoi ».
-
-→ [Découvrir le puzzle des personnes](docs/coulisses/le-puzzle/README.md)
-
-## 🗺️ Et le géographe
-
-Notre **géographe** vérifie que chaque entreprise existe bien sur la carte
-(Google Maps) : son adresse, sa catégorie, sa note. Comme ça, la fiche montre
-aussi la présence réelle de l'entreprise dans la vraie vie.
-
-→ [Découvrir le travail du géographe](docs/coulisses/le-geographe/README.md)
-
-## 📚 Enfin : la bibliothèque des contrats
-
-Les marchés publics (contrats passés par les administrations) sont eux aussi
-archivés dans notre **bibliothèque** : plus d'un million de contrats, consultables
-librement.
-
-→ [Découvrir la bibliothèque des contrats](docs/coulisses/la-bibliotheque/README.md)
+> 🌍 Translated versions: [Français](docs/fr/COULISSES.md) · [English](docs/en/COULISSES.md) · [Español](docs/es/COULISSES.md) · [Deutsch](docs/de/COULISSES.md) · [Italiano](docs/it/COULISSES.md) · [Português](docs/pt/COULISSES.md) · [Nederlands](docs/nl/COULISSES.md) · [Polski](docs/pl/COULISSES.md) · [Русский](docs/ru/COULISSES.md) · [Türkçe](docs/tr/COULISSES.md) · [Українська](docs/uk/COULISSES.md) · [Bahasa Indonesia](docs/id/COULISSES.md) · [Tiếng Việt](docs/vi/COULISSES.md) · [日本語](docs/ja/COULISSES.md) · [한국어](docs/ko/COULISSES.md) · [中文](docs/zh/COULISSES.md) · [العربية](docs/ar/COULISSES.md) · [עברית](docs/he/COULISSES.md) · [हिन्दी](docs/hi/COULISSES.md) · [فارسی](docs/fa/COULISSES.md)
 
 ---
 
-## 👥 L'équipe qui fait tourner les coulisses
+## 🌅 In the morning: the postman
 
-| Personne | Rôle | Domaine |
+Every morning, very early, our **postman** goes to collect the official
+announcements of the previous day: company creations, director changes,
+liquidations, annual accounts... He brings them all back, without losing a
+single one, and files them in our great library.
+
+> 👤 **Played by Thom** — he collects the official announcements every day and
+> structures them for the database. He is the one who keeps the machine running.
+
+→ [Discover the postman's work](docs/en/coulisses/le-facteur/README.md)
+
+## 📖 Then: the translator
+
+Official announcements are texts written in administrative language, not
+always easy to read. Our **translator** reads them all and turns them into
+clear records: the company name, its address, its activity, its directors,
+the amounts...
+
+→ [Discover the translator's work](docs/en/coulisses/le-traducteur/README.md)
+
+## 🔍 Then: the investigator
+
+Once the record is ready, our **investigator** completes it with the company's
+**public** information: its website, its phone number, its social networks.
+Nothing private, nothing secret — only what the company shows itself.
+
+> 👤 **Played by Elysa** — she completes company records (website, phone,
+> directors' social networks). She only collects publicly exposed data:
+> nothing is looked up in forbidden places.
+
+→ [Discover the investigator's work](docs/en/coulisses/lenqueteur/README.md)
+
+## 🧩 At the same time: the people puzzle
+
+Every announcement talks about people: directors, liquidators, statutory
+auditors. Our **puzzle** links each person to their companies, so you can
+easily find out "who does what".
+
+→ [Discover the people puzzle](docs/en/coulisses/le-puzzle/README.md)
+
+## 🗺️ And the geographer
+
+Our **geographer** checks that every company really exists on the map
+(Google Maps): its address, its category, its rating. This way, the record
+also shows the company's real presence in real life.
+
+→ [Discover the geographer's work](docs/en/coulisses/le-geographe/README.md)
+
+## 📚 Finally: the contracts library
+
+Public contracts (contracts awarded by administrations) are also archived in
+our **library**: more than one million contracts, freely consultable.
+
+→ [Discover the contracts library](docs/en/coulisses/la-bibliotheque/README.md)
+
+---
+
+## 👥 The team behind the scenes
+
+| Person | Role | Field |
 |---|---|---|
-| **Nansou** | Chef de projet | Vision, stratégie, contenu — il orchestre tout |
-| **Thom** | Agent ingestion | Le facteur : récupérer les annonces chaque jour |
-| **Elysa** | Agent enrichissement | L'enquêteur : compléter les fiches publiques |
-| **Karan** | Agent international et SEO | Traductions, visibilité à l'international |
-| **Ruby** | Agent supervision | Vérifier que tout fonctionne, en permanence |
+| **Nansou** | Project leader | Vision, strategy, content — he orchestrates everything |
+| **Thom** | Ingestion specialist | The postman: collecting announcements every day |
+| **Elysa** | Enrichment specialist | The investigator: completing public records |
+| **Karan** | International & SEO specialist | Translations, international visibility |
+| **Ruby** | Supervision specialist | Making sure everything works, at all times |
 
 ---
 
-## 📊 Les compteurs en direct
+## 📊 Live counters
 
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Annonces&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Entreprises&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Personnes&color=orange)
+![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue)
+![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green)
+![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange)
 
-Ces chiffres sont réels et évoluent chaque jour. Chaque matin, le facteur
-apporte son lot, le traducteur le lit, et tout le monde peut venir consulter.
+These figures are real and change every day. Every morning the postman brings
+his batch, the translator reads it, and everyone can come and consult it.
 
 ---
 
-## 📅 Le journal de bord
+## 📅 The logbook
 
-Chaque travailleur tient son petit journal : combien de documents traités dans
-la journée, et les petites améliorations apportées. On le retrouve dans chaque
-fiche :
+Each worker keeps a small log: how many documents processed during the day,
+and the small improvements made. You can find it in each page:
 
-| Date | Annonces arrivées | Fiches lues | Petites améliorations |
+| Date | Announcements received | Records read | Small improvements |
 |---|---|---|---|
-| _(complété chaque jour)_ | | | |
+| _(filled daily)_ | | | |
 
-## 🔍 Vérifiez par vous-même
+## 🔍 Check it yourself
 
-Tout est public et gratuit — chacun peut vérifier :
+Everything is public and free — everyone can verify:
 
-- Les dernières annonces : [`https://bodacc.io/fr/annonces`](https://bodacc.io/fr/annonces)
-- Les compteurs en direct : [`https://bodacc.io/api/bodacc/stats/counts`](https://bodacc.io/api/bodacc/stats/counts)
-- Une entreprise : [`https://bodacc.io/fr/entreprises/514494491`](https://bodacc.io/fr/entreprises/514494491)
+- Latest announcements: [`https://bodacc.io/en/annonces`](https://bodacc.io/en/annonces)
+- Live counters: [`https://bodacc.io/api/bodacc/stats/counts`](https://bodacc.io/api/bodacc/stats/counts)
+- A company: [`https://bodacc.io/en/entreprises/514494491`](https://bodacc.io/en/entreprises/514494491)
 
 ---
 
-*Ce document fait partie du dépôt public BODACC-api. Il décrit ce que nous
-faisons, simplement — sans dévoiler nos méthodes internes.*
+*This document is part of the public BODACC-api repository. It describes what
+we do, simply — without revealing our internal methods.*

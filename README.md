@@ -210,6 +210,7 @@ The source data is public and free:
 - **RSS public** : [`https://bodacc.io/rss.xml`](https://bodacc.io/rss.xml) — daily recaps + latest notices (updated every 5 min, pinged on Feedly/Pingomatic)
 - **Sitemap index** : [`https://bodacc.io/sitemap.xml`](https://bodacc.io/sitemap.xml)
 - **URLLIST (all key URLs)** : see [`URLLIST.md`](URLLIST.md) — machine-readable list of site entry points
+- **Behind the scenes** : see [`COULISSES.md`](COULISSES.md) — how the data pipeline works, told for everyone (20 languages)
 
 ---
 
