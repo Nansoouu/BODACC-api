@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (fa)
+# BODACC.io : فهرست URLها
 
-Points d'entrée du site — maintenus pour les robots et agents.
+نقاط ورود سایت : برای ربات‌ها و عوامل حفظ می‌شود.
 همه URLهای زیر HTTP 200 برمی‌گردانند و به‌صورت عمومی قابل دسترسی هستند.
 
-## وب‌سایت (چندزبانه — ۲۰ زبان، پیش‌فرض /fa)
+## وب‌سایت (چندزبانه : ۲۰ زبان، پیش‌فرض /fa)
 
 - خانه: https://bodacc.io/fa
 - آگهی‌ها: https://bodacc.io/fa/annonces

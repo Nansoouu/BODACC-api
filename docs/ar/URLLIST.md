@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (ar)
+# BODACC.io : قائمة العناوين
 
-Points d'entrée du site — maintenus pour les robots et agents.
+نقاط دخول الموقع : تُحفظ للزواحف والروبوتات والوكلاء.
 جميع عناوين URL أدناه تُرجع HTTP 200 ويمكن الوصول إليها علنًا.
 
-## الموقع (متعدد اللغات — 20 لغة، /ar افتراضيًا)
+## الموقع (متعدد اللغات : 20 لغة، /ar افتراضيًا)
 
 - الرئيسية: https://bodacc.io/ar
 - الإعلانات: https://bodacc.io/ar/annonces

@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (id)
+# BODACC.io : daftar URL
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Titik masuk situs : dipelihara untuk crawler, bot, dan agen.
 Semua URL di bawah mengembalikan HTTP 200 dan dapat diakses publik.
 
-## Situs (multibahasa — 20 bahasa, /id default)
+## Situs (multibahasa : 20 bahasa, /id default)
 
 - Beranda: https://bodacc.io/id
 - Pengumuman: https://bodacc.io/id/annonces

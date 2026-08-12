@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (uk)
+# BODACC.io : список URL
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Точки входу сайту : підтримуються для роботів та агентів.
 Усі URL-адреси нижче повертають HTTP 200 і є загальнодоступними.
 
-## Сайт (багатомовний — 20 мов, /uk за замовчуванням)
+## Сайт (багатомовний : 20 мов, /uk за замовчуванням)
 
 - Головна: https://bodacc.io/uk
 - Оголошення: https://bodacc.io/uk/annonces

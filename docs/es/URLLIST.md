@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (es)
+# BODACC.io : lista de URLs
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Puntos de entrada del sitio : mantenidos para robots y agentes.
 Todas las URLs devuelven HTTP 200 y son de acceso público.
 
-## Sitio (multilingüe — 20 idiomas, /es por defecto)
+## Sitio (multilingüe : 20 idiomas, /es por defecto)
 
 - Inicio: https://bodacc.io/es
 - Anuncios: https://bodacc.io/es/annonces

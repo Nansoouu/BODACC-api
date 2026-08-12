@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (he)
+# BODACC.io : רשימת כתובות
 
-Points d'entrée du site — maintenus pour les robots et agents.
+נקודות כניסה לאתר : מתוחזקות עבור סורקים, בוטים וסוכנים.
 כל כתובות ה-URL להלן מחזירות HTTP 200 והן נגישות לציבור.
 
-## האתר (רב-לשוני — 20 שפות, ברירת מחדל /he)
+## האתר (רב-לשוני : 20 שפות, ברירת מחדל /he)
 
 - ראשי: https://bodacc.io/he
 - הודעות: https://bodacc.io/he/annonces

@@ -1,5 +1,5 @@
-# 🧩 Le puzzle des personnes — journal de bord
+# 🧩 Le puzzle des personnes : journal de bord
 
 | Date | Nouvelles personnes | Nouveaux liens | Petites améliorations |
 |---|---|---|---|
-| 12/08/2026 | — | — | Journée de référence |
+| 12/08/2026 | : | : | Journée de référence |

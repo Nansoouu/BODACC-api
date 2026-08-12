@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (ru)
+# BODACC.io : список URL
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Точки входа сайта : поддерживаются для роботов и агентов.
 Все URL ниже возвращают HTTP 200 и доступны публично.
 
-## Сайт (многоязычный — 20 языков, /ru по умолчанию)
+## Сайт (многоязычный : 20 языков, /ru по умолчанию)
 
 - Главная: https://bodacc.io/ru
 - Объявления: https://bodacc.io/ru/annonces

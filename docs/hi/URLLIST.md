@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (hi)
+# BODACC.io : URL सूची
 
-Points d'entrée du site — maintenus pour les robots et agents.
+साइट प्रवेश बिंदु : क्रॉलर, बॉट और एजेंटों के लिए बनाए रखा गया।
 नीचे दिए गए सभी URL HTTP 200 लौटाते हैं और सार्वजनिक रूप से सुलभ हैं।
 
-## साइट (बहुभाषी — 20 भाषाएँ, डिफ़ॉल्ट /hi)
+## साइट (बहुभाषी : 20 भाषाएँ, डिफ़ॉल्ट /hi)
 
 - होम: https://bodacc.io/hi
 - सूचनाएँ: https://bodacc.io/hi/annonces

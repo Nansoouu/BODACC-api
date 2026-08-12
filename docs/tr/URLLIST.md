@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (tr)
+# BODACC.io : URL listesi
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Site giriş noktaları : botlar ve aracılar için tutulur.
 Aşağıdaki tüm URL'ler HTTP 200 döndürür ve herkese açıktır.
 
-## Site (çok dilli — 20 dil, varsayılan /tr)
+## Site (çok dilli : 20 dil, varsayılan /tr)
 
 - Ana Sayfa: https://bodacc.io/tr
 - İlanlar: https://bodacc.io/tr/annonces

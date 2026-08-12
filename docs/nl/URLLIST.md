@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (nl)
+# BODACC.io : URL-lijst
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Toegangspunten van de site : onderhouden voor crawlers, bots en agents.
 Alle onderstaande URL's geven HTTP 200 terug en zijn openbaar toegankelijk.
 
-## Site (meertalig — 20 talen, /nl standaard)
+## Site (meertalig : 20 talen, /nl standaard)
 
 - Home: https://bodacc.io/nl
 - Bekendmakingen: https://bodacc.io/nl/annonces

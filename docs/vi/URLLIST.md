@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (vi)
+# BODACC.io : danh sách URL
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Các điểm vào trang web : duy trì cho trình thu thập, bot và tác nhân.
 Tất cả URL dưới đây trả về HTTP 200 và có thể truy cập công khai.
 
-## Trang web (đa ngôn ngữ — 20 ngôn ngữ, mặc định /vi)
+## Trang web (đa ngôn ngữ : 20 ngôn ngữ, mặc định /vi)
 
 - Trang chủ: https://bodacc.io/vi
 - Thông báo: https://bodacc.io/vi/annonces

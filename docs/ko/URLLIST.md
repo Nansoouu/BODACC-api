@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (ko)
+# BODACC.io : URL 목록
 
-Points d'entrée du site — maintenus pour les robots et agents.
+사이트 진입점 : 크롤러, 봇, 에이전트를 위해 유지 관리됩니다.
 아래 모든 URL은 HTTP 200을 반환하며 공개적으로 액세스할 수 있습니다.
 
-## 사이트 (다국어 — 20개 언어, 기본 /ko)
+## 사이트 (다국어 : 20개 언어, 기본 /ko)
 
 - 홈: https://bodacc.io/ko
 - 공고: https://bodacc.io/ko/annonces

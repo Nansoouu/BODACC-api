@@ -1,9 +1,9 @@
-# BODACC.io — URL List (machine-readable)
+# BODACC.io : URL List (machine-readable)
 
 Live site entry points — maintained for crawlers, bots and agents.
 All URLs below return HTTP 200 and are publicly accessible.
 
-## Site (multilingual — 20 locales, `/en` shown; all locales share the same slugs)
+## Site (multilingual : 20 locales, `/en` shown; all locales share the same slugs)
 
 The canonical path structure is identical in every language: `https://bodacc.io/{locale}/...`.
 Localized URL lists: [docs/ar/URLLIST.md](docs/ar/URLLIST.md) · [docs/de/URLLIST.md](docs/de/URLLIST.md) · [docs/en/URLLIST.md](docs/en/URLLIST.md) · [docs/es/URLLIST.md](docs/es/URLLIST.md) · [docs/fa/URLLIST.md](docs/fa/URLLIST.md) · [docs/fr/URLLIST.md](docs/fr/URLLIST.md) · [docs/he/URLLIST.md](docs/he/URLLIST.md) · [docs/hi/URLLIST.md](docs/hi/URLLIST.md) · [docs/id/URLLIST.md](docs/id/URLLIST.md) · [docs/it/URLLIST.md](docs/it/URLLIST.md) · [docs/ja/URLLIST.md](docs/ja/URLLIST.md) · [docs/ko/URLLIST.md](docs/ko/URLLIST.md) · [docs/nl/URLLIST.md](docs/nl/URLLIST.md) · [docs/pl/URLLIST.md](docs/pl/URLLIST.md) · [docs/pt/URLLIST.md](docs/pt/URLLIST.md) · [docs/ru/URLLIST.md](docs/ru/URLLIST.md) · [docs/tr/URLLIST.md](docs/tr/URLLIST.md) · [docs/uk/URLLIST.md](docs/uk/URLLIST.md) · [docs/vi/URLLIST.md](docs/vi/URLLIST.md) · [docs/zh/URLLIST.md](docs/zh/URLLIST.md)

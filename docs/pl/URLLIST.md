@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (pl)
+# BODACC.io : lista URL
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Punkty wejścia serwisu : utrzymywane dla robotów i agentów.
 Wszystkie poniższe adresy URL zwracają HTTP 200 i są publicznie dostępne.
 
-## Serwis (wielojęzyczny — 20 języków, domyślnie /pl)
+## Serwis (wielojęzyczny : 20 języków, domyślnie /pl)
 
 - Strona główna: https://bodacc.io/pl
 - Ogłoszenia: https://bodacc.io/pl/annonces

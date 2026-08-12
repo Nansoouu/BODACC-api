@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (fr)
+# BODACC.io : liste des URLs
 
-Points d'entrée du site — maintenus pour les robots et agents.
+Points d'entrée du site : maintenus pour les robots et les agents.
 Toutes les URLs ci-dessous renvoient HTTP 200 et sont publiques.
 
-## Site (multilingue — 20 locales, /fr par défaut)
+## Site (multilingue : 20 locales, /fr par défaut)
 
 - Accueil: https://bodacc.io/fr
 - Annonces: https://bodacc.io/fr/annonces

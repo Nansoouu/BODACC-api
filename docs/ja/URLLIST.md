@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (ja)
+# BODACC.io : URLリスト
 
-Points d'entrée du site — maintenus pour les robots et agents.
+サイトのエントリポイント : クローラー、ボット、エージェント向けに維持。
 以下のURLはすべてHTTP 200を返し、公開されています。
 
-## サイト（多言語 — 20言語、既定 /ja）
+## サイト（多言語 : 20言語、既定 /ja）
 
 - ホーム: https://bodacc.io/ja
 - 公告: https://bodacc.io/ja/annonces

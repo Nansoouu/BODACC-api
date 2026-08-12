@@ -1,9 +1,9 @@
-# BODACC.io — Liste des URLs (zh)
+# BODACC.io : URL 列表
 
-Points d'entrée du site — maintenus pour les robots et agents.
+网站入口点：为爬虫、机器人和代理维护。
 以下所有 URL 均返回 HTTP 200，可公开访问。
 
-## 网站（多语言 — 20 种语言，默认 /zh）
+## 网站（多语言 : 20 种语言，默认 /zh）
 
 - 首页: https://bodacc.io/zh
 - 公告: https://bodacc.io/zh/annonces

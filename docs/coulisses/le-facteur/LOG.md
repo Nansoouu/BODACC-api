@@ -1,4 +1,4 @@
-# 🌅 Le facteur du matin — journal de bord
+# 🌅 Le facteur du matin : journal de bord
 
 | Date | Annonces arrivées | Famille la plus nombreuse | Traducteur prévenu | Petites améliorations |
 |---|---|---|---|---|
