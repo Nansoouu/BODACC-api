@@ -20,7 +20,7 @@ range dans notre grande bibliothèque.
 > annonces officielles et les structure pour la base de données. C'est lui qui
 > fait tourner la machine.
 
-→ [Découvrir le travail du facteur](docs/coulisses/le-facteur/README.md)
+→ [Découvrir le travail du facteur](le-facteur/README.md)
 
 ## 📖 Ensuite : le traducteur
 
@@ -29,7 +29,7 @@ toujours faciles à lire. Notre **traducteur** les lit toutes et les transforme
 en fiches claires : le nom de l'entreprise, son adresse, son activité, ses
 dirigeants, les montants...
 
-→ [Découvrir le travail du traducteur](docs/coulisses/le-traducteur/README.md)
+→ [Découvrir le travail du traducteur](le-traducteur/README.md)
 
 ## 🔍 Puis : l'enquêteur
 
@@ -43,7 +43,7 @@ montre elle-même.
 > récupère que les données publiques exposées : rien n'est recherché dans des
 > endroits interdits.
 
-→ [Découvrir le travail de l'enquêteur](docs/coulisses/lenqueteur/README.md)
+→ [Découvrir le travail de l'enquêteur](lenqueteur/README.md)
 
 ## 🧩 En même temps : le puzzle des personnes
 
@@ -51,7 +51,7 @@ Chaque annonce parle de personnes : des dirigeants, des liquidateurs, des
 commissaires aux comptes. Notre **puzzle** relie chaque personne à ses
 entreprises, pour qu'on puisse retrouver facilement « qui fait quoi ».
 
-→ [Découvrir le puzzle des personnes](docs/coulisses/le-puzzle/README.md)
+→ [Découvrir le puzzle des personnes](le-puzzle/README.md)
 
 ## 🗺️ Et le géographe
 
@@ -59,7 +59,7 @@ Notre **géographe** vérifie que chaque entreprise existe bien sur la carte
 (Google Maps) : son adresse, sa catégorie, sa note. Comme ça, la fiche montre
 aussi la présence réelle de l'entreprise dans la vraie vie.
 
-→ [Découvrir le travail du géographe](docs/coulisses/le-geographe/README.md)
+→ [Découvrir le travail du géographe](le-geographe/README.md)
 
 ## 📚 Enfin : la bibliothèque des contrats
 
@@ -67,7 +67,7 @@ Les marchés publics (contrats passés par les administrations) sont eux aussi
 archivés dans notre **bibliothèque** : plus d'un million de contrats, consultables
 librement.
 
-→ [Découvrir la bibliothèque des contrats](docs/coulisses/la-bibliotheque/README.md)
+→ [Découvrir la bibliothèque des contrats](la-bibliotheque/README.md)
 
 ---
 

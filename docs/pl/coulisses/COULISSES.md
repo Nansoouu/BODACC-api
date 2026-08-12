@@ -19,7 +19,7 @@ gubiąc ani jednego, i układa w naszej wielkiej bibliotece.
 > pobiera oficjalne ogłoszenia i porządkuje je pod kątem bazy danych. To on
 > napędza całą maszynę.
 
-→ [Poznaj pracę listonosza](coulisses/le-facteur/README.md)
+→ [Poznaj pracę listonosza](le-facteur/README.md)
 
 ## 📖 Potem : tłumacz
 
@@ -27,7 +27,7 @@ Oficjalne ogłoszenia to teksty pisane językiem administracyjnym, nie zawsze
 łatwe do czytania. Nasz **tłumacz** czyta je wszystkie i zamienia w jasne
 karty: nazwę firmy, jej adres, działalność, osoby zarządzające, kwoty...
 
-→ [Poznaj pracę tłumacza](coulisses/le-traducteur/README.md)
+→ [Poznaj pracę tłumacza](le-traducteur/README.md)
 
 ## 🔍 Następnie : śledcza
 
@@ -41,7 +41,7 @@ pokazuje.
 > Zbiera wyłącznie publicznie dostępne dane: nic nie jest wyszukiwane w
 > miejscach niedozwolonych.
 
-→ [Poznaj pracę śledczej](coulisses/lenqueteur/README.md)
+→ [Poznaj pracę śledczej](lenqueteur/README.md)
 
 ## 🧩 W tym samym czasie : układanka osób
 
@@ -49,7 +49,7 @@ Każde ogłoszenie dotyczy osób: członków zarządu, likwidatorów, biegłych
 rewidentów. Nasza **układanka** łączy każdą osobę z jej firmami, aby łatwo
 odnaleźć "kto co robi".
 
-→ [Poznaj układankę osób](coulisses/le-puzzle/README.md)
+→ [Poznaj układankę osób](le-puzzle/README.md)
 
 ## 🗺️ I geograf
 
@@ -57,7 +57,7 @@ Nasz **geograf** sprawdza, czy każda firma naprawdę istnieje na mapie
 (Google Maps): jej adres, kategorię, ocenę. Dzięki temu karta pokazuje także
 realną obecność firmy w prawdziwym życiu.
 
-→ [Poznaj pracę geografa](coulisses/le-geographe/README.md)
+→ [Poznaj pracę geografa](le-geographe/README.md)
 
 ## 📚 Na koniec : biblioteka kontraktów
 
@@ -65,7 +65,7 @@ Zamówienia publiczne (kontrakty zawierane przez administracje) również są
 archiwizowane w naszej **bibliotece**: ponad milion kontraktów, swobodnie
 dostępnych.
 
-→ [Poznaj bibliotekę kontraktów](coulisses/la-bibliotheque/README.md)
+→ [Poznaj bibliotekę kontraktów](la-bibliotheque/README.md)
 
 ---
 

@@ -21,7 +21,7 @@ großen Bibliothek ein.
 > offiziellen Bekanntmachungen und strukturiert sie für die Datenbank. Er ist es,
 > der die Maschine am Laufen hält.
 
-→ [Die Arbeit des Postboten entdecken](coulisses/le-facteur/README.md)
+→ [Die Arbeit des Postboten entdecken](le-facteur/README.md)
 
 ## 📖 Danach : der Übersetzer
 
@@ -30,7 +30,7 @@ immer leicht zu lesen. Unser **Übersetzer** liest sie alle und verwandelt sie
 in klare Einträge: den Namen des Unternehmens, seine Adresse, seine Tätigkeit,
 seine Geschäftsführung, die Beträge...
 
-→ [Die Arbeit des Übersetzers entdecken](coulisses/le-traducteur/README.md)
+→ [Die Arbeit des Übersetzers entdecken](le-traducteur/README.md)
 
 ## 🔍 Dann : die Ermittlerin
 
@@ -44,7 +44,7 @@ Unternehmen selbst zeigt.
 > Sie erfasst nur öffentlich zugängliche Daten: Es wird nichts an
 > verbotenen Orten gesucht.
 
-→ [Die Arbeit der Ermittlerin entdecken](coulisses/lenqueteur/README.md)
+→ [Die Arbeit der Ermittlerin entdecken](lenqueteur/README.md)
 
 ## 🧩 Gleichzeitig : das Personen-Puzzle
 
@@ -52,7 +52,7 @@ Jede Bekanntmachung handelt von Personen: Geschäftsführern, Liquidatoren,
 Abschlussprüfern. Unser **Puzzle** verbindet jede Person mit ihren
 Unternehmen, damit man leicht herausfinden kann, „wer was macht“.
 
-→ [Das Personen-Puzzle entdecken](coulisses/le-puzzle/README.md)
+→ [Das Personen-Puzzle entdecken](le-puzzle/README.md)
 
 ## 🗺️ Und der Geograf
 
@@ -60,7 +60,7 @@ Unser **Geograf** prüft, ob jedes Unternehmen wirklich auf der Karte existiert
 (Google Maps): seine Adresse, seine Kategorie, seine Bewertung. So zeigt der
 Eintrag auch die reale Präsenz des Unternehmens im echten Leben.
 
-→ [Die Arbeit des Geografen entdecken](coulisses/le-geographe/README.md)
+→ [Die Arbeit des Geografen entdecken](le-geographe/README.md)
 
 ## 📚 Schließlich : die Vertragsbibliothek
 
@@ -68,7 +68,7 @@ Die öffentlichen Aufträge (Verträge der Verwaltungen) werden ebenfalls in uns
 **Bibliothek** archiviert: mehr als eine Million Verträge, frei
 einsehbar.
 
-→ [Die Vertragsbibliothek entdecken](coulisses/la-bibliotheque/README.md)
+→ [Die Vertragsbibliothek entdecken](la-bibliotheque/README.md)
 
 ---
 

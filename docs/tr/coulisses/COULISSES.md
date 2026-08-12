@@ -18,7 +18,7 @@ büyük kütüphanemizde düzenler.
 > 👤 **Thom tarafından canlandırılıyor** — veri toplama ajanı: her gün resmî
 > ilanları toplar ve veritabanı için yapılandırır. Makineyi döndüren odur.
 
-→ [Postacının işini keşfedin](coulisses/le-facteur/README.md)
+→ [Postacının işini keşfedin](le-facteur/README.md)
 
 ## 📖 Sonra : çevirmen
 
@@ -26,7 +26,7 @@ Resmî ilanlar, idari dille yazılmış ve okuması her zaman kolay olmayan
 metinlerdir. **Çevirmenimiz** hepsini okur ve net kayıtlara dönüştürür:
 şirketin adı, adresi, faaliyeti, yöneticileri, tutarlar...
 
-→ [Çevirmenin işini keşfedin](coulisses/le-traducteur/README.md)
+→ [Çevirmenin işini keşfedin](le-traducteur/README.md)
 
 ## 🔍 Ardından : araştırmacı
 
@@ -38,7 +38,7 @@ gizli hiçbir şey — yalnızca şirketin kendi gösterdikleri.
 > kayıtlarını tamamlar (web sitesi, telefon, yöneticilerin sosyal ağları).
 > Yalnızca kamuya açık verileri toplar: yasak yerlerde hiçbir şey aranmaz.
 
-→ [Araştırmacının işini keşfedin](coulisses/lenqueteur/README.md)
+→ [Araştırmacının işini keşfedin](lenqueteur/README.md)
 
 ## 🧩 Aynı anda : kişi bulmacası
 
@@ -46,7 +46,7 @@ Her ilan insanlardan bahseder: yöneticiler, tasfiye memurları, denetçiler.
 **Bulmacamız** her kişiyi şirketleriyle ilişkilendirir; böylece "kim ne
 yapıyor" kolayca bulunabilir.
 
-→ [Kişi bulmacasını keşfedin](coulisses/le-puzzle/README.md)
+→ [Kişi bulmacasını keşfedin](le-puzzle/README.md)
 
 ## 🗺️ Ve coğrafyacı
 
@@ -54,7 +54,7 @@ yapıyor" kolayca bulunabilir.
 olmadığını kontrol eder: adresi, kategorisi, puanı. Böylece kayıt, şirketin
 gerçek hayattaki varlığını da gösterir.
 
-→ [Coğrafyacının işini keşfedin](coulisses/le-geographe/README.md)
+→ [Coğrafyacının işini keşfedin](le-geographe/README.md)
 
 ## 📚 Son olarak : sözleşme kütüphanesi
 
@@ -62,7 +62,7 @@ Kamu ihaleleri (idareler tarafından verilen sözleşmeler) de
 **kütüphanemizde** arşivlenir: bir milyondan fazla sözleşme, serbestçe
 incelenebilir.
 
-→ [Sözleşme kütüphanesini keşfedin](coulisses/la-bibliotheque/README.md)
+→ [Sözleşme kütüphanesini keşfedin](la-bibliotheque/README.md)
 
 ---
 

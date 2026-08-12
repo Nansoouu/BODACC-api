@@ -20,7 +20,7 @@ không để sót một cái nào, và xếp chúng vào thư viện lớn của
 > thập các thông báo chính thức và cấu trúc chúng cho cơ sở dữ liệu.
 > Chính anh là người vận hành cỗ máy.
 
-→ [Khám phá công việc của người đưa thư](coulisses/le-facteur/README.md)
+→ [Khám phá công việc của người đưa thư](le-facteur/README.md)
 
 ## 📖 Tiếp theo : người dịch
 
@@ -29,7 +29,7 @@ không phải lúc nào cũng dễ đọc. **Người dịch** của chúng tôi
 biến chúng thành những hồ sơ rõ ràng: tên doanh nghiệp, địa chỉ, ngành
 nghề, người điều hành, số tiền...
 
-→ [Khám phá công việc của người dịch](coulisses/le-traducteur/README.md)
+→ [Khám phá công việc của người dịch](le-traducteur/README.md)
 
 ## 🔍 Sau đó : nhà điều tra
 
@@ -43,7 +43,7 @@ phô bày.
 > Cô chỉ thu thập dữ liệu công khai: không tìm kiếm gì ở những nơi bị
 > cấm.
 
-→ [Khám phá công việc của nhà điều tra](coulisses/lenqueteur/README.md)
+→ [Khám phá công việc của nhà điều tra](lenqueteur/README.md)
 
 ## 🧩 Cùng lúc đó : bức xếp hình con người
 
@@ -51,7 +51,7 @@ Mỗi thông báo nhắc đến những con người: người điều hành, ng
 kiểm toán viên. **Bức xếp hình** của chúng tôi nối mỗi người với doanh
 nghiệp của họ, để dễ dàng tìm ra "ai làm gì".
 
-→ [Khám phá bức xếp hình con người](coulisses/le-puzzle/README.md)
+→ [Khám phá bức xếp hình con người](le-puzzle/README.md)
 
 ## 🗺️ Và nhà địa lý
 
@@ -60,7 +60,7 @@ tại trên bản đồ (Google Maps): địa chỉ, danh mục, điểm đánh 
 hồ sơ cũng cho thấy sự hiện diện thực tế của doanh nghiệp trong đời
 sống.
 
-→ [Khám phá công việc của nhà địa lý](coulisses/le-geographe/README.md)
+→ [Khám phá công việc của nhà địa lý](le-geographe/README.md)
 
 ## 📚 Cuối cùng : thư viện hợp đồng
 
@@ -68,7 +68,7 @@ Các hợp đồng công (hợp đồng do các cơ quan hành chính ký) cũng
 trữ trong **thư viện** của chúng tôi: hơn một triệu hợp đồng, tự do tra
 cứu.
 
-→ [Khám phá thư viện hợp đồng](coulisses/la-bibliotheque/README.md)
+→ [Khám phá thư viện hợp đồng](la-bibliotheque/README.md)
 
 ---
 

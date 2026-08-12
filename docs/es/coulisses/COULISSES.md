@@ -20,7 +20,7 @@ archiva en nuestra gran biblioteca.
 > anuncios oficiales y los estructura para la base de datos. Es él quien
 > hace funcionar la máquina.
 
-→ [Descubrir el trabajo del cartero](coulisses/le-facteur/README.md)
+→ [Descubrir el trabajo del cartero](le-facteur/README.md)
 
 ## 📖 Después : el traductor
 
@@ -29,7 +29,7 @@ siempre fáciles de leer. Nuestro **traductor** los lee todos y los transforma
 en fichas claras: el nombre de la empresa, su dirección, su actividad, sus
 directivos, los importes...
 
-→ [Descubrir el trabajo del traductor](coulisses/le-traducteur/README.md)
+→ [Descubrir el trabajo del traductor](le-traducteur/README.md)
 
 ## 🔍 Luego : la investigadora
 
@@ -43,7 +43,7 @@ muestra.
 > recoge los datos públicos expuestos: no se busca nada en
 > lugares prohibidos.
 
-→ [Descubrir el trabajo de la investigadora](coulisses/lenqueteur/README.md)
+→ [Descubrir el trabajo de la investigadora](lenqueteur/README.md)
 
 ## 🧩 Al mismo tiempo : el rompecabezas de personas
 
@@ -51,7 +51,7 @@ Cada anuncio habla de personas: directivos, liquidadores, comisarios
 de cuentas. Nuestro **rompecabezas** vincula a cada persona con sus
 empresas, para que se pueda encontrar fácilmente «quién hace qué».
 
-→ [Descubrir el rompecabezas de personas](coulisses/le-puzzle/README.md)
+→ [Descubrir el rompecabezas de personas](le-puzzle/README.md)
 
 ## 🗺️ Y el geógrafo
 
@@ -59,7 +59,7 @@ Nuestro **geógrafo** comprueba que cada empresa existe realmente en el mapa
 (Google Maps): su dirección, su categoría, su nota. Así, la ficha muestra
 también la presencia real de la empresa en la vida real.
 
-→ [Descubrir el trabajo del geógrafo](coulisses/le-geographe/README.md)
+→ [Descubrir el trabajo del geógrafo](le-geographe/README.md)
 
 ## 📚 Por último : la biblioteca de contratos
 
@@ -67,7 +67,7 @@ Los contratos públicos (contratos celebrados por las administraciones) también
 archivan en nuestra **biblioteca**: más de un millón de contratos, consultables
 libremente.
 
-→ [Descubrir la biblioteca de contratos](coulisses/la-bibliotheque/README.md)
+→ [Descubrir la biblioteca de contratos](la-bibliotheque/README.md)
 
 ---
 

@@ -21,7 +21,7 @@ grote bibliotheek.
 > bekendmakingen op en structureert ze voor de database. Hij is het die de
 > machine laat draaien.
 
-→ [Ontdek het werk van de postbode](coulisses/le-facteur/README.md)
+→ [Ontdek het werk van de postbode](le-facteur/README.md)
 
 ## 📖 Daarna : de vertaler
 
@@ -30,7 +30,7 @@ makkelijk te lezen. Onze **vertaler** leest ze allemaal en zet ze om in
 duidelijke dossiers: de naam van het bedrijf, het adres, de activiteit, de
 bestuurders, de bedragen...
 
-→ [Ontdek het werk van de vertaler](coulisses/le-traducteur/README.md)
+→ [Ontdek het werk van de vertaler](le-traducteur/README.md)
 
 ## 🔍 Vervolgens : de onderzoeker
 
@@ -44,7 +44,7 @@ toont.
 > alleen openbaar beschikbare gegevens: er wordt niets opgezocht op verboden
 > plekken.
 
-→ [Ontdek het werk van de onderzoeker](coulisses/lenqueteur/README.md)
+→ [Ontdek het werk van de onderzoeker](lenqueteur/README.md)
 
 ## 🧩 Tegelijkertijd : de personenpuzzel
 
@@ -52,7 +52,7 @@ Elke bekendmaking gaat over personen: bestuurders, vereffenaars,
 commissarissen. Onze **puzzel** verbindt elke persoon met zijn bedrijven,
 zodat je makkelijk kunt terugvinden "wie wat doet".
 
-→ [Ontdek de personenpuzzel](coulisses/le-puzzle/README.md)
+→ [Ontdek de personenpuzzel](le-puzzle/README.md)
 
 ## 🗺️ En de geograaf
 
@@ -60,7 +60,7 @@ Onze **geograaf** controleert of elk bedrijf echt bestaat op de kaart
 (Google Maps): het adres, de categorie, de beoordeling. Zo toont het dossier
 ook de reële aanwezigheid van het bedrijf in het echte leven.
 
-→ [Ontdek het werk van de geograaf](coulisses/le-geographe/README.md)
+→ [Ontdek het werk van de geograaf](le-geographe/README.md)
 
 ## 📚 Ten slotte : de contractenbibliotheek
 
@@ -68,7 +68,7 @@ Ook de overheidsopdrachten (contracten die door overheidsdiensten worden
 gegund) worden gearchiveerd in onze **bibliotheek**: meer dan een miljoen
 contracten, vrij te raadplegen.
 
-→ [Ontdek de contractenbibliotheek](coulisses/la-bibliotheque/README.md)
+→ [Ontdek de contractenbibliotheek](la-bibliotheque/README.md)
 
 ---
 

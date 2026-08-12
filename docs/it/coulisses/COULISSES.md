@@ -20,7 +20,7 @@ archivia nella nostra grande biblioteca.
 > annunci ufficiali e li struttura per il database. È lui che
 > fa funzionare la macchina.
 
-→ [Scopri il lavoro del postino](coulisses/le-facteur/README.md)
+→ [Scopri il lavoro del postino](le-facteur/README.md)
 
 ## 📖 Poi : il traduttore
 
@@ -29,7 +29,7 @@ sempre facili da leggere. Il nostro **traduttore** li legge tutti e li trasforma
 in schede chiare: il nome dell'impresa, il suo indirizzo, la sua attività, i
 suoi dirigenti, gli importi...
 
-→ [Scopri il lavoro del traduttore](coulisses/le-traducteur/README.md)
+→ [Scopri il lavoro del traduttore](le-traducteur/README.md)
 
 ## 🔍 Quindi : la ricercatrice
 
@@ -43,7 +43,7 @@ l'impresa mostra da sola.
 > solo i dati pubblici esposti: non viene cercato nulla in
 > luoghi proibiti.
 
-→ [Scopri il lavoro della ricercatrice](coulisses/lenqueteur/README.md)
+→ [Scopri il lavoro della ricercatrice](lenqueteur/README.md)
 
 ## 🧩 Contemporaneamente : il puzzle delle persone
 
@@ -51,7 +51,7 @@ Ogni annuncio parla di persone: dirigenti, liquidatori, revisori
 dei conti. Il nostro **puzzle** collega ogni persona alle sue
 imprese, così si può scoprire facilmente «chi fa cosa».
 
-→ [Scopri il puzzle delle persone](coulisses/le-puzzle/README.md)
+→ [Scopri il puzzle delle persone](le-puzzle/README.md)
 
 ## 🗺️ E il geografo
 
@@ -59,7 +59,7 @@ Il nostro **geografo** verifica che ogni impresa esista davvero sulla mappa
 (Google Maps): il suo indirizzo, la sua categoria, la sua valutazione. Così la
 scheda mostra anche la presenza reale dell'impresa nella vita vera.
 
-→ [Scopri il lavoro del geografo](coulisses/le-geographe/README.md)
+→ [Scopri il lavoro del geografo](le-geographe/README.md)
 
 ## 📚 Infine : la biblioteca dei contratti
 
@@ -67,7 +67,7 @@ Anche gli appalti pubblici (i contratti stipulati dalle amministrazioni) sono
 archiviati nella nostra **biblioteca**: più di un milione di contratti, consultabili
 liberamente.
 
-→ [Scopri la biblioteca dei contratti](coulisses/la-bibliotheque/README.md)
+→ [Scopri la biblioteca dei contratti](la-bibliotheque/README.md)
 
 ---
 

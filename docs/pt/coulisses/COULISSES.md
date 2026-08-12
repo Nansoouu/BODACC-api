@@ -20,7 +20,7 @@ arquiva-os na nossa grande biblioteca.
 > anúncios oficiais e estrutura-os para a base de dados. É ele quem
 > faz funcionar a máquina.
 
-→ [Descubra o trabalho do carteiro](coulisses/le-facteur/README.md)
+→ [Descubra o trabalho do carteiro](le-facteur/README.md)
 
 ## 📖 Em seguida : o tradutor
 
@@ -29,7 +29,7 @@ sempre fáceis de ler. O nosso **tradutor** lê todos e transforma-os
 em fichas claras: o nome da empresa, a sua morada, a sua atividade, os seus
 dirigentes, os montantes...
 
-→ [Descubra o trabalho do tradutor](coulisses/le-traducteur/README.md)
+→ [Descubra o trabalho do tradutor](le-traducteur/README.md)
 
 ## 🔍 Depois : a investigadora
 
@@ -43,7 +43,7 @@ mostra.
 > recolhe os dados públicos expostos: nada é procurado em
 > locais proibidos.
 
-→ [Descubra o trabalho da investigadora](coulisses/lenqueteur/README.md)
+→ [Descubra o trabalho da investigadora](lenqueteur/README.md)
 
 ## 🧩 Ao mesmo tempo : o quebra-cabeça de pessoas
 
@@ -51,7 +51,7 @@ Cada anúncio fala de pessoas: dirigentes, liquidatários, revisores
 oficiais de contas. O nosso **quebra-cabeça** liga cada pessoa às suas
 empresas, para que se possa descobrir facilmente «quem faz o quê».
 
-→ [Descubra o quebra-cabeça de pessoas](coulisses/le-puzzle/README.md)
+→ [Descubra o quebra-cabeça de pessoas](le-puzzle/README.md)
 
 ## 🗺️ E o geógrafo
 
@@ -59,7 +59,7 @@ O nosso **geógrafo** verifica se cada empresa existe mesmo no mapa
 (Google Maps): a sua morada, a sua categoria, a sua avaliação. Assim, a ficha
 mostra também a presença real da empresa na vida real.
 
-→ [Descubra o trabalho do geógrafo](coulisses/le-geographe/README.md)
+→ [Descubra o trabalho do geógrafo](le-geographe/README.md)
 
 ## 📚 Por fim : a biblioteca de contratos
 
@@ -67,7 +67,7 @@ Os contratos públicos (contratos celebrados pelas administrações) também sã
 arquivados na nossa **biblioteca**: mais de um milhão de contratos, consultáveis
 livremente.
 
-→ [Descubra a biblioteca de contratos](coulisses/la-bibliotheque/README.md)
+→ [Descubra a biblioteca de contratos](la-bibliotheque/README.md)
 
 ---
 

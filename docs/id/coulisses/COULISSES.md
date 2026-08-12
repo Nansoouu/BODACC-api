@@ -20,7 +20,7 @@ satu pun, dan ia menyimpannya di perpustakaan besar kami.
 > pengumuman resmi dan menyusunnya untuk basis data. Dialah yang menjalankan
 > mesinnya.
 
-→ [Kenali pekerjaan tukang pos](coulisses/le-facteur/README.md)
+→ [Kenali pekerjaan tukang pos](le-facteur/README.md)
 
 ## 📖 Lalu : penerjemah
 
@@ -29,7 +29,7 @@ selalu mudah dibaca. **Penerjemah** kami membaca semuanya dan mengubahnya
 menjadi kartu yang jelas: nama perusahaan, alamatnya, kegiatannya,
 direkturnya, jumlahnya...
 
-→ [Kenali pekerjaan penerjemah](coulisses/le-traducteur/README.md)
+→ [Kenali pekerjaan penerjemah](le-traducteur/README.md)
 
 ## 🔍 Kemudian : peneliti
 
@@ -43,7 +43,7 @@ sendiri.
 > mengumpulkan data publik yang terpapar: tidak ada yang dicari di
 > tempat-tempat terlarang.
 
-→ [Kenali pekerjaan peneliti](coulisses/lenqueteur/README.md)
+→ [Kenali pekerjaan peneliti](lenqueteur/README.md)
 
 ## 🧩 Bersamaan dengan itu : teka-teki orang
 
@@ -51,7 +51,7 @@ Setiap pengumuman berbicara tentang orang: direktur, likuidator, auditor.
 **Teka-teki** kami menghubungkan setiap orang dengan perusahaannya, supaya
 mudah menemukan "siapa mengerjakan apa".
 
-→ [Kenali teka-teki orang](coulisses/le-puzzle/README.md)
+→ [Kenali teka-teki orang](le-puzzle/README.md)
 
 ## 🗺️ Dan ahli geografi
 
@@ -60,7 +60,7 @@ peta (Google Maps): alamatnya, kategorinya, peringkatnya. Dengan begitu,
 kartu itu juga menunjukkan kehadiran nyata perusahaan dalam kehidupan
 sehari-hari.
 
-→ [Kenali pekerjaan ahli geografi](coulisses/le-geographe/README.md)
+→ [Kenali pekerjaan ahli geografi](le-geographe/README.md)
 
 ## 📚 Terakhir : perpustakaan kontrak
 
@@ -68,7 +68,7 @@ Kontrak publik (kontrak yang diberikan oleh instansi pemerintahan) juga
 diarsipkan di **perpustakaan** kami: lebih dari satu juta kontrak, bebas
 untuk dikonsultasikan.
 
-→ [Kenali perpustakaan kontrak](coulisses/la-bibliotheque/README.md)
+→ [Kenali perpustakaan kontrak](la-bibliotheque/README.md)
 
 ---
 
