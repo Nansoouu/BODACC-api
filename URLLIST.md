@@ -3,16 +3,22 @@
 Live site entry points — maintained for crawlers, bots and agents.
 All URLs below return HTTP 200 and are publicly accessible.
 
-## Site (multilingual — 20 locales, `/fr` default)
+## Site (multilingual — 20 locales, `/en` shown; all locales share the same slugs)
 
-- Home: https://bodacc.io/fr
-- Notices: https://bodacc.io/fr/annonces
-- Companies: https://bodacc.io/fr/entreprises
-- People: https://bodacc.io/fr/personnes
-- Acteurs (insolvency practitioners): https://bodacc.io/fr/acteurs
-- Pricing: https://bodacc.io/fr/tarifs
-- Technology / open data: https://bodacc.io/fr/technologie
-- Regions hub: https://bodacc.io/fr/regions
+The canonical path structure is identical in every language: `https://bodacc.io/{locale}/...`.
+Localized URL lists: [docs/ar/URLLIST.md](docs/ar/URLLIST.md) · [docs/de/URLLIST.md](docs/de/URLLIST.md) · [docs/en/URLLIST.md](docs/en/URLLIST.md) · [docs/es/URLLIST.md](docs/es/URLLIST.md) · [docs/fa/URLLIST.md](docs/fa/URLLIST.md) · [docs/fr/URLLIST.md](docs/fr/URLLIST.md) · [docs/he/URLLIST.md](docs/he/URLLIST.md) · [docs/hi/URLLIST.md](docs/hi/URLLIST.md) · [docs/id/URLLIST.md](docs/id/URLLIST.md) · [docs/it/URLLIST.md](docs/it/URLLIST.md) · [docs/ja/URLLIST.md](docs/ja/URLLIST.md) · [docs/ko/URLLIST.md](docs/ko/URLLIST.md) · [docs/nl/URLLIST.md](docs/nl/URLLIST.md) · [docs/pl/URLLIST.md](docs/pl/URLLIST.md) · [docs/pt/URLLIST.md](docs/pt/URLLIST.md) · [docs/ru/URLLIST.md](docs/ru/URLLIST.md) · [docs/tr/URLLIST.md](docs/tr/URLLIST.md) · [docs/uk/URLLIST.md](docs/uk/URLLIST.md) · [docs/vi/URLLIST.md](docs/vi/URLLIST.md) · [docs/zh/URLLIST.md](docs/zh/URLLIST.md)
+
+| Page | English | Français | Español | Deutsch |
+|---|---|---|---|---|
+| Home | `/en` | `/fr` | `/es` | `/de` |
+| Notices | `/en/annonces` | `/fr/annonces` | `/es/annonces` | `/de/annonces` |
+| Companies | `/en/entreprises` | `/fr/entreprises` | `/es/entreprises` | `/de/entreprises` |
+| People | `/en/personnes` | `/fr/personnes` | `/es/personnes` | `/de/personnes` |
+| Acteurs | `/en/acteurs` | `/fr/acteurs` | `/es/acteurs` | `/de/acteurs` |
+| Pricing | `/en/tarifs` | `/fr/tarifs` | `/es/tarifs` | `/de/tarifs` |
+| Technology | `/en/technologie` | `/fr/technologie` | `/es/technologie` | `/de/technologie` |
+| Regions hub | `/en/regions` | `/fr/regions` | `/es/regions` | `/de/regions` |
+| Cities | `/en/villes` | `/fr/villes` | `/es/villes` | `/de/villes` |
 
 ## Discovery & feeds
 
@@ -38,9 +44,9 @@ All URLs below return HTTP 200 and are publicly accessible.
 
 ## Examples (entity pages)
 
-- Notice detail: https://bodacc.io/fr/annonces/A202601452836
-- Company detail: https://bodacc.io/fr/entreprises/042285445-copr-l-edelweiss
-- Person detail: https://bodacc.io/fr/personnes/lafon-laura-397362
+- Notice detail (EN): https://bodacc.io/en/annonces/A202601452836
+- Company detail (EN): https://bodacc.io/en/entreprises/042285445-copr-l-edelweiss
+- Person detail (EN): https://bodacc.io/en/personnes/lafon-laura-397362
 
 ---
 *This file is part of the public BODACC-api repository — crawled by GitHub's

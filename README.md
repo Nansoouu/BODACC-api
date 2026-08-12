@@ -14,7 +14,7 @@
 
 # 🌐 [bodacc.io](https://bodacc.io)
 
-🌍 [Français](docs/README.fr.md) · [English](README.md) · [Español](docs/README.es.md) · [Deutsch](docs/README.de.md) · [Italiano](docs/README.it.md) · [Português](docs/README.pt.md) · [Nederlands](docs/README.nl.md) · [Polski](docs/README.pl.md) · [Русский](docs/README.ru.md) · [Türkçe](docs/README.tr.md) · [Українська](docs/README.uk.md) · [Bahasa Indonesia](docs/README.id.md) · [Tiếng Việt](docs/README.vi.md) · [日本語](docs/README.ja.md) · [한국어](docs/README.ko.md) · [中文](docs/README.zh.md) · [العربية](docs/README.ar.md) · [עברית](docs/README.he.md) · [हिन्दी](docs/README.hi.md) · [فارسی](docs/README.fa.md)
+🌍 [Français](docs/fr/README.md) · [English](README.md) · [Español](docs/es/README.md) · [Deutsch](docs/de/README.md) · [Italiano](docs/it/README.md) · [Português](docs/pt/README.md) · [Nederlands](docs/nl/README.md) · [Polski](docs/pl/README.md) · [Русский](docs/ru/README.md) · [Türkçe](docs/tr/README.md) · [Українська](docs/uk/README.md) · [Bahasa Indonesia](docs/id/README.md) · [Tiếng Việt](docs/vi/README.md) · [日本語](docs/ja/README.md) · [한국어](docs/ko/README.md) · [中文](docs/zh/README.md) · [العربية](docs/ar/README.md) · [עברית](docs/he/README.md) · [हिन्दी](docs/hi/README.md) · [فارسی](docs/fa/README.md)
 
 <div align="center">
 
