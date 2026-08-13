@@ -11,4 +11,4 @@ The daily roundups published on BODACC.io, with direct links to each language ve
 | 11 August 2026 | [BODACC on 11 August 2026 : the complete roundup](https://bodacc.io/en/news/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 August 2026 | [BODACC on 9 August 2026 : the complete roundup](https://bodacc.io/en/news/recapitulatif-complet-bodacc-09-08-2026) |
 
-[Back to the repository](../../README.md)
+[Back to the repository](../../../README.md)

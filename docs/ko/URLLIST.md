@@ -1,5 +1,6 @@
 # BODACC.io : URL 목록
 
+> 🌍 [Français](../fr/URLLIST.md) · [Español](../es/URLLIST.md) · [Deutsch](../de/URLLIST.md) · [Italiano](../it/URLLIST.md) · [Português](../pt/URLLIST.md) · [Nederlands](../nl/URLLIST.md) · [Polski](../pl/URLLIST.md) · [Русский](../ru/URLLIST.md) · [Türkçe](../tr/URLLIST.md) · [Українська](../uk/URLLIST.md) · [Bahasa Indonesia](../id/URLLIST.md) · [Tiếng Việt](../vi/URLLIST.md) · [日本語](../ja/URLLIST.md) · [한국어](URLLIST.md) · [中文](../zh/URLLIST.md) · [العربية](../ar/URLLIST.md) · [עברית](../he/URLLIST.md) · [हिन्दी](../hi/URLLIST.md) · [فارسی](../fa/URLLIST.md) · [English](../en/URLLIST.md)
 사이트 진입점 : 크롤러, 봇, 에이전트를 위해 유지 관리됩니다.
 아래 모든 URL은 HTTP 200을 반환하며 공개적으로 액세스할 수 있습니다.
 

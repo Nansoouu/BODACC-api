@@ -11,4 +11,4 @@ De dagelijkse overzichten gepubliceerd op BODACC.io, met een directe link naar e
 | 11 augustus 2026 | [BODACC van 11 augustus 2026 : het volledige overzicht](https://bodacc.io/nl/nieuws/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 augustus 2026 | [BODACC van 9 augustus 2026 : het volledige overzicht](https://bodacc.io/nl/nieuws/recapitulatif-complet-bodacc-09-08-2026) |
 
-[Terug naar de repository](../../README.md)
+[Terug naar de repository](../../../README.md)

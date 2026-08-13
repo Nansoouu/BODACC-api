@@ -1,5 +1,6 @@
 # BODACC.io : lista URL
 
+> 🌍 [Français](../fr/URLLIST.md) · [Español](../es/URLLIST.md) · [Deutsch](../de/URLLIST.md) · [Italiano](../it/URLLIST.md) · [Português](../pt/URLLIST.md) · [Nederlands](../nl/URLLIST.md) · [Polski](URLLIST.md) · [Русский](../ru/URLLIST.md) · [Türkçe](../tr/URLLIST.md) · [Українська](../uk/URLLIST.md) · [Bahasa Indonesia](../id/URLLIST.md) · [Tiếng Việt](../vi/URLLIST.md) · [日本語](../ja/URLLIST.md) · [한국어](../ko/URLLIST.md) · [中文](../zh/URLLIST.md) · [العربية](../ar/URLLIST.md) · [עברית](../he/URLLIST.md) · [हिन्दी](../hi/URLLIST.md) · [فارسی](../fa/URLLIST.md) · [English](../en/URLLIST.md)
 Punkty wejścia serwisu : utrzymywane dla robotów i agentów.
 Wszystkie poniższe adresy URL zwracają HTTP 200 i są publicznie dostępne.
 

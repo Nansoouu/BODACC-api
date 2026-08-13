@@ -1,5 +1,6 @@
 # BODACC.io : daftar URL
 
+> 🌍 [Français](../fr/URLLIST.md) · [Español](../es/URLLIST.md) · [Deutsch](../de/URLLIST.md) · [Italiano](../it/URLLIST.md) · [Português](../pt/URLLIST.md) · [Nederlands](../nl/URLLIST.md) · [Polski](../pl/URLLIST.md) · [Русский](../ru/URLLIST.md) · [Türkçe](../tr/URLLIST.md) · [Українська](../uk/URLLIST.md) · [Bahasa Indonesia](URLLIST.md) · [Tiếng Việt](../vi/URLLIST.md) · [日本語](../ja/URLLIST.md) · [한국어](../ko/URLLIST.md) · [中文](../zh/URLLIST.md) · [العربية](../ar/URLLIST.md) · [עברית](../he/URLLIST.md) · [हिन्दी](../hi/URLLIST.md) · [فارسی](../fa/URLLIST.md) · [English](../en/URLLIST.md)
 Titik masuk situs : dipelihara untuk crawler, bot, dan agen.
 Semua URL di bawah mengembalikan HTTP 200 dan dapat diakses publik.
 

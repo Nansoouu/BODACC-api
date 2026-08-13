@@ -1,5 +1,6 @@
 # BODACC.io : URLリスト
 
+> 🌍 [Français](../fr/URLLIST.md) · [Español](../es/URLLIST.md) · [Deutsch](../de/URLLIST.md) · [Italiano](../it/URLLIST.md) · [Português](../pt/URLLIST.md) · [Nederlands](../nl/URLLIST.md) · [Polski](../pl/URLLIST.md) · [Русский](../ru/URLLIST.md) · [Türkçe](../tr/URLLIST.md) · [Українська](../uk/URLLIST.md) · [Bahasa Indonesia](../id/URLLIST.md) · [Tiếng Việt](../vi/URLLIST.md) · [日本語](URLLIST.md) · [한국어](../ko/URLLIST.md) · [中文](../zh/URLLIST.md) · [العربية](../ar/URLLIST.md) · [עברית](../he/URLLIST.md) · [हिन्दी](../hi/URLLIST.md) · [فارسی](../fa/URLLIST.md) · [English](../en/URLLIST.md)
 サイトのエントリポイント : クローラー、ボット、エージェント向けに維持。
 以下のURLはすべてHTTP 200を返し、公開されています。
 

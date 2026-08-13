@@ -11,4 +11,4 @@ BODACC.io に掲載された日次まとめ。各言語版への直接リンク�
 | 2026年8月11日 | [BODACC 2026年8月11日 : 完全まとめ](https://bodacc.io/ja/nyusu/recapitulatif-complet-bodacc-11-08-2026) |
 | 2026年8月9日 | [BODACC 2026年8月9日 : 完全まとめ](https://bodacc.io/ja/nyusu/recapitulatif-complet-bodacc-09-08-2026) |
 
-[リポジトリに戻る](../../README.md)
+[リポジトリに戻る](../../../README.md)

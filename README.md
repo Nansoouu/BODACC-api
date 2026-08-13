@@ -12,15 +12,13 @@
 </pre>
 </div>
 
-# 🌐 [bodacc.io](https://bodacc.io)
+# 🌐 BODACC-api
 
-🌍 [Français](docs/fr/README.md) · [English](README.md) · [Español](docs/es/README.md) · [Deutsch](docs/de/README.md) · [Italiano](docs/it/README.md) · [Português](docs/pt/README.md) · [Nederlands](docs/nl/README.md) · [Polski](docs/pl/README.md) · [Русский](docs/ru/README.md) · [Türkçe](docs/tr/README.md) · [Українська](docs/uk/README.md) · [Bahasa Indonesia](docs/id/README.md) · [Tiếng Việt](docs/vi/README.md) · [日本語](docs/ja/README.md) · [한국어](docs/ko/README.md) · [中文](docs/zh/README.md) · [العربية](docs/ar/README.md) · [עברית](docs/he/README.md) · [हिन्दी](docs/hi/README.md) · [فارسی](docs/fa/README.md)
+The public documentation and data showcase of [bodacc.io](https://bodacc.io) — the API that turns French legal notices into structured, linked, queryable data.
+
+Every language has its own folder, fully translated: [العربية](docs/ar/README.md) · [Deutsch](docs/de/README.md) · [English](docs/en/README.md) · [Español](docs/es/README.md) · [فارسی](docs/fa/README.md) · [Français](docs/fr/README.md) · [עברית](docs/he/README.md) · [हिन्दी](docs/hi/README.md) · [Bahasa Indonesia](docs/id/README.md) · [Italiano](docs/it/README.md) · [日本語](docs/ja/README.md) · [한국어](docs/ko/README.md) · [Nederlands](docs/nl/README.md) · [Polski](docs/pl/README.md) · [Português](docs/pt/README.md) · [Русский](docs/ru/README.md) · [Türkçe](docs/tr/README.md) · [Українська](docs/uk/README.md) · [Tiếng Việt](docs/vi/README.md) · [中文](docs/zh/README.md)
 
 <div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 
 ![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue)
 ![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green)
@@ -29,196 +27,38 @@
 
 </div>
 
-**The API that turns French legal notices into structured, linked, queryable data — in real time.**
+## 📚 The documentation, per language
 
-BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is the official publication tracking the legal life of French companies: creations, modifications, deregistrations, insolvency proceedings, sales, annual accounts. These texts are public — but they remain raw documents: unstructured, unlinked, and hard to query.
+Each folder contains the full documentation **in its own language**:
+the API README, the URL list, the behind-the-scenes story, and the daily recaps.
 
-**BODACC-api makes them usable.** Every notice is automatically analyzed and transformed into structured data (SIREN, company name, address, NAF code, directors, amounts...), then linked to its company and the people who appear in it. The result: a complete graph of the French economy, queryable with a single HTTP request.
-
-> 🌐 Website: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Pricing](https://bodacc.io/en/pricing)
-
----
-
-## ✨ Why BODACC-api?
-
-| | |
-|---|---|
-| 🗂 **Full history, back to 2004** | Millions of notices in the database, complete coverage — not a rolling window |
-| ⚡ **Real time** | The day's notices are available every morning, before offices open |
-| 🕸 **A graph, not files** | Notice → company (SIREN) → directors → mandates → public contracts: everything linked, queryable in one request |
-| ✨ **From raw text to structured data** | SIREN, NAF, address, directors, proceedings... extracted automatically from every legal text |
-| 🌍 **20 languages** | The interface and content are translated — your teams and clients speak their own language |
-| 🤖 **Agent-ready** | 100/100 on the isitagentready audit (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
-| 🚪 **Zero friction to test** | All read endpoints are accessible without a key — evaluate before you pay |
-
----
-
-## 🏭 Our value: the pipeline
-
-The data itself is public — what makes the difference is what we do with it, automatically, every day:
-
-**1. Reliable, complete ingestion.** Every morning before 09:00, the new notices published by the DILA are integrated into our database. Full history goes back to 2004 — well beyond what public consultation offers. Re-running an ingestion creates no duplicates: our data is continuously verified and consistent.
-
-**2. Intelligent enrichment.** Each notice is a legal text — our hybrid extraction engine (business rules + AI) turns it into structured data: SIREN number, company name, address, NAF code, directors, mandates, amounts, proceedings. What takes hours of human reading becomes queryable JSON fields.
-
-**3. A relational graph.** A notice of insolvency proceedings is only valuable if you know which company it concerns, and who its director is. Our resolution engine links every notice to its company (SIREN), every person to their mandates, every public contract to its winner. You query the French economy like a database — not like a pile of PDFs.
-
-**4. Real-time delivery.** As soon as a notice is published, it is available through the API with its relations and enrichment. No files to download, no ETL to maintain: a single HTTP request is enough.
-
----
-
-## ⚖️ Comparison: where we stand
-
-| | **Official website (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **History** | From 2008 only | Commercial history depending on plan | **Complete since 2004** |
-| **API** | ❌ None | API reserved for higher plans | ✅ **Documented REST API, no key for reads** |
-| **Structured data** | ❌ PDF consultation | ✅ Enriched profiles | ✅ **Notices + companies/people/contracts graph** |
-| **Real time** | Paper publication viewable online | Daily updates | ✅ **Every morning before 09:00** |
-| **Price** | Free, but limited | From **€29.90/month** for basic access | **Affordable plans, free to explore** |
-| **Audience** | General public | Professionals (compliance, monitoring) | **Developers, fintech, legaltech, data teams** |
-
-**Official website strengths**: free, reliable, official. **Weaknesses**: no API, history limited to 2008, no structured data — you stay in the PDFs.
-
-**Pappers strengths**: polished interface, INSEE + INPI + BODACC aggregation, built-in monitoring. **Weaknesses**: the price (€29.90/month for basic access, API and full history cost more), a consultation-oriented product rather than machine-readable data.
-
-**Our position**: **full history since 2004, faster than the official website — at a lower price than Pappers.** Built for teams that want to plug the data into their own tools, not for those who want one more screen.
-
-> 💶 See the plans: [bodacc.io/en/pricing](https://bodacc.io/en/pricing) — Free · Pro · Enterprise · LIFE
-
----
-
-## 🚀 Try it in 30 seconds
-
-All read endpoints are accessible **without a key**:
-
-```bash
-# Search a company by name
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# Notice detail (with its relations: companies + people)
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# Company profile (recent notices + directors + public contracts)
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# Global statistics
-curl "https://bodacc.io/api/bodacc/stats"
-
-# Daily volume (last 30 days)
-curl "https://bodacc.io/api/bodacc/stats/daily30"
-```
-
----
-
-## 📡 Endpoints
-
-### Notices
-
-| Method | Route | Description |
+| Language | Folder | Contents |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Search: `q` (name/SIREN), `famille`, `departement`, dates, `limit`/`offset` pagination |
-| `GET` | `/bodacc/annonces/{id}` | Full detail: `raw_data` + enrichment + `relations` (linked companies and people) |
-| `GET` | `/bodacc/enrichi/{id}` | Structured version (siren, denomination, NAF, directors...) |
-| `POST` | `/bodacc/enrichi/batch` | Batch enrichment |
+| العربية | [docs/ar/](docs/ar/README.md) | [README](docs/ar/README.md) · [URLs](docs/ar/URLLIST.md) · [Coulisses](docs/ar/coulisses/COULISSES.md) · [Recaps](docs/ar/recaps/README.md) |
+| Deutsch | [docs/de/](docs/de/README.md) | [README](docs/de/README.md) · [URLs](docs/de/URLLIST.md) · [Coulisses](docs/de/coulisses/COULISSES.md) · [Recaps](docs/de/recaps/README.md) |
+| English | [docs/en/](docs/en/README.md) | [README](docs/en/README.md) · [URLs](docs/en/URLLIST.md) · [Coulisses](docs/en/coulisses/COULISSES.md) · [Recaps](docs/en/recaps/README.md) |
+| Español | [docs/es/](docs/es/README.md) | [README](docs/es/README.md) · [URLs](docs/es/URLLIST.md) · [Coulisses](docs/es/coulisses/COULISSES.md) · [Recaps](docs/es/recaps/README.md) |
+| فارسی | [docs/fa/](docs/fa/README.md) | [README](docs/fa/README.md) · [URLs](docs/fa/URLLIST.md) · [Coulisses](docs/fa/coulisses/COULISSES.md) · [Recaps](docs/fa/recaps/README.md) |
+| Français | [docs/fr/](docs/fr/README.md) | [README](docs/fr/README.md) · [URLs](docs/fr/URLLIST.md) · [Coulisses](docs/fr/coulisses/COULISSES.md) · [Recaps](docs/fr/recaps/README.md) |
+| עברית | [docs/he/](docs/he/README.md) | [README](docs/he/README.md) · [URLs](docs/he/URLLIST.md) · [Coulisses](docs/he/coulisses/COULISSES.md) · [Recaps](docs/he/recaps/README.md) |
+| हिन्दी | [docs/hi/](docs/hi/README.md) | [README](docs/hi/README.md) · [URLs](docs/hi/URLLIST.md) · [Coulisses](docs/hi/coulisses/COULISSES.md) · [Recaps](docs/hi/recaps/README.md) |
+| Bahasa Indonesia | [docs/id/](docs/id/README.md) | [README](docs/id/README.md) · [URLs](docs/id/URLLIST.md) · [Coulisses](docs/id/coulisses/COULISSES.md) · [Recaps](docs/id/recaps/README.md) |
+| Italiano | [docs/it/](docs/it/README.md) | [README](docs/it/README.md) · [URLs](docs/it/URLLIST.md) · [Coulisses](docs/it/coulisses/COULISSES.md) · [Recaps](docs/it/recaps/README.md) |
+| 日本語 | [docs/ja/](docs/ja/README.md) | [README](docs/ja/README.md) · [URLs](docs/ja/URLLIST.md) · [Coulisses](docs/ja/coulisses/COULISSES.md) · [Recaps](docs/ja/recaps/README.md) |
+| 한국어 | [docs/ko/](docs/ko/README.md) | [README](docs/ko/README.md) · [URLs](docs/ko/URLLIST.md) · [Coulisses](docs/ko/coulisses/COULISSES.md) · [Recaps](docs/ko/recaps/README.md) |
+| Nederlands | [docs/nl/](docs/nl/README.md) | [README](docs/nl/README.md) · [URLs](docs/nl/URLLIST.md) · [Coulisses](docs/nl/coulisses/COULISSES.md) · [Recaps](docs/nl/recaps/README.md) |
+| Polski | [docs/pl/](docs/pl/README.md) | [README](docs/pl/README.md) · [URLs](docs/pl/URLLIST.md) · [Coulisses](docs/pl/coulisses/COULISSES.md) · [Recaps](docs/pl/recaps/README.md) |
+| Português | [docs/pt/](docs/pt/README.md) | [README](docs/pt/README.md) · [URLs](docs/pt/URLLIST.md) · [Coulisses](docs/pt/coulisses/COULISSES.md) · [Recaps](docs/pt/recaps/README.md) |
+| Русский | [docs/ru/](docs/ru/README.md) | [README](docs/ru/README.md) · [URLs](docs/ru/URLLIST.md) · [Coulisses](docs/ru/coulisses/COULISSES.md) · [Recaps](docs/ru/recaps/README.md) |
+| Türkçe | [docs/tr/](docs/tr/README.md) | [README](docs/tr/README.md) · [URLs](docs/tr/URLLIST.md) · [Coulisses](docs/tr/coulisses/COULISSES.md) · [Recaps](docs/tr/recaps/README.md) |
+| Українська | [docs/uk/](docs/uk/README.md) | [README](docs/uk/README.md) · [URLs](docs/uk/URLLIST.md) · [Coulisses](docs/uk/coulisses/COULISSES.md) · [Recaps](docs/uk/recaps/README.md) |
+| Tiếng Việt | [docs/vi/](docs/vi/README.md) | [README](docs/vi/README.md) · [URLs](docs/vi/URLLIST.md) · [Coulisses](docs/vi/coulisses/COULISSES.md) · [Recaps](docs/vi/recaps/README.md) |
+| 中文 | [docs/zh/](docs/zh/README.md) | [README](docs/zh/README.md) · [URLs](docs/zh/URLLIST.md) · [Coulisses](docs/zh/coulisses/COULISSES.md) · [Recaps](docs/zh/recaps/README.md) |
 
-### Companies & people
+## 🔗 Quick links
 
-| Method | Route | Description |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | Company search (name, city, NAF, postal code) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE profile + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profile by SEO slug |
-| `GET` | `/bodacc/personnes/{id}` | Person profile: mandates (roles) + linked companies |
-
-### Statistics
-
-| Method | Route | Description |
-|---|---|---|
-| `GET` | `/bodacc/stats` | Totals, by family, by date |
-| `GET` | `/bodacc/stats/daily` | Today's volume (by publication, department, family) |
-| `GET` | `/bodacc/stats/daily30` | Last 30 days series |
-| `GET` | `/bodacc/stats/counts` | Counters: notices, companies, people |
-| `GET` | `/bodacc/graph/categories` | Distribution by category |
-
-### Alerts & integrations
-
-| Method | Route | Description |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN alerts (company tracking) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Trigger ingestion for a date |
-| `POST` | `/bodacc/import` | Batch import (backfill) |
-
-### NAF reference (INSEE)
-
-| Method | Route | Description |
-|---|---|---|
-| `GET` | `/bodacc/naf` | Full NAF rev. 2 reference (732 sub-classes, 615 classes) — official INSEE labels |
-| `GET` | `/bodacc/naf?q=commerce` | Search NAF by label |
-| `GET` | `/bodacc/naf?code=46.72Z` | One NAF code entry |
-
----
-
-## 📊 The data
-
-The badges at the top of this page are **real-time counters**: BODACC notices, SIRENE companies and extracted people — they evolve as the history is consolidated and enrichment grows.
-
-Stable reference points:
-
-- 📰 **BODACC notices**: full history since 2004, updated every morning before 09:00
-- 🏢 **Companies (SIRENE)**: 29.8M French legal units (INSEE registry)
-- 👤 **Extracted people**: directors, liquidators, statutory auditors... continuously consolidated
-- 📦 **Public contracts (BOAMP)**: 1.69M contracts 2015 → 2026
-
----
-
-## 🛠 Technology
-
-| Layer | Technology |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **Data** | Trigram indexing, full-text search, JSONB |
-| **Ingestion** | Automated pipeline, daily integration, idempotent |
-| **Enrichment** | Hybrid extraction (business rules + AI) |
-| **Frontend** | Next.js · i18n 20 languages |
-| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI agents** | MCP server · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 Open data
-
-The source data is public and free:
-
-- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (legal notices)
-- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29.8M legal units)
-- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (public contracts)
-- **JAL (Journaux d'Annonces Légales)**: [annoncelegale.com](https://www.annoncelegale.com/) — 598 authorized legal-notice newspapers
-
-**BODACC-api adds structure and the graph on top of this raw data**: legal text analysis, identity resolution (people), company ↔ notice ↔ contract links.
-
----
-
-## 🌐 Explore the live site
-
-[Home](https://bodacc.io/en) · [Notices](https://bodacc.io/en/notices) · [Companies](https://bodacc.io/en/companies) · [People](https://bodacc.io/en/people) · [Pricing](https://bodacc.io/en/pricing) · [Technology](https://bodacc.io/en/technology)
-
-## 📡 Discovery feeds (RSS)
-
-![RSS](https://img.shields.io/badge/RSS-Feed-orange?logo=rss&logoColor=white)
-
-- **RSS public** : [`https://bodacc.io/rss.xml`](https://bodacc.io/rss.xml) — daily recaps + latest notices (updated every 5 min, pinged on Feedly/Pingomatic)
-- **Sitemap index** : [`https://bodacc.io/sitemap.xml`](https://bodacc.io/sitemap.xml)
-- **URLLIST (all key URLs)** : see [`URLLIST.md`](URLLIST.md) — machine-readable list of site entry points
-- **Behind the scenes** : see [`COULISSES.md`](COULISSES.md) — how the data pipeline works, told for everyone (20 languages)
-
----
-
-## 📄 License & contact
-
-- License: MIT (code) — data remains subject to its producers' licenses (DILA, INSEE)
-- Website: [bodacc.io](https://bodacc.io)
-- Issues & PR: welcome on this repository
+- [URL list (multilingual index)](URLLIST.md) — machine-readable site entry points, one list per language
+- [Live site](https://bodacc.io) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 ---
 

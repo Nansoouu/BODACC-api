@@ -11,4 +11,4 @@
 | ۱۱ اوت ۲۰۲۶ | [BODACC در ۱۱ اوت ۲۰۲۶ : خلاصه کامل](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-11-08-2026) |
 | ۹ اوت ۲۰۲۶ | [BODACC در ۹ اوت ۲۰۲۶ : خلاصه کامل](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-09-08-2026) |
 
-[بازگشت به مخزن](../../README.md)
+[بازگشت به مخزن](../../../README.md)

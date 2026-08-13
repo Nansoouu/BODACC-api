@@ -11,4 +11,4 @@ I riepiloghi giornalieri pubblicati su BODACC.io, con collegamento diretto a ogn
 | 11 agosto 2026 | [BODACC del 11 agosto 2026 : il riepilogo completo](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 agosto 2026 | [BODACC del 9 agosto 2026 : il riepilogo completo](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-09-08-2026) |
 
-[Torna al repository](../../README.md)
+[Torna al repository](../../../README.md)

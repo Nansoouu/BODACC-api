@@ -11,4 +11,4 @@
 | 11 أغسطس 2026 | [BODACC لـ 11 أغسطس 2026 : الملخص الكامل](https://bodacc.io/ar/akhbar/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 أغسطس 2026 | [BODACC لـ 9 أغسطس 2026 : الملخص الكامل](https://bodacc.io/ar/akhbar/recapitulatif-complet-bodacc-09-08-2026) |
 
-[العودة إلى المستودع](../../README.md)
+[العودة إلى المستودع](../../../README.md)

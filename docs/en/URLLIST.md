@@ -1,15 +1,17 @@
-# BODACC.io : URL List
+# BODACC.io : URL List (English)
 
-Site entry points : maintained for crawlers, bots and agents.
+Live site entry points, maintained for crawlers, bots and agents.
 All URLs below return HTTP 200 and are publicly accessible.
 
-## Site (multilingual : 20 locales, /en default)
+> 🌍 Other languages: [العربية](../ar/URLLIST.md) · [Deutsch](../de/URLLIST.md) · [English](URLLIST.md) · [Español](../es/URLLIST.md) · [فارسی](../fa/URLLIST.md) · [Français](../fr/URLLIST.md) · [עברית](../he/URLLIST.md) · [हिन्दी](../hi/URLLIST.md) · [Bahasa Indonesia](../id/URLLIST.md) · [Italiano](../it/URLLIST.md) · [日本語](../ja/URLLIST.md) · [한국어](../ko/URLLIST.md) · [Nederlands](../nl/URLLIST.md) · [Polski](../pl/URLLIST.md) · [Português](../pt/URLLIST.md) · [Русский](../ru/URLLIST.md) · [Türkçe](../tr/URLLIST.md) · [Українська](../uk/URLLIST.md) · [Tiếng Việt](../vi/URLLIST.md) · [中文](../zh/URLLIST.md)
+
+## Site
 
 - Home: https://bodacc.io/en
 - Notices: https://bodacc.io/en/annonces
 - Companies: https://bodacc.io/en/entreprises
 - People: https://bodacc.io/en/personnes
-- Actors (insolvency practitioners): https://bodacc.io/en/acteurs
+- Actors (court-appointed representatives): https://bodacc.io/en/acteurs
 - Pricing: https://bodacc.io/en/tarifs
 - Technology / open data: https://bodacc.io/en/technologie
 - Regions hub: https://bodacc.io/en/regions
@@ -39,6 +41,10 @@ All URLs below return HTTP 200 and are publicly accessible.
 
 ## Examples (entity pages)
 
-- Example company page (en): https://bodacc.io/en/entreprises/514494491
 - Example notice page (en): https://bodacc.io/en/annonces/A202601511039
+- Example company page (en): https://bodacc.io/en/entreprises/514494491
+- Example person page (en): https://bodacc.io/en/personnes/lafon-laura-397362
 
+---
+*This file is part of the public BODACC-api repository. It lists only stable,
+public entry points. See [README.md](README.md) for the full documentation.*
