@@ -6,6 +6,7 @@ Los resúmenes diarios publicados en BODACC.io, con enlaces directos a cada trad
 
 | Date | Artikel |
 |---|---|
+| 13 août 2026 | [Récapitulatif du 13 août 2026](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-13-08-2026) |
 | 12 de agosto de 2026 | [BODACC del 12 de agosto de 2026 : el resumen completo](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-12-08-2026) |
 | 11 de agosto de 2026 | [BODACC del 11 de agosto de 2026 : el resumen completo](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 de agosto de 2026 | [BODACC del 9 de agosto de 2026 : el resumen completo](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-09-08-2026) |
