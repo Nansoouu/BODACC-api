@@ -70,6 +70,15 @@ einsehbar.
 
 → [Die Vertragsbibliothek entdecken](la-bibliotheque/README.md)
 
+## 🧭 Und der Entdecker, der alles zusammenführt
+
+Wenn die ganze Arbeit erledigt ist, öffnet unser **Entdecker** die Türen: Er
+bereitet die Ansichten (Bekanntmachungen, Unternehmen, Personen, Regionen), die
+Statistiken des Tages und die Zusammenfassungen vor, die jeder einsehen kann. Er
+bringt die Daten auf deinen Bildschirm.
+
+→ [Die Arbeit des Entdeckers entdecken](lexplorateur/README.md)
+
 ---
 
 ## 👥 Das Team hinter den Kulissen

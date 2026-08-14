@@ -69,6 +69,15 @@ liberamente.
 
 → [Scopri la biblioteca dei contratti](la-bibliotheque/README.md)
 
+## 🧭 E l'esploratore, per riunire tutto
+
+Quando tutto il lavoro è fatto, il nostro **esploratore** apre le porte:
+prepara le viste (annunci, imprese, persone, regioni), le statistiche del
+giorno e i riepiloghi che tutti possono consultare. È lui che porta i dati sul
+tuo schermo.
+
+→ [Scopri il lavoro dell'esploratore](lexplorateur/README.md)
+
 ---
 
 ## 👥 Il team dietro le quinte

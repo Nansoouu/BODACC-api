@@ -70,6 +70,12 @@ untuk dikonsultasikan.
 
 → [Kenali perpustakaan kontrak](la-bibliotheque/README.md)
 
+## 🧭 Dan penjelajah, untuk menyatukan semuanya
+
+Setelah semua pekerjaan selesai, **penjelajah** kami membuka pintu: dia menyiapkan tampilan (pengumuman, perusahaan, orang, wilayah), statistik hari itu, dan ringkasan yang bisa dikonsultasikan semua orang. Dialah yang membawa data ke layar Anda.
+
+→ [Kenali pekerjaan penjelajah](lexplorateur/README.md)
+
 ---
 
 ## 👥 Tim di balik layar

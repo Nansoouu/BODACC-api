@@ -1,0 +1,38 @@
+# 🧭 L'esploratore
+
+**Il suo mestiere**: una volta che il postino, il traduttore, la ricercatrice e
+il bibliotecario hanno fatto la loro parte, l'esploratore apre le porte.
+Trasforma i dati raccolti in **viste, statistiche e riepiloghi** che tutti
+possono consultare, senza essere esperti.
+
+È l'**ultimo passaggio** della nostra storia: colui che porta i dati sul tuo
+schermo.
+
+## Cosa fa ogni giorno
+
+1. Ordina gli annunci per tema (creazioni, modifiche, cancellazioni, vendite,
+   depositi di bilanci...) per orientarsi facilmente.
+2. Prepara i **contatori in diretta** e il riepilogo del giorno: quanti annunci
+   sono arrivati, quale famiglia è la più numerosa.
+3. Apre le porte della biblioteca al pubblico: schede imprese, persone, regioni
+   e il riepilogo del giorno.
+
+## Le sue promesse
+
+| Promessa | Dettaglio |
+|---|---|
+| Sempre aggiornato | I contatori riflettono il lavoro reale della giornata |
+| Semplice da consultare | Niente gergo: temi, filtri e schede chiare |
+| Verificabile | Ogni numero proviene dagli annunci ufficiali |
+
+## Il suo diario di bordo
+
+| Data | Annunci esplorabili | Imprese visibili | Persone collegate | Contratti | Piccoli miglioramenti |
+|---|---|---|---|---|---|
+| 14/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(compilato ogni giorno)_ |
+
+## Verificate di persona
+
+- Contatori in diretta: [`https://bodacc.io/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted)
+- Volume del giorno: [`https://bodacc.io/api/bodacc/stats/daily`](https://bodacc.io/api/bodacc/stats/daily)
+- Ultimi annunci: [`https://bodacc.io/api/bodacc/annonces?limit=5`](https://bodacc.io/api/bodacc/annonces?limit=5)

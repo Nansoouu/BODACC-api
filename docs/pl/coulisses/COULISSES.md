@@ -67,6 +67,12 @@ dostępnych.
 
 → [Poznaj bibliotekę kontraktów](la-bibliotheque/README.md)
 
+## 🧭 I odkrywca, żeby wszystko połączyć
+
+Gdy cała praca jest zakończona, nasz **odkrywca** otwiera drzwi: przygotowuje widoki (ogłoszenia, firmy, osoby, regiony), statystyki dnia i podsumowania, które każdy może przeglądać. To on dostarcza dane na Twój ekran.
+
+→ [Poznaj pracę odkrywcy](lexplorateur/README.md)
+
 ---
 
 ## 👥 Zespół za kulisami

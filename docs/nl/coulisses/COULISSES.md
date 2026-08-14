@@ -70,6 +70,15 @@ contracten, vrij te raadplegen.
 
 → [Ontdek de contractenbibliotheek](la-bibliotheque/README.md)
 
+## 🧭 En de ontdekker, om alles samen te brengen
+
+Wanneer al het werk gedaan is, opent onze **ontdekker** de deuren: hij bereidt
+de weergaven (bekendmakingen, bedrijven, personen, regio's), de statistieken
+van de dag en de samenvattingen voor die iedereen kan raadplegen. Hij brengt de
+gegevens naar jouw scherm.
+
+→ [Ontdek het werk van de ontdekker](lexplorateur/README.md)
+
 ---
 
 ## 👥 Het team achter de schermen

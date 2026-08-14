@@ -1,0 +1,38 @@
+# 🧭 Nhà Thám Hiểm
+
+**Công việc của anh**: sau khi người đưa thư, người dịch, nhà điều tra và thủ
+thư hoàn thành phần việc của mình, nhà thám hiểm mở các cánh cửa. Anh biến dữ
+liệu thu thập được thành **các chế độ xem, số liệu thống kê và bản tóm tắt**
+mà ai cũng có thể xem, không cần là chuyên gia.
+
+Anh là **bước cuối cùng** trong câu chuyện của chúng tôi: người đưa dữ liệu
+đến màn hình của bạn.
+
+## Anh ấy làm gì mỗi ngày
+
+1. Anh sắp xếp các thông báo theo chủ đề (thành lập, thay đổi, xóa sổ, bán,
+   nộp báo cáo tài chính...), để dễ dàng tìm thấy.
+2. Anh chuẩn bị **các bộ đếm trực tiếp** và bản tóm tắt trong ngày: có bao
+   nhiêu thông báo đến, nhóm nào đông nhất.
+3. Anh mở cửa thư viện cho công chúng: hồ sơ doanh nghiệp, người, khu vực và
+   bản tóm tắt trong ngày.
+
+## Những lời hứa của anh
+
+| Lời hứa | Chi tiết |
+|---|---|
+| Luôn cập nhật | Các bộ đếm phản ánh công việc thực tế trong ngày |
+| Dễ tra cứu | Không có thuật ngữ chuyên môn: chủ đề, bộ lọc và trang rõ ràng |
+| Kiểm chứng được | Mỗi con số đều đến từ thông báo chính thức |
+
+## Nhật ký của anh
+
+| Ngày | Thông báo có thể khám phá | Doanh nghiệp hiển thị | Người được liên kết | Hợp đồng | Cải tiến nhỏ |
+|---|---|---|---|---|---|
+| 14/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(cập nhật hằng ngày)_ |
+
+## Tự kiểm tra
+
+- Các bộ đếm trực tiếp: [`https://bodacc.io/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted)
+- Khối lượng trong ngày: [`https://bodacc.io/api/bodacc/stats/daily`](https://bodacc.io/api/bodacc/stats/daily)
+- Các thông báo mới nhất: [`https://bodacc.io/api/bodacc/annonces?limit=5`](https://bodacc.io/api/bodacc/annonces?limit=5)

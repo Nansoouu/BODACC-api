@@ -64,6 +64,12 @@ incelenebilir.
 
 → [Sözleşme kütüphanesini keşfedin](la-bibliotheque/README.md)
 
+## 🧭 Ve kâşif, her şeyi bir araya getirmek için
+
+Tüm iş bittiğinde, **kâşifimiz** kapıları açar: görünümleri (ilanlar, şirketler, kişiler, bölgeler), günün istatistiklerini ve herkesin inceleyebileceği özetleri hazırlar. Verileri ekranınıza getiren odur.
+
+→ [Kâşifin çalışmasını keşfedin](lexplorateur/README.md)
+
 ---
 
 ## 👥 Perde arkasındaki ekip

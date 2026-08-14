@@ -70,6 +70,12 @@ cứu.
 
 → [Khám phá thư viện hợp đồng](la-bibliotheque/README.md)
 
+## 🧭 Và nhà thám hiểm, để tập hợp tất cả lại
+
+Khi mọi công việc hoàn tất, **nhà thám hiểm** của chúng tôi mở các cánh cửa: anh chuẩn bị các chế độ xem (thông báo, doanh nghiệp, người, khu vực), số liệu thống kê trong ngày và các bản tóm tắt mà ai cũng có thể tra cứu. Chính anh là người đưa dữ liệu đến màn hình của bạn.
+
+→ [Khám phá công việc của nhà thám hiểm](lexplorateur/README.md)
+
 ---
 
 ## 👥 Đội ngũ hậu trường

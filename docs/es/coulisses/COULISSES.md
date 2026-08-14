@@ -69,6 +69,15 @@ libremente.
 
 → [Descubrir la biblioteca de contratos](la-bibliotheque/README.md)
 
+## 🧭 Y el explorador, para reunirlo todo
+
+Cuando todo el trabajo está hecho, nuestro **explorador** abre las puertas:
+prepara las vistas (anuncios, empresas, personas, regiones), las estadísticas
+del día y los resúmenes que todo el mundo puede consultar. Es él quien lleva
+los datos hasta tu pantalla.
+
+→ [Descubrir el trabajo del explorador](lexplorateur/README.md)
+
 ---
 
 ## 👥 El equipo que hace funcionar los bastidores
