@@ -21,7 +21,7 @@ the postman brings the notices, and you can check the numbers yourself.
 **Today** (14 August 2026): **10 536 notices** — most common family: annual accounts (7 724).
 [Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-14-08-2026)
 
-> 🔍 Want to see the day-by-day numbers of each worker behind the scenes?
+> 🔍 Want to see the day-by-day numbers of each character behind the scenes?
 > Every character keeps a logbook: [the postman](docs/en/coulisses/le-facteur/LOG.md) ·
 > [the translator](docs/en/coulisses/le-traducteur/LOG.md) ·
 > [the detective](docs/en/coulisses/lenqueteur/LOG.md) ·
