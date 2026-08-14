@@ -66,6 +66,15 @@ our **library**: more than one million contracts, freely consultable.
 
 → [Discover the contracts library](la-bibliotheque/README.md)
 
+## 🧭 And the explorer, to bring it all together
+
+Once all the work is done, our **explorer** opens the doors: he prepares the
+views (notices, companies, people, regions), the day's statistics and the
+summaries that everyone can browse. He is the one who brings the data to
+your screen.
+
+→ [Discover the explorer's work](lexplorateur/README.md)
+
 ---
 
 ## 👥 The team behind the scenes

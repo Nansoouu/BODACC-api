@@ -1,0 +1,37 @@
+# 🧭 The Explorer
+
+**His job**: after the postman, the translator, the detective and the librarian
+have done their work, the explorer opens the doors. He turns the collected data
+into **views, statistics and summaries** that anyone can browse — without being
+an expert.
+
+He is the **last step** of our story: the one who brings the data to your screen.
+
+## What he does every day
+
+1. He arranges the announcements by theme (creations, changes, closures, sales,
+   annual accounts...) so you can find your way around.
+2. He prepares the **live counters** and the summary of the day: how many
+   announcements arrived, which family is the most common.
+3. He opens the doors of the library to the public: company pages, people,
+   regions, and the daily recap.
+
+## His promises
+
+| Promise | Detail |
+|---|---|
+| Always up to date | The counters reflect the day's real work |
+| Simple to browse | No jargon: themes, filters, and clear pages |
+| Checkable | Every number comes from the official announcements |
+
+## His logbook
+
+| Date | Notices | Companies | People | Contracts | Small improvements |
+|---|---|---|---|---|---|
+| 12/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(filled daily)_ |
+
+## Check it yourself
+
+- Live counters: [`https://bodacc.io/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted)
+- Today's volume: [`https://bodacc.io/api/bodacc/stats/daily`](https://bodacc.io/api/bodacc/stats/daily)
+- Latest announcements: [`https://bodacc.io/api/bodacc/annonces?limit=5`](https://bodacc.io/api/bodacc/annonces?limit=5)
