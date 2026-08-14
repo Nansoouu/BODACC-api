@@ -2,5 +2,6 @@
 
 | Date | Entreprises complétées | Nouveaux sites trouvés | Petites améliorations |
 |---|---|---|---|
+| 14/08/2026 | 21919 | — |  |
 | 13/08/2026 | 17603 | — |  |
 | 12/08/2026 | 13 726 | : | Journée de référence |
