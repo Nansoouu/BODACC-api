@@ -13,10 +13,10 @@ the postman brings the notices, and you can check the numbers yourself.
 
 | Data | Current value | Live badge |
 |---|---|---|
-| Notices | 45 123 698 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
-| Companies | 29 946 953 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
-| People | 3 965 089 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
-| Contracts (BOAMP) | 1 697 900 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
+| Notices | 45 125 907 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
+| Companies | 29 946 968 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
+| People | 3 988 983 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
+| Contracts (BOAMP) | 1 697 900 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
 
 **Today** (14 August 2026): **10536 notices** — most common family: Dépôts des comptes (7724).
 [Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-14-08-2026)
