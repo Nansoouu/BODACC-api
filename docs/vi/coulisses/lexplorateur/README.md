@@ -29,7 +29,7 @@ Anh là **bước cuối cùng** trong câu chuyện của chúng tôi: người
 
 | Ngày | Thông báo có thể khám phá | Doanh nghiệp hiển thị | Người được liên kết | Hợp đồng | Cải tiến nhỏ |
 |---|---|---|---|---|---|
-| 14/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(cập nhật hằng ngày)_ |
+| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Tự kiểm tra
 

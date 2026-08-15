@@ -29,7 +29,7 @@ jusqu'à votre écran.
 
 | Date | Annonces explorables | Entreprises visibles | Personnes reliées | Contrats | Petites améliorations |
 |---|---|---|---|---|---|
-| 14/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(complété chaque jour)_ |
+| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Vérifiez par vous-même
 

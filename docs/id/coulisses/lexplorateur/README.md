@@ -30,7 +30,7 @@ layar Anda.
 
 | Tanggal | Pengumuman yang dapat dijelajahi | Perusahaan yang terlihat | Orang yang terhubung | Kontrak | Perbaikan kecil |
 |---|---|---|---|---|---|
-| 14/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(diisi setiap hari)_ |
+| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Periksa sendiri
 

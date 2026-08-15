@@ -28,7 +28,7 @@ He is the **last step** of our story: the one who brings the data to your screen
 
 | Date | Notices | Companies | People | Contracts | Small improvements |
 |---|---|---|---|---|---|
-| 12/08/2026 | 32 974 689 | 29 889 790 | 2 764 492 | 1 697 873 | _(filled daily)_ |
+| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Check it yourself
 

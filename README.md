@@ -13,12 +13,12 @@ the postman brings the notices, and you can check the numbers yourself.
 
 | Data | Current value | Live badge |
 |---|---|---|
-| Notices | 32 974 689 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
-| Companies | 29 889 790 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
-| People | 2 764 492 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
-| Contracts (BOAMP) | 1 697 873 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
+| Notices | 45 123 698 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
+| Companies | 29 946 953 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
+| People | 3 965 089 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
+| Contracts (BOAMP) | 1 697 900 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
 
-**Today** (14 August 2026): **10 536 notices** — most common family: annual accounts (7 724).
+**Today** (14 August 2026): **10536 notices** — most common family: Dépôts des comptes (7724).
 [Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-14-08-2026)
 
 > 🔍 Want to see the day-by-day numbers of each character behind the scenes?
