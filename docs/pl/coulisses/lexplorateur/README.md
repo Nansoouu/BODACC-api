@@ -21,6 +21,7 @@ ekran.
 
 | Obietnica | Szczegóły |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Zawsze aktualny | Liczniki odzwierciedlają rzeczywistą pracę dnia |
 | Łatwy w przeglądaniu | Bez żargonu: tematy, filtry i przejrzyste karty |
 | Możliwy do sprawdzenia | Każda liczba pochodzi z oficjalnych ogłoszeń |
@@ -29,7 +30,6 @@ ekran.
 
 | Data | Ogłoszenia do eksploracji | Widoczne firmy | Powiązane osoby | Kontrakty | Drobne ulepszenia |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Sprawdź sam
 

@@ -19,6 +19,7 @@ Hikâyemizin **son adımıdır**: verileri ekranınıza getiren kişi.
 
 | Söz | Ayrıntı |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Her zaman güncel | Sayaçlar günün gerçek işini yansıtır |
 | İncelemesi kolay | Jargon yok: temalar, filtreler ve net sayfalar |
 | Doğrulanabilir | Her rakam resmi ilanlardan gelir |
@@ -27,7 +28,6 @@ Hikâyemizin **son adımıdır**: verileri ekranınıza getiren kişi.
 
 | Tarih | İncelenebilir ilanlar | Görünen şirketler | Bağlı kişiler | Sözleşmeler | Küçük iyileştirmeler |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Kendiniz kontrol edin
 

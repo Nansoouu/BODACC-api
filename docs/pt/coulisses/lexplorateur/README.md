@@ -21,6 +21,7 @@ ecrã.
 
 | Promessa | Detalhe |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Sempre atualizado | Os contadores refletem o trabalho real do dia |
 | Simples de consultar | Sem jargão: temas, filtros e fichas claras |
 | Verificável | Cada número vem dos anúncios oficiais |
@@ -29,7 +30,6 @@ ecrã.
 
 | Data | Anúncios exploráveis | Empresas visíveis | Pessoas ligadas | Contratos | Pequenas melhorias |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Verifique você mesmo
 

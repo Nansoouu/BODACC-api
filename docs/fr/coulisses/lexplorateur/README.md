@@ -21,6 +21,7 @@ jusqu'à votre écran.
 
 | Promesse | Détail |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Toujours à jour | Les compteurs reflètent le travail réel de la journée |
 | Simple à consulter | Pas de jargon : thèmes, filtres, fiches claires |
 | Vérifiable | Chaque chiffre vient des annonces officielles |
@@ -29,7 +30,6 @@ jusqu'à votre écran.
 
 | Date | Annonces explorables | Entreprises visibles | Personnes reliées | Contrats | Petites améliorations |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Vérifiez par vous-même
 

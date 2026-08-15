@@ -22,6 +22,7 @@ deinen Bildschirm bringt.
 
 | Versprechen | Detail |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Immer aktuell | Die Zähler spiegeln die tatsächliche Arbeit des Tages wider |
 | Einfach zu lesen | Kein Fachjargon: Themen, Filter und klare Einträge |
 | Überprüfbar | Jede Zahl stammt aus den offiziellen Bekanntmachungen |
@@ -30,7 +31,6 @@ deinen Bildschirm bringt.
 
 | Datum | Erkundbare Bekanntmachungen | Sichtbare Unternehmen | Verknüpfte Personen | Verträge | Kleine Verbesserungen |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Überzeugen Sie sich selbst
 

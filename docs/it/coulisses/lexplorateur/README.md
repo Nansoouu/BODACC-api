@@ -21,6 +21,7 @@ schermo.
 
 | Promessa | Dettaglio |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Sempre aggiornato | I contatori riflettono il lavoro reale della giornata |
 | Semplice da consultare | Niente gergo: temi, filtri e schede chiare |
 | Verificabile | Ogni numero proviene dagli annunci ufficiali |
@@ -29,7 +30,6 @@ schermo.
 
 | Data | Annunci esplorabili | Imprese visibili | Persone collegate | Contratti | Piccoli miglioramenti |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Verificate di persona
 

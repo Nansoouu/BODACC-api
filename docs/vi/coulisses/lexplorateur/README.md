@@ -21,6 +21,7 @@ Anh là **bước cuối cùng** trong câu chuyện của chúng tôi: người
 
 | Lời hứa | Chi tiết |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Luôn cập nhật | Các bộ đếm phản ánh công việc thực tế trong ngày |
 | Dễ tra cứu | Không có thuật ngữ chuyên môn: chủ đề, bộ lọc và trang rõ ràng |
 | Kiểm chứng được | Mỗi con số đều đến từ thông báo chính thức |
@@ -29,7 +30,6 @@ Anh là **bước cuối cùng** trong câu chuyện của chúng tôi: người
 
 | Ngày | Thông báo có thể khám phá | Doanh nghiệp hiển thị | Người được liên kết | Hợp đồng | Cải tiến nhỏ |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Tự kiểm tra
 

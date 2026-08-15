@@ -22,6 +22,7 @@ layar Anda.
 
 | Janji | Detail |
 |---|---|
+| 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Selalu terkini | Penghitung mencerminkan pekerjaan nyata hari itu |
 | Mudah dilihat | Tanpa jargon: tema, filter, dan kartu yang jelas |
 | Dapat diverifikasi | Setiap angka berasal dari pengumuman resmi |
@@ -30,7 +31,6 @@ layar Anda.
 
 | Tanggal | Pengumuman yang dapat dijelajahi | Perusahaan yang terlihat | Orang yang terhubung | Kontrak | Perbaikan kecil |
 |---|---|---|---|---|---|
-| 15/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 | _(updated live)_ |
 
 ## Periksa sendiri
 
