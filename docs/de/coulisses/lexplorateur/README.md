@@ -22,6 +22,7 @@ deinen Bildschirm bringt.
 
 | Versprechen | Detail |
 |---|---|
+| 16/08/2026 | 45 139 824 | 29 948 135 | 4 046 110 | 1 698 109 |  |
 | 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Immer aktuell | Die Zähler spiegeln die tatsächliche Arbeit des Tages wider |
 | Einfach zu lesen | Kein Fachjargon: Themen, Filter und klare Einträge |

@@ -6,6 +6,7 @@ Die täglichen Rückblicke, veröffentlicht auf BODACC.io, mit direkten Links zu
 
 | Date | Artikel |
 |---|---|
+| 16 août 2026 | [Récapitulatif du 16 août 2026](https://bodacc.io/de/news/recapitulatif-complet-bodacc-16-08-2026) |
 | 14 août 2026 | [Récapitulatif du 14 août 2026](https://bodacc.io/de/news/recapitulatif-complet-bodacc-14-08-2026) |
 | 13 août 2026 | [Récapitulatif du 13 août 2026](https://bodacc.io/de/news/recapitulatif-complet-bodacc-13-08-2026) |
 | 12. August 2026 | [BODACC vom 12. August 2026 : die vollständige Zusammenfassung](https://bodacc.io/de/news/recapitulatif-complet-bodacc-12-08-2026) |

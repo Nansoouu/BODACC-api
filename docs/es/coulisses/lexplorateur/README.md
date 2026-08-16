@@ -21,6 +21,7 @@ pantalla.
 
 | Promesa | Detalle |
 |---|---|
+| 16/08/2026 | 45 139 824 | 29 948 135 | 4 046 110 | 1 698 109 |  |
 | 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Siempre al día | Los contadores reflejan el trabajo real del día |
 | Simple de consultar | Sin jerga: temas, filtros y fichas claras |

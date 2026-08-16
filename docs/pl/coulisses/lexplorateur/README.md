@@ -21,6 +21,7 @@ ekran.
 
 | Obietnica | Szczegóły |
 |---|---|
+| 16/08/2026 | 45 139 824 | 29 948 135 | 4 046 110 | 1 698 109 |  |
 | 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Zawsze aktualny | Liczniki odzwierciedlają rzeczywistą pracę dnia |
 | Łatwy w przeglądaniu | Bez żargonu: tematy, filtry i przejrzyste karty |

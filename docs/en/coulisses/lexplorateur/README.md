@@ -20,6 +20,7 @@ He is the **last step** of our story: the one who brings the data to your screen
 
 | Promise | Detail |
 |---|---|
+| 16/08/2026 | 45 139 824 | 29 948 135 | 4 046 110 | 1 698 109 |  |
 | 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Always up to date | The counters reflect the day's real work |
 | Simple to browse | No jargon: themes, filters, and clear pages |
