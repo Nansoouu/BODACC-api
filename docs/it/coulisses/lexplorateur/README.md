@@ -21,6 +21,7 @@ schermo.
 
 | Promessa | Dettaglio |
 |---|---|
+| 18/08/2026 | 50 359 740 | 29 958 513 | 4 208 416 | 1 698 257 |  |
 | 16/08/2026 | 45 139 824 | 29 948 135 | 4 046 110 | 1 698 109 |  |
 | 14/08/2026 | 45 123 698 | 29 946 953 | 3 965 089 | 1 697 900 |  |
 | Sempre aggiornato | I contatori riflettono il lavoro reale della giornata |
