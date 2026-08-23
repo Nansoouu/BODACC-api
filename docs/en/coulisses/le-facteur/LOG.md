@@ -2,6 +2,7 @@
 
 | Date | Annonces arrivées | Famille la plus nombreuse | Traducteur prévenu | Petites améliorations |
 |---|---|---|---|---|
+| 23/08/2026 | 8582 | Dépôts des comptes (4104) | ✓ |  |
 | 21/08/2026 | 10095 | Dépôts des comptes (5703) | ✓ |  |
 | 19/08/2026 | — | — | ✓ |  |
 | 18/08/2026 | — | — | ✓ |  |

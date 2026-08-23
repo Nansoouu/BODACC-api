@@ -2,6 +2,7 @@
 
 | Date | Nouveaux contrats | Entreprises reliées | Petites améliorations |
 |---|---|---|---|
+| 23/08/2026 | 1691162 | — |  |
 | 21/08/2026 | 1691162 | — |  |
 | 19/08/2026 | 1698483 | — |  |
 | 18/08/2026 | 1698257 | — |  |
