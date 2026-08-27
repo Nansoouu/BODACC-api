@@ -2,6 +2,7 @@
 
 | Date | Groupe exploré | Entreprises trouvées | Avec site web | Petites améliorations |
 |---|---|---|---|---|
+| 27/08/2026 | — | — | — |  |
 | 25/08/2026 | — | 181396 | — |  |
 | 24/08/2026 | — | 171875 | — |  |
 | 23/08/2026 | — | 158074 | — |  |

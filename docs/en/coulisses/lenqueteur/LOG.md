@@ -2,6 +2,7 @@
 
 | Date | Entreprises complétées | Nouveaux sites trouvés | Petites améliorations |
 |---|---|---|---|
+| 27/08/2026 | — | — |  |
 | 25/08/2026 | 181342 | — |  |
 | 24/08/2026 | 173792 | — |  |
 | 23/08/2026 | 159980 | — |  |
