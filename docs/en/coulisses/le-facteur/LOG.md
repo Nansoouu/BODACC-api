@@ -2,6 +2,7 @@
 
 | Date | Annonces arrivées | Famille la plus nombreuse | Traducteur prévenu | Petites améliorations |
 |---|---|---|---|---|
+| 28/08/2026 | — | — | ✓ |  |
 | 27/08/2026 | — | — | ✓ |  |
 | 25/08/2026 | — | — | ✓ |  |
 | 24/08/2026 | — | — | ✓ |  |
