@@ -44,7 +44,7 @@ O BODACC (Boletim Oficial de Anúncios Civis e Comerciais) é a publicação ofi
 
 | | |
 |---|---|
-| 🗂 **Todo o histórico, desde 2004** | Milhões de anúncios em base, cobertura completa — não é uma janela deslizante |
+| 🗂 **Todo o histórico, desde 2008** | Milhões de anúncios em base, cobertura completa — não é uma janela deslizante |
 | ⚡ **Tempo real** | Os anúncios do dia estão disponíveis todas as manhãs, antes da abertura dos escritórios |
 | 🕸 **Um grafo, não arquivos** | Anúncio → empresa (SIREN) → dirigentes → mandatos → contratos públicos: tudo está interligado e consultável em uma requisição |
 | ✨ **Do texto bruto aos dados estruturados** | SIREN, NAF, endereço, dirigentes, processos... extraídos automaticamente de cada texto jurídico |
@@ -58,7 +58,7 @@ O BODACC (Boletim Oficial de Anúncios Civis e Comerciais) é a publicação ofi
 
 O que faz a diferença não é o dado bruto (ele é público), é o que fazemos com ele — todos os dias, automaticamente:
 
-**1. Ingestão confiável e completa.** Todas as manhãs antes das 09:00, os novos anúncios publicados pela DILA são integrados à nossa base. O histórico completo remonta a 2004, muito além do que oferece a consulta pública. Reexecutar uma ingestão não cria nenhuma duplicata: nossos dados são verificados e coerentes permanentemente.
+**1. Ingestão confiável e completa.** Todas as manhãs antes das 09:00, os novos anúncios publicados pela DILA são integrados à nossa base. O histórico completo remonta a 2008, muito além do que oferece a consulta pública. Reexecutar uma ingestão não cria nenhuma duplicata: nossos dados são verificados e coerentes permanentemente.
 
 **2. Enriquecimento inteligente.** Cada anúncio é um texto jurídico — nosso motor de extração híbrido (regras de negócio + IA) o transforma em dados estruturados: número SIREN, razão social, endereço, código NAF, dirigentes, mandatos, valores, processos. O que exige horas de leitura humana torna-se campos JSON consultáveis.
 
@@ -72,7 +72,6 @@ O que faz a diferença não é o dado bruto (ele é público), é o que fazemos 
 
 | | **Site oficial (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Histórico** | Somente desde 2008 | Histórico comercial conforme assinatura | **Completo desde 2004** |
 | **API** | ❌ Nenhuma | API reservada aos planos superiores | ✅ **API REST documentada, sem chave para leitura** |
 | **Dados estruturados** | ❌ Consulta em PDF | ✅ Perfis enriquecidos | ✅ **Anúncios + grafo empresas/pessoas/contratos** |
 | **Tempo real** | Publicação em papel consultável online | Atualização diária | ✅ **Todas as manhãs antes das 09:00** |
@@ -83,7 +82,7 @@ O que faz a diferença não é o dado bruto (ele é público), é o que fazemos 
 
 **Pontos fortes da Pappers**: interface muito bem cuidada, agregação INSEE + INPI + BODACC, monitoramento integrado. **Pontos fracos**: o preço (29,90 €/mês para o acesso básico, a API e o histórico completo são mais caros), uma solução orientada à consulta em vez de dados exploráveis.
 
-**Nossa posição**: **todo o histórico desde 2004, mais rápido que no site oficial — e a um preço inferior ao da Pappers.** Pensado para quem quer conectar os dados em suas próprias ferramentas, não para quem quer mais uma tela.
+**Nossa posição**: **todo o histórico desde 2008, mais rápido que no site oficial — e a um preço inferior ao da Pappers.** Pensado para quem quer conectar os dados em suas próprias ferramentas, não para quem quer mais uma tela.
 
 > 💶 Ver os planos: [bodacc.io/pt/tarifs](https://bodacc.io/pt/tarifs) — Gratuito · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Os selos no topo da página são **contadores em tempo real**: anúncios BODACC,
 
 Referências estáveis:
 
-- 📰 **Anúncios BODACC**: histórico completo desde 2004, atualizado todas as manhãs antes das 09:00
+- 📰 **Anúncios BODACC**: histórico completo desde 2008, atualizado todas as manhãs antes das 09:00
 - 🏢 **Empresas (SIRENE)**: 29,8 M de unidades legais francesas (registro INSEE)
 - 👤 **Pessoas extraídas**: dirigentes, liquidantes, comissários de contas... em consolidação contínua
 - 📦 **Contratos públicos (BOAMP)**: 1,69 M de contratos públicos 2015 → 2026

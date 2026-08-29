@@ -20,7 +20,7 @@ chegar até ao seu ecrã.
 |---|---|
 | Todas as manhãs | Os anúncios do dia anterior estão disponíveis antes das 9 h |
 | Nada se perde | Passar duas vezes nunca cria um duplicado |
-| Todo o histórico | Chegamos até 2004, não só aos últimos dias |
+| Todo o histórico | Chegamos até 2008, não só aos últimos dias |
 
 ## O seu diário de bordo
 

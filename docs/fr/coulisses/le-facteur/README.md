@@ -20,7 +20,7 @@ arriver jusqu'à votre écran.
 |---|---|
 | Tous les matins | Les annonces de la veille sont disponibles avant 9h |
 | Rien ne se perd | Repasser deux fois ne crée jamais de doublon |
-| Tout l'historique | On remonte jusqu'à 2004, pas seulement les derniers jours |
+| Tout l'historique | On remonte jusqu'à 2008, pas seulement les derniers jours |
 
 ## Son journal de bord
 

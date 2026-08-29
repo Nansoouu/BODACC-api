@@ -29,7 +29,7 @@ O tradutor transforma-o numa ficha que todos podem ler — uma criança de
 | Restabelecimentos | Regressos à atividade | ~680 |
 | Diversos | Penhoras, nulidades | algumas |
 
-**No total: todos os anúncios publicados desde 2004 foram lidos e arquivados.**
+**No total: todos os anúncios publicados desde 2008 foram lidos e arquivados.**
 
 ## O seu diário de bordo
 

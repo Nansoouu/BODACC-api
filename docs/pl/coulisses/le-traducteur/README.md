@@ -29,7 +29,7 @@ albo bankier.
 | Przywrócenia | Powrót do działalności | ~680 |
 | Różne | Zajęcia, stwierdzenia nieważności | kilka |
 
-**W sumie: każde ogłoszenie opublikowane od 2004 roku zostało przeczytane i uporządkowane.**
+**W sumie: każde ogłoszenie opublikowane od 2008 roku zostało przeczytane i uporządkowane.**
 
 ## Jego dziennik
 

@@ -44,7 +44,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales), Fransız şirke
 
 | | |
 |---|---|
-| 🗂 **2004'ten beri tüm geçmiş** | Veritabanında milyonlarca ilan, tam kapsam — kayan pencere değil |
+| 🗂 **2008'ten beri tüm geçmiş** | Veritabanında milyonlarca ilan, tam kapsam — kayan pencere değil |
 | ⚡ **Gerçek zamanlı** | Günün ilanları her sabah ofisler açılmadan önce kullanılabilir |
 | 🕸 **Dosyalar değil, bir grafik** | İlan → şirket (SIREN) → yöneticiler → görevler → kamu ihaleleri: her şey ilişkili ve tek bir istekle sorgulanabilir |
 | ✨ **Ham metinden yapılandırılmış verilere** | SIREN, NAF, adres, yöneticiler, prosedürler... her hukuki metinden otomatik olarak çıkarılır |
@@ -58,7 +58,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales), Fransız şirke
 
 Fark yaratan şey ham veri değil (kamuya açıktır), onunla yaptıklarımızdır — her gün, otomatik olarak:
 
-**1. Güvenilir ve eksiksiz bir alım.** Her sabah 09:00'dan önce, DILA tarafından yayınlanan yeni ilanlar veritabanımıza entegre edilir. Tam geçmiş 2004'e kadar uzanır, kamuya açık danışmanın sunduğunun çok ötesinde. Bir alımı yeniden çalıştırmak hiçbir kopya oluşturmaz: verilerimiz sürekli olarak doğrulanır ve tutarlıdır.
+**1. Güvenilir ve eksiksiz bir alım.** Her sabah 09:00'dan önce, DILA tarafından yayınlanan yeni ilanlar veritabanımıza entegre edilir. Tam geçmiş 2008'e kadar uzanır, kamuya açık danışmanın sunduğunun çok ötesinde. Bir alımı yeniden çalıştırmak hiçbir kopya oluşturmaz: verilerimiz sürekli olarak doğrulanır ve tutarlıdır.
 
 **2. Akıllı zenginleştirme.** Her ilan hukuki bir metindir — hibrit çıkarma motorumuz (iş kuralları + yapay zeka) onu yapılandırılmış verilere dönüştürür: SIREN numarası, ticari unvan, adres, NAF kodu, yöneticiler, görevler, tutarlar, prosedürler. Saatlerce insan okuması gerektiren şey, sorgulanabilir JSON alanlarına dönüşür.
 
@@ -72,7 +72,6 @@ Fark yaratan şey ham veri değil (kamuya açıktır), onunla yaptıklarımızd�
 
 | | **Resmi site (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Geçmiş** | Yalnızca 2008'den beri | Aboneliğe göre ticari geçmiş | **2004'ten beri eksiksiz** |
 | **API** | ❌ Yok | API yalnızca üst düzey paketlerde | ✅ **Belgelenmiş REST API, okumada anahtarsız** |
 | **Yapılandırılmış veriler** | ❌ PDF danışma | ✅ Zenginleştirilmiş profiller | ✅ **İlanlar + şirket/kişi/ihale grafiği** |
 | **Gerçek zamanlı** | Çevrimiçi görüntülenebilir kağıt yayın | Günlük güncelleme | ✅ **Her sabah 09:00'dan önce** |
@@ -83,7 +82,7 @@ Fark yaratan şey ham veri değil (kamuya açıktır), onunla yaptıklarımızd�
 
 **Pappers'ın güçlü yönleri**: çok özenli arayüz, INSEE + INPI + BODACC toplama, entegre izleme. **Zayıf yönleri**: fiyat (temel erişim için aylık 29,90 €, API ve tam geçmiş daha pahalıdır), danışma odaklı bir çözüm, kullanılabilir verilerden ziyade.
 
-**Bizim konumumuz**: **2004'ten beri tüm geçmiş, resmi siteden daha hızlı — ve Pappers'ın fiyatından daha düşük bir fiyata.** Veriyi kendi araçlarına bağlamak isteyenler için tasarlandı, fazladan bir ekran isteyenler için değil.
+**Bizim konumumuz**: **2008'ten beri tüm geçmiş, resmi siteden daha hızlı — ve Pappers'ın fiyatından daha düşük bir fiyata.** Veriyi kendi araçlarına bağlamak isteyenler için tasarlandı, fazladan bir ekran isteyenler için değil.
 
 > 💶 Paketleri görün: [bodacc.io/tr/tarifs](https://bodacc.io/tr/tarifs) — Ücretsiz · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Sayfanın üst kısmındaki rozetler **gerçek zamanlı sayaçlardır**: BODACC 
 
 Sabit referans noktaları:
 
-- 📰 **BODACC İlanları**: 2004'ten beri tam geçmiş, her sabah 09:00'dan önce güncellenir
+- 📰 **BODACC İlanları**: 2008'ten beri tam geçmiş, her sabah 09:00'dan önce güncellenir
 - 🏢 **Şirketler (SIRENE)**: 29,8 M Fransız tüzel kişiliği (INSEE kaydı)
 - 👤 **Çıkarılan kişiler**: yöneticiler, tasfiye memurları, bağımsız denetçiler... sürekli konsolidasyonda
 - 📦 **Kamu ihaleleri (BOAMP)**: 2015 → 2026 arası 1,69 M kamu sözleşmesi

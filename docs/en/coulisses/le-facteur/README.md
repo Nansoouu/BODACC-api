@@ -20,7 +20,7 @@ your screen.
 |---|---|
 | Every morning | Yesterday's announcements are available before 9 am |
 | Nothing is lost | Running twice never creates a duplicate |
-| Full history | We go back to 2004, not just recent days |
+| Full history | We go back to 2008, not just recent days |
 
 ## His logbook
 

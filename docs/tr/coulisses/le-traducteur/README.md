@@ -28,7 +28,7 @@ bankacı.
 | İyileştirmeler | Faaliyete dönüşler | ~680 |
 | Çeşitli | Hacizler, butlanlar | birkaç tane |
 
-**Toplam: 2004'ten bu yana yayımlanan her ilan okundu ve yerine yerleştirildi.**
+**Toplam: 2008'ten bu yana yayımlanan her ilan okundu ve yerine yerleştirildi.**
 
 ## Günlüğü
 

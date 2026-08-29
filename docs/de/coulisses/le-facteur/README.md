@@ -20,7 +20,7 @@ auf Ihren Bildschirm gelangen.
 |---|---|
 | Jeden Morgen | Die Bekanntmachungen des Vortages sind vor 9 Uhr verfügbar |
 | Nichts geht verloren | Zweimaliges Durchlaufen erzeugt nie ein Duplikat |
-| Die ganze Geschichte | Wir gehen bis 2004 zurück, nicht nur die letzten Tage |
+| Die ganze Geschichte | Wir gehen bis 2008 zurück, nicht nur die letzten Tage |
 
 ## Sein Logbuch
 

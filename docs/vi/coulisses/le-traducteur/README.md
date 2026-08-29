@@ -29,7 +29,7 @@ tạp. Người dịch biến nó thành một hồ sơ mà ai cũng đọc đư
 | Khôi phục | Trở lại hoạt động | ~680 |
 | Khác | Kê biên, tuyên bố vô hiệu | một vài |
 
-**Tổng cộng: mọi thông báo từng được công bố kể từ 2004 đã được đọc và xếp vào chỗ.**
+**Tổng cộng: mọi thông báo từng được công bố kể từ 2008 đã được đọc và xếp vào chỗ.**
 
 ## Nhật ký của anh
 

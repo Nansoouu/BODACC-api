@@ -44,7 +44,7 @@ El BODACC (Boletín Oficial de Anuncios Civiles y Comerciales) es la publicació
 
 | | |
 |---|---|
-| 🗂 **Todo el historial, desde 2004** | Millones de anuncios en base, cobertura completa — no una ventana deslizante |
+| 🗂 **Todo el historial, desde 2008** | Millones de anuncios en base, cobertura completa — no una ventana deslizante |
 | ⚡ **Tiempo real** | Los anuncios del día están disponibles cada mañana, antes de la apertura de las oficinas |
 | 🕸 **Un grafo, no archivos** | Anuncio → empresa (SIREN) → directivos → cargos → contratos públicos: todo está relacionado y es consultable en una sola petición |
 | ✨ **Del texto bruto a los datos estructurados** | SIREN, NAF, dirección, directivos, procedimientos... extraídos automáticamente de cada texto jurídico |
@@ -58,7 +58,7 @@ El BODACC (Boletín Oficial de Anuncios Civiles y Comerciales) es la publicació
 
 Lo que marca la diferencia no son los datos brutos (son públicos), sino lo que hacemos con ellos — cada día, automáticamente:
 
-**1. Una ingesta fiable y completa.** Cada mañana antes de las 09:00, los nuevos anuncios publicados por la DILA se integran en nuestra base. El historial completo se remonta a 2004, mucho más allá de lo que ofrece la consulta pública. Re-ejecutar una ingesta no crea ningún duplicado: nuestros datos están verificados y son coherentes en todo momento.
+**1. Una ingesta fiable y completa.** Cada mañana antes de las 09:00, los nuevos anuncios publicados por la DILA se integran en nuestra base. El historial completo se remonta a 2008, mucho más allá de lo que ofrece la consulta pública. Re-ejecutar una ingesta no crea ningún duplicado: nuestros datos están verificados y son coherentes en todo momento.
 
 **2. Un enriquecimiento inteligente.** Cada anuncio es un texto jurídico — nuestro motor de extracción híbrido (reglas de negocio + IA) lo transforma en datos estructurados: número SIREN, razón social, dirección, código NAF, directivos, cargos, importes, procedimientos. Lo que requiere horas de lectura humana se convierte en campos JSON consultables.
 
@@ -72,7 +72,6 @@ Lo que marca la diferencia no son los datos brutos (son públicos), sino lo que 
 
 | | **Sitio oficial (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Historial** | Solo desde 2008 | Historial comercial según suscripción | **Completo desde 2004** |
 | **API** | ❌ Ninguna | API reservada a las ofertas superiores | ✅ **API REST documentada, sin clave en lectura** |
 | **Datos estructurados** | ❌ Consulta PDF | ✅ Perfiles enriquecidos | ✅ **Anuncios + grafo empresas/personas/mercados** |
 | **Tiempo real** | Publicación en papel consultable en línea | Actualización diaria | ✅ **Cada mañana antes de las 09:00** |
@@ -83,7 +82,7 @@ Lo que marca la diferencia no son los datos brutos (son públicos), sino lo que 
 
 **Puntos fuertes de Pappers**: interfaz muy cuidada, agregación INSEE + INPI + BODACC, vigilancia integrada. **Puntos débiles**: el precio (29,90 €/mes para el acceso básico, la API y el historial completo son más caros), una solución orientada a la consulta más que a los datos explotables.
 
-**Nuestra posición**: **todo el historial desde 2004, más rápido que en el sitio oficial — y a un precio inferior al de Pappers.** Pensado para quienes quieren conectar los datos en sus propias herramientas, no para quienes quieren una pantalla más.
+**Nuestra posición**: **todo el historial desde 2008, más rápido que en el sitio oficial — y a un precio inferior al de Pappers.** Pensado para quienes quieren conectar los datos en sus propias herramientas, no para quienes quieren una pantalla más.
 
 > 💶 Ver los planes: [bodacc.io/es/tarifs](https://bodacc.io/es/tarifs) — Gratuito · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Las insignias en la parte superior de la página son **contadores en tiempo real
 
 Referencias estables:
 
-- 📰 **Anuncios BODACC**: historial completo desde 2004, actualizado cada mañana antes de las 09:00
+- 📰 **Anuncios BODACC**: historial completo desde 2008, actualizado cada mañana antes de las 09:00
 - 🏢 **Empresas (SIRENE)**: 29,8 M de unidades legales francesas (registro INSEE)
 - 👤 **Personas extraídas**: directivos, liquidadores, comisarios de cuentas... en consolidación continua
 - 📦 **Contratos públicos (BOAMP)**: 1,69 M de contratos públicos 2015 → 2026

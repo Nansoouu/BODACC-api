@@ -20,7 +20,7 @@ scherm kunnen komen.
 |---|---|
 | Elke ochtend | De bekendmakingen van de vorige dag zijn vóór 9 uur beschikbaar |
 | Niets gaat verloren | Twee keer langslopen zorgt nooit voor een duplicaat |
-| De volledige geschiedenis | We gaan terug tot 2004, niet alleen de laatste dagen |
+| De volledige geschiedenis | We gaan terug tot 2008, niet alleen de laatste dagen |
 
 ## Zijn logboek
 

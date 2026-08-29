@@ -19,7 +19,7 @@ Hikâyemizin **ilk adımı** odur: o olmasaydı hiçbir şey ekranınıza ulaşa
 |---|---|
 | Her sabah | Önceki günün ilanları saat 9'dan önce yayında olur |
 | Hiçbir şey kaybolmaz | İki kez geçmek asla mükerrer kayıt oluşturmaz |
-| Tüm geçmiş | Yalnızca son günler değil, 2004'e kadar gidiyoruz |
+| Tüm geçmiş | Yalnızca son günler değil, 2008'e kadar gidiyoruz |
 
 ## Günlüğü
 

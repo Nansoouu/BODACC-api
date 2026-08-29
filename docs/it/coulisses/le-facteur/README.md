@@ -20,7 +20,7 @@ arrivare fino al vostro schermo.
 |---|---|
 | Tutte le mattine | Gli annunci del giorno prima sono disponibili prima delle 9 |
 | Niente si perde | Passare due volte non crea mai un duplicato |
-| Tutta la storia | Si risale fino al 2004, non solo agli ultimi giorni |
+| Tutta la storia | Si risale fino al 2008, non solo agli ultimi giorni |
 
 ## Il suo diario di bordo
 

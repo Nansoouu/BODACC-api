@@ -29,7 +29,7 @@ een kind van 7 jaar of een bankier.
 | Herstel | Terugkeer naar de activiteit | ~680 |
 | Diversen | Beslagen, nietigheden | een paar |
 
-**In totaal: elke bekendmaking die ooit sinds 2004 is gepubliceerd, is gelezen en gerangschikt.**
+**In totaal: elke bekendmaking die ooit sinds 2008 is gepubliceerd, is gelezen en gerangschikt.**
 
 ## Zijn logboek
 

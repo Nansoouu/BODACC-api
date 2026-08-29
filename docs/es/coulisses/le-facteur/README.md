@@ -20,7 +20,7 @@ llegar hasta tu pantalla.
 |---|---|
 | Todas las mañanas | Los anuncios del día anterior están disponibles antes de las 9 h |
 | Nada se pierde | Pasar dos veces nunca crea un duplicado |
-| Todo el historial | Llegamos hasta 2004, no solo los últimos días |
+| Todo el historial | Llegamos hasta 2008, no solo los últimos días |
 
 ## Su cuaderno de bitácora
 

@@ -20,7 +20,7 @@ không gì có thể đến được màn hình của bạn.
 |---|---|
 | Mỗi buổi sáng | Các thông báo của ngày hôm trước có sẵn trước 9 giờ |
 | Không gì bị mất | Đi lại hai lần không bao giờ tạo bản trùng |
-| Toàn bộ lịch sử | Chúng tôi truy về tận 2004, không chỉ những ngày gần đây |
+| Toàn bộ lịch sử | Chúng tôi truy về tận 2008, không chỉ những ngày gần đây |
 
 ## Nhật ký của anh
 

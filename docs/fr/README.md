@@ -44,7 +44,7 @@ Le BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) est la public
 
 | | |
 |---|---|
-| 🗂 **Tout l'historique, depuis 2004** | Des millions d'annonces en base, couverture complète — pas une fenêtre glissante |
+| 🗂 **Tout l'historique, depuis 2008** | Des millions d'annonces en base, couverture complète — pas une fenêtre glissante |
 | ⚡ **Temps réel** | Les annonces du jour sont disponibles chaque matin, avant l'ouverture des bureaux |
 | 🕸 **Un graphe, pas des fichiers** | Annonce → entreprise (SIREN) → dirigeants → mandats → marchés publics : tout est relié et interrogable en une requête |
 | ✨ **Du texte brut aux données structurées** | SIREN, NAF, adresse, dirigeants, procédures... extraits automatiquement de chaque texte juridique |
@@ -58,7 +58,7 @@ Le BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) est la public
 
 Ce qui fait la différence, ce n'est pas la donnée brute (elle est publique), c'est ce que nous en faisons — chaque jour, automatiquement :
 
-**1. Une ingestion fiable et complète.** Chaque matin avant 09:00, les nouvelles annonces publiées par la DILA sont intégrées à notre base. L'historique complet remonte à 2004, bien au-delà de ce qu'offre la consultation publique. Ré-exécuter une ingestion ne crée aucun doublon : nos données sont vérifiées et cohérentes en permanence.
+**1. Une ingestion fiable et complète.** Chaque matin avant 09:00, les nouvelles annonces publiées par la DILA sont intégrées à notre base. L'historique complet remonte à 2008, bien au-delà de ce qu'offre la consultation publique. Ré-exécuter une ingestion ne crée aucun doublon : nos données sont vérifiées et cohérentes en permanence.
 
 **2. Un enrichissement intelligent.** Chaque annonce est un texte juridique — notre moteur d'extraction hybride (règles métier + IA) le transforme en données structurées : numéro SIREN, raison sociale, adresse, code NAF, dirigeants, mandats, montants, procédures. Ce qui demande des heures de lecture humaine devient des champs JSON interrogables.
 
@@ -72,7 +72,6 @@ Ce qui fait la différence, ce n'est pas la donnée brute (elle est publique), c
 
 | | **Site officiel (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Historique** | Depuis 2008 uniquement | Historique commercial selon abonnement | **Complet depuis 2004** |
 | **API** | ❌ Aucune | API réservée aux offres supérieures | ✅ **API REST documentée, sans clé en lecture** |
 | **Données structurées** | ❌ Consultation PDF | ✅ Profils enrichis | ✅ **Annonces + graphe entreprises/personnes/marchés** |
 | **Temps réel** | Publication papier consultable en ligne | Actualisation quotidienne | ✅ **Chaque matin avant 09:00** |
@@ -83,7 +82,7 @@ Ce qui fait la différence, ce n'est pas la donnée brute (elle est publique), c
 
 **Points forts de Pappers** : interface très soignée, agrégation INSEE + INPI + BODACC, veille intégrée. **Points faibles** : le prix (29,90 €/mo pour l'accès de base, l'API et l'historique complet sont plus chers), une solution orientée consultation plutôt que données exploitables.
 
-**Notre position** : **tout l'historique depuis 2004, plus vite que sur le site officiel — et à un tarif inférieur à celui de Pappers.** Pensé pour ceux qui veulent brancher la donnée dans leurs propres outils, pas pour ceux qui veulent un écran en plus.
+**Notre position** : **tout l'historique depuis 2008, plus vite que sur le site officiel — et à un tarif inférieur à celui de Pappers.** Pensé pour ceux qui veulent brancher la donnée dans leurs propres outils, pas pour ceux qui veulent un écran en plus.
 
 > 💶 Voir les forfaits : [bodacc.io/fr/tarifs](https://bodacc.io/fr/tarifs) — Gratuit · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Les badges en haut de page sont des **compteurs en temps réel** : annonces BODA
 
 Repères stables :
 
-- 📰 **Annonces BODACC** : historique complet depuis 2004, mis à jour chaque matin avant 09:00
+- 📰 **Annonces BODACC** : historique complet depuis 2008, mis à jour chaque matin avant 09:00
 - 🏢 **Entreprises (SIRENE)** : 29,8 M d'unités légales françaises (registre INSEE)
 - 👤 **Personnes extraites** : dirigeants, liquidateurs, commissaires aux comptes... en consolidation continue
 - 📦 **Marchés publics (BOAMP)** : 1,69 M de contrats publics 2015 → 2026

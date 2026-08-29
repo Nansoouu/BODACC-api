@@ -29,7 +29,7 @@ El traductor lo convierte en una ficha que cualquiera puede leer — un niño de
 | Restablecimientos | Retornos a la actividad | ~680 |
 | Varios | Embargos, nulidades | algunos |
 
-**En total: cada anuncio publicado desde 2004 ha sido leído y archivado.**
+**En total: cada anuncio publicado desde 2008 ha sido leído y archivado.**
 
 ## Su cuaderno de bitácora
 

@@ -29,7 +29,7 @@ Kind ebenso wie ein Banker.
 | Wiederaufnahmen | Rückkehr zur Tätigkeit | ~680 |
 | Verschiedenes | Pfändungen, Nichtigkeiten | einige |
 
-**Insgesamt: jede Bekanntmachung, die seit 2004 je veröffentlicht wurde, wurde gelesen und einsortiert.**
+**Insgesamt: jede Bekanntmachung, die seit 2008 je veröffentlicht wurde, wurde gelesen und einsortiert.**
 
 ## Sein Logbuch
 

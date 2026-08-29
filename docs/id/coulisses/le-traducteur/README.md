@@ -29,7 +29,7 @@ berusia 7 tahun atau seorang bankir.
 | Pemulihan | Kembali beraktivitas | ~680 |
 | Lain-lain | Penyitaan, pembatalan | beberapa |
 
-**Total: setiap pengumuman yang pernah diterbitkan sejak 2004 telah dibaca
+**Total: setiap pengumuman yang pernah diterbitkan sejak 2008 telah dibaca
 dan disimpan.**
 
 ## Buku catatannya

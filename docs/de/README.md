@@ -44,7 +44,7 @@ Das BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist die offi
 
 | | |
 |---|---|
-| 🗂 **Die gesamte Historie, seit 2004** | Millionen von Bekanntmachungen in der Datenbank, vollständige Abdeckung – kein gleitendes Zeitfenster |
+| 🗂 **Die gesamte Historie, seit 2008** | Millionen von Bekanntmachungen in der Datenbank, vollständige Abdeckung – kein gleitendes Zeitfenster |
 | ⚡ **Echtzeit** | Die Bekanntmachungen des Tages sind jeden Morgen verfügbar, vor Büroöffnung |
 | 🕸 **Ein Graph, keine Dateien** | Bekanntmachung → Unternehmen (SIREN) → Geschäftsführer → Mandate → öffentliche Aufträge: alles ist verknüpft und mit einer Anfrage abfragbar |
 | ✨ **Von Rohtext zu strukturierten Daten** | SIREN, NAF, Adresse, Geschäftsführer, Verfahren... automatisch aus jedem Rechtstext extrahiert |
@@ -58,7 +58,7 @@ Das BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist die offi
 
 Was den Unterschied macht, sind nicht die Rohdaten (sie sind öffentlich), sondern was wir daraus machen – jeden Tag, automatisch:
 
-**1. Eine zuverlässige und vollständige Erfassung.** Jeden Morgen vor 09:00 Uhr werden die von der DILA veröffentlichten neuen Bekanntmachungen in unsere Datenbank integriert. Die vollständige Historie reicht bis 2004 zurück, weit über das hinaus, was die öffentliche Konsultation bietet. Eine erneute Ausführung einer Erfassung erzeugt keine Duplikate: Unsere Daten sind permanent verifiziert und konsistent.
+**1. Eine zuverlässige und vollständige Erfassung.** Jeden Morgen vor 09:00 Uhr werden die von der DILA veröffentlichten neuen Bekanntmachungen in unsere Datenbank integriert. Die vollständige Historie reicht bis 2008 zurück, weit über das hinaus, was die öffentliche Konsultation bietet. Eine erneute Ausführung einer Erfassung erzeugt keine Duplikate: Unsere Daten sind permanent verifiziert und konsistent.
 
 **2. Eine intelligente Anreicherung.** Jede Bekanntmachung ist ein Rechtstext – unsere hybride Extraktions-Engine (Geschäftsregeln + KI) verwandelt ihn in strukturierte Daten: SIREN-Nummer, Firma, Adresse, NAF-Code, Geschäftsführer, Mandate, Beträge, Verfahren. Was Stunden menschlichen Lesens erfordert, wird zu abfragbaren JSON-Feldern.
 
@@ -72,7 +72,6 @@ Was den Unterschied macht, sind nicht die Rohdaten (sie sind öffentlich), sonde
 
 | | **Offizielle Website (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Historie** | Nur seit 2008 | Kommerzielle Historie je nach Abonnement | **Vollständig seit 2004** |
 | **API** | ❌ Keine | API nur für höhere Angebote | ✅ **Dokumentierte REST-API, ohne Schlüssel zum Lesen** |
 | **Strukturierte Daten** | ❌ PDF-Konsultation | ✅ Angereicherte Profile | ✅ **Bekanntmachungen + Graph Unternehmen/Personen/Aufträge** |
 | **Echtzeit** | Papierveröffentlichung online einsehbar | Tägliche Aktualisierung | ✅ **Jeden Morgen vor 09:00 Uhr** |
@@ -83,7 +82,7 @@ Was den Unterschied macht, sind nicht die Rohdaten (sie sind öffentlich), sonde
 
 **Stärken von Pappers**: sehr gepflegte Oberfläche, Aggregation von INSEE + INPI + BODACC, integriertes Monitoring. **Schwächen**: der Preis (29,90 €/Monat für den Basiszugang, API und vollständige Historie sind teurer), eine auf Konsultation ausgerichtete Lösung statt auf nutzbare Daten.
 
-**Unsere Position**: **die gesamte Historie seit 2004, schneller als auf der offiziellen Website – und zu einem niedrigeren Preis als bei Pappers.** Entwickelt für diejenigen, die die Daten in ihre eigenen Tools integrieren möchten, nicht für diejenigen, die nur einen weiteren Bildschirm wollen.
+**Unsere Position**: **die gesamte Historie seit 2008, schneller als auf der offiziellen Website – und zu einem niedrigeren Preis als bei Pappers.** Entwickelt für diejenigen, die die Daten in ihre eigenen Tools integrieren möchten, nicht für diejenigen, die nur einen weiteren Bildschirm wollen.
 
 > 💶 Tarife ansehen: [bodacc.io/de/tarifs](https://bodacc.io/de/tarifs) — Kostenlos · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Die Abzeichen oben auf der Seite sind **Echtzeit-Zähler**: BODACC-Bekanntmachun
 
 Stabile Referenzwerte:
 
-- 📰 **BODACC-Bekanntmachungen**: vollständige Historie seit 2004, aktualisiert jeden Morgen vor 09:00 Uhr
+- 📰 **BODACC-Bekanntmachungen**: vollständige Historie seit 2008, aktualisiert jeden Morgen vor 09:00 Uhr
 - 🏢 **Unternehmen (SIRENE)**: 29,8 M französische rechtliche Einheiten (INSEE-Register)
 - 👤 **Extrahierte Personen**: Geschäftsführer, Liquidatoren, Abschlussprüfer... in kontinuierlicher Konsolidierung
 - 📦 **Öffentliche Aufträge (BOAMP)**: 1,69 M öffentliche Verträge 2015 → 2026

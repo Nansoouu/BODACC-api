@@ -44,7 +44,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales - Công báo chí
 
 | | |
 |---|---|
-| 🗂 **Toàn bộ lịch sử, từ 2004** | Hàng triệu thông báo trong cơ sở dữ liệu, bao phủ đầy đủ — không phải cửa sổ trượt |
+| 🗂 **Toàn bộ lịch sử, từ 2008** | Hàng triệu thông báo trong cơ sở dữ liệu, bao phủ đầy đủ — không phải cửa sổ trượt |
 | ⚡ **Thời gian thực** | Các thông báo trong ngày có sẵn mỗi buổi sáng, trước giờ mở cửa văn phòng |
 | 🕸 **Một đồ thị, không phải các tệp tin** | Thông báo → doanh nghiệp (SIREN) → người quản lý → nhiệm kỳ → thị trường công: tất cả được liên kết và truy vấn trong một yêu cầu |
 | ✨ **Từ văn bản thô đến dữ liệu có cấu trúc** | SIREN, NAF, địa chỉ, người quản lý, thủ tục... được trích xuất tự động từ mỗi văn bản pháp lý |
@@ -58,7 +58,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales - Công báo chí
 
 Điều tạo nên sự khác biệt không phải là dữ liệu thô (nó là công khai), mà là những gì chúng tôi làm với dữ liệu đó — mỗi ngày, một cách tự động:
 
-**1. Tiếp nhận dữ liệu đáng tin cậy và đầy đủ.** Mỗi buổi sáng trước 09:00, các thông báo mới do DILA công bố được tích hợp vào cơ sở dữ liệu của chúng tôi. Lịch sử đầy đủ có từ năm 2004, vượt xa những gì cổng thông tin công khai cung cấp. Việc chạy lại quá trình tiếp nhận không tạo ra bất kỳ bản ghi trùng lặp nào: dữ liệu của chúng tôi được kiểm tra và nhất quán liên tục.
+**1. Tiếp nhận dữ liệu đáng tin cậy và đầy đủ.** Mỗi buổi sáng trước 09:00, các thông báo mới do DILA công bố được tích hợp vào cơ sở dữ liệu của chúng tôi. Lịch sử đầy đủ có từ năm 2008, vượt xa những gì cổng thông tin công khai cung cấp. Việc chạy lại quá trình tiếp nhận không tạo ra bất kỳ bản ghi trùng lặp nào: dữ liệu của chúng tôi được kiểm tra và nhất quán liên tục.
 
 **2. Làm giàu dữ liệu thông minh.** Mỗi thông báo là một văn bản pháp lý — công cụ trích xuất kết hợp của chúng tôi (quy tắc nghiệp vụ + AI) chuyển đổi nó thành dữ liệu có cấu trúc: số SIREN, tên doanh nghiệp, địa chỉ, mã NAF, người quản lý, nhiệm kỳ, số tiền, thủ tục. Những gì cần hàng giờ đọc thủ công trở thành các trường JSON có thể truy vấn.
 
@@ -72,7 +72,6 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales - Công báo chí
 
 | | **Trang web chính thức (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Lịch sử** | Chỉ từ 2008 | Lịch sử thương mại tùy theo gói đăng ký | **Đầy đủ từ 2004** |
 | **API** | ❌ Không có | API chỉ dành cho các gói cao cấp | ✅ **API REST có tài liệu, không cần khóa khi đọc** |
 | **Dữ liệu có cấu trúc** | ❌ Xem PDF | ✅ Hồ sơ được làm giàu | ✅ **Thông báo + đồ thị doanh nghiệp/cá nhân/thị trường** |
 | **Thời gian thực** | Ấn phẩm giấy xem trực tuyến | Cập nhật hàng ngày | ✅ **Mỗi buổi sáng trước 09:00** |
@@ -83,7 +82,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales - Công báo chí
 
 **Điểm mạnh của Pappers**: giao diện rất chăm chút, tổng hợp INSEE + INPI + BODACC, giám sát tích hợp. **Điểm yếu**: giá cả (29,90 €/tháng cho truy cập cơ bản, API và lịch sử đầy đủ đắt hơn), giải pháp hướng đến việc tra cứu hơn là dữ liệu khai thác được.
 
-**Vị trí của chúng tôi**: **toàn bộ lịch sử từ 2004, nhanh hơn trang web chính thức — và với mức giá thấp hơn Pappers.** Được thiết kế cho những ai muốn kết nối dữ liệu vào công cụ của riêng mình, không phải cho những ai muốn thêm một màn hình hiển thị.
+**Vị trí của chúng tôi**: **toàn bộ lịch sử từ 2008, nhanh hơn trang web chính thức — và với mức giá thấp hơn Pappers.** Được thiết kế cho những ai muốn kết nối dữ liệu vào công cụ của riêng mình, không phải cho những ai muốn thêm một màn hình hiển thị.
 
 > 💶 Xem các gói: [bodacc.io/vi/tarifs](https://bodacc.io/vi/tarifs) — Miễn phí · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Các huy hiệu ở đầu trang là **bộ đếm thời gian thực**: thông 
 
 Các mốc ổn định:
 
-- 📰 **Thông báo BODACC**: lịch sử đầy đủ từ 2004, cập nhật mỗi buổi sáng trước 09:00
+- 📰 **Thông báo BODACC**: lịch sử đầy đủ từ 2008, cập nhật mỗi buổi sáng trước 09:00
 - 🏢 **Doanh nghiệp (SIRENE)**: 29,8 triệu đơn vị pháp lý Pháp (đăng ký INSEE)
 - 👤 **Cá nhân được trích xuất**: người quản lý, người thanh lý, kiểm toán viên... đang được củng cố liên tục
 - 📦 **Thị trường công (BOAMP)**: 1,69 triệu hợp đồng công 2015 → 2026

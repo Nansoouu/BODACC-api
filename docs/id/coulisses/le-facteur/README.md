@@ -20,7 +20,7 @@ ke layar Anda.
 |---|---|
 | Setiap pagi | Pengumuman hari sebelumnya tersedia sebelum pukul 9 |
 | Tidak ada yang hilang | Lewat dua kali tidak pernah membuat duplikat |
-| Seluruh riwayat | Kami menelusuri hingga 2004, bukan hanya hari-hari terakhir |
+| Seluruh riwayat | Kami menelusuri hingga 2008, bukan hanya hari-hari terakhir |
 
 ## Buku catatannya
 

@@ -44,7 +44,7 @@ BODACC (Biuletyn Urzędowy Ogłoszeń Cywilnych i Handlowych) to oficjalna publi
 
 | | |
 |---|---|
-| 🗂 **Pełna historia od 2004 roku** | Miliony ogłoszeń w bazie, pełne pokrycie — nie ruchome okno |
+| 🗂 **Pełna historia od 2008 roku** | Miliony ogłoszeń w bazie, pełne pokrycie — nie ruchome okno |
 | ⚡ **Czas rzeczywisty** | Dzisiejsze ogłoszenia są dostępne każdego ranka, przed otwarciem biur |
 | 🕸 **Graf, nie pliki** | Ogłoszenie → przedsiębiorstwo (SIREN) → członkowie zarządu → mandaty → zamówienia publiczne: wszystko jest powiązane i dostępne w jednym zapytaniu |
 | ✨ **Od surowego tekstu do danych ustrukturyzowanych** | SIREN, NAF, adres, członkowie zarządu, procedury... automatycznie wyodrębniane z każdego tekstu prawnego |
@@ -58,7 +58,7 @@ BODACC (Biuletyn Urzędowy Ogłoszeń Cywilnych i Handlowych) to oficjalna publi
 
 To, co robi różnicę, to nie surowe dane (są publiczne), ale to, co z nimi robimy — każdego dnia, automatycznie:
 
-**1. Niezawodna i kompletna ingestia.** Każdego ranka przed 09:00 nowe ogłoszenia opublikowane przez DILA są integrowane z naszą bazą. Pełna historia sięga 2004 roku, znacznie dalej niż oferuje publiczna konsultacja. Ponowne uruchomienie ingestii nie tworzy żadnych duplikatów: nasze dane są stale weryfikowane i spójne.
+**1. Niezawodna i kompletna ingestia.** Każdego ranka przed 09:00 nowe ogłoszenia opublikowane przez DILA są integrowane z naszą bazą. Pełna historia sięga 2008 roku, znacznie dalej niż oferuje publiczna konsultacja. Ponowne uruchomienie ingestii nie tworzy żadnych duplikatów: nasze dane są stale weryfikowane i spójne.
 
 **2. Inteligentne wzbogacanie.** Każde ogłoszenie to tekst prawny — nasz hybrydowy silnik ekstrakcji (reguły biznesowe + AI) przekształca go w dane ustrukturyzowane: numer SIREN, nazwę firmy, adres, kod NAF, członków zarządu, mandaty, kwoty, procedury. To, co wymaga godzin ludzkiego czytania, staje się polami JSON dostępnymi do zapytań.
 
@@ -72,7 +72,6 @@ To, co robi różnicę, to nie surowe dane (są publiczne), ale to, co z nimi ro
 
 | | **Oficjalna strona (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Historia** | Tylko od 2008 roku | Historia komercyjna w zależności od abonamentu | **Kompletna od 2004 roku** |
 | **API** | ❌ Brak | API zarezerwowane dla wyższych ofert | ✅ **Udokumentowane API REST, bez klucza do odczytu** |
 | **Dane ustrukturyzowane** | ❌ Konsultacja PDF | ✅ Wzbogacone profile | ✅ **Ogłoszenia + graf przedsiębiorstwa/osoby/zamówienia** |
 | **Czas rzeczywisty** | Publikacja papierowa dostępna online | Codzienna aktualizacja | ✅ **Każdego ranka przed 09:00** |
@@ -83,7 +82,7 @@ To, co robi różnicę, to nie surowe dane (są publiczne), ale to, co z nimi ro
 
 **Mocne strony Pappers**: bardzo dopracowany interfejs, agregacja INSEE + INPI + BODACC, wbudowany monitoring. **Słabe strony**: cena (29,90 €/mies. za podstawowy dostęp, API i pełna historia są droższe), rozwiązanie zorientowane na konsultację, a nie na użyteczne dane.
 
-**Nasza pozycja**: **pełna historia od 2004 roku, szybciej niż na oficjalnej stronie — i w cenie niższej niż Pappers.** Zaprojektowany dla tych, którzy chcą podłączyć dane do własnych narzędzi, a nie dla tych, którzy chcą kolejnego ekranu.
+**Nasza pozycja**: **pełna historia od 2008 roku, szybciej niż na oficjalnej stronie — i w cenie niższej niż Pappers.** Zaprojektowany dla tych, którzy chcą podłączyć dane do własnych narzędzi, a nie dla tych, którzy chcą kolejnego ekranu.
 
 > 💶 Zobacz pakiety: [bodacc.io/pl/tarifs](https://bodacc.io/pl/tarifs) — Bezpłatny · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Plakietki na górze strony to **liczniki w czasie rzeczywistym**: ogłoszenia BO
 
 Stałe punkty odniesienia:
 
-- 📰 **Ogłoszenia BODACC**: pełna historia od 2004 roku, aktualizowana każdego ranka przed 09:00
+- 📰 **Ogłoszenia BODACC**: pełna historia od 2008 roku, aktualizowana każdego ranka przed 09:00
 - 🏢 **Przedsiębiorstwa (SIRENE)**: 29,8 mln francuskich jednostek prawnych (rejestr INSEE)
 - 👤 **Wyodrębnione osoby**: członkowie zarządu, likwidatorzy, biegli rewidenci... w ciągłej konsolidacji
 - 📦 **Zamówienia publiczne (BOAMP)**: 1,69 mln kontraktów publicznych 2015 → 2026

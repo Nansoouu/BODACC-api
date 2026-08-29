@@ -44,7 +44,7 @@ Het BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de offici
 
 | | |
 |---|---|
-| 🗂 **Volledige historiek, sinds 2004** | Miljoenen bekendmakingen in de database, volledige dekking — geen glijdend venster |
+| 🗂 **Volledige historiek, sinds 2008** | Miljoenen bekendmakingen in de database, volledige dekking — geen glijdend venster |
 | ⚡ **Realtime** | De bekendmakingen van vandaag zijn elke ochtend beschikbaar, vóór opening van kantoren |
 | 🕸 **Een graaf, geen bestanden** | Bekendmaking → bedrijf (SIREN) → bestuurders → mandaten → overheidsopdrachten: alles is verbonden en doorzoekbaar in één aanvraag |
 | ✨ **Van ruwe tekst naar gestructureerde gegevens** | SIREN, NAF, adres, bestuurders, procedures... automatisch geëxtraheerd uit elke juridische tekst |
@@ -58,7 +58,7 @@ Het BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de offici
 
 Wat het verschil maakt, is niet de ruwe data (die is openbaar), maar wat wij ermee doen — elke dag, automatisch:
 
-**1. Betrouwbare en volledige ingestie.** Elke ochtend vóór 09:00 worden de nieuwe bekendmakingen die door de DILA zijn gepubliceerd, in onze database opgenomen. De volledige historiek gaat terug tot 2004, veel verder dan wat de openbare raadpleging biedt. Het opnieuw uitvoeren van een ingestie creëert geen duplicaten: onze gegevens worden continu geverifieerd en zijn consistent.
+**1. Betrouwbare en volledige ingestie.** Elke ochtend vóór 09:00 worden de nieuwe bekendmakingen die door de DILA zijn gepubliceerd, in onze database opgenomen. De volledige historiek gaat terug tot 2008, veel verder dan wat de openbare raadpleging biedt. Het opnieuw uitvoeren van een ingestie creëert geen duplicaten: onze gegevens worden continu geverifieerd en zijn consistent.
 
 **2. Intelligente verrijking.** Elke bekendmaking is een juridische tekst — onze hybride extractiemotor (bedrijfsregels + AI) zet deze om in gestructureerde gegevens: SIREN-nummer, handelsnaam, adres, NAF-code, bestuurders, mandaten, bedragen, procedures. Wat uren menselijk leeswerk vereist, wordt doorzoekbare JSON-velden.
 
@@ -72,7 +72,6 @@ Wat het verschil maakt, is niet de ruwe data (die is openbaar), maar wat wij erm
 
 | | **Officiële website (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Historiek** | Alleen sinds 2008 | Commerciële historiek afhankelijk van abonnement | **Volledig sinds 2004** |
 | **API** | ❌ Geen | API alleen voor hogere abonnementen | ✅ **Gedocumenteerde REST-API, zonder sleutel voor lezen** |
 | **Gestructureerde gegevens** | ❌ PDF-raadpleging | ✅ Verrijkte profielen | ✅ **Bekendmakingen + graaf van bedrijven/personen/opdrachten** |
 | **Realtime** | Papieren publicatie online raadpleegbaar | Dagelijkse actualisering | ✅ **Elke ochtend vóór 09:00** |
@@ -83,7 +82,7 @@ Wat het verschil maakt, is niet de ruwe data (die is openbaar), maar wat wij erm
 
 **Sterke punten van Pappers**: zeer verzorgde interface, aggregatie INSEE + INPI + BODACC, geïntegreerde monitoring. **Zwakke punten**: de prijs (€ 29,90/mnd voor basistoegang, de API en volledige historiek zijn duurder), een oplossing gericht op raadpleging in plaats van bruikbare gegevens.
 
-**Onze positie**: **volledige historiek sinds 2004, sneller dan op de officiële website — en tegen een lager tarief dan Pappers.** Ontworpen voor wie data in eigen tools wil integreren, niet voor wie een extra scherm wil.
+**Onze positie**: **volledige historiek sinds 2008, sneller dan op de officiële website — en tegen een lager tarief dan Pappers.** Ontworpen voor wie data in eigen tools wil integreren, niet voor wie een extra scherm wil.
 
 > 💶 Bekijk de pakketten: [bodacc.io/nl/tarifs](https://bodacc.io/nl/tarifs) — Gratis · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ De badges bovenaan de pagina zijn **realtime tellers**: BODACC-bekendmakingen, S
 
 Stabiele referentiepunten:
 
-- 📰 **BODACC-bekendmakingen**: volledige historiek sinds 2004, elke ochtend vóór 09:00 bijgewerkt
+- 📰 **BODACC-bekendmakingen**: volledige historiek sinds 2008, elke ochtend vóór 09:00 bijgewerkt
 - 🏢 **Bedrijven (SIRENE)**: 29,8 M Franse rechtspersonen (INSEE-register)
 - 👤 **Geëxtraheerde personen**: bestuurders, vereffenaars, commissarissen... in voortdurende consolidatie
 - 📦 **Overheidsopdrachten (BOAMP)**: 1,69 M overheidscontracten 2015 → 2026

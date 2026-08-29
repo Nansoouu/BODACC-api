@@ -20,7 +20,7 @@ Twój ekran.
 |---|---|
 | Każdego ranka | Ogłoszenia z poprzedniego dnia są dostępne przed 9:00 |
 | Nic nie ginie | Ponowne przejście nigdy nie tworzy duplikatu |
-| Pełna historia | Sięgamy do 2004, nie tylko ostatnich dni |
+| Pełna historia | Sięgamy do 2008, nie tylko ostatnich dni |
 
 ## Jego dziennik
 

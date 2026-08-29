@@ -29,7 +29,7 @@ Il traduttore ne fa una scheda che tutti possono leggere — un bambino di
 | Ristabilimenti | Ritorni all'attività | ~680 |
 | Vari | Pignoramenti, nullità | alcune |
 
-**In totale: ogni annuncio mai pubblicato dal 2004 è stato letto e archiviato.**
+**In totale: ogni annuncio mai pubblicato dal 2008 è stato letto e archiviato.**
 
 ## Il suo diario di bordo
 

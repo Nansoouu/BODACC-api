@@ -29,7 +29,7 @@ Le traducteur en fait une fiche que tout le monde peut lire — un enfant de
 | Rétablissements | Retours à l'activité | ~680 |
 | Divers | Saisies, nullités | quelques-unes |
 
-**Au total : chaque annonce jamais publiée depuis 2004 a été lue et rangée.**
+**Au total : chaque annonce jamais publiée depuis 2008 a été lue et rangée.**
 
 ## Son journal de bord
 

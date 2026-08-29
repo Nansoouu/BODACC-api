@@ -44,7 +44,7 @@ Il BODACC (Bollettino Ufficiale degli Annunci Civili e Commerciali) è la pubbli
 
 | | |
 |---|---|
-| 🗂 **Tutto lo storico, dal 2004** | Milioni di annunci in archivio, copertura completa — non una finestra mobile |
+| 🗂 **Tutto lo storico, dal 2008** | Milioni di annunci in archivio, copertura completa — non una finestra mobile |
 | ⚡ **Tempo reale** | Gli annunci del giorno sono disponibili ogni mattina, prima dell'apertura degli uffici |
 | 🕸 **Un grafo, non file** | Annuncio → impresa (SIREN) → dirigenti → incarichi → appalti pubblici: tutto è collegato e interrogabile con una sola richiesta |
 | ✨ **Dal testo grezzo ai dati strutturati** | SIREN, NAF, indirizzo, dirigenti, procedure... estratti automaticamente da ogni testo giuridico |
@@ -58,7 +58,7 @@ Il BODACC (Bollettino Ufficiale degli Annunci Civili e Commerciali) è la pubbli
 
 Ciò che fa la differenza non sono i dati grezzi (sono pubblici), ma ciò che ne facciamo — ogni giorno, automaticamente:
 
-**1. Un'ingestione affidabile e completa.** Ogni mattina prima delle 09:00, i nuovi annunci pubblicati dalla DILA vengono integrati nel nostro database. Lo storico completo risale al 2004, ben oltre ciò che offre la consultazione pubblica. Rieseguire un'ingestione non crea alcun duplicato: i nostri dati sono verificati e coerenti in modo permanente.
+**1. Un'ingestione affidabile e completa.** Ogni mattina prima delle 09:00, i nuovi annunci pubblicati dalla DILA vengono integrati nel nostro database. Lo storico completo risale al 2008, ben oltre ciò che offre la consultazione pubblica. Rieseguire un'ingestione non crea alcun duplicato: i nostri dati sono verificati e coerenti in modo permanente.
 
 **2. Un arricchimento intelligente.** Ogni annuncio è un testo giuridico — il nostro motore di estrazione ibrido (regole di business + IA) lo trasforma in dati strutturati: numero SIREN, ragione sociale, indirizzo, codice NAF, dirigenti, incarichi, importi, procedure. Ciò che richiede ore di lettura umana diventa campi JSON interrogabili.
 
@@ -72,7 +72,6 @@ Ciò che fa la differenza non sono i dati grezzi (sono pubblici), ma ciò che ne
 
 | | **Sito ufficiale (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Storico** | Solo dal 2008 | Storico commerciale in base all'abbonamento | **Completo dal 2004** |
 | **API** | ❌ Nessuna | API riservata alle offerte superiori | ✅ **API REST documentata, senza chiave in lettura** |
 | **Dati strutturati** | ❌ Consultazione PDF | ✅ Profili arricchiti | ✅ **Annunci + grafo imprese/persone/appalti** |
 | **Tempo reale** | Pubblicazione cartacea consultabile online | Aggiornamento quotidiano | ✅ **Ogni mattina prima delle 09:00** |
@@ -83,7 +82,7 @@ Ciò che fa la differenza non sono i dati grezzi (sono pubblici), ma ciò che ne
 
 **Punti di forza di Pappers**: interfaccia molto curata, aggregazione INSEE + INPI + BODACC, monitoraggio integrato. **Punti deboli**: il prezzo (29,90 €/mese per l'accesso base, l'API e lo storico completo sono più costosi), una soluzione orientata alla consultazione piuttosto che ai dati sfruttabili.
 
-**La nostra posizione**: **tutto lo storico dal 2004, più velocemente del sito ufficiale — e a un prezzo inferiore a quello di Pappers.** Pensato per chi vuole collegare i dati ai propri strumenti, non per chi vuole un altro schermo.
+**La nostra posizione**: **tutto lo storico dal 2008, più velocemente del sito ufficiale — e a un prezzo inferiore a quello di Pappers.** Pensato per chi vuole collegare i dati ai propri strumenti, non per chi vuole un altro schermo.
 
 > 💶 Vedi i piani: [bodacc.io/it/tarifs](https://bodacc.io/it/tarifs) — Gratuito · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ I badge in cima alla pagina sono **contatori in tempo reale**: annunci BODACC, i
 
 Riferimenti stabili:
 
-- 📰 **Annunci BODACC**: storico completo dal 2004, aggiornato ogni mattina prima delle 09:00
+- 📰 **Annunci BODACC**: storico completo dal 2008, aggiornato ogni mattina prima delle 09:00
 - 🏢 **Imprese (SIRENE)**: 29,8 M di unità legali francesi (registro INSEE)
 - 👤 **Persone estratte**: dirigenti, liquidatori, revisori dei conti... in consolidamento continuo
 - 📦 **Appalti pubblici (BOAMP)**: 1,69 M di contratti pubblici 2015 → 2026

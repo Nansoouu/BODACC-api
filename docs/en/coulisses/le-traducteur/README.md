@@ -29,7 +29,7 @@ or a banker.
 | Restorations | Returns to activity | ~680 |
 | Miscellaneous | Seizures, nullities | a few |
 
-**In total: every announcement ever published since 2004 has been read and filed.**
+**In total: every announcement ever published since 2008 has been read and filed.**
 
 ## His logbook
 

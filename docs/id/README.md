@@ -44,7 +44,7 @@ BODACC (Buletin Resmi Pengumuman Sipil dan Komersial) adalah publikasi resmi yan
 
 | | |
 |---|---|
-| 🗂 **Seluruh riwayat, sejak 2004** | Jutaan pengumuman dalam basis data, cakupan lengkap — bukan jendela bergulir |
+| 🗂 **Seluruh riwayat, sejak 2008** | Jutaan pengumuman dalam basis data, cakupan lengkap — bukan jendela bergulir |
 | ⚡ **Real-time** | Pengumuman hari ini tersedia setiap pagi, sebelum jam kantor dimulai |
 | 🕸 **Grafik, bukan berkas** | Pengumuman → perusahaan (SIREN) → direksi → mandat → pasar publik: semuanya terhubung dan dapat ditelusuri dalam satu permintaan |
 | ✨ **Dari teks mentah ke data terstruktur** | SIREN, NAF, alamat, direksi, prosedur... diekstraksi secara otomatis dari setiap teks hukum |
@@ -58,7 +58,7 @@ BODACC (Buletin Resmi Pengumuman Sipil dan Komersial) adalah publikasi resmi yan
 
 Yang membuat perbedaan bukanlah data mentah (data tersebut publik), melainkan apa yang kami lakukan dengannya — setiap hari, secara otomatis:
 
-**1. Ingestion yang andal dan lengkap.** Setiap pagi sebelum pukul 09:00, pengumuman baru yang diterbitkan oleh DILA diintegrasikan ke dalam basis data kami. Riwayat lengkapnya dimulai dari tahun 2004, jauh melampaui apa yang ditawarkan konsultasi publik. Menjalankan ulang ingestion tidak membuat duplikat: data kami selalu terverifikasi dan konsisten.
+**1. Ingestion yang andal dan lengkap.** Setiap pagi sebelum pukul 09:00, pengumuman baru yang diterbitkan oleh DILA diintegrasikan ke dalam basis data kami. Riwayat lengkapnya dimulai dari tahun 2008, jauh melampaui apa yang ditawarkan konsultasi publik. Menjalankan ulang ingestion tidak membuat duplikat: data kami selalu terverifikasi dan konsisten.
 
 **2. Pengayaan cerdas.** Setiap pengumuman adalah teks hukum — mesin ekstraksi hibrida kami (aturan bisnis + AI) mengubahnya menjadi data terstruktur: nomor SIREN, nama badan usaha, alamat, kode NAF, direksi, mandat, jumlah, prosedur. Apa yang membutuhkan waktu berjam-jam untuk dibaca manusia menjadi kolom JSON yang dapat ditelusuri.
 
@@ -72,7 +72,6 @@ Yang membuat perbedaan bukanlah data mentah (data tersebut publik), melainkan ap
 
 | | **Situs resmi (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **Riwayat** | Hanya sejak 2008 | Riwayat komersial sesuai langganan | **Lengkap sejak 2004** |
 | **API** | ❌ Tidak ada | API khusus penawaran tingkat atas | ✅ **API REST terdokumentasi, tanpa kunci untuk baca** |
 | **Data terstruktur** | ❌ Konsultasi PDF | ✅ Profil yang diperkaya | ✅ **Pengumuman + grafik perusahaan/orang/pasar** |
 | **Real-time** | Publikasi kertas dapat dilihat daring | Pembaruan harian | ✅ **Setiap pagi sebelum pukul 09:00** |
@@ -83,7 +82,7 @@ Yang membuat perbedaan bukanlah data mentah (data tersebut publik), melainkan ap
 
 **Kelebihan Pappers**: antarmuka yang sangat rapi, agregasi INSEE + INPI + BODACC, pemantauan terintegrasi. **Kekurangan**: harga (29,90 €/bln untuk akses dasar, API dan riwayat lengkap lebih mahal), solusi yang berorientasi pada konsultasi daripada data yang dapat dimanfaatkan.
 
-**Posisi kami**: **seluruh riwayat sejak 2004, lebih cepat daripada situs resmi — dan dengan tarif lebih rendah daripada Pappers.** Dirancang untuk mereka yang ingin menghubungkan data ke alat mereka sendiri, bukan untuk mereka yang menginginkan layar tambahan.
+**Posisi kami**: **seluruh riwayat sejak 2008, lebih cepat daripada situs resmi — dan dengan tarif lebih rendah daripada Pappers.** Dirancang untuk mereka yang ingin menghubungkan data ke alat mereka sendiri, bukan untuk mereka yang menginginkan layar tambahan.
 
 > 💶 Lihat paket: [bodacc.io/id/tarifs](https://bodacc.io/id/tarifs) — Gratis · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ Lencana di bagian atas halaman adalah **penghitung real-time**: pengumuman BODAC
 
 Titik referensi yang stabil:
 
-- 📰 **Pengumuman BODACC**: riwayat lengkap sejak 2004, diperbarui setiap pagi sebelum pukul 09:00
+- 📰 **Pengumuman BODACC**: riwayat lengkap sejak 2008, diperbarui setiap pagi sebelum pukul 09:00
 - 🏢 **Perusahaan (SIRENE)**: 29,8 J unit legal Prancis (registri INSEE)
 - 👤 **Orang yang diekstraksi**: direksi, likuidator, auditor... dalam konsolidasi berkelanjutan
 - 📦 **Pasar publik (BOAMP)**: 1,69 J kontrak publik 2015 → 2026

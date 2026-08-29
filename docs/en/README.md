@@ -44,7 +44,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is the official 
 
 | | |
 |---|---|
-| 🗂 **Full history, back to 2004** | Millions of notices in the database, complete coverage — not a rolling window |
+| 🗂 **Full history, back to 2008** | Millions of notices in the database, complete coverage — not a rolling window |
 | ⚡ **Real time** | The day's notices are available every morning, before offices open |
 | 🕸 **A graph, not files** | Notice → company (SIREN) → directors → mandates → public contracts: everything linked, queryable in one request |
 | ✨ **From raw text to structured data** | SIREN, NAF, address, directors, proceedings... extracted automatically from every legal text |
@@ -58,7 +58,7 @@ BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is the official 
 
 The data itself is public — what makes the difference is what we do with it, automatically, every day:
 
-**1. Reliable, complete ingestion.** Every morning before 09:00, the new notices published by the DILA are integrated into our database. Full history goes back to 2004 — well beyond what public consultation offers. Re-running an ingestion creates no duplicates: our data is continuously verified and consistent.
+**1. Reliable, complete ingestion.** Every morning before 09:00, the new notices published by the DILA are integrated into our database. Full history goes back to 2008 — well beyond what public consultation offers. Re-running an ingestion creates no duplicates: our data is continuously verified and consistent.
 
 **2. Intelligent enrichment.** Each notice is a legal text — our hybrid extraction engine (business rules + AI) turns it into structured data: SIREN number, company name, address, NAF code, directors, mandates, amounts, proceedings. What takes hours of human reading becomes queryable JSON fields.
 
@@ -72,7 +72,6 @@ The data itself is public — what makes the difference is what we do with it, a
 
 | | **Official website (bodacc.fr)** | **Pappers** | **BODACC.io** |
 |---|---|---|---|
-| **History** | From 2008 only | Commercial history depending on plan | **Complete since 2004** |
 | **API** | ❌ None | API reserved for higher plans | ✅ **Documented REST API, no key for reads** |
 | **Structured data** | ❌ PDF consultation | ✅ Enriched profiles | ✅ **Notices + companies/people/contracts graph** |
 | **Real time** | Paper publication viewable online | Daily updates | ✅ **Every morning before 09:00** |
@@ -83,7 +82,7 @@ The data itself is public — what makes the difference is what we do with it, a
 
 **Pappers strengths**: polished interface, INSEE + INPI + BODACC aggregation, built-in monitoring. **Weaknesses**: the price (€29.90/month for basic access, API and full history cost more), a consultation-oriented product rather than machine-readable data.
 
-**Our position**: **full history since 2004, faster than the official website — at a lower price than Pappers.** Built for teams that want to plug the data into their own tools, not for those who want one more screen.
+**Our position**: **full history since 2008, faster than the official website — at a lower price than Pappers.** Built for teams that want to plug the data into their own tools, not for those who want one more screen.
 
 > 💶 See the plans: [bodacc.io/en/pricing](https://bodacc.io/en/pricing) — Free · Pro · Enterprise · LIFE
 
@@ -166,7 +165,7 @@ The badges at the top of this page are **real-time counters**: BODACC notices, S
 
 Stable reference points:
 
-- 📰 **BODACC notices**: full history since 2004, updated every morning before 09:00
+- 📰 **BODACC notices**: full history since 2008, updated every morning before 09:00
 - 🏢 **Companies (SIRENE)**: 29.8M French legal units (INSEE registry)
 - 👤 **Extracted people**: directors, liquidators, statutory auditors... continuously consolidated
 - 📦 **Public contracts (BOAMP)**: 1.69M contracts 2015 → 2026
