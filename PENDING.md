@@ -13,3 +13,4 @@ Règles :
 - Une ligne par modification terminée (message = ce que fait le commit).
 - Ne pas commiter/pusher à la main — le janitor s'en charge.
 - Le janitor coche [x] les entrées traitées et pousse tout sur GitHub.
+[x] 2026-09-01 06:58 | README.md | docs : corrections
