@@ -13,13 +13,13 @@ the postman brings the notices, and you can check the numbers yourself.
 
 | Data | Current value | Live badge |
 |---|---|---|
-| Notices | 50 539 584 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
-| Companies | 29 961 400 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
-| People | 4 501 012 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
-| Contracts (BOAMP) | 1 691 162 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
+| Notices | 50 494 236 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
+| Companies | 29 968 808 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
+| People | 4 659 589 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
+| Contracts (BOAMP) | 1 700 514 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
 
-**Today** (14 August 2026): **10536 notices** — most common family: Dépôts des comptes (7724).
-[Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-14-08-2026)
+**Today** (30 August 2026): **8084 notices** — most common family: Dépôts des comptes (4687).
+[Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-30-08-2026)
 
 > 🔍 Want to see the day-by-day numbers of each character behind the scenes?
 > Every character keeps a logbook: [the postman](docs/en/coulisses/le-facteur/LOG.md) ·
