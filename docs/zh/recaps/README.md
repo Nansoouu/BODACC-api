@@ -6,6 +6,7 @@ BODACC.io 上发布的每日汇总，包含每个语言版本的直接链接。
 
 | 日期 | 文章 |
 |---|---|
+| 3 septembre 2026 | [Récapitulatif du 3 septembre 2026](https://bodacc.io/zh/xinwen/recapitulatif-complet-bodacc-03-09-2026) |
 | 19 août 2026 | [Récapitulatif du 19 août 2026](https://bodacc.io/zh/xinwen/recapitulatif-complet-bodacc-21-08-2026) |
 | 19 août 2026 | [Récapitulatif du 19 août 2026](https://bodacc.io/zh/xinwen/recapitulatif-complet-bodacc-19-08-2026) |
 | 16 août 2026 | [Récapitulatif du 16 août 2026](https://bodacc.io/zh/xinwen/recapitulatif-complet-bodacc-16-08-2026) |
