@@ -6,12 +6,13 @@ BODACC.io पर प्रकाशित दैनिक सारांश, �
 
 | दिनांक | लेख |
 |---|---|
-| 3 septembre 2026 | [Récapitulatif du 3 septembre 2026](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-03-09-2026) |
-| 19 août 2026 | [Récapitulatif du 19 août 2026](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-21-08-2026) |
-| 19 août 2026 | [Récapitulatif du 19 août 2026](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-19-08-2026) |
-| 16 août 2026 | [Récapitulatif du 16 août 2026](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-16-08-2026) |
-| 14 août 2026 | [Récapitulatif du 14 août 2026](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-14-08-2026) |
-| 13 août 2026 | [Récapitulatif du 13 août 2026](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-13-08-2026) |
+| 4 सितंबर 2026 | [BODACC के 4 सितंबर 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-04-09-2026) |
+| 6 सितंबर 2026 | [BODACC के 6 सितंबर 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-06-09-2026) |
+| 3 सितंबर 2026 | [BODACC के 3 सितंबर 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-03-09-2026) |
+| 19 अगस्त 2026 | [BODACC के 19 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-19-08-2026) |
+| 16 अगस्त 2026 | [BODACC के 16 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-16-08-2026) |
+| 14 अगस्त 2026 | [BODACC के 14 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-14-08-2026) |
+| 13 अगस्त 2026 | [BODACC के 13 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-13-08-2026) |
 | 12 अगस्त 2026 | [BODACC के 12 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-12-08-2026) |
 | 11 अगस्त 2026 | [BODACC के 11 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 अगस्त 2026 | [BODACC के 9 अगस्त 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-09-08-2026) |

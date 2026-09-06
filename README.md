@@ -14,12 +14,12 @@ the postman brings the notices, and you can check the numbers yourself.
 | Data | Current value | Live badge |
 |---|---|---|
 | Notices | 50 494 236 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Notices&color=blue) |
-| Companies | 29 968 808 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
+| Companies | 29 921 656 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Companies&color=green) |
 | People | 4 659 589 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
 | Contracts (BOAMP) | 1 700 514 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
 
-**Today** (30 August 2026): **8084 notices** — most common family: Dépôts des comptes (4687).
-[Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-30-08-2026)
+**Today** (6 September 2026): **12 130 notices** — most common family: Dépôts des comptes (5 996).
+[Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-06-09-2026)
 
 > 🔍 Want to see the day-by-day numbers of each character behind the scenes?
 > Every character keeps a logbook: [the postman](docs/en/coulisses/le-facteur/LOG.md) ·

@@ -6,12 +6,13 @@ Ringkasan harian yang diterbitkan di BODACC.io, dengan tautan langsung ke setiap
 
 | Date | Artikel |
 |---|---|
-| 3 septembre 2026 | [Récapitulatif du 3 septembre 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-03-09-2026) |
-| 19 août 2026 | [Récapitulatif du 19 août 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-21-08-2026) |
-| 19 août 2026 | [Récapitulatif du 19 août 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-19-08-2026) |
-| 16 août 2026 | [Récapitulatif du 16 août 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-16-08-2026) |
-| 14 août 2026 | [Récapitulatif du 14 août 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-14-08-2026) |
-| 13 août 2026 | [Récapitulatif du 13 août 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-13-08-2026) |
+| 4 September 2026 | [BODACC pada 4 September 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-04-09-2026) |
+| 6 September 2026 | [BODACC pada 6 September 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-06-09-2026) |
+| 3 September 2026 | [BODACC pada 3 September 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-03-09-2026) |
+| 19 Agustus 2026 | [BODACC pada 19 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-19-08-2026) |
+| 16 Agustus 2026 | [BODACC pada 16 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-16-08-2026) |
+| 14 Agustus 2026 | [BODACC pada 14 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-14-08-2026) |
+| 13 Agustus 2026 | [BODACC pada 13 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-13-08-2026) |
 | 12 Agustus 2026 | [BODACC pada 12 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-12-08-2026) |
 | 11 Agustus 2026 | [BODACC pada 11 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-11-08-2026) |
 | 9 Agustus 2026 | [BODACC pada 9 Agustus 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-09-08-2026) |
