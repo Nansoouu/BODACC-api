@@ -6,6 +6,7 @@ Les récapitulatifs quotidiens publiés sur BODACC.io, avec un lien direct vers 
 
 | Date | Récapitulatif |
 |---|---|
+| 8 septembre 2026 | [Récapitulatif du 8 septembre 2026](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-08-09-2026) |
 | 4 septembre 2026 | [Le BODACC du 4 septembre 2026 : le récapitulatif complet](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-04-09-2026) |
 | 6 septembre 2026 | [Le BODACC du 6 septembre 2026 : le récapitulatif complet](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-06-09-2026) |
 | 3 septembre 2026 | [Récapitulatif du 3 septembre 2026](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-03-09-2026) |
