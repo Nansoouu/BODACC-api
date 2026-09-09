@@ -2,6 +2,7 @@
 
 | Date | Entreprises complétées | Nouveaux sites trouvés | Petites améliorations |
 |---|---|---|---|
+| 09/09/2026 | — | — |  |
 | 08/09/2026 | — | — |  |
 | 06/09/2026 | — | — |  |
 | 05/09/2026 | — | — |  |

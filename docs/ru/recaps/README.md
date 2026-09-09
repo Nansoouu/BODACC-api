@@ -6,6 +6,7 @@
 
 | Дата | Статья |
 |---|---|
+| 9 septembre 2026 | [Récapitulatif du 9 septembre 2026](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-09-09-2026) |
 | 8 septembre 2026 | [Récapitulatif du 8 septembre 2026](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-08-09-2026) |
 | 4 сентября 2026 | [BODACC от 4 сентября 2026 : полный обзор](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-04-09-2026) |
 | 6 сентября 2026 | [BODACC от 6 сентября 2026 : полный обзор](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-06-09-2026) |

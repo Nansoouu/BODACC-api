@@ -6,6 +6,7 @@
 
 | تاريخ | المقال |
 |---|---|
+| 9 septembre 2026 | [Récapitulatif du 9 septembre 2026](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-09-09-2026) |
 | 8 septembre 2026 | [Récapitulatif du 8 septembre 2026](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-08-09-2026) |
 | ۴ سپتامبر ۲۰۲۶ | [BODACC در ۴ سپتامبر ۲۰۲۶ : خلاصه کامل](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-04-09-2026) |
 | ۶ سپتامبر ۲۰۲۶ | [BODACC در ۶ سپتامبر ۲۰۲۶ : خلاصه کامل](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-06-09-2026) |
