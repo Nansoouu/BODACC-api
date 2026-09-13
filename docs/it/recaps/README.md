@@ -6,6 +6,7 @@ I riepiloghi giornalieri pubblicati su BODACC.io, con collegamento diretto a ogn
 
 | Date | Artikel |
 |---|---|
+| 11 septembre 2026 | [Récapitulatif du 11 septembre 2026](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-13-09-2026) |
 | 10 septembre 2026 | [Récapitulatif du 10 septembre 2026](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-11-09-2026) |
 | 10 septembre 2026 | [Récapitulatif du 10 septembre 2026](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-10-09-2026) |
 | 9 septembre 2026 | [Récapitulatif du 9 septembre 2026](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-09-09-2026) |
