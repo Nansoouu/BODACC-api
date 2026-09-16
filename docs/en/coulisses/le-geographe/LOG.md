@@ -2,6 +2,7 @@
 
 | Date | Groupe exploré | Entreprises trouvées | Avec site web | Petites améliorations |
 |---|---|---|---|---|
+| 16/09/2026 | — | — | — |  |
 | 13/09/2026 | — | — | — |  |
 | 11/09/2026 | — | — | — |  |
 | 10/09/2026 | — | — | — |  |
