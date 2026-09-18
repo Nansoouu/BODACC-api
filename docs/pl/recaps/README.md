@@ -6,6 +6,7 @@ Codzienne podsumowania publikowane na BODACC.io, z bezpośrednim linkiem do każ
 
 | Data | Artykuł |
 |---|---|
+| 18 septembre 2026 | [Récapitulatif du 18 septembre 2026](https://bodacc.io/pl/aktualnosci/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 septembre 2026 | [Récapitulatif du 17 septembre 2026](https://bodacc.io/pl/aktualnosci/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 septembre 2026 | [Récapitulatif du 16 septembre 2026](https://bodacc.io/pl/aktualnosci/recapitulatif-complet-bodacc-16-09-2026) |
 | 13 septembre 2026 | [Récapitulatif du 13 septembre 2026](https://bodacc.io/pl/aktualnosci/recapitulatif-complet-bodacc-15-09-2026) |

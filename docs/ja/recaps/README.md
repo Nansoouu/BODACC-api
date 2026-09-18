@@ -6,6 +6,7 @@ BODACC.io に掲載された日次まとめ。各言語版への直接リンク�
 
 | 日期 | 記事 |
 |---|---|
+| 18 septembre 2026 | [Récapitulatif du 18 septembre 2026](https://bodacc.io/ja/nyusu/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 septembre 2026 | [Récapitulatif du 17 septembre 2026](https://bodacc.io/ja/nyusu/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 septembre 2026 | [Récapitulatif du 16 septembre 2026](https://bodacc.io/ja/nyusu/recapitulatif-complet-bodacc-16-09-2026) |
 | 13 septembre 2026 | [Récapitulatif du 13 septembre 2026](https://bodacc.io/ja/nyusu/recapitulatif-complet-bodacc-15-09-2026) |
