@@ -6,6 +6,7 @@
 
 | Дата | Стаття |
 |---|---|
+| 20 вересня 2026 | [BODACC за 20 вересня 2026 року](https://bodacc.io/uk/novyny/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 вересня 2026 | [BODACC від 18 вересня 2026 : повний огляд](https://bodacc.io/uk/novyny/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 вересня 2026 | [BODACC від 17 вересня 2026 : повний огляд](https://bodacc.io/uk/novyny/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 вересня 2026 | [BODACC від 16 вересня 2026 : повний огляд](https://bodacc.io/uk/novyny/recapitulatif-complet-bodacc-16-09-2026) |

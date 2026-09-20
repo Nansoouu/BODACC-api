@@ -6,6 +6,7 @@ Ringkasan harian yang diterbitkan di BODACC.io, dengan tautan langsung ke setiap
 
 | Tanggal | Artikel |
 |---|---|
+| 20 September 2026 | [BODACC tanggal 20 September 2026](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 September 2026 | [BODACC pada 18 September 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 September 2026 | [BODACC pada 17 September 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 September 2026 | [BODACC pada 16 September 2026 : rangkuman lengkap](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-16-09-2026) |

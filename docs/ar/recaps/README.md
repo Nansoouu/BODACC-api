@@ -6,6 +6,7 @@
 
 | التاريخ | المقال |
 |---|---|
+| 20 سبتمبر 2026 | [نشرة BODACC الصادرة في 20 سبتمبر 2026](https://bodacc.io/ar/akhbar/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 سبتمبر 2026 | [BODACC لـ 18 سبتمبر 2026 : الملخص الكامل](https://bodacc.io/ar/akhbar/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 سبتمبر 2026 | [BODACC لـ 17 سبتمبر 2026 : الملخص الكامل](https://bodacc.io/ar/akhbar/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 سبتمبر 2026 | [BODACC لـ 16 سبتمبر 2026 : الملخص الكامل](https://bodacc.io/ar/akhbar/recapitulatif-complet-bodacc-16-09-2026) |

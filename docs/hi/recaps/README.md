@@ -6,6 +6,7 @@ BODACC.io पर प्रकाशित दैनिक सारांश, �
 
 | दिनांक | लेख |
 |---|---|
+| 20 सितंबर 2026 | [बीओडीएसीसी 20 सितंबर 2026 का](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 सितंबर 2026 | [BODACC के 18 सितंबर 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 सितंबर 2026 | [BODACC के 17 सितंबर 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 सितंबर 2026 | [BODACC के 16 सितंबर 2026 : पूर्ण सारांश](https://bodacc.io/hi/samachar/recapitulatif-complet-bodacc-16-09-2026) |

@@ -6,6 +6,7 @@ The daily roundups published on BODACC.io, with direct links to each language ve
 
 | Date | Roundup |
 |---|---|
+| 20 September 2026 | [The BODACC of 20 September 2026](https://bodacc.io/en/news/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 September 2026 | [BODACC on 18 September 2026 : the complete roundup](https://bodacc.io/en/news/recapitulatif-complet-bodacc-18-09-2026) |
 | 17 September 2026 | [BODACC on 17 September 2026 : the complete roundup](https://bodacc.io/en/news/recapitulatif-complet-bodacc-17-09-2026) |
 | 16 September 2026 | [BODACC on 16 September 2026 : the complete roundup](https://bodacc.io/en/news/recapitulatif-complet-bodacc-16-09-2026) |
