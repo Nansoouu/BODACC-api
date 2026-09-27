@@ -2,6 +2,7 @@
 
 | Date | Entreprises complétées | Nouveaux sites trouvés | Petites améliorations |
 |---|---|---|---|
+| 27/09/2026 | 8 854 | 8 305 |  |
 | 25/09/2026 | 4 790 | 4 485 |  |
 | 20/09/2026 | 7 714 | 6 887 |  |
 | 18/09/2026 | — | — |  |
