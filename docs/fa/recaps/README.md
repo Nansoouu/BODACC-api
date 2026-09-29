@@ -6,6 +6,7 @@
 
 | تاريخ | المقال |
 |---|---|
+| 27 septembre 2026 | [Récapitulatif du 27 septembre 2026](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-29-09-2026) |
 | 25 septembre 2026 | [Récapitulatif du 25 septembre 2026](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-27-09-2026) |
 | 20 septembre 2026 | [بولتن رسمی اعلانات حقوقی فرانسه (BODACC) مورخ ۲۰](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-20-09-2026) |
 | ۱۸ سپتامبر ۲۰۲۶ | [BODACC در ۱۸ سپتامبر ۲۰۲۶ : خلاصه کامل](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-18-09-2026) |

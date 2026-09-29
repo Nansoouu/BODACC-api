@@ -6,6 +6,7 @@ Os resumos diários publicados no BODACC.io, com link direto para cada traduçã
 
 | Data | Artigo |
 |---|---|
+| 27 septembre 2026 | [Récapitulatif du 27 septembre 2026](https://bodacc.io/pt/noticias/recapitulatif-complet-bodacc-29-09-2026) |
 | 25 septembre 2026 | [Récapitulatif du 25 septembre 2026](https://bodacc.io/pt/noticias/recapitulatif-complet-bodacc-27-09-2026) |
 | 2026 : 17 96 | [O BODACC de 20 de setembro de 2026](https://bodacc.io/pt/noticias/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 de setembro de 2026 | [BODACC de 18 de setembro de 2026 : o resumo completo](https://bodacc.io/pt/noticias/recapitulatif-complet-bodacc-18-09-2026) |

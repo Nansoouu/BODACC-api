@@ -6,6 +6,7 @@ BODACC.io'da yayınlanan günlük özetler, her dil sürümüne doğrudan bağla
 
 | Tarih | Makale |
 |---|---|
+| 27 septembre 2026 | [Récapitulatif du 27 septembre 2026](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-29-09-2026) |
 | 25 septembre 2026 | [Récapitulatif du 25 septembre 2026](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-27-09-2026) |
 | 20 Eylül 2026 | [BODACC 20 Eylül 2026 tarihli sayısı](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-20-09-2026) |
 | 18 Eylül 2026 | [BODACC 18 Eylül 2026 : tam özet](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-18-09-2026) |
