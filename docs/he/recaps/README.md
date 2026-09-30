@@ -6,6 +6,7 @@
 
 | תאריך | המאמר |
 |---|---|
+| 30 septembre 2026 | [Récapitulatif du 30 septembre 2026](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-30-09-2026) |
 | 27 septembre 2026 | [Récapitulatif du 27 septembre 2026](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-29-09-2026) |
 | 25 septembre 2026 | [Récapitulatif du 25 septembre 2026](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-27-09-2026) |
 | 20 בספטמבר 2026 | [BODACC של 20 בספטמבר 2026](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-20-09-2026) |

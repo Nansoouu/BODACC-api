@@ -6,6 +6,7 @@ Các bản tóm tắt hàng ngày được đăng trên BODACC.io, kèm liên k�
 
 | Ngày | Bài viết |
 |---|---|
+| 30 septembre 2026 | [Récapitulatif du 30 septembre 2026](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-30-09-2026) |
 | 27 septembre 2026 | [Récapitulatif du 27 septembre 2026](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-29-09-2026) |
 | 25 septembre 2026 | [Récapitulatif du 25 septembre 2026](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-27-09-2026) |
 | 9 năm 2026 | [BODACC ngày 20 tháng 9 năm 2026](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-20-09-2026) |
