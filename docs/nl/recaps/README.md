@@ -6,6 +6,7 @@ De dagelijkse overzichten gepubliceerd op BODACC.io, met een directe link naar e
 
 | Datum | Artikel |
 |---|---|
+| 1 octobre 2026 | [Récapitulatif du 1 octobre 2026](https://bodacc.io/nl/nieuws/recapitulatif-complet-bodacc-01-10-2026) |
 | 30 septembre 2026 | [Récapitulatif du 30 septembre 2026](https://bodacc.io/nl/nieuws/recapitulatif-complet-bodacc-30-09-2026) |
 | 27 septembre 2026 | [Récapitulatif du 27 septembre 2026](https://bodacc.io/nl/nieuws/recapitulatif-complet-bodacc-29-09-2026) |
 | 25 septembre 2026 | [Récapitulatif du 25 septembre 2026](https://bodacc.io/nl/nieuws/recapitulatif-complet-bodacc-27-09-2026) |
