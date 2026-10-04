@@ -2,6 +2,7 @@
 
 | Date | Annonces arrivées | Famille la plus nombreuse | Traducteur prévenu | Petites améliorations |
 |---|---|---|---|---|
+| 04/10/2026 | 17 416 | Dépôts des comptes (9768) | ✓ |  |
 | 02/10/2026 | 14 396 | Dépôts des comptes (6051) | ✓ |  |
 | 01/10/2026 | 15 874 | Dépôts des comptes (12027) | ✓ |  |
 | 30/09/2026 | 30 849 | Radiations (14843) | ✓ |  |
