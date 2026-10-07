@@ -18,8 +18,8 @@ the postman brings the notices, and you can check the numbers yourself.
 | People | — | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=People&color=orange) |
 | Contracts (BOAMP) | — | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracts&color=purple) |
 
-**Today** (6 October 2026): **32 448 notices** — most common family: Dépôts des comptes (15061).
-[Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-06-10-2026)
+**Today** (7 October 2026): **6 153 notices** — most common family: Dépôts des comptes (2242).
+[Read the daily recap](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-07-10-2026)
 
 > 🔍 Want to see the day-by-day numbers of each character behind the scenes?
 > Every character keeps a logbook: [the postman](docs/en/coulisses/le-facteur/LOG.md) ·
