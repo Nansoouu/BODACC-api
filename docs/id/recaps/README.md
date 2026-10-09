@@ -6,6 +6,7 @@ Ringkasan harian yang diterbitkan di BODACC.io, dengan tautan langsung ke setiap
 
 | Tanggal | Artikel |
 |---|---|
+| 8 octobre 2026 | [Direct BODACC du 9 octobre](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-09-10-2026) |
 | 7 octobre 2026 | [Direct BODACC du 8 octobre](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-08-10-2026) |
 | 7 octobre 2026 | [Direct BODACC du 7 octobre](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-07-10-2026) |
 | 6 octobre 2026 | [Direct BODACC du 6 octobre](https://bodacc.io/id/berita/recapitulatif-complet-bodacc-06-10-2026) |
