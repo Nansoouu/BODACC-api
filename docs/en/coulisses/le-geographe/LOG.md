@@ -2,7 +2,7 @@
 
 | Date | Groupe exploré | Entreprises trouvées | Avec site web | Petites améliorations |
 |---|---|---|---|---|
-| 09/10/2026 | — | 0 | 0 |  |
+| 09/10/2026 | — | 1 985 | 1 985 |  |
 | 08/10/2026 | — | 0 | 0 |  |
 | 07/10/2026 | — | 0 | 0 |  |
 | 06/10/2026 | — | 0 | 0 |  |
