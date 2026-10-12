@@ -2,7 +2,7 @@
 
 | Date | Nouveaux contrats | Entreprises reliées | Petites améliorations |
 |---|---|---|---|
-| 11/10/2026 | 87 | — |  |
+| 11/10/2026 | 323 | — |  |
 | 09/10/2026 | 0 | — |  |
 | 08/10/2026 | 0 | — |  |
 | 07/10/2026 | 0 | — |  |
