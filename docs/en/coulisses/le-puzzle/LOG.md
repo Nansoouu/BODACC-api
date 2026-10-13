@@ -2,6 +2,7 @@
 
 | Date | Nouvelles personnes | Nouveaux liens | Petites améliorations |
 |---|---|---|---|
+| 13/10/2026 | 13 470 | 0 |  |
 | 11/10/2026 | 9 224 | 0 |  |
 | 09/10/2026 | 2 504 | 0 |  |
 | 08/10/2026 | 1 742 | 0 |  |

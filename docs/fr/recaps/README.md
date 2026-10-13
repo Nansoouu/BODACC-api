@@ -6,6 +6,7 @@ Les récapitulatifs quotidiens publiés sur BODACC.io, avec un lien direct vers 
 
 | Date | Récapitulatif |
 |---|---|
+| 13 octobre 2026 | [Direct BODACC du 13 octobre](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-13-10-2026) |
 | 9 octobre 2026 | [Direct BODACC du 11 octobre](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-11-10-2026) |
 | 8 octobre 2026 | [Direct BODACC du 9 octobre](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-09-10-2026) |
 | 7 octobre 2026 | [Direct BODACC du 8 octobre](https://bodacc.io/fr/actualites/recapitulatif-complet-bodacc-08-10-2026) |
