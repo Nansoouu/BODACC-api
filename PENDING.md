@@ -19,3 +19,6 @@ Règles :
 [x] 2026-10-15 15:00 | README.md .gitignore | docs : page d'accueil
 [x] 2026-10-15 16:00 | README.md docs/fr/README.md | docs : page d accueil et version francaise
 [x] 2026-10-15 01:39 | docs/es/README.md docs/de/README.md docs/it/README.md docs/pt/README.md | docs : accueil es de it pt
+[x] 2026-10-15 01:41 | docs/ar/README.md docs/he/README.md docs/hi/README.md docs/fa/README.md | docs : accueil ar he hi fa
+[x] 2026-10-15 01:42 | docs/id/README.md docs/vi/README.md docs/ja/README.md docs/ko/README.md docs/zh/README.md | docs : accueil id vi ja ko zh
+[x] 2026-10-15 01:44 | docs/nl/README.md docs/pl/README.md docs/ru/README.md docs/tr/README.md docs/uk/README.md | docs : accueil nl pl ru tr uk
