@@ -1,215 +1,266 @@
 <div align="center">
 
-<pre>
-             ____   ____  _____          _____ _____               _
-            |  _ \ / __ \|  __ \   /\   / ____/ ____|             (_)
-            | |_) | |  | | |  | | /  \ | |   | |        __ _ _ __  _
-            |  _ <| |  | | |  | |/ /\ \| |   | |       / _` | '_ \| |
-            | |_) | |__| | |__| / ____ \ |___| |____  | (_| | |_) | |
-            |____/ \____/|_____/_/    \_\_____\_____|  \__,_| .__/|_|
-                                                             | |
-                                                             |_|
-</pre>
-</div>
+# BODACC.io : die API BODACC für französische Bekanntmachungen und Unternehmensdaten
 
-# 🌐 [bodacc.io](https://bodacc.io)
+**Jede Veröffentlichung eines französischen Unternehmens, in Echtzeit.** Gründungen, Änderungen,
+Jahresabschlüsse, Insolvenzverfahren, Verkäufe, Löschungen — jede Bekanntmachung des BODACC, verknüpft
+mit ihrem Unternehmen, seinen Geschäftsführern und ihrer offiziellen Quelle. Kostenlos und offen, in 20 Sprachen.
 
-🌍 [Français](../fr/README.md) · [English](../en/README.md) · [Español](../es/README.md) · [Deutsch](../de/README.md) · [Italiano](../it/README.md) · [Português](../pt/README.md) · [Nederlands](../nl/README.md) · [Polski](../pl/README.md) · [Русский](../ru/README.md) · [Türkçe](../tr/README.md) · [Українська](../uk/README.md) · [Bahasa Indonesia](../id/README.md) · [Tiếng Việt](../vi/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md) · [中文](../zh/README.md) · [العربية](../ar/README.md) · [עברית](../he/README.md) · [हिन्दी](../hi/README.md) · [فارسی](../fa/README.md)
-> 📰 [Die vollständige zusammenfassung](recaps/README.md) · 🏠 [Hinter den Kulissen von BODACC.io](coulisses/COULISSES.md)
-
-<div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Bekanntmachungen&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Unternehmen&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Personen&color=orange)
-![Site bodacc.io](https://img.shields.io/badge/bodacc.io-Explorer-important?logo=internetexplorer&logoColor=white&style=for-the-badge)
+[**bodacc.io**](https://bodacc.io) · [Dokumentation der API](https://bodacc.io/de/dokumentation) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 </div>
 
-**Die API, die französische gesetzliche Bekanntmachungen in strukturierte, verknüpfte und nutzbare Daten verwandelt – in Echtzeit.**
+## 1. Aktuelle Daten des BODACC
 
-Das BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist die offizielle Veröffentlichung, die das rechtliche Leben französischer Unternehmen nachzeichnet: Gründungen, Änderungen, Löschungen, Insolvenzverfahren, Verkäufe, Hinterlegungen von Jahresabschlüssen. Diese Texte sind öffentlich, bleiben aber rohe Dokumente: Sie sind weder strukturiert, noch miteinander verknüpft, noch einfach abfragbar.
+| Datensatz BODACC | Einträge | Live |
+|---|---|---|
+| Bekanntmachungen des BODACC | 51 043 403 | ![Bekanntmachungen](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Bekanntmachungen&color=blue) |
+| Französische Unternehmen | 30 032 566 | ![Unternehmen](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Unternehmen&color=green) |
+| Geschäftsführer und Mandatsträger | 4 935 692 | ![Personen](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Personen&color=orange) |
+| Öffentliche Aufträge (BOAMP) | 1 716 163 | ![Aufträge](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Aufträge&color=purple) |
 
-**BODACC-api macht sie nutzbar.** Jede Bekanntmachung wird automatisch analysiert und in strukturierte Daten umgewandelt (SIREN, Firma, Adresse, NAF, Geschäftsführer, Beträge...), dann mit ihrem Unternehmen und den darin vorkommenden Personen verknüpft. Ergebnis: ein vollständiger Graph des französischen Wirtschaftslebens, abfragbar mit einer einzigen HTTP-Anfrage.
+Diese Zahlen sind nicht abgeschrieben: Sie werden **live von der API BODACC selbst geliefert**, unter
+[`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted).
+Prüfen Sie es selbst, und prüfen Sie es morgen noch einmal.
 
-> 🌐 Website: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Preise](https://bodacc.io/de/tarifs)
+**Heute** (14. Oktober 2026): **5 920 Bekanntmachungen** — häufigste Familie: Jahresabschlüsse (2 306).
 
----
-
-## ✨ Warum BODACC-api?
-
-| | |
+| Familie BODACC | Bekanntmachungen heute |
 |---|---|
-| 🗂 **Die gesamte Historie, seit 2008** | Millionen von Bekanntmachungen in der Datenbank, vollständige Abdeckung – kein gleitendes Zeitfenster |
-| ⚡ **Echtzeit** | Die Bekanntmachungen des Tages sind jeden Morgen verfügbar, vor Büroöffnung |
-| 🕸 **Ein Graph, keine Dateien** | Bekanntmachung → Unternehmen (SIREN) → Geschäftsführer → Mandate → öffentliche Aufträge: alles ist verknüpft und mit einer Anfrage abfragbar |
-| ✨ **Von Rohtext zu strukturierten Daten** | SIREN, NAF, Adresse, Geschäftsführer, Verfahren... automatisch aus jedem Rechtstext extrahiert |
-| 🌍 **20 Sprachen** | Die Oberfläche und die Inhalte sind übersetzt – Ihre Teams und Ihre Kunden sprechen ihre Sprache |
-| 🤖 **Agent-ready** | 100/100 im isitagentready-Audit (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
-| 🚪 **Null Reibung zum Testen** | Alle Lese-Endpunkte sind ohne Schlüssel zugänglich – Sie bewerten, bevor Sie zahlen |
+| Jahresabschlüsse | 2 306 |
+| Gründungen | 1 415 |
+| Änderungen | 1 193 |
+| Löschungen | 500 |
+| Insolvenzverfahren | 323 |
+| Eintragungen | 118 |
+| Verkäufe und Übertragungen | 65 |
 
----
+## 2. Was Ihnen die API BODACC bietet
 
-## 🏭 Unser Mehrwert: die Pipeline
+Das BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist das offizielle Journal des
+französischen Wirtschaftslebens. Jede Gründung, jeder Jahresabschluss, jede Insolvenz, jeder Verkauf wird
+dort gesetzlich veröffentlicht. BODACC.io macht aus diesem Journal eine Datenbank, die Sie abfragen können.
 
-Was den Unterschied macht, sind nicht die Rohdaten (sie sind öffentlich), sondern was wir daraus machen – jeden Tag, automatisch:
+**Die meisten Unternehmensdatenbanken liefern Ihnen eine Momentaufnahme. Die API BODACC liefert Ihnen die Bewegung.**
 
-**1. Eine zuverlässige und vollständige Erfassung.** Jeden Morgen vor 09:00 Uhr werden die von der DILA veröffentlichten neuen Bekanntmachungen in unsere Datenbank integriert. Die vollständige Historie reicht bis 2008 zurück, weit über das hinaus, was die öffentliche Konsultation bietet. Eine erneute Ausführung einer Erfassung erzeugt keine Duplikate: Unsere Daten sind permanent verifiziert und konsistent.
+Ein Verzeichnis sagt Ihnen, dass ein Unternehmen existiert: sein Name, seine Adresse, seine Registernummer.
+Das BODACC sagt Ihnen, **was das Unternehmen gerade getan hat** — und wann. Genau darin liegt der Unterschied:
 
-**2. Eine intelligente Anreicherung.** Jede Bekanntmachung ist ein Rechtstext – unsere hybride Extraktions-Engine (Geschäftsregeln + KI) verwandelt ihn in strukturierte Daten: SIREN-Nummer, Firma, Adresse, NAF-Code, Geschäftsführer, Mandate, Beträge, Verfahren. Was Stunden menschlichen Lesens erfordert, wird zu abfragbaren JSON-Feldern.
+| | Unternehmensverzeichnisse | BODACC.io |
+|---|---|---|
+| Was Sie erhalten | eine eingefrorene Identitätsakte | datierte Ereignisse |
+| Aktualität | quartalsweise aktualisiert | am selben Morgen veröffentlicht |
+| Insolvenz | ein Statusmerkmal | das Verfahren, seine Art und sein Datum |
+| Abschlüsse | ein boolesches „eingereicht“ | jede Hinterlegung, mit ihrem Bilanzstichtag |
+| Mandatsträger | ein Name | jedes Mandat, mit seinen Unternehmen |
+| Quelle | eine Kopie | die offizielle Bekanntmachung und ihr PDF |
 
-**3. Ein Beziehungsgraph.** Eine Bekanntmachung über ein Insolvenzverfahren ist nur dann wertvoll, wenn man weiß, zu welchem Unternehmen sie gehört und wer dessen Geschäftsführer ist. Unsere Auflösungs-Engine verknüpft jede Bekanntmachung mit ihrem Unternehmen (SIREN), jede Person mit ihren Mandaten, jeden öffentlichen Auftrag mit seinem Auftragnehmer. Sie fragen das französische Wirtschaftsleben wie eine Datenbank ab – nicht wie einen Haufen PDFs.
+## 3. Die Bekanntmachungen des BODACC im Detail
 
-**4. Eine Echtzeit-Verbreitung.** Sobald eine Bekanntmachung veröffentlicht ist, ist sie über die API verfügbar, mit ihren Beziehungen und ihrer Anreicherung. Keine Dateien zum Herunterladen, kein zu wartender ETL-Prozess: Eine HTTP-Anfrage genügt.
+Jede Bekanntmachung trägt 23 Felder. Hier ist eine echte, genau so, wie die API BODACC sie zurückgibt:
 
----
-
-## ⚖️ Vergleich: wo wir uns positionieren
-
-| | **Offizielle Website (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **API** | ❌ Keine | API nur für höhere Angebote | ✅ **Dokumentierte REST-API, ohne Schlüssel zum Lesen** |
-| **Strukturierte Daten** | ❌ PDF-Konsultation | ✅ Angereicherte Profile | ✅ **Bekanntmachungen + Graph Unternehmen/Personen/Aufträge** |
-| **Echtzeit** | Papierveröffentlichung online einsehbar | Tägliche Aktualisierung | ✅ **Jeden Morgen vor 09:00 Uhr** |
-| **Preis** | Kostenlos, aber begrenzt | Ab **29,90 €/Monat** für den Basiszugang | **Erschwingliche Tarife, ab kostenlos zum Entdecken** |
-| **Zielgruppe** | Allgemeine Öffentlichkeit | Fachleute (Compliance, Monitoring) | **Entwickler, Fintech, Legaltech, Datenteams** |
-
-**Stärken der offiziellen Website**: kostenlos, zuverlässig, offiziell. **Schwächen**: keine API, Historie auf 2008 begrenzt, keine strukturierten Daten – Sie bleiben bei den PDFs.
-
-**Stärken von Pappers**: sehr gepflegte Oberfläche, Aggregation von INSEE + INPI + BODACC, integriertes Monitoring. **Schwächen**: der Preis (29,90 €/Monat für den Basiszugang, API und vollständige Historie sind teurer), eine auf Konsultation ausgerichtete Lösung statt auf nutzbare Daten.
-
-**Unsere Position**: **die gesamte Historie seit 2008, schneller als auf der offiziellen Website – und zu einem niedrigeren Preis als bei Pappers.** Entwickelt für diejenigen, die die Daten in ihre eigenen Tools integrieren möchten, nicht für diejenigen, die nur einen weiteren Bildschirm wollen.
-
-> 💶 Tarife ansehen: [bodacc.io/de/tarifs](https://bodacc.io/de/tarifs) — Kostenlos · Pro · Enterprise · LIFE
-
----
-
-## 🚀 In 30 Sekunden testen
-
-Alle Lese-Endpunkte sind **ohne Schlüssel** zugänglich:
-
-```bash
-# Ein Unternehmen nach Namen suchen
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# Detail einer Bekanntmachung (mit ihren Beziehungen: Unternehmen + Personen)
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# Unternehmensprofil (aktuelle Bekanntmachungen + Geschäftsführer + öffentliche Aufträge)
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# Globale Statistiken
-curl "https://bodacc.io/api/bodacc/stats"
-
-# Tägliches Volumen (letzte 30 Tage)
-curl "https://bodacc.io/api/bodacc/stats/daily30"
+```json
+{
+  "id": "C202601972306",
+  "dateparution": "2026-10-14",
+  "familleavis": "dpc",
+  "familleavis_lib": "Dépôts des comptes",
+  "typeavis_lib": "Avis initial",
+  "commercant": "HOLDING BIIZ",
+  "ville": "Saint-Louis",
+  "cp": "97450",
+  "departement_nom_officiel": "La Réunion",
+  "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
+  "registre": ["988208435", "988 208 435"],
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+}
 ```
 
----
+Jede Bekanntmachung verweist auf **ihre vollständige Seite auf bodacc.io**, wo die offizielle Quelle und
+ihr PDF nur einen Klick entfernt sind.
 
-## 📡 Die Endpunkte
+Die sieben Familien des BODACC, mit dem französischen Begriff, den Sie in den Daten sehen:
 
-### Bekanntmachungen
-
-| Methode | Route | Beschreibung |
+| Familie BODACC | In den Daten | Bedeutung |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Suche: `q` (Name/SIREN), `famille`, `departement`, Daten, Paginierung `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Vollständiges Detail: `raw_data` + Anreicherung + `relations` (verknüpfte Unternehmen und Personen) |
-| `GET` | `/bodacc/enrichi/{id}` | Strukturierte Version (siren, dénomination, NAF, dirigeants...) |
-| `POST` | `/bodacc/enrichi/batch` | Stapel-Anreicherung |
+| Gründungen | `creation` | ein neues Unternehmen wird eingetragen |
+| Änderungen | `modification` | Satzung, Geschäftsführung, Sitz, Kapitaländerung |
+| Jahresabschlüsse | `dpc` | beim Handelsgericht hinterlegter Jahresabschluss |
+| Insolvenzverfahren | `collective` | Insolvenzverwaltung, Liquidation, Sanierung |
+| Verkäufe und Übertragungen | `vente` | ein Geschäft wird verkauft oder übertragen |
+| Löschungen | `radiation` | das Unternehmen wird aus dem Register entfernt |
+| Eintragungen | `immatriculation` | Eintragung ins Handelsregister |
 
-### Unternehmen & Personen
+## 4. Die Unternehmensdatensätze des BODACC
 
-| Methode | Route | Beschreibung |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | Unternehmenssuche (Name, Stadt, NAF, Postleitzahl) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE-Profil + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profil per SEO-Slug |
-| `GET` | `/bodacc/personnes/{id}` | Personenprofil: Mandate (Rollen) + verknüpfte Unternehmen |
+Jede Bekanntmachung verweist auf das Unternehmen dahinter. Die API BODACC stellt diese Unternehmen mit der
+Identität, der Tätigkeit und der Abschlusshistorie bereit:
 
-### Statistiken
+```json
+{
+  "siren": "552081317",
+  "nom_complet": "EIFFAGE ENERGIE SYSTEMES - INDUSTRIE TERTIAIRE BOURGOGNE FRANCHE-COMTE",
+  "adresse_complete": "245 Rue Charles de Freycinet 21600 Longvic",
+  "naf_code": "43.21A",
+  "nature_juridique": "5710",
+  "date_creation": "2025-04-24",
+  "etat_administratif": "A",
+  "depot_comptes": "oui",
+  "dernier_depot": "2026-07-31",
+  "derniere_cloture": "2025-12-31",
+  "dernier_ecart_jours": 212
+}
+```
 
-| Methode | Route | Beschreibung |
-|---|---|---|
-| `GET` | `/bodacc/stats` | Gesamtzahlen, nach Familie, nach Datum |
-| `GET` | `/bodacc/stats/daily` | Volumen des Tages (nach Ausgabe, Département, Familie) |
-| `GET` | `/bodacc/stats/daily30` | Serie der letzten 30 Tage |
-| `GET` | `/bodacc/stats/counts` | Zähler: Bekanntmachungen, Unternehmen, Personen |
-| `GET` | `/bodacc/graph/categories` | Verteilung nach Kategorie |
+Über die Identität hinaus: der Tätigkeitsschlüssel (NAF), die Rechtsform, der Verwaltungsstatus,
+**das Datum der letzten Abschlusshinterlegung, der letzte Bilanzstichtag und die Anzahl der Tage seither**,
+dazu die Kennzeichnungen, die ein Unternehmen tragen kann — Sozialwirtschaft, Bio, RGE, Qualiopi.
 
-### Alerts & Integrationen
+## 5. Geschäftsführer und Mandatsträger des BODACC
 
-| Methode | Route | Beschreibung |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | Alerts per SIREN (Unternehmensverfolgung) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Erfassung für ein Datum auslösen |
-| `POST` | `/bodacc/import` | Stapelimport (Backfill) |
+Hinter jedem Unternehmen stehen die Menschen, die es führen. Die API BODACC listet **4,9 Millionen
+Geschäftsführer, Mandatsträger, Liquidatoren und Abschlussprüfer**, jeweils mit:
 
-### NAF-Referenz (INSEE)
+- ihren Mandaten, Unternehmen für Unternehmen, mit dem jeweiligen Zeitraum
+- ihren weiteren Unternehmen, sodass Sie eine Person über eine ganze Laufbahn verfolgen können
+- den Bekanntmachungen, die sie betreffen
 
-| Methode | Route | Beschreibung |
-|---|---|---|
-| `GET` | `/bodacc/naf` | Vollständiges NAF-Referenzwerk Rev. 2 (732 Unterklassen, 615 Klassen) – offizielle INSEE-Bezeichnungen |
-| `GET` | `/bodacc/naf?q=commerce` | NAF-Suche nach Bezeichnung |
-| `GET` | `/bodacc/naf?code=46.72Z` | Datenblatt eines NAF-Codes |
+Das macht aus einem Register einen Graphen: ein Unternehmen, seine Mandatsträger und die Unternehmen, die
+diese Mandatsträger ebenfalls führen. Ein einziger Endpunkt stellt ihn direkt bereit.
+
+## 6. Die API BODACC
+
+REST, JSON, kein Schlüssel bei offenen Endpunkten erforderlich, bis zu 500 Datensätze pro Aufruf,
+paginiert über `offset`.
+
+```bash
+# Die neuesten Bekanntmachungen des BODACC (immer die frischesten zuerst)
+curl "https://bodacc.io/api/bodacc/annonces?limit=100"
+
+# Eine einzelne Bekanntmachung, mit ihren Unternehmen, ihren Mandatsträgern und ihrem PDF
+curl "https://bodacc.io/api/bodacc/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+
+# Ein Unternehmen nach SIREN
+curl "https://bodacc.io/api/bodacc/entreprises/552081317"
+
+# Jede Bekanntmachung des BODACC zu diesem Unternehmen
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/annonces"
+
+# Der Unternehmensgraph: Mandatsträger und ihre weiteren Unternehmen
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/graphe"
+
+# Suche nach Name, Stadt, Departement, Tätigkeitsschlüssel oder Zeitraum
+curl "https://bodacc.io/api/bodacc/entreprises?q=eiffage&departement=75"
+curl "https://bodacc.io/api/bodacc/annonces?famille=collective&date_debut=2026-10-01"
+```
+
+Vollständige Referenz: [bodacc.io/de/dokumentation](https://bodacc.io/de/dokumentation) — Endpunkt für
+Endpunkt, mit Swagger UI und veröffentlichter OpenAPI-Spezifikation, in 20 Sprachen.
+
+## 7. Datensätze und Exporte des BODACC
+
+Über die API hinaus ist jede Seite von bodacc.io eine stabile, indexierbare URL — Bekanntmachungen,
+Unternehmen, Mandatsträger, Regionen, Städte, Statistiken — und die Website veröffentlicht
+maschinenlesbare Einstiegspunkte:
+
+- [Sitemaps](https://bodacc.io/sitemap.xml) — das vollständige URL-Verzeichnis, pro Sprache
+- [API-Katalog](https://bodacc.io/.well-known/api-catalog) — für Agenten auffindbar
+- [RSS](https://bodacc.io/rss.xml) — der tägliche Feed
+- [URL-Liste](URLLIST.md) — jeder Einstiegspunkt, eine Liste pro Sprache
+
+## 8. Abdeckung und Aktualität des BODACC
+
+Das BODACC erscheint an Werktagen, nicht am Wochenende. BODACC.io erfasst jede Veröffentlichung und stellt
+sie **am selben Morgen** bereit, meist innerhalb von Minuten nach der Freigabe. Jede Bekanntmachung behält
+ihr Veröffentlichungsdatum, sodass Sie immer erkennen, was neu ist.
+
+## 9. Wofür das BODACC genutzt wird
+
+- **Compliance und KYC** — prüfen Sie den tatsächlichen Status einer Gegenpartei vor der Unterschrift, nicht ihren Status von vor drei Monaten
+- **Due Diligence** — verfolgen Sie die Einreichungen eines Unternehmens, seine Abschlüsse und seine Insolvenzhistorie
+- **Kredit- und Risikobewertung** — Insolvenzverfahren und Abschlüsse sind die frühesten Signale
+- **Vertriebsinformationen** — eine neue Gründung ist ein neuer Interessent, am Tag ihres Entstehens
+- **Journalismus** — unternehmensbezogene Fakten, belegt und datiert
+- **Forschung** — 51 Millionen Einreichungen, von den ältesten Registern bis heute Morgen
+- **Recht und Buchhaltung** — finden Sie die Unternehmen, für die Sie tätig sind, und was sie eingereicht haben
+
+## 10. Häufige Fragen zum BODACC
+
+**Ist BODACC.io das offizielle BODACC?**
+
+Nein. BODACC.io ist ein unabhängiger Dienst, der die öffentlichen Daten des BODACC nutzbar und abfragbar
+macht. Er ist nicht mit der DILA oder einer öffentlichen Stelle verbunden. Jede Bekanntmachung verweist auf
+ihre offizielle Quelle.
+
+**Ist die API BODACC kostenlos?**
+
+Offene Endpunkte sind kostenlos und benötigen keinen Schlüssel. Für intensive Nutzung gibt es
+kostenpflichtige Tarife — [siehe Preise](https://bodacc.io/de/preise).
+
+**Worin unterscheidet sich das BODACC von einem Unternehmensverzeichnis?**
+
+Ein Verzeichnis liefert die Identität eines Unternehmens. Das BODACC liefert seine Tätigkeit: was es
+eingereicht hat, wann, und was das Gericht darüber veröffentlicht hat. Beide ergänzen sich — BODACC.io
+enthält auch die Identität.
+
+**Wie aktuell sind die Daten?**
+
+Bekanntmachungen erscheinen am Morgen ihrer Veröffentlichung. Unternehmensdatensätze werden aktualisiert,
+sobald Bekanntmachungen eintreffen.
+
+**Wie viele Datensätze pro Aufruf?**
+
+Bis zu 500, mit `offset` für die Paginierung. Bei offenen Endpunkten gibt es keine Obergrenze für die
+Anzahl der Aufrufe.
+
+**Kann ich es in der Produktion einsetzen?**
+
+Ja. Die API ist dokumentiert, versioniert und wird über Cloudflare bereitgestellt. Ein Verweis auf
+[bodacc.io](https://bodacc.io) ist willkommen.
+
+**Welche Sprachen werden unterstützt?**
+
+Die Website und ihre Dokumentation gibt es in 20 Sprachen. Die API selbst ist sprachneutral: ihre Slugs und
+Endpunkte sind für alle gleich.
+
+## 11. Dokumentation des BODACC nach Sprache
+
+Jeder Ordner unten enthält die vollständige Dokumentation des BODACC in seiner eigenen Sprache: die
+API-Referenz, die URL-Liste und die täglichen Zusammenfassungen.
+
+| # | Sprache | Dokumentation | URLs | Tägliche Daten |
+|---|---|---|---|---|
+| 1 | العربية | [docs/ar/](docs/ar/README.md) | [URLLIST](docs/ar/URLLIST.md) | [recaps](docs/ar/recaps/README.md) |
+| 2 | Deutsch | [docs/de/](docs/de/README.md) | [URLLIST](docs/de/URLLIST.md) | [recaps](docs/de/recaps/README.md) |
+| 3 | English | [docs/en/](docs/en/README.md) | [URLLIST](docs/en/URLLIST.md) | [recaps](docs/en/recaps/README.md) |
+| 4 | Español | [docs/es/](docs/es/README.md) | [URLLIST](docs/es/URLLIST.md) | [recaps](docs/es/recaps/README.md) |
+| 5 | فارسی | [docs/fa/](docs/fa/README.md) | [URLLIST](docs/fa/URLLIST.md) | [recaps](docs/fa/recaps/README.md) |
+| 6 | Français | [docs/fr/](docs/fr/README.md) | [URLLIST](docs/fr/URLLIST.md) | [recaps](docs/fr/recaps/README.md) |
+| 7 | עברית | [docs/he/](docs/he/README.md) | [URLLIST](docs/he/URLLIST.md) | [recaps](docs/he/recaps/README.md) |
+| 8 | हिन्दी | [docs/hi/](docs/hi/README.md) | [URLLIST](docs/hi/URLLIST.md) | [recaps](docs/hi/recaps/README.md) |
+| 9 | Bahasa Indonesia | [docs/id/](docs/id/README.md) | [URLLIST](docs/id/URLLIST.md) | [recaps](docs/id/recaps/README.md) |
+| 10 | Italiano | [docs/it/](docs/it/README.md) | [URLLIST](docs/it/URLLIST.md) | [recaps](docs/it/recaps/README.md) |
+| 11 | 日本語 | [docs/ja/](docs/ja/README.md) | [URLLIST](docs/ja/URLLIST.md) | [recaps](docs/ja/recaps/README.md) |
+| 12 | 한국어 | [docs/ko/](docs/ko/README.md) | [URLLIST](docs/ko/URLLIST.md) | [recaps](docs/ko/recaps/README.md) |
+| 13 | Nederlands | [docs/nl/](docs/nl/README.md) | [URLLIST](docs/nl/URLLIST.md) | [recaps](docs/nl/recaps/README.md) |
+| 14 | Polski | [docs/pl/](docs/pl/README.md) | [URLLIST](docs/pl/URLLIST.md) | [recaps](docs/pl/recaps/README.md) |
+| 15 | Português | [docs/pt/](docs/pt/README.md) | [URLLIST](docs/pt/URLLIST.md) | [recaps](docs/pt/recaps/README.md) |
+| 16 | Русский | [docs/ru/](docs/ru/README.md) | [URLLIST](docs/ru/URLLIST.md) | [recaps](docs/ru/recaps/README.md) |
+| 17 | Türkçe | [docs/tr/](docs/tr/README.md) | [URLLIST](docs/tr/URLLIST.md) | [recaps](docs/tr/recaps/README.md) |
+| 18 | Українська | [docs/uk/](docs/uk/README.md) | [URLLIST](docs/uk/URLLIST.md) | [recaps](docs/uk/recaps/README.md) |
+| 19 | Tiếng Việt | [docs/vi/](docs/vi/README.md) | [URLLIST](docs/vi/URLLIST.md) | [recaps](docs/vi/recaps/README.md) |
+| 20 | 中文 | [docs/zh/](docs/zh/README.md) | [URLLIST](docs/zh/URLLIST.md) | [recaps](docs/zh/recaps/README.md) |
+
+## 12. Links zum BODACC
+
+- [BODACC.io](https://bodacc.io) — die Live-Website
+- [Unternehmenssuche](https://bodacc.io/de/unternehmen) · [Bekanntmachungen](https://bodacc.io/de/bekanntmachungen) · [Mandatsträger](https://bodacc.io/de/personen)
+- [Dokumentation der API](https://bodacc.io/de/dokumentation) · [Swagger UI](https://bodacc.io/api/bodacc/docs)
+- [Preise](https://bodacc.io/de/preise) · [Technologie](https://bodacc.io/de/technologie)
+- [URL-Liste (mehrsprachiger Index)](URLLIST.md)
 
 ---
 
-## 📊 Die Daten
-
-Die Abzeichen oben auf der Seite sind **Echtzeit-Zähler**: BODACC-Bekanntmachungen, SIRENE-Unternehmen und extrahierte Personen – sie entwickeln sich im Laufe der Konsolidierung der Historie und der Anreicherung.
-
-Stabile Referenzwerte:
-
-- 📰 **BODACC-Bekanntmachungen**: vollständige Historie seit 2008, aktualisiert jeden Morgen vor 09:00 Uhr
-- 🏢 **Unternehmen (SIRENE)**: 29,8 M französische rechtliche Einheiten (INSEE-Register)
-- 👤 **Extrahierte Personen**: Geschäftsführer, Liquidatoren, Abschlussprüfer... in kontinuierlicher Konsolidierung
-- 📦 **Öffentliche Aufträge (BOAMP)**: 1,69 M öffentliche Verträge 2015 → 2026
-
----
-
-## 🛠 Technologie
-
-| Ebene | Technologie |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **Daten** | Trigramm-Indexierung, Volltextsuche, JSONB |
-| **Erfassung** | Automatisierte Pipeline, tägliche Integration, idempotent |
-| **Anreicherung** | Hybride Extraktion (Geschäftsregeln + KI) |
-| **Frontend** | Next.js · i18n 20 Sprachen |
-| **Infrastruktur** | Docker · Cloudflare (CDN, Cache, DNSSEC) |
-| **KI-Agenten** | MCP-Server · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 Open Data
-
-Die Quelldaten sind öffentlich und kostenlos:
-
-- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (gesetzliche Bekanntmachungen)
-- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 M rechtliche Einheiten)
-- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (öffentliche Aufträge)
-
-**BODACC-api fügt dieser Rohdatenstruktur und -graph hinzu**: Analyse der Rechtstexte, Identitätsauflösung (Personen), Verknüpfungen Unternehmen ↔ Bekanntmachung ↔ Vertrag.
-
----
-
-## 🌐 Website erkunden
-
-[Startseite](https://bodacc.io/de) · [Bekanntmachungen](https://bodacc.io/de/annonces) · [Unternehmen](https://bodacc.io/de/entreprises) · [Personen](https://bodacc.io/de/personnes) · [Preise](https://bodacc.io/de/tarifs) · [Technologie](https://bodacc.io/de/technologie)
-
----
-
-## 📄 Lizenz & Kontakt
-
-- Lizenz: MIT (Code) – die Daten unterliegen weiterhin den Lizenzen ihrer Produzenten (DILA, INSEE)
-- Website: [bodacc.io](https://bodacc.io)
-- Issues & PRs: auf diesem Repository willkommen
-
----
-
-*Das BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist die offizielle Veröffentlichung der gesetzlichen Bekanntmachungen französischer Unternehmen. Dieses Projekt ist nicht mit der DILA verbunden.*
+*Das BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) ist die offizielle Veröffentlichung
+der rechtlichen Bekanntmachungen französischer Unternehmen. BODACC.io ist ein unabhängiger Dienst und nicht
+mit der DILA verbunden.*
