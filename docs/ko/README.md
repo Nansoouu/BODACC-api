@@ -1,215 +1,258 @@
 <div align="center">
 
-<pre>
-             ____   ____  _____          _____ _____               _
-            |  _ \ / __ \|  __ \   /\   / ____/ ____|             (_)
-            | |_) | |  | | |  | | /  \ | |   | |        __ _ _ __  _
-            |  _ <| |  | | |  | |/ /\ \| |   | |       / _` | '_ \| |
-            | |_) | |__| | |__| / ____ \ |___| |____  | (_| | |_) | |
-            |____/ \____/|_____/_/    \_\_____\_____|  \__,_| .__/|_|
-                                                             | |
-                                                             |_|
-</pre>
-</div>
+# BODACC.io : 프랑스 법률 공고와 기업 데이터를 위한 BODACC API
 
-# 🌐 [bodacc.io](https://bodacc.io)
+**프랑스 기업의 모든 공고를, 실시간으로.** 설립, 변경, 재무제표 제출, 도산 절차, 매각, 등록 말소까지,
+모든 BODACC 공고를 그 기업과 임원, 공식 출처에 연결합니다. 무료이고 열려 있으며, 20개 언어를
+지원합니다.
 
-🌍 [Français](../fr/README.md) · [English](../en/README.md) · [Español](../es/README.md) · [Deutsch](../de/README.md) · [Italiano](../it/README.md) · [Português](../pt/README.md) · [Nederlands](../nl/README.md) · [Polski](../pl/README.md) · [Русский](../ru/README.md) · [Türkçe](../tr/README.md) · [Українська](../uk/README.md) · [Bahasa Indonesia](../id/README.md) · [Tiếng Việt](../vi/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md) · [中文](../zh/README.md) · [العربية](../ar/README.md) · [עברית](../he/README.md) · [हिन्दी](../hi/README.md) · [فارسی](../fa/README.md)
-> 📰 [전체 요약](recaps/README.md) · 🏠 [BODACC.io의 무대 뒤](coulisses/COULISSES.md)
-
-<div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=공고&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=기업&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=인물&color=orange)
-![Site bodacc.io](https://img.shields.io/badge/bodacc.io-Explorer-important?logo=internetexplorer&logoColor=white&style=for-the-badge)
+[**bodacc.io**](https://bodacc.io) · [API 문서](https://bodacc.io/ko/munseo) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 </div>
 
-**프랑스 법률 공고를 구조화되고, 연결되며, 활용 가능한 데이터로 변환하는 API — 실시간으로.**
+## 1. BODACC 실시간 데이터
 
-BODACC(불탱탱 민사 및 상사 공고 관보)은 프랑스 기업의 법적 생활을 기록하는 공식 간행물입니다: 설립, 변경, 말소, 집단 절차, 매각, 재무제표 제출. 이러한 텍스트는 공개되어 있지만, 원시 문서 상태로 남아 있습니다: 구조화되어 있지도, 서로 연결되어 있지도, 쉽게 조회할 수 없습니다.
+| BODACC 데이터셋 | 레코드 수 | 실시간 |
+|---|---|---|
+| BODACC 법률 공고 | 51 043 403 | ![공고](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=공고&color=blue) |
+| 프랑스 기업 | 30 032 566 | ![기업](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=기업&color=green) |
+| 임원 및 등기 임원 | 4 935 692 | ![인물](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=인물&color=orange) |
+| 공공 계약(BOAMP) | 1 716 163 | ![계약](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=계약&color=purple) |
 
-**BODACC-api는 이를 활용 가능하게 만듭니다.** 각 공고는 자동으로 분석되어 구조화된 데이터(SIREN, 회사명, 주소, NAF, 임원, 금액 등)로 변환된 후, 해당 기업 및 관련 인물과 연결됩니다. 결과: 단 한 번의 HTTP 요청으로 조회 가능한 프랑스 경제 생활의 완전한 그래프.
+이 숫자들은 복사해 붙여 넣은 것이 아닙니다. **BODACC API 자체가 실시간으로 제공합니다**.
+[`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted)에서
+확인할 수 있습니다. 직접 확인해 보고, 내일 다시 확인해 보세요.
 
-> 🌐 웹사이트: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [요금제](https://bodacc.io/ko/tarifs)
+**오늘**(2026년 10월 14일): **5 920건의 공고** — 가장 많은 유형: 재무제표 제출(2 306).
 
----
-
-## ✨ 왜 BODACC-api인가?
-
-| | |
+| BODACC 유형 | 오늘의 공고 |
 |---|---|
-| 🗂 **2008년부터의 전체 이력** | 수백만 건의 공고가 데이터베이스에 있으며, 전체를 포괄합니다 — 슬라이딩 윈도우가 아닙니다 |
-| ⚡ **실시간** | 당일 공고는 매일 아침, 업무 시작 전에 제공됩니다 |
-| 🕸 **파일이 아닌 그래프** | 공고 → 기업(SIREN) → 임원 → 임기 → 공공 조달: 모든 것이 연결되어 단일 요청으로 조회 가능합니다 |
-| ✨ **원시 텍스트에서 구조화된 데이터로** | SIREN, NAF, 주소, 임원, 절차... 각 법률 텍스트에서 자동으로 추출됩니다 |
-| 🌍 **20개 언어** | 인터페이스와 콘텐츠가 번역되어 제공됩니다 — 귀하의 팀과 고객이 자신의 언어를 사용합니다 |
-| 🤖 **에이전트 지원** | isitagentready 감사에서 100/100 (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
-| 🚪 **테스트에 제로 마찰** | 모든 읽기 엔드포인트는 키 없이 접근 가능합니다 — 비용을 지불하기 전에 평가할 수 있습니다 |
+| 재무제표 제출 | 2 306 |
+| 설립 | 1 415 |
+| 변경 | 1 193 |
+| 등록 말소 | 500 |
+| 도산 절차 | 323 |
+| 상업 등기 | 118 |
+| 매각 및 양도 | 65 |
 
----
+## 2. BODACC API가 제공하는 것
 
-## 🏭 핵심 가치: 파이프라인
+BODACC(Bulletin Officiel des Annonces Civiles et Commerciales)는 프랑스 기업 활동을 기록하는 공식
+관보입니다. 모든 설립, 모든 재무제표 제출, 모든 도산, 모든 매각이 법에 따라 그곳에 게재됩니다.
+BODACC.io는 그 관보를 조회할 수 있는 데이터베이스로 바꿉니다.
 
-차별화 요소는 원시 데이터(공개 데이터임)가 아니라, 우리가 매일 자동으로 수행하는 데이터 처리에 있습니다:
+**대부분의 기업 데이터베이스는 한 장의 사진을 줍니다. BODACC API는 움직임을 줍니다.**
 
-**1. 안정적이고 완전한 수집.** 매일 아침 09:00 이전에 DILA가 게시한 새로운 공고가 데이터베이스에 통합됩니다. 전체 이력은 공개 조회 범위를 훨씬 넘어 2008년까지 거슬러 올라갑니다. 수집을 다시 실행해도 중복이 생성되지 않습니다: 데이터는 항상 검증되고 일관성을 유지합니다.
+인명록은 기업이 존재한다는 것을 알려줍니다. 이름, 주소, 등록번호. BODACC는 **그 기업이 방금 무엇을
+했는지**, 그리고 언제 했는지를 알려줍니다. 차이는 바로 거기에 있습니다:
 
-**2. 지능적인 강화.** 각 공고는 법률 텍스트입니다 — 당사의 하이브리드 추출 엔진(비즈니스 규칙 + AI)이 이를 구조화된 데이터(사업자등록번호, 회사명, 주소, NAF 코드, 임원, 임기, 금액, 절차)로 변환합니다. 수시간의 수동 판독이 필요한 작업이 조회 가능한 JSON 필드가 됩니다.
+| | 기업 인명록 | BODACC.io |
+|---|---|---|
+| 얻는 것 | 고정된 신원 정보 | 날짜가 붙은 사건 |
+| 최신성 | 분기마다 갱신 | 당일 아침에 공개 |
+| 도산 | 상태 플래그 | 절차 자체, 그 성격과 날짜 |
+| 회계 | '제출함'이라는 참·거짓 값 | 결산일이 붙은 각 제출 건 |
+| 임원 | 이름 하나 | 모든 재임 기간과 해당 회사 |
+| 출처 | 복사본 | 공식 공고와 그 PDF |
 
-**3. 관계형 그래프.** 집단 절차 공고는 해당 기업과의 연결 및 대표 임원이 누구인지 알 때만 가치가 있습니다. 당사의 해석 엔진은 각 공고를 해당 기업(SIREN)에, 각 인물을 해당 임기에, 각 공공 조달을 해당 낙찰자에 연결합니다. PDF 더미가 아닌 데이터베이스처럼 프랑스 경제 생활을 조회할 수 있습니다.
+## 3. BODACC 법률 공고 자세히 보기
 
-**4. 실시간 배포.** 공고가 게시되는 즉시 관계 및 강화 데이터와 함께 API를 통해 제공됩니다. 다운로드할 파일도, 유지 관리할 ETL도 없습니다: HTTP 요청 하나면 충분합니다.
+모든 공고는 23개 필드를 가집니다. 다음은 BODACC API가 반환하는 그대로의 실제 공고입니다:
 
----
-
-## ⚖️ 비교: 당사의 위치
-
-| | **공식 사이트 (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **API** | ❌ 없음 | 상위 요금제 전용 API | ✅ **문서화된 REST API, 읽기 키 불필요** |
-| **구조화된 데이터** | ❌ PDF 조회 | ✅ 강화된 프로필 | ✅ **공고 + 기업/인물/시장 그래프** |
-| **실시간** | 온라인에서 열람 가능한 종이 발행 | 일일 업데이트 | ✅ **매일 아침 09:00 이전** |
-| **가격** | 무료이지만 제한적 | 기본 액세스 **월 29.90€**부터 | **접근 가능한 요금제, 탐색을 위한 무료 체험부터** |
-| **대상** | 일반 대중 | 전문가 (컴플라이언스, 모니터링) | **개발자, 핀테크, 리걸테크, 데이터 팀** |
-
-**공식 사이트의 장점**: 무료, 신뢰할 수 있음, 공식적. **단점**: API 없음, 이력이 2008년으로 제한됨, 구조화된 데이터 없음 — PDF에 머물러야 함.
-
-**Pappers의 장점**: 매우 세련된 인터페이스, INSEE + INPI + BODACC 집계, 통합 모니터링. **단점**: 가격(기본 액세스 월 29.90€, API 및 전체 이력은 더 비쌈), 활용 가능한 데이터보다는 조회 중심의 솔루션.
-
-**당사의 위치**: **공식 사이트보다 빠르게 2008년부터의 전체 이력 제공 — Pappers보다 저렴한 가격으로.** 추가 화면이 아닌 자체 도구에 데이터를 연결하려는 사람들을 위해 설계되었습니다.
-
-> 💶 요금제 보기: [bodacc.io/ko/tarifs](https://bodacc.io/ko/tarifs) — 무료 · Pro · Enterprise · LIFE
-
----
-
-## 🚀 30초 만에 사용해보기
-
-모든 읽기 엔드포인트는 **키 없이** 접근할 수 있습니다:
-
-```bash
-# 이름으로 기업 검색
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# 공고 상세 정보 (관계: 기업 + 인물 포함)
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# 기업 프로필 (최근 공고 + 임원 + 공공 조달)
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# 전체 통계
-curl "https://bodacc.io/api/bodacc/stats"
-
-# 일일 볼륨 (최근 30일)
-curl "https://bodacc.io/api/bodacc/stats/daily30"
+```json
+{
+  "id": "C202601972306",
+  "dateparution": "2026-10-14",
+  "familleavis": "dpc",
+  "familleavis_lib": "Dépôts des comptes",
+  "typeavis_lib": "Avis initial",
+  "commercant": "HOLDING BIIZ",
+  "ville": "Saint-Louis",
+  "cp": "97450",
+  "departement_nom_officiel": "La Réunion",
+  "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
+  "registre": ["988208435", "988 208 435"],
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+}
 ```
 
----
+모든 공고는 **bodacc.io의 전체 페이지**로 연결됩니다. 공식 출처와 PDF는 그곳에서 클릭 한 번이면
+열립니다.
 
-## 📡 엔드포인트
+BODACC의 일곱 가지 유형과, 데이터에서 보게 될 용어:
 
-### 공고
-
-| 메서드 | 경로 | 설명 |
+| BODACC 유형 | 데이터에서 | 의미 |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | 검색: `q` (이름/SIREN), `famille`, `departement`, 날짜, 페이지네이션 `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | 전체 상세 정보: `raw_data` + 강화 데이터 + `relations` (연결된 기업 및 인물) |
-| `GET` | `/bodacc/enrichi/{id}` | 구조화된 버전 (siren, dénomination, NAF, dirigeants...) |
-| `POST` | `/bodacc/enrichi/batch` | 일괄 강화 |
+| 설립 | `creation` | 새로운 기업이 등록된다 |
+| 변경 | `modification` | 정관, 경영, 주소, 자본의 변경 |
+| 재무제표 제출 | `dpc` | 연간 재무제표를 법원 등기소에 제출한다 |
+| 도산 절차 | `collective` | 회생, 청산, 재건 |
+| 매각 및 양도 | `vente` | 사업이 매각되거나 양도된다 |
+| 등록 말소 | `radiation` | 기업이 등기부에서 말소된다 |
+| 상업 등기 | `immatriculation` | 상업 등기부에 등기한다 |
 
-### 기업 및 인물
+## 4. BODACC 기업 레코드
 
-| 메서드 | 경로 | 설명 |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | 기업 검색 (이름, 도시, NAF, 우편번호) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE 프로필 + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | SEO 슬러그별 프로필 |
-| `GET` | `/bodacc/personnes/{id}` | 인물 프로필: 임기 (역할) + 연결된 기업 |
+각 공고는 그 뒤에 있는 기업을 가리킵니다. BODACC API는 그 기업들을 신원, 활동, 회계 이력과 함께
+공개합니다:
 
-### 통계
+```json
+{
+  "siren": "552081317",
+  "nom_complet": "EIFFAGE ENERGIE SYSTEMES - INDUSTRIE TERTIAIRE BOURGOGNE FRANCHE-COMTE",
+  "adresse_complete": "245 Rue Charles de Freycinet 21600 Longvic",
+  "naf_code": "43.21A",
+  "nature_juridique": "5710",
+  "date_creation": "2025-04-24",
+  "etat_administratif": "A",
+  "depot_comptes": "oui",
+  "dernier_depot": "2026-07-31",
+  "derniere_cloture": "2025-12-31",
+  "dernier_ecart_jours": 212
+}
+```
 
-| 메서드 | 경로 | 설명 |
-|---|---|---|
-| `GET` | `/bodacc/stats` | 총계, 유형별, 날짜별 |
-| `GET` | `/bodacc/stats/daily` | 당일 볼륨 (발행별, 부서별, 유형별) |
-| `GET` | `/bodacc/stats/daily30` | 최근 30일 시계열 |
-| `GET` | `/bodacc/stats/counts` | 카운터: 공고, 기업, 인물 |
-| `GET` | `/bodacc/graph/categories` | 카테고리별 분포 |
+신원을 넘어서: 활동 코드(NAF), 법적 형태, 행정 상태, **마지막 재무제표 제출일, 마지막 결산일,
+그리고 그로부터 지난 일수**, 그리고 기업이 지닐 수 있는 라벨: 사회적 경제, 유기농, RGE, Qualiopi.
 
-### 알림 및 통합
+## 5. BODACC 임원 및 등기 임원
 
-| 메서드 | 경로 | 설명 |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | SIREN별 알림 (기업 모니터링) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | 특정 날짜에 대한 수집 트리거 |
-| `POST` | `/bodacc/import` | 일괄 가져오기 (백필) |
+모든 기업 뒤에는 그것을 운영하는 사람들이 있습니다. BODACC API는 **490만 명의 임원, 등기 임원,
+청산인, 감사인**을 수록하며, 각각에 대해 다음을 제공합니다:
 
-### NAF 참조 데이터 (INSEE)
+- 회사별 재임 기간과 해당 기간
+- 그 사람의 다른 회사. 경력 전반에 걸쳐 한 사람을 따라갈 수 있습니다
+- 그 사람과 관련된 공고
 
-| 메서드 | 경로 | 설명 |
-|---|---|---|
-| `GET` | `/bodacc/naf` | NAF 개정 2 전체 참조 데이터 (732 하위 클래스, 615 클래스) — 공식 INSEE 라벨 |
-| `GET` | `/bodacc/naf?q=commerce` | 라벨로 NAF 검색 |
-| `GET` | `/bodacc/naf?code=46.72Z` | 특정 NAF 코드 정보 |
+이것이 등기부를 그래프로 바꿉니다: 기업, 그 임원들, 그리고 그 임원들이 함께 운영하는 기업들.
+하나의 엔드포인트가 그것을 직접 공개합니다.
+
+## 6. BODACC API
+
+REST, JSON, 공개 엔드포인트에는 키가 필요 없고, 호출당 최대 500건, `offset`으로 페이지를 나눕니다.
+
+```bash
+# 최신 BODACC 공고(항상 가장 최근 것이 먼저)
+curl "https://bodacc.io/api/bodacc/annonces?limit=100"
+
+# 하나의 공고를, 그 기업과 임원, PDF와 함께
+curl "https://bodacc.io/api/bodacc/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+
+# SIREN으로 기업 조회
+curl "https://bodacc.io/api/bodacc/entreprises/552081317"
+
+# 그 기업과 관련된 모든 BODACC 공고
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/annonces"
+
+# 기업 그래프: 임원과 그들의 다른 회사
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/graphe"
+
+# 이름, 도시, 주, 활동 코드 또는 기간으로 검색
+curl "https://bodacc.io/api/bodacc/entreprises?q=eiffage&departement=75"
+curl "https://bodacc.io/api/bodacc/annonces?famille=collective&date_debut=2026-10-01"
+```
+
+전체 레퍼런스: [bodacc.io/ko/munseo](https://bodacc.io/ko/munseo) — 엔드포인트별 설명, Swagger UI와
+공개된 OpenAPI 명세 포함, 20개 언어로.
+
+## 7. BODACC 데이터셋과 내보내기
+
+API 외에도, bodacc.io의 모든 페이지는 안정적이고 크롤링 가능한 URL입니다: 법률 공고, 기업, 임원,
+지역, 도시, 통계 — 그리고 사이트는 기계가 읽을 수 있는 진입점을 공개합니다:
+
+- [사이트맵](https://bodacc.io/sitemap.xml) — 언어별 전체 URL 목록
+- [API 카탈로그](https://bodacc.io/.well-known/api-catalog) — 에이전트가 발견할 수 있습니다
+- [RSS](https://bodacc.io/rss.xml) — 일일 피드
+- [URL 목록](URLLIST.md) — 모든 진입점, 언어별로 하나의 목록
+
+## 8. BODACC 수록 범위와 최신성
+
+BODACC는 영업일에 발행되며 주말에는 발행되지 않습니다. BODACC.io는 각 호를 수집해 **당일 아침**,
+보통 공개 후 몇 분 안에 이용할 수 있게 합니다. 모든 공고는 게재일을 유지하므로, 무엇이 새로운지
+항상 알 수 있습니다.
+
+## 9. BODACC는 어디에 쓰이는가
+
+- **규정 준수와 KYC** — 서명 전에 거래 상대방의 현재 상태를 확인합니다. 석 달 전 상태가 아니라
+- **실사** — 기업이 제출한 서류, 회계, 도산 이력을 추적합니다
+- **신용 및 위험 점수** — 도산 절차와 재무제표 제출은 가장 이른 신호입니다
+- **영업 정보** — 신설 기업은 그날 바로 잠재 고객입니다
+- **저널리즘** — 출처와 날짜가 있는 기업 단위의 사실
+- **연구** — 5 100만 건의 게재물, 가장 오래된 등기부부터 오늘 아침까지
+- **법무와 회계** — 자신이 대리하는 기업과 그들이 제출한 내용을 찾습니다
+
+## 10. BODACC 자주 묻는 질문
+
+**BODACC.io는 공식 BODACC입니까?**
+
+아니요. BODACC.io는 공개된 BODACC 데이터를 쓸 수 있고 조회할 수 있게 만드는 독립 서비스입니다.
+DILA나 어떤 공공 기관과도 제휴 관계가 없습니다. 모든 공고는 공식 출처로 연결됩니다.
+
+**BODACC API는 무료입니까?**
+
+공개 엔드포인트는 무료이며 키가 필요 없습니다. 대량 사용을 위한 유료 요금제가 있습니다 —
+[요금 보기](https://bodacc.io/ko/tarifs).
+
+**BODACC와 기업 인명록의 차이는 무엇입니까?**
+
+인명록은 기업의 신원을 알려줍니다. BODACC는 그 활동을 알려줍니다: 무엇을 언제 게재했고, 법원이
+무엇을 공개했는지. 둘은 서로를 보완합니다 — BODACC.io는 신원도 함께 담고 있습니다.
+
+**데이터는 얼마나 최신입니까?**
+
+공고는 게재되는 날 아침에 나타납니다. 기업 레코드는 공고가 들어오는 대로 갱신됩니다.
+
+**호출당 레코드는 몇 건입니까?**
+
+최대 500건이며, 페이지를 나누려면 `offset`을 사용합니다. 공개 엔드포인트에는 호출 횟수 제한이
+없습니다.
+
+**프로덕션 환경에서 사용할 수 있습니까?**
+
+예. API는 문서화되어 있고 버전이 관리되며 Cloudflare에서 제공됩니다.
+[bodacc.io](https://bodacc.io) 출처 표기는 환영합니다.
+
+**어떤 언어를 지원합니까?**
+
+사이트와 그 문서는 20개 언어로 존재합니다. API 자체는 언어 중립적입니다: 슬러그와 엔드포인트는
+모두에게 동일합니다.
+
+## 11. 언어별 BODACC 문서
+
+아래 각 폴더에는 해당 언어의 BODACC 문서 전체가 들어 있습니다: API 레퍼런스, URL 목록, 일일 요약.
+
+| # | 언어 | 문서 | URL | 일일 데이터 |
+|---|---|---|---|---|
+| 1 | العربية | [docs/ar/](docs/ar/README.md) | [URLLIST](docs/ar/URLLIST.md) | [recaps](docs/ar/recaps/README.md) |
+| 2 | Deutsch | [docs/de/](docs/de/README.md) | [URLLIST](docs/de/URLLIST.md) | [recaps](docs/de/recaps/README.md) |
+| 3 | English | [docs/en/](docs/en/README.md) | [URLLIST](docs/en/URLLIST.md) | [recaps](docs/en/recaps/README.md) |
+| 4 | Español | [docs/es/](docs/es/README.md) | [URLLIST](docs/es/URLLIST.md) | [recaps](docs/es/recaps/README.md) |
+| 5 | فارسی | [docs/fa/](docs/fa/README.md) | [URLLIST](docs/fa/URLLIST.md) | [recaps](docs/fa/recaps/README.md) |
+| 6 | Français | [docs/fr/](docs/fr/README.md) | [URLLIST](docs/fr/URLLIST.md) | [recaps](docs/fr/recaps/README.md) |
+| 7 | עברית | [docs/he/](docs/he/README.md) | [URLLIST](docs/he/URLLIST.md) | [recaps](docs/he/recaps/README.md) |
+| 8 | हिन्दी | [docs/hi/](docs/hi/README.md) | [URLLIST](docs/hi/URLLIST.md) | [recaps](docs/hi/recaps/README.md) |
+| 9 | Bahasa Indonesia | [docs/id/](docs/id/README.md) | [URLLIST](docs/id/URLLIST.md) | [recaps](docs/id/recaps/README.md) |
+| 10 | Italiano | [docs/it/](docs/it/README.md) | [URLLIST](docs/it/URLLIST.md) | [recaps](docs/it/recaps/README.md) |
+| 11 | 日本語 | [docs/ja/](docs/ja/README.md) | [URLLIST](docs/ja/URLLIST.md) | [recaps](docs/ja/recaps/README.md) |
+| 12 | 한국어 | [docs/ko/](docs/ko/README.md) | [URLLIST](docs/ko/URLLIST.md) | [recaps](docs/ko/recaps/README.md) |
+| 13 | Nederlands | [docs/nl/](docs/nl/README.md) | [URLLIST](docs/nl/URLLIST.md) | [recaps](docs/nl/recaps/README.md) |
+| 14 | Polski | [docs/pl/](docs/pl/README.md) | [URLLIST](docs/pl/URLLIST.md) | [recaps](docs/pl/recaps/README.md) |
+| 15 | Português | [docs/pt/](docs/pt/README.md) | [URLLIST](docs/pt/URLLIST.md) | [recaps](docs/pt/recaps/README.md) |
+| 16 | Русский | [docs/ru/](docs/ru/README.md) | [URLLIST](docs/ru/URLLIST.md) | [recaps](docs/ru/recaps/README.md) |
+| 17 | Türkçe | [docs/tr/](docs/tr/README.md) | [URLLIST](docs/tr/URLLIST.md) | [recaps](docs/tr/recaps/README.md) |
+| 18 | Українська | [docs/uk/](docs/uk/README.md) | [URLLIST](docs/uk/URLLIST.md) | [recaps](docs/uk/recaps/README.md) |
+| 19 | Tiếng Việt | [docs/vi/](docs/vi/README.md) | [URLLIST](docs/vi/URLLIST.md) | [recaps](docs/vi/recaps/README.md) |
+| 20 | 中文 | [docs/zh/](docs/zh/README.md) | [URLLIST](docs/zh/URLLIST.md) | [recaps](docs/zh/recaps/README.md) |
+
+## 12. BODACC 링크
+
+- [BODACC.io](https://bodacc.io) — 라이브 사이트
+- [기업 검색](https://bodacc.io/ko/entreprises) · [법률 공고](https://bodacc.io/ko/annonces) · [임원](https://bodacc.io/ko/personnes)
+- [API 문서](https://bodacc.io/ko/munseo) · [Swagger UI](https://bodacc.io/api/bodacc/docs)
+- [요금](https://bodacc.io/ko/tarifs) · [기술](https://bodacc.io/ko/technologie)
+- [URL 목록(다국어 색인)](URLLIST.md)
 
 ---
 
-## 📊 데이터
-
-페이지 상단의 배지는 **실시간 카운터**입니다: BODACC 공고, SIRENE 기업 및 추출된 인물 — 이력 통합 및 강화가 진행됨에 따라 변경됩니다.
-
-안정적인 기준:
-
-- 📰 **BODACC 공고**: 2008년부터의 전체 이력, 매일 아침 09:00 이전 업데이트
-- 🏢 **기업 (SIRENE)**: 프랑스 법인 2,980만 개 (INSEE 등록부)
-- 👤 **추출된 인물**: 임원, 청산인, 감사인... 지속적으로 통합 중
-- 📦 **공공 조달 (BOAMP)**: 2015년 → 2026년 공공 계약 169만 건
-
----
-
-## 🛠 기술
-
-| 계층 | 기술 |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **데이터** | Trigram 인덱싱, 전문 검색, JSONB |
-| **수집** | 자동화된 파이프라인, 일일 통합, 멱등성 |
-| **강화** | 하이브리드 추출 (비즈니스 규칙 + AI) |
-| **프론트엔드** | Next.js · i18n 20개 언어 |
-| **인프라** | Docker · Cloudflare (CDN, 캐시, DNSSEC) |
-| **AI 에이전트** | MCP 서버 · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 오픈 데이터
-
-소스 데이터는 공개적이고 무료입니다:
-
-- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (법률 공고)
-- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (법인 2,980만 개)
-- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (공공 조달)
-
-**BODACC-api는 이 원시 데이터에 구조와 그래프를 추가합니다**: 법률 텍스트 분석, 신원 확인(인물), 기업 ↔ 공고 ↔ 계약 연결.
-
----
-
-## 🌐 웹사이트 탐색
-
-[홈](https://bodacc.io/ko) · [공고](https://bodacc.io/ko/annonces) · [기업](https://bodacc.io/ko/entreprises) · [인물](https://bodacc.io/ko/personnes) · [요금제](https://bodacc.io/ko/tarifs) · [기술](https://bodacc.io/ko/technologie)
-
----
-
-## 📄 라이선스 및 연락처
-
-- 라이선스: MIT (코드) — 데이터는 해당 생산자(DILA, INSEE)의 라이선스를 따릅니다
-- 웹사이트: [bodacc.io](https://bodacc.io)
-- 이슈 및 PR: 이 저장소에 언제든 환영합니다
-
----
-
-*BODACC(불탱탱 민사 및 상사 공고 관보)은 프랑스 기업의 법률 공고를 게재하는 공식 간행물입니다. 이 프로젝트는 DILA와 제휴 관계가 아닙니다.*
+*BODACC(Bulletin Officiel des Annonces Civiles et Commerciales)는 프랑스 기업 공고의 공식
+간행물입니다. BODACC.io는 독립 서비스이며 DILA와 제휴 관계가 없습니다.*

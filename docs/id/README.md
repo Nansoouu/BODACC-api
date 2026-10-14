@@ -1,215 +1,269 @@
 <div align="center">
 
-<pre>
-             ____   ____  _____          _____ _____               _
-            |  _ \ / __ \|  __ \   /\   / ____/ ____|             (_)
-            | |_) | |  | | |  | | /  \ | |   | |        __ _ _ __  _
-            |  _ <| |  | | |  | |/ /\ \| |   | |       / _` | '_ \| |
-            | |_) | |__| | |__| / ____ \ |___| |____  | (_| | |_) | |
-            |____/ \____/|_____/_/    \_\_____\_____|  \__,_| .__/|_|
-                                                             | |
-                                                             |_|
-</pre>
-</div>
+# BODACC.io : API BODACC untuk pengumuman resmi dan data perusahaan Prancis
 
-# 🌐 [bodacc.io](https://bodacc.io)
+**Setiap pengumuman perusahaan Prancis, secara real time.** Pendirian, perubahan, penyampaian laporan
+keuangan, prosedur kepailitan, penjualan, penghapusan: setiap pengumuman BODACC, terkait dengan
+perusahaannya, para pengurusnya, dan sumber resminya. Gratis dan terbuka, dalam 20 bahasa.
 
-🌍 [Français](../fr/README.md) · [English](../en/README.md) · [Español](../es/README.md) · [Deutsch](../de/README.md) · [Italiano](../it/README.md) · [Português](../pt/README.md) · [Nederlands](../nl/README.md) · [Polski](../pl/README.md) · [Русский](../ru/README.md) · [Türkçe](../tr/README.md) · [Українська](../uk/README.md) · [Bahasa Indonesia](../id/README.md) · [Tiếng Việt](../vi/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md) · [中文](../zh/README.md) · [العربية](../ar/README.md) · [עברית](../he/README.md) · [हिन्दी](../hi/README.md) · [فارسی](../fa/README.md)
-> 📰 [Rangkuman lengkap](recaps/README.md) · 🏠 [Di balik layar BODACC.io](coulisses/COULISSES.md)
-
-<div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Pengumuman&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Perusahaan&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Orang&color=orange)
-![Site bodacc.io](https://img.shields.io/badge/bodacc.io-Explorer-important?logo=internetexplorer&logoColor=white&style=for-the-badge)
+[**bodacc.io**](https://bodacc.io) · [Dokumentasi API](https://bodacc.io/id/dokumentasi) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 </div>
 
-**API yang mengubah pengumuman legal Prancis menjadi data terstruktur, saling terhubung, dan dapat dimanfaatkan — secara real-time.**
+## 1. Data BODACC secara langsung
 
-BODACC (Buletin Resmi Pengumuman Sipil dan Komersial) adalah publikasi resmi yang mencatat kehidupan hukum perusahaan Prancis: pendirian, perubahan, penghapusan, prosedur kolektif, penjualan, penyetoran laporan keuangan. Teks-teks ini bersifat publik, tetapi tetap berupa dokumen mentah: tidak terstruktur, tidak saling terhubung, dan tidak mudah untuk ditelusuri.
+| Kumpulan data BODACC | Jumlah rekaman | Langsung |
+|---|---|---|
+| Pengumuman resmi BODACC | 51 043 403 | ![Pengumuman](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=pengumuman&color=blue) |
+| Perusahaan Prancis | 30 032 566 | ![Perusahaan](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=perusahaan&color=green) |
+| Direksi dan pengurus | 4 935 692 | ![Orang](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=orang&color=orange) |
+| Kontrak publik (BOAMP) | 1 716 163 | ![Kontrak](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=kontrak&color=purple) |
 
-**BODACC-api menjadikannya dapat dimanfaatkan.** Setiap pengumuman dianalisis secara otomatis dan diubah menjadi data terstruktur (SIREN, nama badan usaha, alamat, NAF, direksi, jumlah...), kemudian dihubungkan ke perusahaannya dan orang-orang yang muncul di dalamnya. Hasilnya: grafik lengkap kehidupan ekonomi Prancis, yang dapat ditelusuri hanya dengan satu permintaan HTTP.
+Angka-angka ini tidak disalin tempel: angka-angka ini **disajikan secara langsung oleh API BODACC itu
+sendiri**, di
+[`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted).
+Periksa sendiri, lalu periksa lagi besok.
 
-> 🌐 Situs: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Harga](https://bodacc.io/id/tarifs)
+**Hari ini** (14 Oktober 2026): **5 920 pengumuman** — famili terbanyak: Penyampaian laporan keuangan (2 306).
 
----
-
-## ✨ Mengapa BODACC-api?
-
-| | |
+| Famili BODACC | Pengumuman hari ini |
 |---|---|
-| 🗂 **Seluruh riwayat, sejak 2008** | Jutaan pengumuman dalam basis data, cakupan lengkap — bukan jendela bergulir |
-| ⚡ **Real-time** | Pengumuman hari ini tersedia setiap pagi, sebelum jam kantor dimulai |
-| 🕸 **Grafik, bukan berkas** | Pengumuman → perusahaan (SIREN) → direksi → mandat → pasar publik: semuanya terhubung dan dapat ditelusuri dalam satu permintaan |
-| ✨ **Dari teks mentah ke data terstruktur** | SIREN, NAF, alamat, direksi, prosedur... diekstraksi secara otomatis dari setiap teks hukum |
-| 🌍 **20 bahasa** | Antarmuka dan konten diterjemahkan — tim dan klien Anda berbicara dalam bahasa mereka |
-| 🤖 **Siap-agen** | 100/100 pada audit isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
-| 🚪 **Tanpa hambatan untuk mencoba** | Semua endpoint baca dapat diakses tanpa kunci — Anda mengevaluasi sebelum membayar |
+| Penyampaian laporan keuangan | 2 306 |
+| Pendirian | 1 415 |
+| Perubahan | 1 193 |
+| Penghapusan | 500 |
+| Prosedur kepailitan | 323 |
+| Pendaftaran | 118 |
+| Penjualan dan pengalihan | 65 |
 
----
+## 2. Apa yang diberikan API BODACC kepada Anda
 
-## 🏭 Nilai tambah kami: jalur pemrosesan
+BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) adalah jurnal resmi kehidupan
+perusahaan Prancis. Setiap pendirian, setiap penyampaian laporan keuangan, setiap kepailitan, setiap
+penjualan diterbitkan di sana menurut hukum. BODACC.io mengubah jurnal itu menjadi basis data yang
+dapat Anda kueri.
 
-Yang membuat perbedaan bukanlah data mentah (data tersebut publik), melainkan apa yang kami lakukan dengannya — setiap hari, secara otomatis:
+**Sebagian besar basis data perusahaan memberi Anda sebuah potret. API BODACC memberi Anda pergerakan.**
 
-**1. Ingestion yang andal dan lengkap.** Setiap pagi sebelum pukul 09:00, pengumuman baru yang diterbitkan oleh DILA diintegrasikan ke dalam basis data kami. Riwayat lengkapnya dimulai dari tahun 2008, jauh melampaui apa yang ditawarkan konsultasi publik. Menjalankan ulang ingestion tidak membuat duplikat: data kami selalu terverifikasi dan konsisten.
+Sebuah direktori memberi tahu Anda bahwa perusahaan itu ada: namanya, alamatnya, nomor
+pendaftarannya. BODACC memberi tahu Anda **apa yang baru saja dilakukan perusahaan itu**, dan kapan.
+Di situlah letak seluruh perbedaannya:
 
-**2. Pengayaan cerdas.** Setiap pengumuman adalah teks hukum — mesin ekstraksi hibrida kami (aturan bisnis + AI) mengubahnya menjadi data terstruktur: nomor SIREN, nama badan usaha, alamat, kode NAF, direksi, mandat, jumlah, prosedur. Apa yang membutuhkan waktu berjam-jam untuk dibaca manusia menjadi kolom JSON yang dapat ditelusuri.
+| | Direktori perusahaan | BODACC.io |
+|---|---|---|
+| Yang Anda dapatkan | catatan identitas yang beku | peristiwa bertanggal |
+| Kesegaran | diperbarui setiap kuartal | diterbitkan pagi itu juga |
+| Insolvensi | penanda status | prosedurnya, sifatnya, dan tanggalnya |
+| Laporan keuangan | status "sudah disampaikan" | setiap penyampaian, dengan tanggal penutupannya |
+| Pengurus | sebuah nama | setiap mandat, dengan perusahaan terkait |
+| Sumber | salinan | pengumuman resmi dan PDF-nya |
 
-**3. Grafik relasional.** Pengumuman prosedur kolektif hanya berguna jika kita tahu perusahaan mana yang terkait, dan siapa direksinya. Mesin resolusi kami menghubungkan setiap pengumuman ke perusahaannya (SIREN), setiap orang ke mandatnya, setiap pasar publik ke pemenangnya. Anda menelusuri kehidupan ekonomi Prancis seperti basis data — bukan seperti tumpukan PDF.
+## 3. Pengumuman resmi BODACC secara terperinci
 
-**4. Distribusi real-time.** Segera setelah pengumuman diterbitkan, pengumuman tersebut tersedia melalui API, beserta relasi dan pengayaannya. Tidak ada berkas untuk diunduh, tidak ada ETL untuk dipelihara: satu permintaan HTTP sudah cukup.
+Setiap pengumuman memiliki 23 bidang. Berikut satu pengumuman nyata, persis seperti yang dikembalikan
+oleh API BODACC:
 
----
-
-## ⚖️ Perbandingan: posisi kami
-
-| | **Situs resmi (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **API** | ❌ Tidak ada | API khusus penawaran tingkat atas | ✅ **API REST terdokumentasi, tanpa kunci untuk baca** |
-| **Data terstruktur** | ❌ Konsultasi PDF | ✅ Profil yang diperkaya | ✅ **Pengumuman + grafik perusahaan/orang/pasar** |
-| **Real-time** | Publikasi kertas dapat dilihat daring | Pembaruan harian | ✅ **Setiap pagi sebelum pukul 09:00** |
-| **Harga** | Gratis, tetapi terbatas | Mulai **29,90 €/bln** untuk akses dasar | **Paket terjangkau, mulai gratis untuk eksplorasi** |
-| **Publik** | Masyarakat umum | Profesional (kepatuhan, pemantauan) | **Pengembang, fintech, legaltech, tim data** |
-
-**Kelebihan situs resmi**: gratis, andal, resmi. **Kekurangan**: tidak ada API, riwayat terbatas hingga 2008, tidak ada data terstruktur — Anda tetap berada di PDF.
-
-**Kelebihan Pappers**: antarmuka yang sangat rapi, agregasi INSEE + INPI + BODACC, pemantauan terintegrasi. **Kekurangan**: harga (29,90 €/bln untuk akses dasar, API dan riwayat lengkap lebih mahal), solusi yang berorientasi pada konsultasi daripada data yang dapat dimanfaatkan.
-
-**Posisi kami**: **seluruh riwayat sejak 2008, lebih cepat daripada situs resmi — dan dengan tarif lebih rendah daripada Pappers.** Dirancang untuk mereka yang ingin menghubungkan data ke alat mereka sendiri, bukan untuk mereka yang menginginkan layar tambahan.
-
-> 💶 Lihat paket: [bodacc.io/id/tarifs](https://bodacc.io/id/tarifs) — Gratis · Pro · Enterprise · LIFE
-
----
-
-## 🚀 Coba dalam 30 detik
-
-Semua endpoint baca dapat diakses **tanpa kunci**:
-
-```bash
-# Cari perusahaan berdasarkan nama
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# Detail pengumuman (dengan relasinya: perusahaan + orang)
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# Profil perusahaan (pengumuman terbaru + direksi + pasar publik)
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# Statistik global
-curl "https://bodacc.io/api/bodacc/stats"
-
-# Volume harian (30 hari terakhir)
-curl "https://bodacc.io/api/bodacc/stats/daily30"
+```json
+{
+  "id": "C202601972306",
+  "dateparution": "2026-10-14",
+  "familleavis": "dpc",
+  "familleavis_lib": "Dépôts des comptes",
+  "typeavis_lib": "Avis initial",
+  "commercant": "HOLDING BIIZ",
+  "ville": "Saint-Louis",
+  "cp": "97450",
+  "departement_nom_officiel": "La Réunion",
+  "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
+  "registre": ["988208435", "988 208 435"],
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+}
 ```
 
----
+Setiap pengumuman menautkan ke **halaman lengkapnya di bodacc.io**, tempat sumber resmi dan PDF-nya
+berada hanya satu klik jauhnya.
 
-## 📡 Endpoint
+Tujuh famili BODACC, dengan istilah yang akan Anda lihat di dalam data:
 
-### Pengumuman
-
-| Metode | Rute | Deskripsi |
+| Famili BODACC | Di dalam data | Artinya |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Pencarian: `q` (nama/SIREN), `famille`, `departement`, tanggal, paginasi `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Detail lengkap: `raw_data` + pengayaan + `relations` (perusahaan dan orang terkait) |
-| `GET` | `/bodacc/enrichi/{id}` | Versi terstruktur (siren, dénomination, NAF, direksi...) |
-| `POST` | `/bodacc/enrichi/batch` | Pengayaan massal |
+| Pendirian | `creation` | sebuah perusahaan baru didaftarkan |
+| Perubahan | `modification` | anggaran dasar, manajemen, alamat, perubahan modal |
+| Penyampaian laporan keuangan | `dpc` | laporan keuangan tahunan disampaikan di kepaniteraan pengadilan |
+| Prosedur kepailitan | `collective` | penundaan kewajiban pembayaran utang, likuidasi, pemulihan |
+| Penjualan dan pengalihan | `vente` | sebuah usaha dijual atau dialihkan |
+| Penghapusan | `radiation` | perusahaan dihapus dari daftar |
+| Pendaftaran | `immatriculation` | pendaftaran di daftar niaga |
 
-### Perusahaan & orang
+## 4. Catatan perusahaan BODACC
 
-| Metode | Rute | Deskripsi |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | Pencarian perusahaan (nama, kota, NAF, kode pos) |
-| `GET` | `/bodacc/entreprises/{siren}` | Profil INSEE + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profil berdasarkan slug SEO |
-| `GET` | `/bodacc/personnes/{id}` | Profil orang: mandat (peran) + perusahaan terkait |
+Setiap pengumuman menunjuk ke perusahaan di baliknya. API BODACC menampilkan perusahaan-perusahaan itu
+beserta identitas, aktivitas, dan riwayat akuntansinya:
 
-### Statistik
+```json
+{
+  "siren": "552081317",
+  "nom_complet": "EIFFAGE ENERGIE SYSTEMES - INDUSTRIE TERTIAIRE BOURGOGNE FRANCHE-COMTE",
+  "adresse_complete": "245 Rue Charles de Freycinet 21600 Longvic",
+  "naf_code": "43.21A",
+  "nature_juridique": "5710",
+  "date_creation": "2025-04-24",
+  "etat_administratif": "A",
+  "depot_comptes": "oui",
+  "dernier_depot": "2026-07-31",
+  "derniere_cloture": "2025-12-31",
+  "dernier_ecart_jours": 212
+}
+```
 
-| Metode | Rute | Deskripsi |
-|---|---|---|
-| `GET` | `/bodacc/stats` | Total, per keluarga, per tanggal |
-| `GET` | `/bodacc/stats/daily` | Volume hari ini (per terbitan, departemen, keluarga) |
-| `GET` | `/bodacc/stats/daily30` | Seri 30 hari terakhir |
-| `GET` | `/bodacc/stats/counts` | Penghitung: pengumuman, perusahaan, orang |
-| `GET` | `/bodacc/graph/categories` | Distribusi per kategori |
+Di luar identitas: kode aktivitas (NAF), bentuk hukum, status administratif, **tanggal penyampaian
+laporan keuangan terakhir, tanggal penutupan terakhir, dan jumlah hari sejak saat itu**, serta label
+yang mungkin disandang sebuah perusahaan: ekonomi sosial, bio, RGE, Qualiopi.
 
-### Alert & integrasi
+## 5. Direksi dan pengurus BODACC
 
-| Metode | Rute | Deskripsi |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | Alert berdasarkan SIREN (pemantauan perusahaan) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Memicu ingestion untuk tanggal tertentu |
-| `POST` | `/bodacc/import` | Impor massal (backfill) |
+Di balik setiap perusahaan berdiri orang-orang yang menjalankannya. API BODACC mendata **4,9 juta
+direktur, pengurus, likuidator, dan auditor**, masing-masing dengan:
 
-### Referensi NAF (INSEE)
+- mandatnya, perusahaan demi perusahaan, beserta periode yang bersangkutan
+- perusahaan lain mereka, sehingga Anda dapat mengikuti seseorang sepanjang kariernya
+- pengumuman yang menyangkut mereka
 
-| Metode | Rute | Deskripsi |
-|---|---|---|
-| `GET` | `/bodacc/naf` | Referensi NAF rev. 2 lengkap (732 subkelas, 615 kelas) — label resmi INSEE |
-| `GET` | `/bodacc/naf?q=commerce` | Pencarian NAF berdasarkan label |
-| `GET` | `/bodacc/naf?code=46.72Z` | Detail kode NAF |
+Itulah yang mengubah sebuah daftar resmi menjadi graf: sebuah perusahaan, para pengurusnya, dan
+perusahaan-perusahaan yang juga dijalankan para pengurus itu. Satu endpoint menampilkannya secara
+langsung.
+
+## 6. API BODACC
+
+REST, JSON, tanpa kunci pada endpoint terbuka, hingga 500 rekaman per panggilan, dengan paginasi
+melalui `offset`.
+
+```bash
+# Pengumuman BODACC terbaru (selalu yang paling baru lebih dahulu)
+curl "https://bodacc.io/api/bodacc/annonces?limit=100"
+
+# Satu pengumuman, dengan perusahaannya, para pengurusnya, dan PDF-nya
+curl "https://bodacc.io/api/bodacc/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+
+# Sebuah perusahaan berdasarkan SIREN
+curl "https://bodacc.io/api/bodacc/entreprises/552081317"
+
+# Setiap pengumuman BODACC yang menyangkut perusahaan itu
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/annonces"
+
+# Graf perusahaan: para pengurus dan perusahaan mereka yang lain
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/graphe"
+
+# Pencarian berdasarkan nama, kota, departemen, kode aktivitas, atau rentang tanggal
+curl "https://bodacc.io/api/bodacc/entreprises?q=eiffage&departement=75"
+curl "https://bodacc.io/api/bodacc/annonces?famille=collective&date_debut=2026-10-01"
+```
+
+Referensi lengkap: [bodacc.io/id/dokumentasi](https://bodacc.io/id/dokumentasi) — endpoint demi
+endpoint, dengan antarmuka Swagger dan spesifikasi OpenAPI yang diterbitkan, dalam 20 bahasa.
+
+## 7. Kumpulan data dan ekspor BODACC
+
+Di luar API, setiap halaman bodacc.io adalah URL yang stabil dan dapat dirayapi: pengumuman resmi,
+perusahaan, pengurus, wilayah, kota, statistik — dan situs ini menerbitkan titik masuk yang dapat
+dibaca mesin:
+
+- [Sitemap](https://bodacc.io/sitemap.xml) — inventaris URL lengkap, per bahasa
+- [Katalog API](https://bodacc.io/.well-known/api-catalog) — dapat ditemukan oleh agen
+- [RSS](https://bodacc.io/rss.xml) — feed harian
+- [Daftar URL](URLLIST.md) — setiap titik masuk, satu daftar per bahasa
+
+## 8. Cakupan dan kesegaran data BODACC
+
+BODACC terbit pada hari kerja, bukan pada akhir pekan. BODACC.io mengumpulkan setiap terbitan dan
+menyediakannya **pagi itu juga**, biasanya dalam beberapa menit setelah dirilis. Setiap pengumuman
+mempertahankan tanggal penerbitannya, sehingga Anda selalu dapat mengetahui apa yang baru.
+
+## 9. BODACC digunakan untuk apa
+
+- **Kepatuhan dan KYC** — memeriksa status nyata mitra usaha sebelum menandatangani, bukan statusnya tiga bulan lalu
+- **Uji tuntas** — mengikuti penyampaian dokumen sebuah perusahaan, laporan keuangannya, dan riwayat insolvensinya
+- **Penilaian kredit dan risiko** — prosedur kepailitan dan penyampaian laporan keuangan adalah sinyal paling awal
+- **Intelijen penjualan** — pendirian baru adalah calon klien baru, pada hari terjadinya
+- **Jurnalisme** — fakta di tingkat perusahaan, bersumber dan bertanggal
+- **Riset** — 51 juta penyampaian, dari daftar tertua hingga pagi ini
+- **Hukum dan akuntansi** — menemukan perusahaan yang Anda tangani, dan apa yang mereka sampaikan
+
+## 10. Pertanyaan yang sering diajukan tentang BODACC
+
+**Apakah BODACC.io adalah BODACC resmi?**
+
+Tidak. BODACC.io adalah layanan independen yang membuat data BODACC publik dapat digunakan dan
+dikueri. Layanan ini tidak berafiliasi dengan DILA atau badan publik mana pun. Setiap pengumuman
+menautkan kembali ke sumber resminya.
+
+**Apakah API BODACC gratis?**
+
+Endpoint terbuka gratis dan tidak memerlukan kunci. Tersedia paket berbayar untuk penggunaan berat —
+[lihat harga](https://bodacc.io/id/tarifs).
+
+**Apa perbedaan antara BODACC dan direktori perusahaan?**
+
+Direktori memberi Anda identitas sebuah perusahaan. BODACC memberi Anda aktivitasnya: apa yang
+disampaikannya, kapan, dan apa yang diterbitkan pengadilan tentangnya. Keduanya saling melengkapi —
+BODACC.io juga memuat identitas.
+
+**Seberapa segar datanya?**
+
+Pengumuman muncul pada pagi hari saat diterbitkan. Catatan perusahaan diperbarui seiring datangnya
+pengumuman.
+
+**Berapa banyak rekaman per panggilan?**
+
+Hingga 500, dengan `offset` untuk paginasi. Tidak ada batas jumlah panggilan pada endpoint terbuka.
+
+**Bisakah saya menggunakannya dalam produksi?**
+
+Ya. API ini terdokumentasi, berversi, dan disajikan dari Cloudflare. Atribusi ke
+[bodacc.io](https://bodacc.io) sangat dihargai.
+
+**Bahasa apa saja yang didukung?**
+
+Situs dan dokumentasinya tersedia dalam 20 bahasa. API-nya sendiri netral bahasa: slug dan
+endpoint-nya sama untuk semua.
+
+## 11. Dokumentasi BODACC, per bahasa
+
+Setiap folder di bawah ini memuat dokumentasi BODACC yang lengkap dalam bahasanya sendiri: referensi
+API, daftar URL, dan rekap harian.
+
+| # | Bahasa | Dokumentasi | URL | Data harian |
+|---|---|---|---|---|
+| 1 | العربية | [docs/ar/](docs/ar/README.md) | [URLLIST](docs/ar/URLLIST.md) | [recaps](docs/ar/recaps/README.md) |
+| 2 | Deutsch | [docs/de/](docs/de/README.md) | [URLLIST](docs/de/URLLIST.md) | [recaps](docs/de/recaps/README.md) |
+| 3 | English | [docs/en/](docs/en/README.md) | [URLLIST](docs/en/URLLIST.md) | [recaps](docs/en/recaps/README.md) |
+| 4 | Español | [docs/es/](docs/es/README.md) | [URLLIST](docs/es/URLLIST.md) | [recaps](docs/es/recaps/README.md) |
+| 5 | فارسی | [docs/fa/](docs/fa/README.md) | [URLLIST](docs/fa/URLLIST.md) | [recaps](docs/fa/recaps/README.md) |
+| 6 | Français | [docs/fr/](docs/fr/README.md) | [URLLIST](docs/fr/URLLIST.md) | [recaps](docs/fr/recaps/README.md) |
+| 7 | עברית | [docs/he/](docs/he/README.md) | [URLLIST](docs/he/URLLIST.md) | [recaps](docs/he/recaps/README.md) |
+| 8 | हिन्दी | [docs/hi/](docs/hi/README.md) | [URLLIST](docs/hi/URLLIST.md) | [recaps](docs/hi/recaps/README.md) |
+| 9 | Bahasa Indonesia | [docs/id/](docs/id/README.md) | [URLLIST](docs/id/URLLIST.md) | [recaps](docs/id/recaps/README.md) |
+| 10 | Italiano | [docs/it/](docs/it/README.md) | [URLLIST](docs/it/URLLIST.md) | [recaps](docs/it/recaps/README.md) |
+| 11 | 日本語 | [docs/ja/](docs/ja/README.md) | [URLLIST](docs/ja/URLLIST.md) | [recaps](docs/ja/recaps/README.md) |
+| 12 | 한국어 | [docs/ko/](docs/ko/README.md) | [URLLIST](docs/ko/URLLIST.md) | [recaps](docs/ko/recaps/README.md) |
+| 13 | Nederlands | [docs/nl/](docs/nl/README.md) | [URLLIST](docs/nl/URLLIST.md) | [recaps](docs/nl/recaps/README.md) |
+| 14 | Polski | [docs/pl/](docs/pl/README.md) | [URLLIST](docs/pl/URLLIST.md) | [recaps](docs/pl/recaps/README.md) |
+| 15 | Português | [docs/pt/](docs/pt/README.md) | [URLLIST](docs/pt/URLLIST.md) | [recaps](docs/pt/recaps/README.md) |
+| 16 | Русский | [docs/ru/](docs/ru/README.md) | [URLLIST](docs/ru/URLLIST.md) | [recaps](docs/ru/recaps/README.md) |
+| 17 | Türkçe | [docs/tr/](docs/tr/README.md) | [URLLIST](docs/tr/URLLIST.md) | [recaps](docs/tr/recaps/README.md) |
+| 18 | Українська | [docs/uk/](docs/uk/README.md) | [URLLIST](docs/uk/URLLIST.md) | [recaps](docs/uk/recaps/README.md) |
+| 19 | Tiếng Việt | [docs/vi/](docs/vi/README.md) | [URLLIST](docs/vi/URLLIST.md) | [recaps](docs/vi/recaps/README.md) |
+| 20 | 中文 | [docs/zh/](docs/zh/README.md) | [URLLIST](docs/zh/URLLIST.md) | [recaps](docs/zh/recaps/README.md) |
+
+## 12. Tautan BODACC
+
+- [BODACC.io](https://bodacc.io) — situs langsung
+- [Pencarian perusahaan](https://bodacc.io/id/entreprises) · [Pengumuman resmi](https://bodacc.io/id/annonces) · [Direksi](https://bodacc.io/id/personnes)
+- [Dokumentasi API](https://bodacc.io/id/dokumentasi) · [Antarmuka Swagger](https://bodacc.io/api/bodacc/docs)
+- [Harga](https://bodacc.io/id/tarifs) · [Teknologi](https://bodacc.io/id/technologie)
+- [Daftar URL (indeks multibahasa)](URLLIST.md)
 
 ---
 
-## 📊 Data
-
-Lencana di bagian atas halaman adalah **penghitung real-time**: pengumuman BODACC, perusahaan SIRENE, dan orang yang diekstraksi — semuanya berubah seiring dengan konsolidasi riwayat dan pengayaan.
-
-Titik referensi yang stabil:
-
-- 📰 **Pengumuman BODACC**: riwayat lengkap sejak 2008, diperbarui setiap pagi sebelum pukul 09:00
-- 🏢 **Perusahaan (SIRENE)**: 29,8 J unit legal Prancis (registri INSEE)
-- 👤 **Orang yang diekstraksi**: direksi, likuidator, auditor... dalam konsolidasi berkelanjutan
-- 📦 **Pasar publik (BOAMP)**: 1,69 J kontrak publik 2015 → 2026
-
----
-
-## 🛠 Teknologi
-
-| Lapisan | Teknologi |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **Data** | Indeksasi trigram, pencarian teks lengkap, JSONB |
-| **Ingestion** | Pipeline otomatis, integrasi harian, idempoten |
-| **Pengayaan** | Ekstraksi hibrida (aturan bisnis + AI) |
-| **Frontend** | Next.js · i18n 20 bahasa |
-| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **Agen AI** | Server MCP · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 Data terbuka
-
-Data sumber bersifat publik dan gratis:
-
-- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (pengumuman legal)
-- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 J unit legal)
-- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (pasar publik)
-
-**BODACC-api menambahkan struktur dan grafik pada data mentah ini**: analisis teks hukum, resolusi identitas (orang), tautan perusahaan ↔ pengumuman ↔ kontrak.
-
----
-
-## 🌐 Jelajahi situs
-
-[Beranda](https://bodacc.io/id) · [Pengumuman](https://bodacc.io/id/annonces) · [Perusahaan](https://bodacc.io/id/entreprises) · [Orang](https://bodacc.io/id/personnes) · [Harga](https://bodacc.io/id/tarifs) · [Teknologi](https://bodacc.io/id/technologie)
-
----
-
-## 📄 Lisensi & kontak
-
-- Lisensi: MIT (kode) — data tetap tunduk pada lisensi produsennya (DILA, INSEE)
-- Situs: [bodacc.io](https://bodacc.io)
-- Isu & PR: dipersilakan di repositori ini
-
----
-
-*BODACC (Buletin Resmi Pengumuman Sipil dan Komersial) adalah publikasi resmi pengumuman legal perusahaan Prancis. Proyek ini tidak berafiliasi dengan DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) adalah publikasi resmi pengumuman
+hukum perusahaan Prancis. BODACC.io adalah layanan independen dan tidak berafiliasi dengan DILA.*

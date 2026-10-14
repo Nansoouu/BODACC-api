@@ -1,215 +1,251 @@
 <div align="center">
 
-<pre>
-             ____   ____  _____          _____ _____               _
-            |  _ \ / __ \|  __ \   /\   / ____/ ____|             (_)
-            | |_) | |  | | |  | | /  \ | |   | |        __ _ _ __  _
-            |  _ <| |  | | |  | |/ /\ \| |   | |       / _` | '_ \| |
-            | |_) | |__| | |__| / ____ \ |___| |____  | (_| | |_) | |
-            |____/ \____/|_____/_/    \_\_____\_____|  \__,_| .__/|_|
-                                                             | |
-                                                             |_|
-</pre>
-</div>
+# BODACC.io : 面向法国公告与企业数据的 BODACC API
 
-# 🌐 [bodacc.io](https://bodacc.io)
+**法国企业的每一份公告，实时呈现。** 设立、变更、账目提交、破产程序、出售、注销：每一份 BODACC
+公告，都与所属企业、其管理人员及其官方来源相关联。免费开放，支持 20 种语言。
 
-🌍 [Français](../fr/README.md) · [English](../en/README.md) · [Español](../es/README.md) · [Deutsch](../de/README.md) · [Italiano](../it/README.md) · [Português](../pt/README.md) · [Nederlands](../nl/README.md) · [Polski](../pl/README.md) · [Русский](../ru/README.md) · [Türkçe](../tr/README.md) · [Українська](../uk/README.md) · [Bahasa Indonesia](../id/README.md) · [Tiếng Việt](../vi/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md) · [中文](../zh/README.md) · [العربية](../ar/README.md) · [עברית](../he/README.md) · [हिन्दी](../hi/README.md) · [فارسی](../fa/README.md)
-> 📰 [完整总结](recaps/README.md) · 🏠 [BODACC.io 的幕后](coulisses/COULISSES.md)
-
-<div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=公告&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=企业&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=人物&color=orange)
-![Site bodacc.io](https://img.shields.io/badge/bodacc.io-Explorer-important?logo=internetexplorer&logoColor=white&style=for-the-badge)
+[**bodacc.io**](https://bodacc.io) · [API 文档](https://bodacc.io/zh/wendang) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 </div>
 
-**将法国法律公告转化为结构化、关联且可操作数据的API——实时呈现。**
+## 1. BODACC 实时数据
 
-BODACC（民事和商业公告官方公报）是追踪法国企业法律生命周期的官方出版物：创建、变更、注销、集体诉讼、出售、账目备案。这些文本是公开的，但仅停留在原始文件状态：它们既非结构化，也互不关联，更难以轻松查询。
+| BODACC 数据集 | 记录数 | 实时 |
+|---|---|---|
+| BODACC 公告 | 51 043 403 | ![公告](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=公告&color=blue) |
+| 法国企业 | 30 032 566 | ![企业](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=企业&color=green) |
+| 管理人员与董事 | 4 935 692 | ![人物](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=人物&color=orange) |
+| 公共合同（BOAMP） | 1 716 163 | ![合同](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=合同&color=purple) |
 
-**BODACC-api 让它们变得可操作。** 每则公告都会被自动分析并转化为结构化数据（SIREN、公司名称、地址、NAF、高管、金额……），然后与其对应的企业及其中出现的人员建立关联。最终成果：一个完整的法国经济生活图谱，通过一次 HTTP 请求即可查询。
+这些数字不是复制粘贴来的：它们**由 BODACC API 本身实时提供**，位于
+[`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted)。
+请亲自核对，明天再核对一次。
 
-> 🌐 网站：[bodacc.io](https://bodacc.io) · 📖 Swagger：[https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [价格](https://bodacc.io/zh/tarifs)
+**今天**（2026 年 10 月 14 日）：**5 920 条公告** — 最常见的类别：账目提交（2 306）。
 
----
-
-## ✨ 为什么选择 BODACC-api？
-
-| | |
+| BODACC 类别 | 今日公告 |
 |---|---|
-| 🗂 **全部历史数据，自 2008 年起** | 数据库中有数百万条公告，覆盖完整——而非滑动窗口 |
-| ⚡ **实时** | 当天的公告每天早晨在办公时间开始前即可获取 |
-| 🕸 **一个图谱，而非文件** | 公告 → 企业 (SIREN) → 高管 → 职务 → 公共市场：一切皆关联，一次请求即可查询 |
-| ✨ **从原始文本到结构化数据** | SIREN、NAF、地址、高管、程序……从每份法律文本中自动提取 |
-| 🌍 **20 种语言** | 界面和内容均已翻译——您的团队和客户使用他们的语言 |
-| 🤖 **为智能体就绪** | 在 isitagentready 审计中获得 100/100 分（DNSSEC、DNS-AID、auth.md、WebMCP、llms.txt） |
-| 🚪 **测试零摩擦** | 所有读取端点无需密钥即可访问——您可以在付费前进行评估 |
+| 账目提交 | 2 306 |
+| 设立 | 1 415 |
+| 变更 | 1 193 |
+| 注销 | 500 |
+| 破产程序 | 323 |
+| 商业登记 | 118 |
+| 出售与转让 | 65 |
 
----
+## 2. BODACC API 能为您提供什么
 
-## 🏭 我们的增值：处理管道
+BODACC（Bulletin Officiel des Annonces Civiles et Commerciales）是记录法国企业活动的官方公报。
+每一次设立、每一次账目提交、每一次破产、每一次出售，都依法在此刊登。BODACC.io 把这份公报变成
+可以查询的数据库。
 
-真正重要的不是原始数据（它是公开的），而是我们对数据的处理方式——每天自动进行：
+**大多数企业数据库给您的是一张快照。BODACC API 给您的是动态。**
 
-**1. 可靠且完整的摄取。** 每天上午 09:00 前，DILA 发布的新公告都会集成到我们的数据库中。完整历史可追溯至 2008 年，远超公开查询所能提供的范围。重新执行摄取不会产生任何重复数据：我们的数据始终保持验证和一致状态。
+企业名录告诉您一家企业存在：名称、地址、注册号。BODACC 告诉您**这家企业刚刚做了什么**，以及
+什么时候做的。区别就在这里：
 
-**2. 智能增强。** 每则公告都是一份法律文本——我们的混合提取引擎（业务规则 + AI）将其转化为结构化数据：SIREN 编号、公司名称、地址、NAF 代码、高管、职务、金额、程序。需要数小时人工阅读的内容变成了可查询的 JSON 字段。
+| | 企业名录 | BODACC.io |
+|---|---|---|
+| 您得到什么 | 一份固化的身份记录 | 带日期的事件 |
+| 时效性 | 每季度更新 | 当日早晨发布 |
+| 破产 | 一个状态标记 | 程序本身、其性质与日期 |
+| 账目 | 一个“已提交”的是否值 | 每次提交，附结账日期 |
+| 管理人员 | 一个名字 | 每一项任期，及其所属公司 |
+| 来源 | 一份副本 | 官方公告及其 PDF |
 
-**3. 关系图谱。** 一则集体诉讼公告只有在知道它关联到哪家企业、其高管是谁时才有价值。我们的解析引擎将每则公告与其企业 (SIREN)、每个人与其职务、每个公共市场与其中标者关联起来。您可以像查询数据库一样查询法国经济生活——而不是一堆 PDF。
+## 3. BODACC 公告详解
 
-**4. 实时分发。** 公告一经发布，即可通过 API 获取，并附带其关系和增强数据。无需下载文件，无需维护 ETL：一次 HTTP 请求即可。
+每条公告包含 23 个字段。以下是一条真实公告，与 BODACC API 返回的完全一致：
 
----
-
-## ⚖️ 对比：我们的定位
-
-| | **官方网站 (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **API** | ❌ 无 | API 仅限高级套餐 | ✅ **文档完善的 REST API，读取无需密钥** |
-| **结构化数据** | ❌ PDF 查询 | ✅ 增强的企业档案 | ✅ **公告 + 企业/人员/市场图谱** |
-| **实时性** | 纸质出版物可在线查询 | 每日更新 | ✅ **每天上午 09:00 前** |
-| **价格** | 免费，但有局限 | 基础访问 **29.90 欧元/月起** | **价格实惠的套餐，从免费探索开始** |
-| **受众** | 大众 | 专业人士（合规、监控） | **开发者、金融科技、法律科技、数据团队** |
-
-**官方网站的优势**：免费、可靠、官方。**劣势**：无 API，历史数据仅限于 2008 年，无任何结构化数据——您只能停留在 PDF 中。
-
-**Pappers 的优势**：界面非常精美，聚合了 INSEE + INPI + BODACC 数据，内置监控功能。**劣势**：价格（基础访问 29.90 欧元/月，API 和完整历史数据更贵），解决方案偏向查询而非可操作数据。
-
-**我们的定位**：**自 2008 年起的全部历史数据，比官方网站更快——且价格低于 Pappers。** 专为希望将数据集成到自有工具中的人设计，而非为那些只想要多一个屏幕的人。
-
-> 💶 查看套餐：[bodacc.io/zh/tarifs](https://bodacc.io/zh/tarifs) — 免费 · 专业版 · 企业版 · LIFE
-
----
-
-## 🚀 30 秒快速体验
-
-所有读取端点均可**无需密钥**访问：
-
-```bash
-# 按名称搜索企业
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# 公告详情（含其关系：企业 + 人员）
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# 企业档案（近期公告 + 高管 + 公共市场）
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# 全局统计
-curl "https://bodacc.io/api/bodacc/stats"
-
-# 每日数量（最近 30 天）
-curl "https://bodacc.io/api/bodacc/stats/daily30"
+```json
+{
+  "id": "C202601972306",
+  "dateparution": "2026-10-14",
+  "familleavis": "dpc",
+  "familleavis_lib": "Dépôts des comptes",
+  "typeavis_lib": "Avis initial",
+  "commercant": "HOLDING BIIZ",
+  "ville": "Saint-Louis",
+  "cp": "97450",
+  "departement_nom_officiel": "La Réunion",
+  "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
+  "registre": ["988208435", "988 208 435"],
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+}
 ```
 
----
+每条公告都链接到**它在 bodacc.io 上的完整页面**，官方来源和 PDF 从此一键可达。
 
-## 📡 端点
+BODACC 的七个类别，以及您在数据中会看到的术语：
 
-### 公告
-
-| 方法 | 路由 | 描述 |
+| BODACC 类别 | 数据中的写法 | 含义 |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | 搜索：`q`（名称/SIREN）、`famille`、`departement`、日期、分页 `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | 完整详情：`raw_data` + 增强数据 + `relations`（关联的企业和人员） |
-| `GET` | `/bodacc/enrichi/{id}` | 结构化版本（siren、公司名称、NAF、高管……） |
-| `POST` | `/bodacc/enrichi/batch` | 批量增强 |
+| 设立 | `creation` | 一家新企业完成登记 |
+| 变更 | `modification` | 章程、管理层、地址、资本变更 |
+| 账目提交 | `dpc` | 年度账目提交至法院书记处 |
+| 破产程序 | `collective` | 重整、清算、恢复 |
+| 出售与转让 | `vente` | 一项业务被出售或转让 |
+| 注销 | `radiation` | 企业从登记簿中被注销 |
+| 商业登记 | `immatriculation` | 在商业登记簿上登记 |
 
-### 企业与人员
+## 4. BODACC 企业记录
 
-| 方法 | 路由 | 描述 |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | 企业搜索（名称、城市、NAF、邮政编码） |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE 档案 + `annonces_recentes`、`dirigeants`、`marches_publics`、`stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | 按 SEO slug 查询档案 |
-| `GET` | `/bodacc/personnes/{id}` | 人员档案：职务（角色）+ 关联企业 |
+每条公告都指向其背后的企业。BODACC API 公开这些企业的身份、经营活动与会计记录：
 
-### 统计
+```json
+{
+  "siren": "552081317",
+  "nom_complet": "EIFFAGE ENERGIE SYSTEMES - INDUSTRIE TERTIAIRE BOURGOGNE FRANCHE-COMTE",
+  "adresse_complete": "245 Rue Charles de Freycinet 21600 Longvic",
+  "naf_code": "43.21A",
+  "nature_juridique": "5710",
+  "date_creation": "2025-04-24",
+  "etat_administratif": "A",
+  "depot_comptes": "oui",
+  "dernier_depot": "2026-07-31",
+  "derniere_cloture": "2025-12-31",
+  "dernier_ecart_jours": 212
+}
+```
 
-| 方法 | 路由 | 描述 |
-|---|---|---|
-| `GET` | `/bodacc/stats` | 总计、按类别、按日期 |
-| `GET` | `/bodacc/stats/daily` | 当日数量（按发布、省份、类别） |
-| `GET` | `/bodacc/stats/daily30` | 最近 30 天序列 |
-| `GET` | `/bodacc/stats/counts` | 计数器：公告、企业、人员 |
-| `GET` | `/bodacc/graph/categories` | 按类别分布 |
+除身份之外：活动代码（NAF）、法律形式、行政状态、**最近一次账目提交的日期、最近一次结账的日期
+以及距今天数**，还有企业可能携带的标签：社会经济、有机、RGE、Qualiopi。
 
-### 提醒与集成
+## 5. BODACC 管理人员与董事
 
-| 方法 | 路由 | 描述 |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | 按 SIREN 设置提醒（企业跟踪） |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | 为指定日期触发摄取 |
-| `POST` | `/bodacc/import` | 批量导入（回填） |
+每一家企业背后，都是经营它的人。BODACC API 收录 **490 万名董事、管理人员、清算人和审计师**，
+每人都包含：
 
-### NAF 参考表 (INSEE)
+- 其任期，按公司逐一列出，并附相关期间
+- 其其他公司，便于追踪一个人的整个职业生涯
+- 与其相关的公告
 
-| 方法 | 路由 | 描述 |
-|---|---|---|
-| `GET` | `/bodacc/naf` | 完整的 NAF 修订版 2 参考表（732 个子类、615 个类别）——INSEE 官方标签 |
-| `GET` | `/bodacc/naf?q=commerce` | 按标签搜索 NAF |
-| `GET` | `/bodacc/naf?code=46.72Z` | 单个 NAF 代码的详情 |
+这正是把登记簿变成关系图的关键：一家企业、它的管理人员，以及这些管理人员同时经营的其他企业。
+一个端点即可直接获取。
+
+## 6. BODACC API
+
+REST、JSON，开放端点无需密钥，每次调用最多 500 条记录，通过 `offset` 分页。
+
+```bash
+# 最新的 BODACC 公告（始终最新在前）
+curl "https://bodacc.io/api/bodacc/annonces?limit=100"
+
+# 单条公告，含其企业、管理人员与 PDF
+curl "https://bodacc.io/api/bodacc/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+
+# 按 SIREN 查询企业
+curl "https://bodacc.io/api/bodacc/entreprises/552081317"
+
+# 与该企业相关的全部 BODACC 公告
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/annonces"
+
+# 企业关系图：管理人员及其其他公司
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/graphe"
+
+# 按名称、城市、省份、活动代码或日期范围搜索
+curl "https://bodacc.io/api/bodacc/entreprises?q=eiffage&departement=75"
+curl "https://bodacc.io/api/bodacc/annonces?famille=collective&date_debut=2026-10-01"
+```
+
+完整参考：[bodacc.io/zh/wendang](https://bodacc.io/zh/wendang) — 逐个端点，附 Swagger UI 与公开发布
+的 OpenAPI 规范，支持 20 种语言。
+
+## 7. BODACC 数据集与导出
+
+除 API 之外，bodacc.io 的每个页面都是稳定、可抓取的网址：公告、企业、管理人员、地区、城市、
+统计 — 网站还公开了机器可读的入口：
+
+- [站点地图](https://bodacc.io/sitemap.xml) — 按语言划分的完整网址清单
+- [API 目录](https://bodacc.io/.well-known/api-catalog) — 可被智能体发现
+- [RSS](https://bodacc.io/rss.xml) — 每日订阅源
+- [网址列表](URLLIST.md) — 所有入口，每种语言一份列表
+
+## 8. BODACC 覆盖范围与更新速度
+
+BODACC 在工作日出版，周末不出。BODACC.io 收集每一期，并在**当日早晨**提供，通常在发布后几分钟
+之内。每条公告都保留其发布日期，因此您始终知道哪些是新的。
+
+## 9. 人们如何使用 BODACC
+
+- **合规与 KYC** — 在签约前核查交易对手的真实状况，而不是它三个月前的状况
+- **尽职调查** — 追踪一家企业提交的文件、账目与破产历史
+- **信用与风险评分** — 破产程序与账目提交是最早的信号
+- **销售情报** — 一家新设立的企业，就是当天的潜在客户
+- **新闻报道** — 有来源、有日期的企业层面事实
+- **研究** — 5 100 万条刊登记录，从最早的登记簿到今天早晨
+- **法律与会计** — 找到您所代理的企业，以及它们提交了什么
+
+## 10. BODACC 常见问题
+
+**BODACC.io 是官方的 BODACC 吗？**
+
+不是。BODACC.io 是一项独立服务，让公开的 BODACC 数据可用、可查询。它不隶属于 DILA 或任何公共
+机构。每条公告都链接回其官方来源。
+
+**BODACC API 免费吗？**
+
+开放端点免费，且无需密钥。高频使用有付费方案 — [查看价格](https://bodacc.io/zh/tarifs)。
+
+**BODACC 与企业名录有什么区别？**
+
+名录给您的是一家企业的身份。BODACC 给您的它的活动：它刊登了什么、什么时候刊登，以及法院公布
+了什么。两者相互补充 — BODACC.io 也包含身份信息。
+
+**数据有多新？**
+
+公告在其发布的当天早晨出现。企业记录随公告的到达而更新。
+
+**每次调用可以返回多少条记录？**
+
+最多 500 条，用 `offset` 分页。开放端点的调用次数没有上限。
+
+**我可以在生产环境中使用吗？**
+
+可以。API 有文档、有版本，并由 Cloudflare 提供服务。欢迎注明来源
+[bodacc.io](https://bodacc.io)。
+
+**支持哪些语言？**
+
+网站及其文档有 20 种语言。API 本身不区分语言：它的 slug 和端点对所有人都是相同的。
+
+## 11. 按语言划分的 BODACC 文档
+
+以下每个文件夹都包含该语言版本的完整 BODACC 文档：API 参考、网址列表和每日摘要。
+
+| # | 语言 | 文档 | 网址 | 每日数据 |
+|---|---|---|---|---|
+| 1 | العربية | [docs/ar/](docs/ar/README.md) | [URLLIST](docs/ar/URLLIST.md) | [recaps](docs/ar/recaps/README.md) |
+| 2 | Deutsch | [docs/de/](docs/de/README.md) | [URLLIST](docs/de/URLLIST.md) | [recaps](docs/de/recaps/README.md) |
+| 3 | English | [docs/en/](docs/en/README.md) | [URLLIST](docs/en/URLLIST.md) | [recaps](docs/en/recaps/README.md) |
+| 4 | Español | [docs/es/](docs/es/README.md) | [URLLIST](docs/es/URLLIST.md) | [recaps](docs/es/recaps/README.md) |
+| 5 | فارسی | [docs/fa/](docs/fa/README.md) | [URLLIST](docs/fa/URLLIST.md) | [recaps](docs/fa/recaps/README.md) |
+| 6 | Français | [docs/fr/](docs/fr/README.md) | [URLLIST](docs/fr/URLLIST.md) | [recaps](docs/fr/recaps/README.md) |
+| 7 | עברית | [docs/he/](docs/he/README.md) | [URLLIST](docs/he/URLLIST.md) | [recaps](docs/he/recaps/README.md) |
+| 8 | हिन्दी | [docs/hi/](docs/hi/README.md) | [URLLIST](docs/hi/URLLIST.md) | [recaps](docs/hi/recaps/README.md) |
+| 9 | Bahasa Indonesia | [docs/id/](docs/id/README.md) | [URLLIST](docs/id/URLLIST.md) | [recaps](docs/id/recaps/README.md) |
+| 10 | Italiano | [docs/it/](docs/it/README.md) | [URLLIST](docs/it/URLLIST.md) | [recaps](docs/it/recaps/README.md) |
+| 11 | 日本語 | [docs/ja/](docs/ja/README.md) | [URLLIST](docs/ja/URLLIST.md) | [recaps](docs/ja/recaps/README.md) |
+| 12 | 한국어 | [docs/ko/](docs/ko/README.md) | [URLLIST](docs/ko/URLLIST.md) | [recaps](docs/ko/recaps/README.md) |
+| 13 | Nederlands | [docs/nl/](docs/nl/README.md) | [URLLIST](docs/nl/URLLIST.md) | [recaps](docs/nl/recaps/README.md) |
+| 14 | Polski | [docs/pl/](docs/pl/README.md) | [URLLIST](docs/pl/URLLIST.md) | [recaps](docs/pl/recaps/README.md) |
+| 15 | Português | [docs/pt/](docs/pt/README.md) | [URLLIST](docs/pt/URLLIST.md) | [recaps](docs/pt/recaps/README.md) |
+| 16 | Русский | [docs/ru/](docs/ru/README.md) | [URLLIST](docs/ru/URLLIST.md) | [recaps](docs/ru/recaps/README.md) |
+| 17 | Türkçe | [docs/tr/](docs/tr/README.md) | [URLLIST](docs/tr/URLLIST.md) | [recaps](docs/tr/recaps/README.md) |
+| 18 | Українська | [docs/uk/](docs/uk/README.md) | [URLLIST](docs/uk/URLLIST.md) | [recaps](docs/uk/recaps/README.md) |
+| 19 | Tiếng Việt | [docs/vi/](docs/vi/README.md) | [URLLIST](docs/vi/URLLIST.md) | [recaps](docs/vi/recaps/README.md) |
+| 20 | 中文 | [docs/zh/](docs/zh/README.md) | [URLLIST](docs/zh/URLLIST.md) | [recaps](docs/zh/recaps/README.md) |
+
+## 12. BODACC 链接
+
+- [BODACC.io](https://bodacc.io) — 实时网站
+- [企业搜索](https://bodacc.io/zh/entreprises) · [公告](https://bodacc.io/zh/annonces) · [管理人员](https://bodacc.io/zh/personnes)
+- [API 文档](https://bodacc.io/zh/wendang) · [Swagger UI](https://bodacc.io/api/bodacc/docs)
+- [价格](https://bodacc.io/zh/tarifs) · [技术](https://bodacc.io/zh/technologie)
+- [网址列表（多语言索引）](URLLIST.md)
 
 ---
 
-## 📊 数据
-
-页面顶部的徽章是**实时计数器**：BODACC 公告、SIRENE 企业和提取的人员——它们会随着历史数据的整合和增强而不断变化。
-
-稳定参考：
-
-- 📰 **BODACC 公告**：自 2008 年起的完整历史，每天上午 09:00 前更新
-- 🏢 **企业 (SIRENE)**：2980 万个法国法人单位（INSEE 注册）
-- 👤 **提取的人员**：高管、清算人、审计师……持续整合中
-- 📦 **公共市场 (BOAMP)**：2015 → 2026 年 169 万份公共合同
-
----
-
-## 🛠 技术
-
-| 层级 | 技术 |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **数据** | Trigram 索引、全文搜索、JSONB |
-| **摄取** | 自动化管道、每日集成、幂等 |
-| **增强** | 混合提取（业务规则 + AI） |
-| **前端** | Next.js · i18n 20 种语言 |
-| **基础设施** | Docker · Cloudflare（CDN、缓存、DNSSEC） |
-| **AI 智能体** | MCP 服务器 · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 开放数据
-
-源数据是公开且免费的：
-
-- **BODACC**：[data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/)（法律公告）
-- **SIRENE**：[INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/)（2980 万个法人单位）
-- **BOAMP**：[Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com)（公共市场）
-
-**BODACC-api 在这些原始数据之上增加了结构和图谱**：法律文本分析、身份解析（人员）、企业 ↔ 公告 ↔ 合同之间的关联。
-
----
-
-## 🌐 浏览网站
-
-[首页](https://bodacc.io/zh) · [公告](https://bodacc.io/zh/annonces) · [企业](https://bodacc.io/zh/entreprises) · [人员](https://bodacc.io/zh/personnes) · [价格](https://bodacc.io/zh/tarifs) · [技术](https://bodacc.io/zh/technologie)
-
----
-
-## 📄 许可证与联系
-
-- 许可证：MIT（代码）——数据仍受其生产者（DILA、INSEE）的许可证约束
-- 网站：[bodacc.io](https://bodacc.io)
-- 欢迎在此仓库提交 Issue 和 PR
-
----
-
-*BODACC（民事和商业公告官方公报）是法国企业法律公告的官方出版物。本项目与 DILA 无关联。*
+*BODACC（Bulletin Officiel des Annonces Civiles et Commerciales）是法国企业公告的官方出版物。
+BODACC.io 是一项独立服务，不隶属于 DILA。*

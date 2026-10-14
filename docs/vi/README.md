@@ -1,215 +1,265 @@
 <div align="center">
 
-<pre>
-             ____   ____  _____          _____ _____               _
-            |  _ \ / __ \|  __ \   /\   / ____/ ____|             (_)
-            | |_) | |  | | |  | | /  \ | |   | |        __ _ _ __  _
-            |  _ <| |  | | |  | |/ /\ \| |   | |       / _` | '_ \| |
-            | |_) | |__| | |__| / ____ \ |___| |____  | (_| | |_) | |
-            |____/ \____/|_____/_/    \_\_____\_____|  \__,_| .__/|_|
-                                                             | |
-                                                             |_|
-</pre>
-</div>
+# BODACC.io : API BODACC cho các thông báo pháp lý và dữ liệu doanh nghiệp Pháp
 
-# 🌐 [bodacc.io](https://bodacc.io)
+**Mọi thông báo của doanh nghiệp Pháp, theo thời gian thực.** Thành lập, sửa đổi, nộp báo cáo
+tài chính, thủ tục phá sản, bán và chuyển nhượng, xóa tên: mọi thông báo BODACC, được liên kết với
+doanh nghiệp của nó, những người quản lý và nguồn chính thức của nó. Miễn phí và mở, bằng 20 ngôn ngữ.
 
-🌍 [Français](../fr/README.md) · [English](../en/README.md) · [Español](../es/README.md) · [Deutsch](../de/README.md) · [Italiano](../it/README.md) · [Português](../pt/README.md) · [Nederlands](../nl/README.md) · [Polski](../pl/README.md) · [Русский](../ru/README.md) · [Türkçe](../tr/README.md) · [Українська](../uk/README.md) · [Bahasa Indonesia](../id/README.md) · [Tiếng Việt](../vi/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md) · [中文](../zh/README.md) · [العربية](../ar/README.md) · [עברית](../he/README.md) · [हिन्दी](../hi/README.md) · [فارسی](../fa/README.md)
-> 📰 [Tóm tắt đầy đủ](recaps/README.md) · 🏠 [Hậu trường BODACC.io](coulisses/COULISSES.md)
-
-<div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Thông báo&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Doanh nghiệp&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Người&color=orange)
-![Site bodacc.io](https://img.shields.io/badge/bodacc.io-Explorer-important?logo=internetexplorer&logoColor=white&style=for-the-badge)
+[**bodacc.io**](https://bodacc.io) · [Tài liệu API](https://bodacc.io/vi/tai-lieu) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 </div>
 
-**API chuyển đổi thông báo pháp lý của Pháp thành dữ liệu có cấu trúc, liên kết và khai thác được — theo thời gian thực.**
+## 1. Dữ liệu BODACC trực tiếp
 
-BODACC (Bulletin Officiel des Annonces Civiles et Commerciales - Công báo chính thức về các thông báo dân sự và thương mại) là ấn phẩm chính thức ghi lại đời sống pháp lý của các doanh nghiệp Pháp: thành lập, sửa đổi, giải thể, thủ tục tập thể, mua bán, nộp báo cáo tài chính. Các văn bản này là công khai, nhưng vẫn ở dạng tài liệu thô: không có cấu trúc, không liên kết với nhau, và khó truy vấn.
+| Bộ dữ liệu BODACC | Số bản ghi | Trực tiếp |
+|---|---|---|
+| Thông báo pháp lý BODACC | 51 043 403 | ![Thông báo](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Thông báo&color=blue) |
+| Doanh nghiệp Pháp | 30 032 566 | ![Doanh nghiệp](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Doanh nghiệp&color=green) |
+| Người quản lý và đại diện | 4 935 692 | ![Người](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Người&color=orange) |
+| Hợp đồng công (BOAMP) | 1 716 163 | ![Hợp đồng](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Hợp đồng&color=purple) |
 
-**BODACC-api giúp chúng khai thác được.** Mỗi thông báo được tự động phân tích và chuyển đổi thành dữ liệu có cấu trúc (SIREN, tên doanh nghiệp, địa chỉ, NAF, người quản lý, số tiền...), sau đó được liên kết với doanh nghiệp của nó và các cá nhân xuất hiện trong đó. Kết quả: một đồ thị hoàn chỉnh về đời sống kinh tế Pháp, có thể truy vấn chỉ bằng một yêu cầu HTTP.
+Những con số này không phải được sao chép lại: chúng **được chính API BODACC phục vụ trực tiếp**, tại
+[`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted).
+Bạn hãy tự kiểm tra, rồi kiểm tra lại vào ngày mai.
 
-> 🌐 Trang web: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Bảng giá](https://bodacc.io/vi/tarifs)
+**Hôm nay** (14 tháng 10 năm 2026): **5 920 thông báo** — nhóm phổ biến nhất: Nộp báo cáo tài chính (2 306).
 
----
-
-## ✨ Tại sao chọn BODACC-api?
-
-| | |
+| Nhóm BODACC | Thông báo hôm nay |
 |---|---|
-| 🗂 **Toàn bộ lịch sử, từ 2008** | Hàng triệu thông báo trong cơ sở dữ liệu, bao phủ đầy đủ — không phải cửa sổ trượt |
-| ⚡ **Thời gian thực** | Các thông báo trong ngày có sẵn mỗi buổi sáng, trước giờ mở cửa văn phòng |
-| 🕸 **Một đồ thị, không phải các tệp tin** | Thông báo → doanh nghiệp (SIREN) → người quản lý → nhiệm kỳ → thị trường công: tất cả được liên kết và truy vấn trong một yêu cầu |
-| ✨ **Từ văn bản thô đến dữ liệu có cấu trúc** | SIREN, NAF, địa chỉ, người quản lý, thủ tục... được trích xuất tự động từ mỗi văn bản pháp lý |
-| 🌍 **20 ngôn ngữ** | Giao diện và nội dung được dịch — đội ngũ và khách hàng của bạn nói ngôn ngữ của họ |
-| 🤖 **Sẵn sàng cho AI Agent** | 100/100 tại cuộc kiểm toán isitagentready (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
-| 🚪 **Không rào cản khi dùng thử** | Tất cả các endpoint đọc đều truy cập được mà không cần khóa — bạn đánh giá trước khi trả phí |
+| Nộp báo cáo tài chính | 2 306 |
+| Thành lập doanh nghiệp | 1 415 |
+| Sửa đổi | 1 193 |
+| Xóa tên | 500 |
+| Thủ tục phá sản | 323 |
+| Đăng ký | 118 |
+| Bán và chuyển nhượng | 65 |
 
----
+## 2. API BODACC mang lại cho bạn những gì
 
-## 🏭 Giá trị gia tăng của chúng tôi: quy trình xử lý
+BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) là công báo chính thức về đời sống
+doanh nghiệp Pháp. Mỗi lần thành lập, mỗi lần nộp báo cáo tài chính, mỗi vụ phá sản, mỗi lần bán
+đều được công bố tại đó theo luật. BODACC.io biến công báo đó thành một cơ sở dữ liệu mà bạn có thể
+truy vấn.
 
-Điều tạo nên sự khác biệt không phải là dữ liệu thô (nó là công khai), mà là những gì chúng tôi làm với dữ liệu đó — mỗi ngày, một cách tự động:
+**Phần lớn các cơ sở dữ liệu doanh nghiệp chỉ cho bạn một bức ảnh tĩnh. API BODACC cho bạn sự chuyển động.**
 
-**1. Tiếp nhận dữ liệu đáng tin cậy và đầy đủ.** Mỗi buổi sáng trước 09:00, các thông báo mới do DILA công bố được tích hợp vào cơ sở dữ liệu của chúng tôi. Lịch sử đầy đủ có từ năm 2008, vượt xa những gì cổng thông tin công khai cung cấp. Việc chạy lại quá trình tiếp nhận không tạo ra bất kỳ bản ghi trùng lặp nào: dữ liệu của chúng tôi được kiểm tra và nhất quán liên tục.
+Một danh bạ cho bạn biết rằng một doanh nghiệp tồn tại: tên, địa chỉ, số đăng ký của nó. BODACC cho
+bạn biết **doanh nghiệp vừa làm gì**, và khi nào. Toàn bộ khác biệt nằm ở đó:
 
-**2. Làm giàu dữ liệu thông minh.** Mỗi thông báo là một văn bản pháp lý — công cụ trích xuất kết hợp của chúng tôi (quy tắc nghiệp vụ + AI) chuyển đổi nó thành dữ liệu có cấu trúc: số SIREN, tên doanh nghiệp, địa chỉ, mã NAF, người quản lý, nhiệm kỳ, số tiền, thủ tục. Những gì cần hàng giờ đọc thủ công trở thành các trường JSON có thể truy vấn.
+| | Danh bạ doanh nghiệp | BODACC.io |
+|---|---|---|
+| Bạn nhận được gì | một hồ sơ nhận dạng đóng băng | các sự kiện có ngày tháng |
+| Độ mới | cập nhật theo quý | công bố ngay buổi sáng cùng ngày |
+| Mất khả năng thanh toán | một cờ trạng thái | thủ tục, tính chất và ngày của thủ tục |
+| Báo cáo tài chính | một giá trị "đã nộp" | từng lần nộp, kèm ngày khóa sổ |
+| Người quản lý | một cái tên | từng nhiệm kỳ, kèm các công ty liên quan |
+| Nguồn | một bản sao | thông báo chính thức và tệp PDF của nó |
 
-**3. Đồ thị quan hệ.** Một thông báo về thủ tục tập thể chỉ có giá trị nếu biết nó thuộc về doanh nghiệp nào và ai là người quản lý. Công cụ phân giải của chúng tôi liên kết mỗi thông báo với doanh nghiệp của nó (SIREN), mỗi cá nhân với nhiệm kỳ của họ, mỗi thị trường công với bên trúng thầu. Bạn truy vấn đời sống kinh tế Pháp như một cơ sở dữ liệu — không phải như một đống PDF.
+## 3. Thông báo pháp lý BODACC, chi tiết
 
-**4. Phân phối thời gian thực.** Ngay khi một thông báo được công bố, nó có sẵn qua API, kèm theo các mối quan hệ và dữ liệu đã làm giàu. Không cần tải tệp, không cần duy trì ETL: chỉ cần một yêu cầu HTTP.
+Mỗi thông báo mang 23 trường. Dưới đây là một thông báo có thật, đúng như API BODACC trả về:
 
----
-
-## ⚖️ So sánh: vị trí của chúng tôi
-
-| | **Trang web chính thức (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **API** | ❌ Không có | API chỉ dành cho các gói cao cấp | ✅ **API REST có tài liệu, không cần khóa khi đọc** |
-| **Dữ liệu có cấu trúc** | ❌ Xem PDF | ✅ Hồ sơ được làm giàu | ✅ **Thông báo + đồ thị doanh nghiệp/cá nhân/thị trường** |
-| **Thời gian thực** | Ấn phẩm giấy xem trực tuyến | Cập nhật hàng ngày | ✅ **Mỗi buổi sáng trước 09:00** |
-| **Giá** | Miễn phí, nhưng hạn chế | Từ **29,90 €/tháng** cho truy cập cơ bản | **Gói giá phải chăng, bắt đầu miễn phí để khám phá** |
-| **Đối tượng** | Công chúng | Chuyên gia (tuân thủ, giám sát) | **Nhà phát triển, fintech, legaltech, đội ngũ dữ liệu** |
-
-**Điểm mạnh của trang web chính thức**: miễn phí, đáng tin cậy, chính thức. **Điểm yếu**: không có API, lịch sử giới hạn đến 2008, không có dữ liệu có cấu trúc — bạn chỉ có PDF.
-
-**Điểm mạnh của Pappers**: giao diện rất chăm chút, tổng hợp INSEE + INPI + BODACC, giám sát tích hợp. **Điểm yếu**: giá cả (29,90 €/tháng cho truy cập cơ bản, API và lịch sử đầy đủ đắt hơn), giải pháp hướng đến việc tra cứu hơn là dữ liệu khai thác được.
-
-**Vị trí của chúng tôi**: **toàn bộ lịch sử từ 2008, nhanh hơn trang web chính thức — và với mức giá thấp hơn Pappers.** Được thiết kế cho những ai muốn kết nối dữ liệu vào công cụ của riêng mình, không phải cho những ai muốn thêm một màn hình hiển thị.
-
-> 💶 Xem các gói: [bodacc.io/vi/tarifs](https://bodacc.io/vi/tarifs) — Miễn phí · Pro · Enterprise · LIFE
-
----
-
-## 🚀 Dùng thử trong 30 giây
-
-Tất cả các endpoint đọc đều truy cập được **không cần khóa**:
-
-```bash
-# Tìm kiếm doanh nghiệp theo tên
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# Chi tiết một thông báo (kèm các mối quan hệ: doanh nghiệp + cá nhân)
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# Hồ sơ doanh nghiệp (thông báo gần đây + người quản lý + thị trường công)
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# Thống kê tổng quan
-curl "https://bodacc.io/api/bodacc/stats"
-
-# Khối lượng hàng ngày (30 ngày gần nhất)
-curl "https://bodacc.io/api/bodacc/stats/daily30"
+```json
+{
+  "id": "C202601972306",
+  "dateparution": "2026-10-14",
+  "familleavis": "dpc",
+  "familleavis_lib": "Dépôts des comptes",
+  "typeavis_lib": "Avis initial",
+  "commercant": "HOLDING BIIZ",
+  "ville": "Saint-Louis",
+  "cp": "97450",
+  "departement_nom_officiel": "La Réunion",
+  "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
+  "registre": ["988208435", "988 208 435"],
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+}
 ```
 
----
+Mỗi thông báo liên kết tới **trang đầy đủ của nó trên bodacc.io**, nơi nguồn chính thức và tệp PDF
+chỉ cách một cú nhấp chuột.
 
-## 📡 Các endpoint
+Bảy nhóm BODACC, kèm thuật ngữ bạn sẽ thấy trong dữ liệu:
 
-### Thông báo
-
-| Phương thức | Route | Mô tả |
+| Nhóm BODACC | Trong dữ liệu | Ý nghĩa |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Tìm kiếm: `q` (tên/SIREN), `famille`, `departement`, ngày tháng, phân trang `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Chi tiết đầy đủ: `raw_data` + dữ liệu làm giàu + `relations` (doanh nghiệp và cá nhân liên quan) |
-| `GET` | `/bodacc/enrichi/{id}` | Phiên bản có cấu trúc (siren, dénomination, NAF, dirigeants...) |
-| `POST` | `/bodacc/enrichi/batch` | Làm giàu theo lô |
+| Thành lập doanh nghiệp | `creation` | một doanh nghiệp mới được đăng ký |
+| Sửa đổi | `modification` | điều lệ, ban điều hành, địa chỉ, vốn |
+| Nộp báo cáo tài chính | `dpc` | báo cáo tài chính thường niên được nộp tại lục sự tòa án |
+| Thủ tục phá sản | `collective` | phục hồi, thanh lý, tái tổ chức |
+| Bán và chuyển nhượng | `vente` | một cơ sở kinh doanh được bán hoặc chuyển nhượng |
+| Xóa tên | `radiation` | doanh nghiệp bị xóa khỏi sổ đăng ký |
+| Đăng ký | `immatriculation` | đăng ký vào sổ đăng ký thương mại |
 
-### Doanh nghiệp & cá nhân
+## 4. Hồ sơ doanh nghiệp BODACC
 
-| Phương thức | Route | Mô tả |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | Tìm kiếm doanh nghiệp (tên, thành phố, NAF, mã bưu chính) |
-| `GET` | `/bodacc/entreprises/{siren}` | Hồ sơ INSEE + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Hồ sơ theo slug SEO |
-| `GET` | `/bodacc/personnes/{id}` | Hồ sơ cá nhân: nhiệm kỳ (vai trò) + doanh nghiệp liên quan |
+Mỗi thông báo trỏ tới doanh nghiệp đứng sau nó. API BODACC công bố những doanh nghiệp đó cùng với
+nhận dạng, hoạt động và lịch sử kế toán của họ:
 
-### Thống kê
+```json
+{
+  "siren": "552081317",
+  "nom_complet": "EIFFAGE ENERGIE SYSTEMES - INDUSTRIE TERTIAIRE BOURGOGNE FRANCHE-COMTE",
+  "adresse_complete": "245 Rue Charles de Freycinet 21600 Longvic",
+  "naf_code": "43.21A",
+  "nature_juridique": "5710",
+  "date_creation": "2025-04-24",
+  "etat_administratif": "A",
+  "depot_comptes": "oui",
+  "dernier_depot": "2026-07-31",
+  "derniere_cloture": "2025-12-31",
+  "dernier_ecart_jours": 212
+}
+```
 
-| Phương thức | Route | Mô tả |
-|---|---|---|
-| `GET` | `/bodacc/stats` | Tổng số, theo loại, theo ngày |
-| `GET` | `/bodacc/stats/daily` | Khối lượng trong ngày (theo số phát hành, tỉnh, loại) |
-| `GET` | `/bodacc/stats/daily30` | Chuỗi số liệu 30 ngày gần nhất |
-| `GET` | `/bodacc/stats/counts` | Bộ đếm: thông báo, doanh nghiệp, cá nhân |
-| `GET` | `/bodacc/graph/categories` | Phân bổ theo danh mục |
+Ngoài phần nhận dạng: mã hoạt động (NAF), hình thức pháp lý, tình trạng hành chính, **ngày nộp báo
+cáo tài chính gần nhất, ngày khóa sổ gần nhất và số ngày đã trôi qua**, cùng các nhãn mà một doanh
+nghiệp có thể mang: kinh tế xã hội, hữu cơ, RGE, Qualiopi.
 
-### Cảnh báo & tích hợp
+## 5. Người quản lý và đại diện BODACC
 
-| Phương thức | Route | Mô tả |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | Cảnh báo theo SIREN (theo dõi doanh nghiệp) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Kích hoạt tiếp nhận dữ liệu cho một ngày |
-| `POST` | `/bodacc/import` | Nhập theo lô (backfill) |
+Đằng sau mỗi doanh nghiệp là những người điều hành nó. API BODACC liệt kê **4,9 triệu người quản lý,
+đại diện, người thanh lý và kiểm toán viên**, mỗi người kèm theo:
 
-### Bảng mã NAF (INSEE)
+- các nhiệm kỳ của họ, theo từng công ty, cùng khoảng thời gian liên quan
+- các công ty khác của họ, để bạn có thể theo dõi một người suốt sự nghiệp
+- những thông báo liên quan tới họ
 
-| Phương thức | Route | Mô tả |
-|---|---|---|
-| `GET` | `/bodacc/naf` | Bảng mã NAF rev. 2 đầy đủ (732 phân nhóm, 615 nhóm) — nhãn chính thức INSEE |
-| `GET` | `/bodacc/naf?q=commerce` | Tìm kiếm NAF theo nhãn |
-| `GET` | `/bodacc/naf?code=46.72Z` | Chi tiết một mã NAF |
+Đó là điều biến một sổ đăng ký thành một đồ thị: một doanh nghiệp, những người quản lý của nó, và
+những doanh nghiệp mà những người đó cũng điều hành. Một điểm truy cập công bố điều đó trực tiếp.
+
+## 6. API BODACC
+
+REST, JSON, không cần khóa trên các điểm truy cập mở, tối đa 500 bản ghi mỗi lần gọi, phân trang
+bằng `offset`.
+
+```bash
+# Những thông báo BODACC mới nhất (luôn là mới nhất trước)
+curl "https://bodacc.io/api/bodacc/annonces?limit=100"
+
+# Một thông báo, cùng doanh nghiệp, người quản lý và tệp PDF của nó
+curl "https://bodacc.io/api/bodacc/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+
+# Một doanh nghiệp theo SIREN
+curl "https://bodacc.io/api/bodacc/entreprises/552081317"
+
+# Mọi thông báo BODACC liên quan tới doanh nghiệp đó
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/annonces"
+
+# Đồ thị doanh nghiệp: người quản lý và các công ty khác của họ
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/graphe"
+
+# Tìm kiếm theo tên, thành phố, tỉnh, mã hoạt động hoặc khoảng thời gian
+curl "https://bodacc.io/api/bodacc/entreprises?q=eiffage&departement=75"
+curl "https://bodacc.io/api/bodacc/annonces?famille=collective&date_debut=2026-10-01"
+```
+
+Tham chiếu đầy đủ: [bodacc.io/vi/tai-lieu](https://bodacc.io/vi/tai-lieu) — từng điểm truy cập một,
+kèm giao diện Swagger và đặc tả OpenAPI được công bố, bằng 20 ngôn ngữ.
+
+## 7. Bộ dữ liệu và xuất dữ liệu BODACC
+
+Ngoài API, mỗi trang của bodacc.io là một địa chỉ ổn định và có thể thu thập: thông báo pháp lý,
+doanh nghiệp, người quản lý, vùng, thành phố, thống kê — và trang web công bố những điểm vào đọc được
+bằng máy:
+
+- [Sitemap](https://bodacc.io/sitemap.xml) — bản kiểm kê đầy đủ các địa chỉ, theo từng ngôn ngữ
+- [Danh mục API](https://bodacc.io/.well-known/api-catalog) — có thể được các tác nhân khám phá
+- [RSS](https://bodacc.io/rss.xml) — luồng cập nhật hằng ngày
+- [Danh sách URL](URLLIST.md) — mọi điểm vào, một danh sách cho mỗi ngôn ngữ
+
+## 8. Phạm vi và độ mới của dữ liệu BODACC
+
+BODACC được công bố vào các ngày làm việc, không công bố vào cuối tuần. BODACC.io thu thập mỗi
+số công bố và đưa nó lên **ngay buổi sáng cùng ngày**, thường trong vài phút sau khi phát hành. Mỗi
+thông báo giữ nguyên ngày công bố, nên bạn luôn biết điều gì là mới.
+
+## 9. Người ta dùng BODACC để làm gì
+
+- **Tuân thủ và KYC** — kiểm tra tình trạng thật của một đối tác trước khi ký, chứ không phải tình trạng của nó ba tháng trước
+- **Thẩm định kỹ lưỡng** — theo dõi các hồ sơ doanh nghiệp nộp, báo cáo tài chính và lịch sử mất khả năng thanh toán của nó
+- **Chấm điểm tín dụng và rủi ro** — thủ tục phá sản và việc nộp báo cáo tài chính là những tín hiệu sớm nhất
+- **Thông tin bán hàng** — một doanh nghiệp mới thành lập là một khách hàng tiềm năng mới, ngay trong ngày
+- **Báo chí** — những dữ kiện ở cấp doanh nghiệp, có nguồn và có ngày
+- **Nghiên cứu** — 51 triệu hồ sơ công bố, từ những sổ đăng ký cổ nhất đến sáng nay
+- **Pháp lý và kế toán** — tìm những doanh nghiệp bạn đại diện, và những gì họ đã nộp
+
+## 10. Câu hỏi thường gặp về BODACC
+
+**BODACC.io có phải là BODACC chính thức không?**
+
+Không. BODACC.io là một dịch vụ độc lập giúp dữ liệu BODACC công khai trở nên dễ dùng và có thể
+truy vấn. Dịch vụ này không liên kết với DILA hay bất kỳ cơ quan công quyền nào. Mỗi thông báo đều
+dẫn trở lại nguồn chính thức của nó.
+
+**API BODACC có miễn phí không?**
+
+Các điểm truy cập mở là miễn phí và không cần khóa. Có các gói trả phí cho nhu cầu sử dụng nặng —
+[xem bảng giá](https://bodacc.io/vi/tarifs).
+
+**Sự khác nhau giữa BODACC và một danh bạ doanh nghiệp là gì?**
+
+Một danh bạ cho bạn nhận dạng của doanh nghiệp. BODACC cho bạn hoạt động của nó: những gì nó đã công
+bố, khi nào, và những gì tòa án đã công bố về nó. Hai thứ bổ sung cho nhau — BODACC.io cũng mang
+phần nhận dạng.
+
+**Dữ liệu mới đến mức nào?**
+
+Các thông báo xuất hiện vào buổi sáng ngày chúng được công bố. Hồ sơ doanh nghiệp được cập nhật khi
+các thông báo đến.
+
+**Mỗi lần gọi được bao nhiêu bản ghi?**
+
+Tối đa 500, với `offset` để phân trang. Số lần gọi trên các điểm truy cập mở không bị giới hạn.
+
+**Tôi có thể dùng nó trong môi trường thực tế không?**
+
+Có. API được ghi tài liệu, được đánh phiên bản và được phục vụ từ Cloudflare. Việc ghi nguồn về
+[bodacc.io](https://bodacc.io) luôn được hoan nghênh.
+
+**Hỗ trợ những ngôn ngữ nào?**
+
+Trang web và tài liệu của nó có bằng 20 ngôn ngữ. Bản thân API thì trung lập về ngôn ngữ: các slug và
+điểm truy cập của nó giống nhau cho tất cả mọi người.
+
+## 11. Tài liệu BODACC, theo từng ngôn ngữ
+
+Mỗi thư mục dưới đây chứa tài liệu BODACC đầy đủ bằng chính ngôn ngữ của nó: tham chiếu API, danh
+sách URL và các bản tóm tắt hằng ngày.
+
+| # | Ngôn ngữ | Tài liệu | URL | Dữ liệu hằng ngày |
+|---|---|---|---|---|
+| 1 | العربية | [docs/ar/](docs/ar/README.md) | [URLLIST](docs/ar/URLLIST.md) | [recaps](docs/ar/recaps/README.md) |
+| 2 | Deutsch | [docs/de/](docs/de/README.md) | [URLLIST](docs/de/URLLIST.md) | [recaps](docs/de/recaps/README.md) |
+| 3 | English | [docs/en/](docs/en/README.md) | [URLLIST](docs/en/URLLIST.md) | [recaps](docs/en/recaps/README.md) |
+| 4 | Español | [docs/es/](docs/es/README.md) | [URLLIST](docs/es/URLLIST.md) | [recaps](docs/es/recaps/README.md) |
+| 5 | فارسی | [docs/fa/](docs/fa/README.md) | [URLLIST](docs/fa/URLLIST.md) | [recaps](docs/fa/recaps/README.md) |
+| 6 | Français | [docs/fr/](docs/fr/README.md) | [URLLIST](docs/fr/URLLIST.md) | [recaps](docs/fr/recaps/README.md) |
+| 7 | עברית | [docs/he/](docs/he/README.md) | [URLLIST](docs/he/URLLIST.md) | [recaps](docs/he/recaps/README.md) |
+| 8 | हिन्दी | [docs/hi/](docs/hi/README.md) | [URLLIST](docs/hi/URLLIST.md) | [recaps](docs/hi/recaps/README.md) |
+| 9 | Bahasa Indonesia | [docs/id/](docs/id/README.md) | [URLLIST](docs/id/URLLIST.md) | [recaps](docs/id/recaps/README.md) |
+| 10 | Italiano | [docs/it/](docs/it/README.md) | [URLLIST](docs/it/URLLIST.md) | [recaps](docs/it/recaps/README.md) |
+| 11 | 日本語 | [docs/ja/](docs/ja/README.md) | [URLLIST](docs/ja/URLLIST.md) | [recaps](docs/ja/recaps/README.md) |
+| 12 | 한국어 | [docs/ko/](docs/ko/README.md) | [URLLIST](docs/ko/URLLIST.md) | [recaps](docs/ko/recaps/README.md) |
+| 13 | Nederlands | [docs/nl/](docs/nl/README.md) | [URLLIST](docs/nl/URLLIST.md) | [recaps](docs/nl/recaps/README.md) |
+| 14 | Polski | [docs/pl/](docs/pl/README.md) | [URLLIST](docs/pl/URLLIST.md) | [recaps](docs/pl/recaps/README.md) |
+| 15 | Português | [docs/pt/](docs/pt/README.md) | [URLLIST](docs/pt/URLLIST.md) | [recaps](docs/pt/recaps/README.md) |
+| 16 | Русский | [docs/ru/](docs/ru/README.md) | [URLLIST](docs/ru/URLLIST.md) | [recaps](docs/ru/recaps/README.md) |
+| 17 | Türkçe | [docs/tr/](docs/tr/README.md) | [URLLIST](docs/tr/URLLIST.md) | [recaps](docs/tr/recaps/README.md) |
+| 18 | Українська | [docs/uk/](docs/uk/README.md) | [URLLIST](docs/uk/URLLIST.md) | [recaps](docs/uk/recaps/README.md) |
+| 19 | Tiếng Việt | [docs/vi/](docs/vi/README.md) | [URLLIST](docs/vi/URLLIST.md) | [recaps](docs/vi/recaps/README.md) |
+| 20 | 中文 | [docs/zh/](docs/zh/README.md) | [URLLIST](docs/zh/URLLIST.md) | [recaps](docs/zh/recaps/README.md) |
+
+## 12. Liên kết BODACC
+
+- [BODACC.io](https://bodacc.io) — trang web trực tiếp
+- [Tìm kiếm doanh nghiệp](https://bodacc.io/vi/entreprises) · [Thông báo pháp lý](https://bodacc.io/vi/annonces) · [Người quản lý](https://bodacc.io/vi/personnes)
+- [Tài liệu API](https://bodacc.io/vi/tai-lieu) · [Giao diện Swagger](https://bodacc.io/api/bodacc/docs)
+- [Bảng giá](https://bodacc.io/vi/tarifs) · [Công nghệ](https://bodacc.io/vi/technologie)
+- [Danh sách URL (chỉ mục đa ngôn ngữ)](URLLIST.md)
 
 ---
 
-## 📊 Dữ liệu
-
-Các huy hiệu ở đầu trang là **bộ đếm thời gian thực**: thông báo BODACC, doanh nghiệp SIRENE và cá nhân được trích xuất — chúng thay đổi trong quá trình củng cố lịch sử và làm giàu dữ liệu.
-
-Các mốc ổn định:
-
-- 📰 **Thông báo BODACC**: lịch sử đầy đủ từ 2008, cập nhật mỗi buổi sáng trước 09:00
-- 🏢 **Doanh nghiệp (SIRENE)**: 29,8 triệu đơn vị pháp lý Pháp (đăng ký INSEE)
-- 👤 **Cá nhân được trích xuất**: người quản lý, người thanh lý, kiểm toán viên... đang được củng cố liên tục
-- 📦 **Thị trường công (BOAMP)**: 1,69 triệu hợp đồng công 2015 → 2026
-
----
-
-## 🛠 Công nghệ
-
-| Lớp | Công nghệ |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **Dữ liệu** | Lập chỉ mục trigram, tìm kiếm toàn văn, JSONB |
-| **Tiếp nhận** | Quy trình tự động hóa, tích hợp hàng ngày, idempotent |
-| **Làm giàu** | Trích xuất kết hợp (quy tắc nghiệp vụ + AI) |
-| **Frontend** | Next.js · i18n 20 ngôn ngữ |
-| **Hạ tầng** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI Agents** | Máy chủ MCP · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 Dữ liệu mở
-
-Dữ liệu nguồn là công khai và miễn phí:
-
-- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (thông báo pháp lý)
-- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 triệu đơn vị pháp lý)
-- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (thị trường công)
-
-**BODACC-api thêm cấu trúc và đồ thị vào dữ liệu thô này**: phân tích văn bản pháp lý, phân giải danh tính (cá nhân), liên kết doanh nghiệp ↔ thông báo ↔ hợp đồng.
-
----
-
-## 🌐 Khám phá trang web
-
-[Trang chủ](https://bodacc.io/vi) · [Thông báo](https://bodacc.io/vi/annonces) · [Doanh nghiệp](https://bodacc.io/vi/entreprises) · [Cá nhân](https://bodacc.io/vi/personnes) · [Bảng giá](https://bodacc.io/vi/tarifs) · [Công nghệ](https://bodacc.io/vi/technologie)
-
----
-
-## 📄 Giấy phép & liên hệ
-
-- Giấy phép: MIT (mã nguồn) — dữ liệu vẫn tuân theo giấy phép của các nhà sản xuất (DILA, INSEE)
-- Trang web: [bodacc.io](https://bodacc.io)
-- Issues & PR: hoan nghênh đóng góp trên kho lưu trữ này
-
----
-
-*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) là ấn phẩm chính thức về các thông báo pháp lý của doanh nghiệp Pháp. Dự án này không liên kết với DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) là ấn phẩm chính thức của các thông
+báo pháp lý về doanh nghiệp Pháp. BODACC.io là một dịch vụ độc lập và không liên kết với DILA.*
