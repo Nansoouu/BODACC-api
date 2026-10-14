@@ -1,215 +1,264 @@
 <div align="center">
 
-<pre>
-             ____   ____  _____          _____ _____               _
-            |  _ \ / __ \|  __ \   /\   / ____/ ____|             (_)
-            | |_) | |  | | |  | | /  \ | |   | |        __ _ _ __  _
-            |  _ <| |  | | |  | |/ /\ \| |   | |       / _` | '_ \| |
-            | |_) | |__| | |__| / ____ \ |___| |____  | (_| | |_) | |
-            |____/ \____/|_____/_/    \_\_____\_____|  \__,_| .__/|_|
-                                                             | |
-                                                             |_|
-</pre>
-</div>
+# BODACC.io : de BODACC API voor Franse wettelijke bekendmakingen en bedrijfsgegevens
 
-# 🌐 [bodacc.io](https://bodacc.io)
+**Elke Franse bedrijfsaangifte, in realtime.** Oprichtingen, wijzigingen, deponering van
+jaarrekeningen, insolventieprocedures, verkopen, doorhalingen — elke bekendmaking van BODACC,
+gekoppeld aan haar bedrijf, haar bestuurders en haar officiële bron. Gratis en open, in 20 talen.
 
-🌍 [Français](../fr/README.md) · [English](../en/README.md) · [Español](../es/README.md) · [Deutsch](../de/README.md) · [Italiano](../it/README.md) · [Português](../pt/README.md) · [Nederlands](../nl/README.md) · [Polski](../pl/README.md) · [Русский](../ru/README.md) · [Türkçe](../tr/README.md) · [Українська](../uk/README.md) · [Bahasa Indonesia](../id/README.md) · [Tiếng Việt](../vi/README.md) · [日本語](../ja/README.md) · [한국어](../ko/README.md) · [中文](../zh/README.md) · [العربية](../ar/README.md) · [עברית](../he/README.md) · [हिन्दी](../hi/README.md) · [فارسی](../fa/README.md)
-> 📰 [Het volledige overzicht](recaps/README.md) · 🏠 [Achter de schermen van BODACC.io](coulisses/COULISSES.md)
-
-<div align="center">
-
-![Python 3.12](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)
-![PostgreSQL 16](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
-
-![Annonces](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Bekendmakingen&color=blue)
-![Entreprises](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Bedrijven&color=green)
-![Personnes](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Personen&color=orange)
-![Site bodacc.io](https://img.shields.io/badge/bodacc.io-Explorer-important?logo=internetexplorer&logoColor=white&style=for-the-badge)
+[**bodacc.io**](https://bodacc.io) · [API-documentatie](https://bodacc.io/nl/documentatie) · [Swagger](https://bodacc.io/api/bodacc/docs) · [RSS](https://bodacc.io/rss.xml)
 
 </div>
 
-**De API die Franse wettelijke bekendmakingen omzet in gestructureerde, gerelateerde en bruikbare gegevens — in realtime.**
+## 1. Live gegevens van BODACC
 
-Het BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de officiële publicatie die het juridische leven van Franse bedrijven volgt: oprichtingen, wijzigingen, doorhalingen, collectieve procedures, verkopen, deponering van jaarrekeningen. Deze teksten zijn openbaar, maar blijven ruwe documenten: ze zijn niet gestructureerd, niet onderling verbonden en niet eenvoudig doorzoekbaar.
+| Gegevensset van BODACC | Records | Live |
+|---|---|---|
+| Wettelijke bekendmakingen van BODACC | 51 043 403 | ![Bekendmakingen](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=Bekendmakingen&color=blue) |
+| Franse bedrijven | 30 032 566 | ![Bedrijven](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=Bedrijven&color=green) |
+| Bestuurders en functionarissen | 4 935 692 | ![Personen](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=Personen&color=orange) |
+| Overheidsopdrachten (BOAMP) | 1 716 163 | ![Contracten](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=Contracten&color=purple) |
 
-**BODACC-api maakt ze bruikbaar.** Elke bekendmaking wordt automatisch geanalyseerd en omgezet in gestructureerde gegevens (SIREN, handelsnaam, adres, NAF, bestuurders, bedragen...), en vervolgens gekoppeld aan het betreffende bedrijf en de personen die erin voorkomen. Resultaat: een complete graaf van het Franse economische leven, doorzoekbaar met één enkele HTTP-aanvraag.
+Die cijfers zijn niet gekopieerd en geplakt: ze worden **live geleverd door de BODACC API zelf**, op
+[`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted).
+Controleer ze zelf, en controleer ze morgen opnieuw.
 
-> 🌐 Website: [bodacc.io](https://bodacc.io) · 📖 Swagger: [https://bodacc.io/api/bodacc/docs](https://bodacc.io/api/bodacc/docs) · 💶 [Tarieven](https://bodacc.io/nl/tarifs)
+**Vandaag** (14 oktober 2026): **5 920 bekendmakingen** — meest voorkomende familie: deponering van jaarrekeningen (2 306).
 
----
-
-## ✨ Waarom BODACC-api?
-
-| | |
+| Familie van BODACC | Bekendmakingen vandaag |
 |---|---|
-| 🗂 **Volledige historiek, sinds 2008** | Miljoenen bekendmakingen in de database, volledige dekking — geen glijdend venster |
-| ⚡ **Realtime** | De bekendmakingen van vandaag zijn elke ochtend beschikbaar, vóór opening van kantoren |
-| 🕸 **Een graaf, geen bestanden** | Bekendmaking → bedrijf (SIREN) → bestuurders → mandaten → overheidsopdrachten: alles is verbonden en doorzoekbaar in één aanvraag |
-| ✨ **Van ruwe tekst naar gestructureerde gegevens** | SIREN, NAF, adres, bestuurders, procedures... automatisch geëxtraheerd uit elke juridische tekst |
-| 🌍 **20 talen** | De interface en inhoud zijn vertaald — uw teams en klanten spreken hun eigen taal |
-| 🤖 **Agent-ready** | 100/100 op de isitagentready-audit (DNSSEC, DNS-AID, auth.md, WebMCP, llms.txt) |
-| 🚪 **Nul frictie om te testen** | Alle lees-endpoints zijn toegankelijk zonder sleutel — u evalueert vóór u betaalt |
+| Deponering van jaarrekeningen | 2 306 |
+| Oprichtingen | 1 415 |
+| Wijzigingen | 1 193 |
+| Doorhalingen | 500 |
+| Insolventieprocedures | 323 |
+| Inschrijvingen | 118 |
+| Verkopen en overdrachten | 65 |
 
----
+## 2. Wat de BODACC API u biedt
 
-## 🏭 Onze toegevoegde waarde: de pipeline
+De BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is het officiële publicatieblad
+van het Franse bedrijfsleven. Elke oprichting, elke deponering van een jaarrekening, elk
+faillissement, elke verkoop worden daar wettelijk gepubliceerd. BODACC.io maakt van dat
+publicatieblad een database die u kunt bevragen.
 
-Wat het verschil maakt, is niet de ruwe data (die is openbaar), maar wat wij ermee doen — elke dag, automatisch:
+**De meeste bedrijfsdatabases geven u een momentopname. De BODACC API geeft u de beweging.**
 
-**1. Betrouwbare en volledige ingestie.** Elke ochtend vóór 09:00 worden de nieuwe bekendmakingen die door de DILA zijn gepubliceerd, in onze database opgenomen. De volledige historiek gaat terug tot 2008, veel verder dan wat de openbare raadpleging biedt. Het opnieuw uitvoeren van een ingestie creëert geen duplicaten: onze gegevens worden continu geverifieerd en zijn consistent.
+Een register vertelt u dat een bedrijf bestaat: zijn naam, zijn adres, zijn registratienummer. De
+BODACC vertelt u **wat het bedrijf zojuist heeft gedaan**, en wanneer. Dat verschil is de kern:
 
-**2. Intelligente verrijking.** Elke bekendmaking is een juridische tekst — onze hybride extractiemotor (bedrijfsregels + AI) zet deze om in gestructureerde gegevens: SIREN-nummer, handelsnaam, adres, NAF-code, bestuurders, mandaten, bedragen, procedures. Wat uren menselijk leeswerk vereist, wordt doorzoekbare JSON-velden.
+| | Bedrijvengidsen | BODACC.io |
+|---|---|---|
+| Wat u krijgt | een bevroren identiteitsfiche | gedateerde gebeurtenissen |
+| Actualiteit | elk kwartaal vernieuwd | dezelfde ochtend gepubliceerd |
+| Insolventie | een statusmarkering | de procedure, haar aard en haar datum |
+| Jaarrekeningen | een boolean "gedeponeerd" | elke deponering, met haar afsluitdatum |
+| Bestuurders | een naam | elk mandaat, met zijn bedrijven |
+| Bron | een kopie | de officiële bekendmaking en haar PDF |
 
-**3. Een relationele graaf.** Een bekendmaking van een collectieve procedure is alleen waardevol als je weet aan welk bedrijf deze is gekoppeld en wie de bestuurder is. Onze resolutiemotor verbindt elke bekendmaking met het bedrijf (SIREN), elke persoon met zijn mandaten, elke overheidsopdracht met zijn opdrachtnemer. U doorzoekt het Franse economische leven als een database — niet als een stapel PDF's.
+## 3. Wettelijke bekendmakingen van BODACC in detail
 
-**4. Realtime verspreiding.** Zodra een bekendmaking is gepubliceerd, is deze beschikbaar via de API, met zijn relaties en verrijking. Geen bestanden om te downloaden, geen ETL om te onderhouden: één HTTP-aanvraag volstaat.
+Elke bekendmaking bevat 23 velden. Hier is er een echte, precies zoals de BODACC API die teruggeeft:
 
----
-
-## ⚖️ Vergelijking: waar wij ons positioneren
-
-| | **Officiële website (bodacc.fr)** | **Pappers** | **BODACC.io** |
-|---|---|---|---|
-| **API** | ❌ Geen | API alleen voor hogere abonnementen | ✅ **Gedocumenteerde REST-API, zonder sleutel voor lezen** |
-| **Gestructureerde gegevens** | ❌ PDF-raadpleging | ✅ Verrijkte profielen | ✅ **Bekendmakingen + graaf van bedrijven/personen/opdrachten** |
-| **Realtime** | Papieren publicatie online raadpleegbaar | Dagelijkse actualisering | ✅ **Elke ochtend vóór 09:00** |
-| **Prijs** | Gratis, maar beperkt | Vanaf **€ 29,90/mnd** voor basistoegang | **Toegankelijke pakketten, vanaf gratis om te verkennen** |
-| **Publiek** | Algemeen publiek | Professionals (compliance, monitoring) | **Ontwikkelaars, fintech, legaltech, datateams** |
-
-**Sterke punten van de officiële website**: gratis, betrouwbaar, officieel. **Zwakke punten**: geen API, historiek beperkt tot 2008, geen gestructureerde gegevens — u blijft in PDF's.
-
-**Sterke punten van Pappers**: zeer verzorgde interface, aggregatie INSEE + INPI + BODACC, geïntegreerde monitoring. **Zwakke punten**: de prijs (€ 29,90/mnd voor basistoegang, de API en volledige historiek zijn duurder), een oplossing gericht op raadpleging in plaats van bruikbare gegevens.
-
-**Onze positie**: **volledige historiek sinds 2008, sneller dan op de officiële website — en tegen een lager tarief dan Pappers.** Ontworpen voor wie data in eigen tools wil integreren, niet voor wie een extra scherm wil.
-
-> 💶 Bekijk de pakketten: [bodacc.io/nl/tarifs](https://bodacc.io/nl/tarifs) — Gratis · Pro · Enterprise · LIFE
-
----
-
-## 🚀 Probeer het in 30 seconden
-
-Alle lees-endpoints zijn toegankelijk **zonder sleutel**:
-
-```bash
-# Zoek een bedrijf op naam
-curl "https://bodacc.io/api/bodacc/annonces?q=rizom&limit=5"
-
-# Detail van een bekendmaking (met relaties: bedrijven + personen)
-curl "https://bodacc.io/api/bodacc/annonces/A202601432266"
-
-# Bedrijfsprofiel (recente bekendmakingen + bestuurders + overheidsopdrachten)
-curl "https://bodacc.io/api/bodacc/entreprises/912969573"
-
-# Algemene statistieken
-curl "https://bodacc.io/api/bodacc/stats"
-
-# Dagelijks volume (afgelopen 30 dagen)
-curl "https://bodacc.io/api/bodacc/stats/daily30"
+```json
+{
+  "id": "C202601972306",
+  "dateparution": "2026-10-14",
+  "familleavis": "dpc",
+  "familleavis_lib": "Dépôts des comptes",
+  "typeavis_lib": "Avis initial",
+  "commercant": "HOLDING BIIZ",
+  "ville": "Saint-Louis",
+  "cp": "97450",
+  "departement_nom_officiel": "La Réunion",
+  "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
+  "registre": ["988208435", "988 208 435"],
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+}
 ```
 
----
+Elke bekendmaking linkt naar **haar volledige pagina op bodacc.io**, waar de officiële bron en haar
+PDF één klik verwijderd zijn.
 
-## 📡 De endpoints
+De zeven families van BODACC, met de Franse term die u in de gegevens ziet:
 
-### Bekendmakingen
-
-| Methode | Route | Beschrijving |
+| Familie van BODACC | In de gegevens | Wat het betekent |
 |---|---|---|
-| `GET` | `/bodacc/annonces` | Zoeken: `q` (naam/SIREN), `famille`, `departement`, datums, paginering `limit`/`offset` |
-| `GET` | `/bodacc/annonces/{id}` | Volledig detail: `raw_data` + verrijking + `relations` (gerelateerde bedrijven en personen) |
-| `GET` | `/bodacc/enrichi/{id}` | Gestructureerde versie (siren, benaming, NAF, bestuurders...) |
-| `POST` | `/bodacc/enrichi/batch` | Verrijking in batch |
+| Oprichtingen | `creation` | een nieuw bedrijf wordt ingeschreven |
+| Wijzigingen | `modification` | statuten, bestuur, adres, kapitaalwijziging |
+| Deponering van jaarrekeningen | `dpc` | jaarrekening gedeponeerd bij de griffie van de rechtbank |
+| Insolventieprocedures | `collective` | gerechtelijke bescherming, liquidatie, herstel |
+| Verkopen en overdrachten | `vente` | een onderneming wordt verkocht of overgedragen |
+| Doorhalingen | `radiation` | het bedrijf wordt uit het register geschrapt |
+| Inschrijvingen | `immatriculation` | inschrijving in het handelsregister |
 
-### Bedrijven & personen
+## 4. Bedrijfsfiches van BODACC
 
-| Methode | Route | Beschrijving |
-|---|---|---|
-| `GET` | `/bodacc/entreprises` | Bedrijfszoekopdracht (naam, stad, NAF, postcode) |
-| `GET` | `/bodacc/entreprises/{siren}` | INSEE-profiel + `annonces_recentes`, `dirigeants`, `marches_publics`, `stats` |
-| `GET` | `/bodacc/entreprises/by-slug/{slug}` | Profiel op SEO-slug |
-| `GET` | `/bodacc/personnes/{id}` | Personenprofiel: mandaten (rollen) + gerelateerde bedrijven |
+Elke bekendmaking wijst naar het bedrijf erachter. De BODACC API stelt die bedrijven beschikbaar met
+de identiteit, de activiteit en de boekhoudkundige geschiedenis:
 
-### Statistieken
+```json
+{
+  "siren": "552081317",
+  "nom_complet": "EIFFAGE ENERGIE SYSTEMES - INDUSTRIE TERTIAIRE BOURGOGNE FRANCHE-COMTE",
+  "adresse_complete": "245 Rue Charles de Freycinet 21600 Longvic",
+  "naf_code": "43.21A",
+  "nature_juridique": "5710",
+  "date_creation": "2025-04-24",
+  "etat_administratif": "A",
+  "depot_comptes": "oui",
+  "dernier_depot": "2026-07-31",
+  "derniere_cloture": "2025-12-31",
+  "dernier_ecart_jours": 212
+}
+```
 
-| Methode | Route | Beschrijving |
-|---|---|---|
-| `GET` | `/bodacc/stats` | Totalen, per familie, per datum |
-| `GET` | `/bodacc/stats/daily` | Volume van de dag (per publicatie, departement, familie) |
-| `GET` | `/bodacc/stats/daily30` | Reeks van de afgelopen 30 dagen |
-| `GET` | `/bodacc/stats/counts` | Tellers: bekendmakingen, bedrijven, personen |
-| `GET` | `/bodacc/graph/categories` | Verdeling per categorie |
+Meer dan de identiteit: de activiteitencode (NAF), de rechtsvorm, de administratieve status, **de
+datum van de laatste deponering van een jaarrekening, de laatste afsluitdatum en het aantal dagen
+sindsdien**, plus de labels die een bedrijf kan dragen — sociale economie, bio, RGE, Qualiopi.
 
-### Alerts & integraties
+## 5. Bestuurders en functionarissen van BODACC
 
-| Methode | Route | Beschrijving |
-|---|---|---|
-| `GET/POST/DELETE` | `/bodacc/alertes` | Alerts op SIREN (bedrijfsopvolging) |
-| `POST` | `/bodacc/ingest?target_date=YYYY-MM-DD` | Ingestie voor een datum activeren |
-| `POST` | `/bodacc/import` | Batch-import (backfill) |
+Achter elk bedrijf staan de mensen die het leiden. De BODACC API vermeldt **4,9 miljoen bestuurders,
+functionarissen, vereffenaars en commissarissen**, elk met:
 
-### NAF-referentiekader (INSEE)
+- hun mandaten, bedrijf per bedrijf, met de betrokken periode
+- hun andere bedrijven, zodat u een persoon door een loopbaan heen kunt volgen
+- de bekendmakingen die hen betreffen
 
-| Methode | Route | Beschrijving |
-|---|---|---|
-| `GET` | `/bodacc/naf` | Volledig NAF-referentiekader rev. 2 (732 subklassen, 615 klassen) — officiële INSEE-benamingen |
-| `GET` | `/bodacc/naf?q=commerce` | NAF-zoekopdracht op benaming |
-| `GET` | `/bodacc/naf?code=46.72Z` | Fiche van een NAF-code |
+Dat is wat een register in een graaf verandert: een bedrijf, zijn bestuurders, en de bedrijven die
+die bestuurders ook leiden. Eén endpoint stelt dat rechtstreeks beschikbaar.
+
+## 6. De BODACC API
+
+REST, JSON, geen sleutel nodig op open endpoints, tot 500 records per oproep, gepagineerd met `offset`.
+
+```bash
+# De nieuwste bekendmakingen van BODACC (altijd de meest recente eerst)
+curl "https://bodacc.io/api/bodacc/annonces?limit=100"
+
+# Eén bekendmaking, met haar bedrijven, haar bestuurders en haar PDF
+curl "https://bodacc.io/api/bodacc/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
+
+# Een bedrijf op SIREN
+curl "https://bodacc.io/api/bodacc/entreprises/552081317"
+
+# Elke bekendmaking van BODACC over dat bedrijf
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/annonces"
+
+# De bedrijfsgraaf: bestuurders en hun andere bedrijven
+curl "https://bodacc.io/api/bodacc/entreprises/552081317/graphe"
+
+# Zoeken op naam, stad, departement, activiteitencode of datumbereik
+curl "https://bodacc.io/api/bodacc/entreprises?q=eiffage&departement=75"
+curl "https://bodacc.io/api/bodacc/annonces?famille=collective&date_debut=2026-10-01"
+```
+
+Volledige referentie: [bodacc.io/nl/documentatie](https://bodacc.io/nl/documentatie) — endpoint per
+endpoint, met een Swagger-interface en een gepubliceerde OpenAPI-specificatie, in 20 talen.
+
+## 7. Gegevensverzamelingen en exports van BODACC
+
+Naast de API is elke pagina van bodacc.io een stabiele, crawlbare URL — wettelijke bekendmakingen,
+bedrijven, bestuurders, regio's, steden, statistieken — en de site publiceert machineleesbare
+ingangspunten:
+
+- [Sitemaps](https://bodacc.io/sitemap.xml) — de volledige URL-inventaris, per taal
+- [API-catalogus](https://bodacc.io/.well-known/api-catalog) — vindbaar voor agents
+- [RSS](https://bodacc.io/rss.xml) — de dagelijkse feed
+- [URL-lijst](URLLIST.md) — elk ingangspunt, één lijst per taal
+
+## 8. Dekking en actualiteit van BODACC
+
+De BODACC verschijnt op werkdagen, niet in het weekend. BODACC.io verzamelt elke publicatie en maakt
+ze **dezelfde ochtend** beschikbaar, meestal binnen enkele minuten na vrijgave. Elke bekendmaking
+behoudt haar publicatiedatum, zodat u altijd kunt zien wat nieuw is.
+
+## 9. Waarvoor men BODACC gebruikt
+
+- **Naleving en KYC** — controleer de werkelijke status van een tegenpartij vóór ondertekening, niet haar status van drie maanden geleden
+- **Due diligence** — volg de aangiften van een bedrijf, zijn jaarrekeningen en zijn insolventieverleden
+- **Krediet- en risicoscoring** — insolventieprocedures en deponeringen van jaarrekeningen zijn de vroegste signalen
+- **Verkoopintelligentie** — een nieuwe inschrijving is een potentiële nieuwe klant, op de dag dat ze plaatsvindt
+- **Journalistiek** — feiten op bedrijfsniveau, met bron en datum
+- **Onderzoek** — 51 miljoen aangiften, van de oudste registers tot deze ochtend
+- **Rechtskundig en boekhoudkundig** — vind de bedrijven waarvoor u optreedt, en wat zij hebben gedeponeerd
+
+## 10. Veelgestelde vragen over BODACC
+
+**Is BODACC.io de officiële BODACC?**
+
+Nee. BODACC.io is een onafhankelijke dienst die de openbare gegevens van BODACC bruikbaar en
+bevraagbaar maakt. Hij is niet verbonden met de DILA of enige openbare instantie. Elke bekendmaking
+linkt terug naar haar officiële bron.
+
+**Is de BODACC API gratis?**
+
+Open endpoints zijn gratis en vereisen geen sleutel. Voor intensief gebruik bestaan er betaalde
+formules — [zie de prijzen](https://bodacc.io/nl/prijzen).
+
+**Wat is het verschil tussen de BODACC en een bedrijvengids?**
+
+Een gids geeft u de identiteit van een bedrijf. De BODACC geeft u zijn activiteit: wat het heeft
+gedeponeerd, wanneer, en wat de rechtbank erover heeft gepubliceerd. De twee vullen elkaar aan —
+BODACC.io bevat ook de identiteit.
+
+**Hoe actueel zijn de gegevens?**
+
+Bekendmakingen verschijnen de ochtend waarop ze worden gepubliceerd. Bedrijfsfiches worden bijgewerkt zodra er bekendmakingen binnenkomen.
+
+**Hoeveel records per oproep?**
+
+Tot 500, met `offset` voor paginering. Er is geen limiet op het aantal oproepen op open endpoints.
+
+**Kan ik het in productie gebruiken?**
+
+Ja. De API is gedocumenteerd, geversioneerd en geserveerd vanaf Cloudflare. Naamsvermelding van
+[bodacc.io](https://bodacc.io) wordt gewaardeerd.
+
+**Welke talen worden ondersteund?**
+
+De site en haar documentatie bestaan in 20 talen. De API zelf is taalneutraal: de slugs en endpoints
+zijn voor iedereen dezelfde.
+
+## 11. Documentatie van BODACC per taal
+
+Elke map hieronder bevat de volledige documentatie van BODACC in haar eigen taal: de API-referentie,
+de URL-lijst en de dagelijkse overzichten.
+
+| # | Taal | Documentatie | URL's | Dagelijkse gegevens |
+|---|---|---|---|---|
+| 1 | العربية | [docs/ar/](docs/ar/README.md) | [URLLIST](docs/ar/URLLIST.md) | [recaps](docs/ar/recaps/README.md) |
+| 2 | Deutsch | [docs/de/](docs/de/README.md) | [URLLIST](docs/de/URLLIST.md) | [recaps](docs/de/recaps/README.md) |
+| 3 | English | [docs/en/](docs/en/README.md) | [URLLIST](docs/en/URLLIST.md) | [recaps](docs/en/recaps/README.md) |
+| 4 | Español | [docs/es/](docs/es/README.md) | [URLLIST](docs/es/URLLIST.md) | [recaps](docs/es/recaps/README.md) |
+| 5 | فارسی | [docs/fa/](docs/fa/README.md) | [URLLIST](docs/fa/URLLIST.md) | [recaps](docs/fa/recaps/README.md) |
+| 6 | Français | [docs/fr/](docs/fr/README.md) | [URLLIST](docs/fr/URLLIST.md) | [recaps](docs/fr/recaps/README.md) |
+| 7 | עברית | [docs/he/](docs/he/README.md) | [URLLIST](docs/he/URLLIST.md) | [recaps](docs/he/recaps/README.md) |
+| 8 | हिन्दी | [docs/hi/](docs/hi/README.md) | [URLLIST](docs/hi/URLLIST.md) | [recaps](docs/hi/recaps/README.md) |
+| 9 | Bahasa Indonesia | [docs/id/](docs/id/README.md) | [URLLIST](docs/id/URLLIST.md) | [recaps](docs/id/recaps/README.md) |
+| 10 | Italiano | [docs/it/](docs/it/README.md) | [URLLIST](docs/it/URLLIST.md) | [recaps](docs/it/recaps/README.md) |
+| 11 | 日本語 | [docs/ja/](docs/ja/README.md) | [URLLIST](docs/ja/URLLIST.md) | [recaps](docs/ja/recaps/README.md) |
+| 12 | 한국어 | [docs/ko/](docs/ko/README.md) | [URLLIST](docs/ko/URLLIST.md) | [recaps](docs/ko/recaps/README.md) |
+| 13 | Nederlands | [docs/nl/](docs/nl/README.md) | [URLLIST](docs/nl/URLLIST.md) | [recaps](docs/nl/recaps/README.md) |
+| 14 | Polski | [docs/pl/](docs/pl/README.md) | [URLLIST](docs/pl/URLLIST.md) | [recaps](docs/pl/recaps/README.md) |
+| 15 | Português | [docs/pt/](docs/pt/README.md) | [URLLIST](docs/pt/URLLIST.md) | [recaps](docs/pt/recaps/README.md) |
+| 16 | Русский | [docs/ru/](docs/ru/README.md) | [URLLIST](docs/ru/URLLIST.md) | [recaps](docs/ru/recaps/README.md) |
+| 17 | Türkçe | [docs/tr/](docs/tr/README.md) | [URLLIST](docs/tr/URLLIST.md) | [recaps](docs/tr/recaps/README.md) |
+| 18 | Українська | [docs/uk/](docs/uk/README.md) | [URLLIST](docs/uk/URLLIST.md) | [recaps](docs/uk/recaps/README.md) |
+| 19 | Tiếng Việt | [docs/vi/](docs/vi/README.md) | [URLLIST](docs/vi/URLLIST.md) | [recaps](docs/vi/recaps/README.md) |
+| 20 | 中文 | [docs/zh/](docs/zh/README.md) | [URLLIST](docs/zh/URLLIST.md) | [recaps](docs/zh/recaps/README.md) |
+
+## 12. Links naar BODACC
+
+- [BODACC.io](https://bodacc.io) — de live site
+- [Bedrijfszoekopdracht](https://bodacc.io/nl/bedrijven) · [Wettelijke bekendmakingen](https://bodacc.io/nl/aankondigingen) · [Bestuurders](https://bodacc.io/nl/personen)
+- [API-documentatie](https://bodacc.io/nl/documentatie) · [Swagger-interface](https://bodacc.io/api/bodacc/docs)
+- [Prijzen](https://bodacc.io/nl/prijzen) · [Technologie](https://bodacc.io/nl/technologie)
+- [URL-lijst (meertalige index)](URLLIST.md)
 
 ---
 
-## 📊 De gegevens
-
-De badges bovenaan de pagina zijn **realtime tellers**: BODACC-bekendmakingen, SIRENE-bedrijven en geëxtraheerde personen — ze evolueren naarmate de historiek wordt geconsolideerd en verrijkt.
-
-Stabiele referentiepunten:
-
-- 📰 **BODACC-bekendmakingen**: volledige historiek sinds 2008, elke ochtend vóór 09:00 bijgewerkt
-- 🏢 **Bedrijven (SIRENE)**: 29,8 M Franse rechtspersonen (INSEE-register)
-- 👤 **Geëxtraheerde personen**: bestuurders, vereffenaars, commissarissen... in voortdurende consolidatie
-- 📦 **Overheidsopdrachten (BOAMP)**: 1,69 M overheidscontracten 2015 → 2026
-
----
-
-## 🛠 Technologie
-
-| Laag | Technologie |
-|---|---|
-| **API** | Python · FastAPI · PostgreSQL 16 |
-| **Gegevens** | Trigram-indexering, full-text zoeken, JSONB |
-| **Ingestie** | Geautomatiseerde pipeline, dagelijkse integratie, idempotent |
-| **Verrijking** | Hybride extractie (bedrijfsregels + AI) |
-| **Frontend** | Next.js · i18n 20 talen |
-| **Infra** | Docker · Cloudflare (CDN, cache, DNSSEC) |
-| **AI-agents** | MCP-server · DNS-AID · auth.md · llms.txt |
-
----
-
-## 🔓 Open data
-
-De brongegevens zijn openbaar en gratis:
-
-- **BODACC**: [data.gouv.fr / DILA](https://www.data.gouv.fr/fr/datasets/bodacc-annonces-commerciales/) (wettelijke bekendmakingen)
-- **SIRENE**: [INSEE](https://www.data.gouv.fr/fr/datasets/base-sirene-des-entreprises-et-de-leurs-etablissements-siren-siret/) (29,8 M rechtspersonen)
-- **BOAMP**: [Opendatasoft / DILA](https://boamp-datadila.opendatasoft.com) (overheidsopdrachten)
-
-**BODACC-api voegt structuur en de graaf toe aan deze ruwe data**: analyse van juridische teksten, identiteitsresolutie (personen), links bedrijf ↔ bekendmaking ↔ contract.
-
----
-
-## 🌐 Verken de website
-
-[Home](https://bodacc.io/nl) · [Bekendmakingen](https://bodacc.io/nl/annonces) · [Bedrijven](https://bodacc.io/nl/entreprises) · [Personen](https://bodacc.io/nl/personnes) · [Tarieven](https://bodacc.io/nl/tarifs) · [Technologie](https://bodacc.io/nl/technologie)
-
----
-
-## 📄 Licentie & contact
-
-- Licentie: MIT (code) — de gegevens blijven onderworpen aan de licenties van hun producenten (DILA, INSEE)
-- Website: [bodacc.io](https://bodacc.io)
-- Issues & PR: welkom op deze repository
-
----
-
-*Het BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de officiële publicatie van wettelijke bekendmakingen van Franse bedrijven. Dit project is niet gelieerd aan de DILA.*
+*BODACC (Bulletin Officiel des Annonces Civiles et Commerciales) is de officiële publicatie van
+wettelijke bekendmakingen van Franse bedrijven. BODACC.io is een onafhankelijke dienst en is niet
+verbonden met de DILA.*
