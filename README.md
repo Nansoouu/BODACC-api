@@ -72,13 +72,12 @@ Every notice carries 23 fields. Here is a real one, exactly as the BODACC API re
   "departement_nom_officiel": "La Réunion",
   "tribunal": "Greffe du Tribunal Mixte de Commerce de saint-pierre",
   "registre": ["988208435", "988 208 435"],
-  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz",
-  "source": "https://www.bodacc.fr/pages/annonces-commerciales-detail/?q.id=id:C202601972306",
-  "pdf": "https://www.bodacc.fr/telechargements/COMMERCIALES/PDF/C/2026/20260197/1/BODACC_C_PDF_Unitaire_20260197_02267.pdf"
+  "url": "https://bodacc.io/fr/annonces/C202601972306-depot-comptes-988208435-141026-holding-biiz"
 }
 ```
 
-Every notice links back to **its official source and its PDF** — nothing is taken on trust.
+Each notice links to **its full page on bodacc.io**, where the official source and its PDF are one
+click away.
 
 The seven BODACC families, with the French term you will see in the data:
 
