@@ -14,16 +14,16 @@ directors and its official source. Free and open, in 20 languages.
 
 | BODACC dataset | Records | Live |
 |---|---|---|
-| BODACC legal notices | 51 043 403 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=notices&color=blue) |
-| French companies | 30 032 566 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=companies&color=green) |
-| Directors and officers | 4 935 692 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=people&color=orange) |
-| Public contracts (BOAMP) | 1 716 163 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=contracts&color=purple) |
+| Notices | 51 043 403 | ![Notices](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=annonces&label=notices&color=blue) |
+| Companies | 30 032 566 | ![Companies](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=entreprises&label=companies&color=green) |
+| People | 4 935 692 | ![People](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=personnes&label=people&color=orange) |
+| Contracts (BOAMP) | 1 716 163 | ![Contracts](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fbodacc.io%2Fapi%2Fbodacc%2Fstats%2Fcounts-formatted&query=boamp&label=contracts&color=purple) |
 
 Those figures are not copy-pasted: they are **served live by the BODACC API itself**, on
 [`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted).
 Check them yourself, then check them again tomorrow.
 
-**Today** (14 October 2026): **5 920 notices** — most common family: Accounts filings (2 306).
+**Today** (14 October 2026): **5 920 notices** — most common family: Dépôts des comptes (2306).
 
 | BODACC family | Notices today |
 |---|---|
