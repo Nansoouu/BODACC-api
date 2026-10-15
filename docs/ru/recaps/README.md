@@ -6,6 +6,7 @@
 
 | Дата | Статья |
 |---|---|
+| 15 octobre 2026 | [Direct BODACC du 15 octobre](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-15-10-2026) |
 | 13 octobre 2026 | [Direct BODACC du 14 octobre](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-14-10-2026) |
 | 13 octobre 2026 | [Direct BODACC du 13 octobre](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-13-10-2026) |
 | 9 octobre 2026 | [Direct BODACC du 11 octobre](https://bodacc.io/ru/novosti/recapitulatif-complet-bodacc-11-10-2026) |
