@@ -6,6 +6,7 @@
 
 | תאריך | המאמר |
 |---|---|
+| 15 octobre 2026 | [Direct BODACC du 16 octobre](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-16-10-2026) |
 | 15 octobre 2026 | [Direct BODACC du 15 octobre](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-15-10-2026) |
 | 13 octobre 2026 | [Direct BODACC du 14 octobre](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-14-10-2026) |
 | 13 octobre 2026 | [Direct BODACC du 13 octobre](https://bodacc.io/he/chadashot/recapitulatif-complet-bodacc-13-10-2026) |
