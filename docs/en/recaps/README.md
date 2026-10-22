@@ -6,6 +6,7 @@ The daily roundups published on BODACC.io, with direct links to each language ve
 
 | Date | Roundup |
 |---|---|
+| 21 octobre 2026 | [Direct BODACC du 22 octobre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-22-10-2026) |
 | 20 octobre 2026 | [Direct BODACC du 21 octobre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-21-10-2026) |
 | 20 octobre 2026 | [Direct BODACC du 20 octobre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-20-10-2026) |
 | 18 octobre 2026 | [Direct BODACC du 18 octobre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-18-10-2026) |
