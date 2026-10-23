@@ -6,6 +6,7 @@ BODACC.io에 게시된 일일 요약과 각 언어 버전으로의 직접 링크
 
 | 날짜 | 기사 |
 |---|---|
+| 23 octobre 2026 | [Direct BODACC du 23 octobre](https://bodacc.io/ko/nyuseu/recapitulatif-complet-bodacc-23-10-2026) |
 | 21 octobre 2026 | [Direct BODACC du 22 octobre](https://bodacc.io/ko/nyuseu/recapitulatif-complet-bodacc-22-10-2026) |
 | 20 octobre 2026 | [Direct BODACC du 21 octobre](https://bodacc.io/ko/nyuseu/recapitulatif-complet-bodacc-21-10-2026) |
 | 20 octobre 2026 | [Direct BODACC du 20 octobre](https://bodacc.io/ko/nyuseu/recapitulatif-complet-bodacc-20-10-2026) |
