@@ -6,6 +6,7 @@ I riepiloghi giornalieri pubblicati su BODACC.io, con collegamento diretto a ogn
 
 | Data | Articolo |
 |---|---|
+| 25 octobre 2026 | [Direct BODACC du 27 octobre](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-27-10-2026) |
 | 23 octobre 2026 | [Direct BODACC du 25 octobre](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-25-10-2026) |
 | 23 octobre 2026 | [Direct BODACC du 23 octobre](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-23-10-2026) |
 | 21 octobre 2026 | [Direct BODACC du 22 octobre](https://bodacc.io/it/notizie/recapitulatif-complet-bodacc-22-10-2026) |
