@@ -23,7 +23,7 @@ Those figures are not copy-pasted: they are **served live by the BODACC API itse
 [`/api/bodacc/stats/counts-formatted`](https://bodacc.io/api/bodacc/stats/counts-formatted).
 Check them yourself, then check them again tomorrow.
 
-**Today** (27 October 2026): **26 547 notices** — most common family: Dépôts des comptes (12171).
+**Today** (28 October 2026): **5 928 notices** — most common family: Dépôts des comptes (2251).
 
 | BODACC family | Notices today |
 |---|---|
