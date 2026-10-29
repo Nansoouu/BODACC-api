@@ -6,6 +6,7 @@
 
 | تاريخ | المقال |
 |---|---|
+| 29 octobre 2026 | [Direct BODACC du 29 octobre](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-29-10-2026) |
 | 28 octobre 2026 | [Direct BODACC du 28 octobre](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-28-10-2026) |
 | 25 octobre 2026 | [Direct BODACC du 27 octobre](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-27-10-2026) |
 | 23 octobre 2026 | [Direct BODACC du 25 octobre](https://bodacc.io/fa/khabarha/recapitulatif-complet-bodacc-25-10-2026) |
