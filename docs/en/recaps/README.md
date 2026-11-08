@@ -6,6 +6,7 @@ The daily roundups published on BODACC.io, with direct links to each language ve
 
 | Date | Roundup |
 |---|---|
+| 8 novembre 2026 | [Direct BODACC du 8 novembre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-08-11-2026) |
 | 5 novembre 2026 | [Direct BODACC du 5 novembre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-05-11-2026) |
 | 2 novembre 2026 | [Direct BODACC du 4 novembre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-04-11-2026) |
 | 31 octobre 2026 | [Direct BODACC du 2 novembre](https://bodacc.io/en/news/recapitulatif-complet-bodacc-02-11-2026) |

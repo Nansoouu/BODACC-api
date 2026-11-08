@@ -6,6 +6,7 @@ Các bản tóm tắt hàng ngày được đăng trên BODACC.io, kèm liên k�
 
 | Ngày | Bài viết |
 |---|---|
+| 8 novembre 2026 | [Direct BODACC du 8 novembre](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-08-11-2026) |
 | 5 novembre 2026 | [Direct BODACC du 5 novembre](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-05-11-2026) |
 | 2 novembre 2026 | [Direct BODACC du 4 novembre](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-04-11-2026) |
 | 31 octobre 2026 | [Direct BODACC du 2 novembre](https://bodacc.io/vi/tin-tuc/recapitulatif-complet-bodacc-02-11-2026) |
