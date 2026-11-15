@@ -6,6 +6,7 @@ BODACC.io'da yayınlanan günlük özetler, her dil sürümüne doğrudan bağla
 
 | Tarih | Makale |
 |---|---|
+| 15 novembre 2026 | [Direct BODACC du 15 novembre](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-15-11-2026) |
 | 12 novembre 2026 | [Direct BODACC du 12 novembre](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-12-11-2026) |
 | 10 novembre 2026 | [Direct BODACC du 10 novembre](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-10-11-2026) |
 | 8 novembre 2026 | [Direct BODACC du 8 novembre](https://bodacc.io/tr/haberler/recapitulatif-complet-bodacc-08-11-2026) |
