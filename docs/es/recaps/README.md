@@ -6,6 +6,7 @@ Los resúmenes diarios publicados en BODACC.io, con enlaces directos a cada trad
 
 | Fecha | Artículo |
 |---|---|
+| 17 novembre 2026 | [Récapitulatif du 17 novembre 2026](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-17-11-2026) |
 | 15 novembre 2026 | [Direct BODACC du 15 novembre](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-15-11-2026) |
 | 12 novembre 2026 | [Direct BODACC du 12 novembre](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-12-11-2026) |
 | 10 novembre 2026 | [Direct BODACC du 10 novembre](https://bodacc.io/es/noticias/recapitulatif-complet-bodacc-10-11-2026) |
